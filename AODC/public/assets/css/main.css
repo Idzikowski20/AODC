@@ -1888,19 +1888,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: inline-block;
   color: var(--clr-body-heading);
 }
-.jm-header-main-menu ul li:is(.menu-has-children) > a:after {
-  display: inline-block;
-  font-family: "Font Awesome 6 Pro";
-  content: "\f067";
-  font-size: 13px;
-  font-weight: 500;
-  margin-left: 5px;
-  -webkit-transition: all 0.3s linear 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
-}
+
 .jm-header-main-menu ul li:is(.menu-has-children):hover > a::after {
   content: "\f068";
 }
@@ -2948,17 +2936,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
   z-index: 1;
 }
-.jm-banner-area-2.jm-overlay::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  opacity: 0.83;
-  background-color: rgba(30, 30, 30, 0.87);
-  z-index: -1;
-}
+
 .jm-banner-content-title-2 {
   color: var(--clr-common-white);
   font-size: 53px;
@@ -4688,19 +4666,7 @@ blog sidebar area
   z-index: 1;
   transition: all ease-in-out 400ms;
 }
-.jm-category-item-new .jm-category-item-img-new a:after {
-  position: absolute;
-  content: "\f178";
-  font-family: "font awesome 5 Pro";
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 36px;
-  z-index: 2;
-  opacity: 0;
-  transition: all ease-in-out 400ms;
-}
+
 .jm-category-item-new .jm-category-item-img-new a img {
   display: block;
   width: 100%;
@@ -4734,10 +4700,7 @@ blog sidebar area
     width: calc(100% - 10px);
   }
 }
-.jm-category-item-new:hover .jm-category-item-img-new a:after {
-  opacity: 1;
-  left: 50%;
-}
+
 .jm-category-item-new:hover .jm-category-item-img-new a:before {
   opacity: 0.7;
 }

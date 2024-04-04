@@ -12,8 +12,8 @@ const Header = () => {
                     <div className="row align-items-center">
                         <div className="col-xl-7 col-md-8">
                             <div className="jm-header-top-cta">
-                                <span><i className="fas fa-map-marker-alt"></i>27/52 Avenue, NY USA 685.</span>
-                                <span><i className="fal fa-clock"></i>Mon - Sat 8.00 - 18.00.</span>
+                                <span><i className="fas fa-map-marker-alt">Aleja krajowska 37</i></span>
+                                <span><i className="fal fa-clock"></i>od poniedziałek do piątku 8-16</span>
                             </div>
                         </div>
                         <div className="col-xl-5 col-md-4">
@@ -40,10 +40,10 @@ const Header = () => {
                                 <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                     <ul>
                                         <li className="menu-has-children">
-                                            <Link to="/">Home</Link>
+                                            <Link to="/">Wróć do</Link>
                                             <ul className="sub-menu">
-                                                <li><Link to="/">Home 1</Link></li>
-                                                <li><Link to="/homePage2">Home 2</Link></li>
+                                                <li><Link to="/">Strona główna</Link></li>
+                                                <li><Link to="/kariera">Kariera</Link></li>
                                             </ul>
                                         </li>
                                         <li className="menu-has-children">

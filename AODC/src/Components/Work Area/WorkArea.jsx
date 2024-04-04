@@ -9,12 +9,9 @@ const WorkArea = () => {
                 <div className="col-xl-3">
                     <div className="jm-work-left-2 mb-40 text-center text-xl-start">
                         <div className="jm-section-title mb-25">
-                            <h2 className="title">Choose Your
-                                work</h2>
-                            <p className="text">Find jobs on the work that suits you the most.</p>
-                        </div>
-                        <div className="jm-work-btn-2">
-                            <Link to="/jobCategoryPage" className="jm-theme-btn jm-theme-btn-black">View More Jobs</Link>
+                            <h2 className="title">Obszar
+                                Działalności</h2>
+                            <p className="text">Na których działamy</p>
                         </div>
                     </div>
                 </div>
@@ -27,8 +24,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-user"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">Register</Link></h4>
-                                        <p>Create a account as Employer or a Candidate for free.</p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Instytucje publiczne</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>
@@ -38,8 +35,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-magnifying-glass"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">Search</Link></h4>
-                                        <p>Browse throught positions to find the right job for you.</p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Służby mundorowe</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>
@@ -49,8 +46,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-paper-plane"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">Apply Jobs</Link></h4>
-                                        <p>Apply to a job with your resume and change your Career.</p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Szpitale</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +57,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-microchip"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">Creative Technologies</Link></h4>
-                                        <p>Gain a business in the most advanced IoT solutions.</p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Przemysł</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,8 +68,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-thumbs-up"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">Top Rated Companies</Link></h4>
-                                        <p>Find The Best Top Rated Companies in your Local area </p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Sektor finansowy</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,8 +79,8 @@ const WorkArea = () => {
                                         <i className="fa-thin fa-headset"></i>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title"><Link to="/serviceDetailsPage">24/7 Customer Support</Link></h4>
-                                        <p>self-service banking extending cash in you band.</p>
+                                        <h4 className="title"><Link to="/serviceDetailsPage">Podmioty komercyjne</Link></h4>
+                                        <p>x</p>
                                     </div>
                                 </div>
                             </div>

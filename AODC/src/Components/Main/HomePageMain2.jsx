@@ -14,15 +14,8 @@ const HomePageMain2 = () => {
   return (
     <main className='homepage-2-main'>
         <Banner2/>
-        <JobSearchHero/>
-        <JobSearchTab/>
-        <Category2/>
-        <FeaturedJobs/>
         <WorkArea/>
-        <FeaturedCandidate/>
         <VideoArea2/>
-        <PriceArea2/>
-        <BlogArea/>
     </main>
   )
 }
