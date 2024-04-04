@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jobslab React JS Documentation</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left-side">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+
+            <div class="left-content">
+                <ul role="tablist">
+                    <li class="active"><a href="#one" data-toggle="tab">Welcome</a></li>
+                    <li><a href="#two" data-toggle="tab">Main File Structure</a></li>
+                    <li><a href="#install" data-toggle="tab">Cpanel Installation</a></li>
+                    <li><a href="#three" data-toggle="tab">Components Structure</a></li>
+                    <li><a href="#four" data-toggle="tab">Context API</a></li>
+                    <li><a href="#five" data-toggle="tab">Data Array</a></li>
+                    <li><a href="#six" data-toggle="tab">Pages Structure</a></li>
+                    <li><a href="#source" data-toggle="tab">Sources & Credits</a></li>
+                    <li><a href="#support" data-toggle="tab">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; Copyright <a href="https://themeforest.net/user/codebasket">Jobslab</a> 2023.</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="right-content">
+                <div id="one" class="content active fade in">
+                    <h1><span>Jobslab</span> - React JS Template</h1>
+                    <div class="created">
+                        <p>Created : 8 June 2023 <br>
+                            Last Update : 8 June 2023<br>
+                            By : <a href="https://themeforest.net/user/codebasket">Code Basket</a><br>
+                            Email : codebasketinfo@gmail.com<br>
+                            <br>
+                            Thank you for purchasing our Template. If you have any question, please feel free to contact
+                            us.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="two" class="content fade">
+                    <h1>Main File Structure</h1>
+                    <p>
+                        All the file are well organized, its so easy to work with the template.
+                        <br>
+                        1. Unzip the main-files.
+                        <br>
+                        2. Open "MainFile" folder.
+                        <br>
+                        3. You will find 2 folders and 7 files.
+                        <br>
+                        4. The first folder "public" holds the assets of the react app.
+                        <br>
+                        5. The "src" folder contains the components, context, data and pages folder. It also have 3 root files.
+                        <br>
+                        6. The App.jsx files contains the routing of the website and it is rendered in the main.jsx file.
+                        <br>
+                        7. Also you will see into "assets" 3 directories css, fonts and img.
+                        <br>
+                        8. In the first folder Content you will find style.css and other styling files the all the files.
+                    </p>
+                    <img src="img/file.png" alt=""><br>
+                </div>
+                <div id="install" class="content active fade">
+                    <h1>To deploy Jobslab to cPanel, you'll typically need to follow these general steps:</h1>
+                        <p>
+                            1. Build Jobslab: Run the command `npm run build` in the project directory to create a production-ready build of the Jobslab. This will generate optimized and bundled files in a `build` directory.
+                            <br>
+                            2. Prepare your files: Zip all the files and folders from the `dist` directory generated in the previous step and also add .htaccess file included in the doc.
+                            <br>
+                            3. Access cPanel: Log in to your cPanel account provided by your hosting provider.
+                            <br>
+                            4. File Manager: Locate the "File Manager" or "Files" section in cPanel and open it.
+                            <br>
+                            5. Select your domain or subdomain: Choose the domain or subdomain where you want to deploy Jobslab. This will open the File Manager for that specific location.
+                            <br>
+                            6. Upload files: Inside the File Manager, click the "Upload" button or option and upload all the files and folders from your local `dist` directory. You can drag and drop the files or use the file upload interface.
+                            <br>
+                            7. Extract files (if necessary): If you uploaded a compressed file, such as a ZIP archive, select it in the File Manager and choose the "Extract" option to extract the files and folders.
+                            <br>
+                            8. Verify files: Ensure that all the files and folders from Jobslab are now present in the desired location on the server.
+                            <br>
+                            9. Set up routing (if necessary): If the Jobslab uses client-side routing (e.g., React Router) and you're not using the cPanel default document (usually `index.html`), you may need to configure your server to redirect all requests to your main `index.html` file. This step may require creating or modifying an `.htaccess` file, which depends on your server's configuration. Consult your hosting provider's documentation or support for guidance on setting up routing correctly.
+                            <br>
+                            10. Access your Jobslab: After uploading the files and configuring routing (if necessary), you should be able to access your Jobslab by visiting your domain or subdomain in a web browser.
+                            <div>
+                                <h3>Steps to install and start in local server</h3>
+                                <p>
+                                    1. Unzip the "mainFile" and you can open commad prompt in the mainFile and use command "npm install" to install node modules.
+                                    <br>
+                                    2. After installing node modules you can type the command "npm run dev" to open the web app in local server.
+                                    <br>
+                                    3. For production build use the command "npm run build".
+                                </p>
+                            </div>
+                        </p>
+                </div>
+
+                <div id="three" class="content fade">
+                    <h1>Components Structure</h1>
+                    <div>In the component folder it is cleanly organized for better use and reusabilty of the components. </div>
+                    <div>The components are mounted in the pages jsx file according to need</div>
+                    <div>There are some components which are used by passing down props which are easy to understand.</div>
+                    <img src="img/component.png" alt="">
+                </div>
+
+                <div id="four" class="content fade">
+                    <h1>Context API</h1>
+                    <div>The context.js contains all the state management of the web app and the functions or states can be imported to any component using useContext hook of react.</div>
+                    <div>The use of context api reduces the excess props drilling and the reduces multiple lines of codes to improve performance.</div>
+                    <div>The functions in context api are well documented for your better understanding.</div>
+                    <img src="img/context.png" alt="">
+                </div>
+
+                <div id="five" class="content fade">
+                    <h1>Data Array</h1>
+                    <div>The data array holds the array from which data is fetched using map method to reduce excess code</div>
+                    <img src="img/data.png" alt="">
+                </div>
+                <div id="six" class="content fade">
+                    <h1>Pages Structure</h1>
+                    <duv>In the Pages folder there are multiple page jsx files in which the requiered components are mounted.</duv>
+                    <img src="img/page.png" alt="">
+                </div>
+
+                <div id="source" class="content fade">
+                    <h1>Sources &amp; Credits</h1>
+                    <ul>
+                        <li><span>Fonts</span>
+                        <li><a href="https://fonts.google.com/specimen/Red+Hat+Text" target="_blank">Red Hat Text</a></li>
+                        </li>
+                        </li><br>
+                        <li><span>Icon</span>
+                        <li><a href="https://fontawesome.com/">FontAwesome</a></li>
+                        <li><a href="https://mui.com/material-ui/material-icons/">Material Icon</a></li>
+                        </li><br>
+                        <li><span>Libraries</span>
+                        <li><a href="https://react.dev/" target="_blank">React Js</a></li>
+                        <li><a href="https://react-bootstrap.netlify.app/" target="_blank">React Bootstrap</a></li>
+                        <li><a href="https://swiperjs.com/react" target="_blank">React Swiper JS</a></li>
+                        <li><a href="https://mui.com/material-ui/getting-started/overview/" target="_blank">Material UI</a></li>
+                        <li><a href="https://fkhadra.github.io/react-toastify/introduction/" target="_blank">React Toastify</a></li>
+                        <li><a href="https://github.com/glennreyes/react-countup" target="_blank">React Countup</a></li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="support" class="content fade">
+                    <h1>Supports</h1>
+                    <p>Thank you for reading the documentaion. If you still have any question or any problem, please
+                        contact with us. We will give you best support.</p>
+                    <a href="https://themeforest.net/user/codebasket">Code Basket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
