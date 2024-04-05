@@ -46,6 +46,8 @@ CSS INDEX
 *************************************************************** */
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
 body {
+  color: #000;
+    background-color: #000;
   font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -80,13 +82,13 @@ a:focus,
 
 a:focus,
 a:hover {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
 a,
 button {
-  color: inherit;
+  color: #fff;
   outline: medium none;
 }
 
@@ -109,7 +111,7 @@ h4,
 h5,
 h6 {
   font-family: "Rubik", sans-serif;
-  color: var(--clr-body-heading);
+  color: #fff;
   margin-top: 0px;
   line-height: 1.4;
   font-weight: 700;
@@ -1751,7 +1753,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .light-bg {
-  background: #f1f7f4;
+  background: #101010;
 }
 
 .no-after::after {
@@ -3228,8 +3230,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 .jm-banner-content-title-3 {
-  color: var(--clr-common-white);
-  font-size: 52px;
+  background: #F6F8F9;
+  background: radial-gradient(circle farthest-corner at center center, #F6F8F9 0%, #E5EBEE 30%, #D7DEE3 60%, #D1D2D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 72px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -4127,7 +4132,7 @@ blog sidebar area
 .jm-section-title .title {
   font-size: 42px;
   line-height: 1.3;
-  color: var(--clr-body-heading);
+  color: #fff;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5018,8 +5023,8 @@ blog sidebar area
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   content: "";
@@ -11171,7 +11176,6 @@ a{
   padding-top: 100px;
 }
 .homepage-2-main .jm-banner-area-2{
-  background-image: url(../img/banner/banner-1.jpg);
 }
 .homepage-2-main .jm-category-area-3{
   padding-top: 0 !important;

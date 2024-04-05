@@ -42,17 +42,17 @@ const Header2 = () => {
 
                     {/* Przycisk dodaj oferte */}
 
-                    {/* <div className="col-xl-3 col-lg-3 col-5">
+                    <div className="col-xl-3 col-lg-3 col-5">
                         <div className="jm-header-right jm-header-right-2 text-end  d-flex align-items-center justify-content-end">
-                            <Link to="#" className="jm-search jm-header-action-search" role='button' onClick={handleOpenForm}><i className="fal fa-search"></i></Link>
-                            <Link to="/postJobPage" className="jm-theme-btn jm-theme-btn-2 d-none d-lg-block">Post Job</Link>
-                            <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick={handleOpen}>
+                            <Link to="#" className="jm-search jm-header-action-search" role='button' onClick='{handleOpenForm}'><i className="fal fa-search"></i></Link>
+                            <Link to="#" className="jm-theme-btn jm-theme-btn-2 d-none d-lg-block">Zaloguj</Link>
+                            <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick='{handleOpen}'>
                                 <span className="dr-line-1"></span>
                                 <span className="dr-line-2"></span>
                                 <span className="dr-line-3"></span>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
 
                 </div>
             </div>

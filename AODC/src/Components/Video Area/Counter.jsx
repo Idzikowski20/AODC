@@ -9,10 +9,10 @@ const Counter = () => {
                 <div className="jm-video-content-wrapper text-center text-xl-start">
                     <div className="jm-video-content-3 ml-80">
                         <div className="jm-section-title mb-40">
-                            <span className="subtitle">success</span>
+                            <span className="subtitle">AODC</span>
                             <div className="jm-video-info-3">
-                                <h2 className="title">Delivering the best result for our users!</h2>
-                                <p  className="text">All jobs, resumes and companies are reviewed before they get published in order to deliver quality possible to all of our users.</p>
+                                <h2 className="title">Sprawdź prezentacje naszej firmy.</h2>
+                                <p  className="text">???</p>
                             </div>
                         </div>
                         <div className="jm-video-counter-3">
@@ -22,9 +22,9 @@ const Counter = () => {
                                     <div className="jm-video-counter-item-content">
                                         <h2 className="title">
                                             <span className="odometer mainCounter" data-count="140">
-                                                <CountUp duration={8} end={140}/>
+                                                <CountUp duration={8} end={100}/>
                                             </span>+</h2>
-                                        <span className="subtitle">Pro Member</span>
+                                        <span className="subtitle">Pracowników</span>
                                     </div>
                                 </div>
                             </div>
@@ -34,9 +34,9 @@ const Counter = () => {
                                     <div className="jm-video-counter-item-content">
                                         <h2 className="title">
                                             <span className="odometer mainCounter" data-count="250">
-                                                <CountUp duration={8} end={250}/>
+                                                <CountUp duration={8} end={220}/>
                                             </span>+</h2>
-                                        <span className="subtitle">Jobs</span>
+                                        <span className="subtitle">Kontraktów</span>
                                     </div>
                                 </div>
                             </div>
@@ -46,9 +46,9 @@ const Counter = () => {
                                     <div className="jm-video-counter-item-content">
                                         <h2 className="title">
                                             <span className="odometer mainCounter" data-count="199">
-                                                <CountUp duration={8} end={199}/>
+                                                <CountUp duration={8} end={20}/>
                                             </span>+</h2>
-                                        <span className="subtitle">Resumes</span>
+                                        <span className="subtitle">Lat doświadczenia</span>
                                     </div>
                                 </div>
                             </div>
