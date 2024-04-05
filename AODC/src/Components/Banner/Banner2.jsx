@@ -12,7 +12,7 @@ const Banner2 = () => {
                             <h1 className="jm-banner-content-title-3">
                                Sztuka rozwiązań<br/>
                             </h1>
-                            <h2 className="jm-banner-sub-text">| Dla data center |</h2>
+                            <h2 className="jm-banner-sub-text"> Dla data center </h2>
                         </div>
                     </div>
                 </div>

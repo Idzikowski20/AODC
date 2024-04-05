@@ -46,8 +46,8 @@ CSS INDEX
 *************************************************************** */
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
 body {
-  color: #000;
-    background-color: #000;
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 31 34 / var(--tw-bg-opacity));
   font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1702,8 +1702,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 35px;
 }
 
 @media (min-width: 1600px) {
@@ -1753,8 +1752,19 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .light-bg {
-  background: #101010;
+  border: 1px solid;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+    border-color: rgb(227 15 117 / var(--tw-border-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
 }
+
 
 .no-after::after {
   display: none;
@@ -11176,6 +11186,7 @@ a{
   padding-top: 100px;
 }
 .homepage-2-main .jm-banner-area-2{
+  background-color: rgb(29 31 34 / var(--tw-bg-opacity));
 }
 .homepage-2-main .jm-category-area-3{
   padding-top: 0 !important;
