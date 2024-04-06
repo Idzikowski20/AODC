@@ -31,18 +31,18 @@ const SidePanel = () => {
 
         <div className="jm-sidebar-contact-wrapper mt-40">
           <div className="jm-sidebar-contact mb-40">
-            <h4 className="jm-sidebar-contact-title">Contact Info</h4>
+            <h4 className="jm-sidebar-contact-title">Kontakt</h4>
             <span className="sidebar-address">
               <i className="fal fa-map-marker-alt"></i>
-              <span>10221 Hollywood Blvd, los angeles USA</span>
+              <span>Działkowa 37, 02-234 Warszawa</span>
             </span>
-            <Link to="tel:(+99)012345678">
+            <Link to="tel:(+22)8463515">
               <i className="fal fa-phone"></i>
-              <span>(+99)012345678</span>
+              <span>(+22) 846 35 15</span>
             </Link>
-            <Link to="mailto:examplesite@gmail.com" className="theme-3">
+            <Link to="mailto:biuro@aodc.pl" className="theme-3">
               <i className="fal fa-envelope"></i>
-              <span><span>examplesite@gmail.com</span></span>
+              <span><span>biuro@aodc.pl</span></span>
             </Link>
           </div>
 

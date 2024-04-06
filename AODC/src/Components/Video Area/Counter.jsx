@@ -48,7 +48,7 @@ const Counter = () => {
                                             <span className="odometer mainCounter" data-count="199">
                                                 <CountUp duration={8} end={20}/>
                                             </span>+</h2>
-                                        <span className="subtitle">Lat doświadczenia</span>
+                                        <span className="subtitle">Lat na rynku</span>
                                     </div>
                                 </div>
                             </div>
