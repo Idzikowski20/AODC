@@ -10,29 +10,29 @@ const About = () => {
                 <div className="col-xl-6 col-lg-6 order-1 order-lg-0">
                     <div className="jm-about-wrap-2 mr-40 mb-40">
                         <div className="jm-section-title mb-25">
-                            <h2 className="title mb-20">Suits jobs for you.
+                            <h2 className="title mb-20">Sprawdź kogo poszukujemy.
                             </h2>
                             <p className="text jm-about-desc mt-15">There are many variations of passages of Lorem Ipsum Fasts Fastsby humour, by injected humour, or coved ceilings.</p>
-                        </div>
+                        </div>  
                         <div className="jm-about-content-2 mb-25">
                             <ul className="jm-about-content-items-2">
                                 <li className="jm-about-content-item-2">
                                     <span className="jm-about-icon-2"><i className="fal fa-bookmark"></i></span>
-                                    <span className="jm-about-text-2">Bookmark Jobs</span>
+                                    <span className="jm-about-text-2">Sprawdź dostępne oferty</span>
                                 </li>
                                 <li className="jm-about-content-item-2">
                                     <span className="jm-about-icon-2"><i className="fal fa-address-card"></i></span>
-                                    <span className="jm-about-text-2">Apply with your Resume</span>
+                                    <span className="jm-about-text-2">Aplikuj na stanowisko</span>
                                 </li>
                                 <li className="jm-about-content-item-2">
                                     <span className="jm-about-icon-2"><i className="fal fa-envelope"></i></span>
-                                    <span className="jm-about-text-2">Get notified
+                                    <span className="jm-about-text-2">Czekaj na naszą odpowiedź 
                                     </span>
                                 </li>
                             </ul>
                         </div>
                         <div className="jm-about-content-btn-2">
-                            <Link to="/jobPage" className="jm-theme-btn">Browse Jobs</Link>
+                            <Link to="/jobPage" className="jm-theme-btn">Sprawdź oferty</Link>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const About = () => {
                         <img src="assets/img/about/home-2-about-1.png" alt="Image Not Found"/>
                         <div className="jm-about-experience-year">
                             <span className="jm-about-experience-number"><span className="odometer aboutCount"  data-count="25"><CountUp duration={8} end={25}/></span><span className="jm-about-experience-plus">+</span></span>
-                            <span className="jm-about-experience-number-text">Years Of <span className="jm-about-experience-number-text-big">Experience</span></span>
+                            <span className="jm-about-experience-number-text">Lat <span className="jm-about-experience-number-text-big">Doświadczenia</span></span>
                         </div>
                     </div>
                 </div>

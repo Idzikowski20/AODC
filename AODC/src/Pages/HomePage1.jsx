@@ -8,7 +8,6 @@ import Footer from '../Components/Footer/Footer'
 const HomePage1 = () => {
   return (
     <>
-      <SearchForm/>
       <SidePanel/>
       <Header/>
       <HomeMain1/>

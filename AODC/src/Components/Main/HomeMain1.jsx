@@ -14,13 +14,7 @@ const HomeMain1 = () => {
     <main className='home-page-1'>
         <Banner/>
         <About/>
-        <Category/>
-        <Jobs/>
         <VideoArea/>
-        <Candidates/>
-        <PriceArea/>
-        <Blog/>
-        <CallToAction/>
     </main>
   )
 }
