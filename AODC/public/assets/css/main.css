@@ -44,16 +44,20 @@ CSS INDEX
 01. common
 ******************************************************* 
 *************************************************************** */
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 31 34 / var(--tw-bg-opacity));
-  font-family: "Red Hat Text", sans-serif;
+  background: #191337;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--clr-body-text);
+  color:  #fff;
   font-size: 16px;
   line-height: 26px;
+}
+
+h1, h2, h3, h4, span, p, a {
+  color: #fff;
 }
 
 .img, img {
@@ -1750,16 +1754,20 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-position: center center;
   background-repeat: no-repeat;
 }
+ 
+.linkedin {
+  width: 700px;
+  height: 500px;
+}
 
 .light-bg {
-  border: 1px solid;
+  border: 1px solid #d32b50;
   position: relative;
   isolation: isolate;
   overflow: hidden;
   border-radius: 0.75rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-    border-color: rgb(227 15 117 / var(--tw-border-opacity));
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
@@ -2028,7 +2036,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-area-2.header-sticky.sticky {
   position: fixed;
   top: 0;
-  background-color: #282828;
+  background-color: #191337;
   z-index: 99;
   left: 0;
   right: 0;
@@ -2490,10 +2498,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 110px;
   height: 110px;
   display: inline-block;
-  background: var(--clr-common-white);
+  background: #191337;
   text-align: center;
   line-height: 110px;
-  color: var(--clr-theme-primary);
+  color: #d32b50;
   border-radius: 50%;
   position: relative;
   font-size: 30px;
@@ -2509,7 +2517,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   content: "";
   background-color: var(--clr-theme-primary);
   animation-name: playAnimation;
-  animation-duration: 1.8s;
+  animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
@@ -2798,12 +2806,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .jm-banner-img .jm-banner-bg-1 {
   position: absolute;
-  left: 0px;
-  top: 60px;
+  left: 10px;
+  top: -60px;
   max-width: 95%;
   animation: jmSpin 20s linear infinite;
 }
 .jm-banner-img .jm-banner-img-1 {
+  width: 400px;
+  left: 30px;
   position: relative;
 }
 
@@ -5016,7 +5026,7 @@ blog sidebar area
   width: 60px;
   height: 60px;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #d32b50;
   content: "";
   z-index: -1;
   border-radius: 50%;
@@ -5386,7 +5396,7 @@ blog sidebar area
 
 .jm-work-item-icon-2 {
   font-size: 40px;
-  color: var(--clr-theme-primary);
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -5561,6 +5571,12 @@ blog sidebar area
   position: relative;
 }
 .jm-video-wrap::before {
+  border: 1px solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(227 15 117 / var(--tw-border-opacity));
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
   position: absolute;
   left: 0;
   top: 0;
@@ -5608,7 +5624,7 @@ blog sidebar area
 @supports (text-stroke: 2px black) or (-webkit-text-stroke: 2px black) {
   .jm-video-text .title {
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 5px white;
     text-shadow: none;
   }
 }
@@ -11141,7 +11157,7 @@ a{
   white-space: nowrap;
 }
 .jm-video-wrap{
-  background-image: url(../img/video/video-1.jpg);
+  background-image: url(../img/video/video-3.jpg);
 }
 .progress-wrap{
   position: fixed;
@@ -11166,7 +11182,7 @@ a{
   padding-top: 100px;
 }
 .homepage-2-main .jm-banner-area-2{
-  background-color: rgb(29 31 34 / var(--tw-bg-opacity));
+
 }
 .homepage-2-main .jm-category-area-3{
   padding-top: 0 !important;

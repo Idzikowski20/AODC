@@ -12,8 +12,8 @@ const Header = () => {
                     <div className="row align-items-center">
                         <div className="col-xl-7 col-md-8">
                             <div className="jm-header-top-cta">
-                                <span><i className="fas fa-map-marker-alt">Aleja krajowska 37</i></span>
-                                <span><i className="fal fa-clock"></i>od poniedziałek do piątku 8-16</span>
+                                <span><i className="fas fa-map-marker-alt"> Dzialkowa 37, Warszawa</i></span>
+                                <span><i className="fal fa-clock"></i>Pn-pt 8:00 - 16:00</span>
                             </div>
                         </div>
                         <div className="col-xl-5 col-md-4">
@@ -40,50 +40,22 @@ const Header = () => {
                                 <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                     <ul>
                                         <li className="menu-has-children">
-                                            <Link to="/">Wróć do</Link>
+                                            <Link to="/">Strona główna</Link>
+                                        </li>
+                                        <li className="menu-has-children">
+                                            <Link to="/jobPage">O nas</Link>
+                                        </li>
+                                        <li className="menu-has-children">
+                                            <Link to="#">Kariera</Link>
                                             <ul className="sub-menu">
-                                                <li><Link to="/">Strona główna</Link></li>
-                                                <li><Link to="/kariera">Kariera</Link></li>
+                                                <li><Link to="/JobPage">Oferty pracy</Link></li>
                                             </ul>
                                         </li>
                                         <li className="menu-has-children">
-                                            <Link to="/jobPage">Jobs</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link to="/jobPage">Jobs Grid</Link></li>
-                                                <li><Link to="/jobListPage">Jobs List</Link></li>
-                                                <li><Link to="/jobDetailsPage">Job Details</Link></li>
-                                                <li><Link to="/jobCategoryPage">Jobs By Category</Link></li>
-                                                <li><Link to="/employerListPage">Employer List</Link></li>
-                                                <li><Link to="/employerGridPage">Employer Grid</Link></li>
-                                                <li><Link to="/companyDetailsPage">Employer Details</Link></li>
-                                                <li><Link to="/postJobPage">Post a Job</Link></li>
-                                                <li><Link to="/addResumePage">Add Resume</Link></li>
-                                            </ul>
+                                            <Link to="/jobPage">Realizacje</Link>
                                         </li>
                                         <li className="menu-has-children">
-                                            <Link to="/candidateListPage">Candidates</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link to="/candidatePage">Candidates Grid</Link></li>
-                                                <li><Link to="/candidateListPage">Candidates List</Link></li>
-                                                <li><Link to="/candidateDetailsPage">Candidates Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-has-children">
-                                            <Link to="#">Pages</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link to="/aboutPage">About</Link></li>
-                                                <li><Link to="/servicePage">Services</Link></li>
-                                                <li><Link to="/serviceDetailsPage">Services Details</Link></li>
-                                                <li><Link to="/contactPage">Contact</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-has-children">
-                                            <Link to="/blogPage">Blog</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link to="/blogPage">Blog Grid</Link></li>
-                                                <li><Link to="/blogListPage">Blog List</Link></li>
-                                                <li><Link to="/blogDetailsPage">Blog Details</Link></li>
-                                            </ul>
+                                            <Link to="/jobPage">Kontakt</Link>
                                         </li>
                                     </ul>
                                 </nav>
@@ -91,9 +63,7 @@ const Header = () => {
                         </div>
                         <div className="col-xl-3 col-lg-3 col-5">
                             <div className="jm-header-right  text-end d-flex align-items-center justify-content-end">
-                                <Link to="#" className="jm-search d-none d-lg-block jm-header-action-search" role='button' onClick={handleOpenForm}><i className="fal fa-search"></i></Link>
-                                <Link to="/candidateDetailsPage" className="jm-user"><i className="fal fa-user"></i></Link>
-                                <Link to="/postJobPage" className="jm-theme-btn d-none d-lg-block">Post Job</Link>
+                                <Link to="#" className="jm-theme-btn d-none d-lg-block">Zaloguj</Link>
                                 <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick={handleOpen}>
                                     <span className="dr-line-1"></span>
                                     <span className="dr-line-2"></span>
