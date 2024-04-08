@@ -9,9 +9,9 @@ const JobPage = () => {
   return (
     <>
     <SearchForm/>
+    <JobMain/>
     <SidePanel/>
     <Header/>
-    <JobMain/>
     <Footer/>
     </>
   )

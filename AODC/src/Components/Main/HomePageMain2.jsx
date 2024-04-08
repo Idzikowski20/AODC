@@ -2,6 +2,7 @@ import React from 'react'
 import Banner2 from '../Banner/Banner2'
 import WorkArea from '../Work Area/WorkArea'
 import VideoArea2 from '../Video Area/VideoArea2'
+import VideoArea3 from '../Video Area/VideoArea3'
 import SidePanel from '../../Components/Side Panel/SidePanel'
 
 const HomePageMain2 = () => {
@@ -9,6 +10,7 @@ const HomePageMain2 = () => {
     <main className='homepage-2-main'>
         <Banner2/>
         <SidePanel/>
+        <VideoArea3/>
         <VideoArea2/>
         <WorkArea/>
     </main>

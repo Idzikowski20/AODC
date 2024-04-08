@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Scene from '../3Dscene/3Dscene.jsx'
 
 const Banner2 = () => {
   return (
@@ -21,9 +20,6 @@ const Banner2 = () => {
                 </div>
             </div>
         </div>
-        <div className="flex justify-center items-center h-screen w-screen">
-                            <Scene />
-                        </div>
     </section>
   )
 }
