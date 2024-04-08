@@ -47,7 +47,7 @@ CSS INDEX
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   --tw-bg-opacity: 1;
-  background: #191337;
+  background: #031229;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1754,10 +1754,21 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.linkedin-conteiner {
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
  
 .linkedin {
-  width: 700px;
-  height: 500px;
+  width: 1320px;
+  border: 1px solid #d32b50;
+  z-index: 1;
+  position: relative;
 }
 
 .light-bg {
@@ -2045,7 +2056,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-area-2.header-sticky.sticky {
   position: fixed;
   top: 0;
-  background-color: #191337;
+  background-color: #031229;
   z-index: 99;
   left: 0;
   right: 0;
@@ -2507,7 +2518,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 110px;
   height: 110px;
   display: inline-block;
-  background: #191337;
+  background: #031229;
   text-align: center;
   line-height: 110px;
   color: #d32b50;
@@ -5666,7 +5677,7 @@ blog sidebar area
 
 @supports (text-stroke: 2px black) or (-webkit-text-stroke: 2px black) {
   .jm-video-text .title {
-    color: transparent;
+    color: #031229;
     -webkit-text-stroke: 5px white;
     text-shadow: none;
   }
@@ -10966,8 +10977,9 @@ blog sidebar area
 }
 
 .jm-footer-area-3 {
+  border-top: 1px solid #061630;
   background-color: var(--clr-theme-primary);
-  background-color: #282828;
+  background-color: #031229;
 }
 
 .jm-footer-top-subscribe-3 {

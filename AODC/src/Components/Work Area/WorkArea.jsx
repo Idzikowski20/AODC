@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const WorkArea = () => {
   return (
-    <section className="jm-work-area-2 pt-100 pb-60">
+    <section className="jm-work-area-2 pb-60">
         <div className="container light-bg">
             <div className="row align-items-center">
                 <div className="col-xl-3">
