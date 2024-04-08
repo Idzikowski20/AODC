@@ -12,6 +12,8 @@ const JobPage = () => {
     <SidePanel/>
     <Header/>
     <JobMain/>
+    <SidePanel/>
+    <Header/>
     <Footer/>
     </>
   )
