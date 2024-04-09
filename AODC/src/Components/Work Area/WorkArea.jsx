@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const WorkArea = () => {
   return (
     <section className="jm-work-area-2 pb-60">
+        <div className='bluur'></div>
         <div className="container light-bg">
             <div className="row align-items-center">
                 <div className="col-xl-3">
@@ -15,7 +16,6 @@ const WorkArea = () => {
                         </div>
                     </div>
                 </div>
-                <img className='bigbluur' src='public/assets/img/Bluur/Bluur.png'></img>
                 <div className="col-xl-9">
                     <div className="jm-work-wrap-2 ml-40 mb-40">
                         <div className="row g-0">

@@ -7,7 +7,6 @@ const Counter = () => {
         <span>Realizacje</span>
             <h2>Firma AoDC zrealizowała</h2>
                 <span class="bg-watermark">AoDC</span>
-                <div className='bluur'></div>
                     <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
                        <div className="row justify-content-center width-100%">
                             <div className="#">
@@ -20,7 +19,7 @@ const Counter = () => {
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="140">
-                                                            <CountUp duration={8} end={94}/>
+                                                            <CountUp duration={4} end={94}/>
                                                         </span></h2>
                                                     <span className="subtitle">Serwerownie</span>
                                                 </div>
@@ -32,7 +31,7 @@ const Counter = () => {
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="250">
-                                                            <CountUp duration={8} end={73}/>
+                                                            <CountUp duration={4} end={73}/>
                                                         </span></h2>
                                                     <span className="subtitle">Serwisy</span>
                                                 </div>
@@ -44,7 +43,7 @@ const Counter = () => {
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
-                                                            <CountUp duration={8} end={98}/>
+                                                            <CountUp duration={4} end={98}/>
                                                         </span></h2>
                                                     <span className="subtitle">Koncepcje</span>
                                                 </div>
@@ -56,7 +55,7 @@ const Counter = () => {
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
-                                                            <CountUp duration={8} end={79}/>
+                                                            <CountUp duration={4} end={79}/>
                                                         </span></h2>
                                                     <span className="subtitle">Projekty</span>
                                                 </div>

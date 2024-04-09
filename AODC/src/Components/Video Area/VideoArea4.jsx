@@ -9,8 +9,7 @@ const VideoArea = () => {
         <div className="container-fluid p-0">
           <div className="homepage bg-default">
             <div className="jm-video-text">
-              <h1 className="title">Sztuka rozwiązań</h1>
-              <h2 className=''>Dla data center</h2>
+              <h1 className="title"></h1>
             </div>
           </div>
         </div>

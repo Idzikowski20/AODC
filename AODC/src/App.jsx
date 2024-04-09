@@ -22,6 +22,7 @@ import CompanyDetailsPage from "./Pages/CompanyDetailsPage"
 import PostJobPage from "./Pages/PostJobPage"
 import AddResumePage from "./Pages/AddResumePage"
 import { useEffect } from "react"
+import PreLoader from "./Components/PreLoader/PreLoader"
 
 function App() {
   const ScrollToTop = () => {
@@ -34,6 +35,8 @@ function App() {
     return null;
   };
   return (
+    <>
+    <PreLoader />
    <Router>
     <ScrollToTop/>
       <Routes>
@@ -61,6 +64,7 @@ function App() {
           <Route path="*" element={<ErrorPage/>}/>
       </Routes>
    </Router>
+   </>
   )
 }
 
