@@ -15,6 +15,7 @@ const PreLoader = () => {
         <div>
             <img src='assets/img/logo/logo.png'></img>
         </div>
+        <h1>Ładowanie</h1>
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
   )
