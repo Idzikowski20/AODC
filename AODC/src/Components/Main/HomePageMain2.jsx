@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner2 from '../Banner/Banner2'
+import Team from '../Team/Team'
 import WorkArea from '../Work Area/WorkArea'
 import VideoArea from '../Video Area/VideoArea'
 import SidePanel from '../../Components/Side Panel/SidePanel'
@@ -11,6 +12,7 @@ const HomePageMain2 = () => {
         <Banner2/>
         <Linkedin />
         <SidePanel/>
+        <Team/>
         <WorkArea/>
         <VideoArea/>
     </main>

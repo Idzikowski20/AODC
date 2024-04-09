@@ -1,5 +1,5 @@
 import { BrowserRouter as Router,Routes,Route,useLocation } from "react-router-dom"
-import HomePage1 from "./Pages/HomePage1"
+import HomePageCarrier from "./Pages/HomePageCarrier"
 import JobPage from "./Pages/JobPage"
 import CandidatePage from "./Pages/CandidatePage"
 import AboutPage from "./Pages/AboutPage"
@@ -12,7 +12,7 @@ import ErrorPage from "./Pages/ErrorPage"
 import ContactPage from "./Pages/ContactPage"
 import CandidateListPage from "./Pages/CandidateListPage"
 import CandidateDetailsPage from "./Pages/CandidateDetailsPage"
-import HomePage2 from "./Pages/HomePage2"
+import HomePage from "./Pages/HomePage"
 import JobListPage from "./Pages/JobListPage"
 import JobDetailsPage from "./Pages/JobDetailsPage"
 import JobCategoryPage from "./Pages/JobCategoryPage"
@@ -37,8 +37,8 @@ function App() {
    <Router>
     <ScrollToTop/>
       <Routes>
-          <Route path="/" element={<HomePage2/>}/>
-          <Route path="/kariera" element={<HomePage1/>}/>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/kariera" element={<HomePageCarrier/>}/>
           <Route path="/jobPage" element={<JobPage/>}/>
           <Route path="/jobListPage" element={<JobListPage/>}/>
           <Route path="/jobDetailsPage" element={<JobDetailsPage/>}/>

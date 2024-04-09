@@ -1756,17 +1756,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .linkedin-conteiner {
-  padding: 20px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
  
 .linkedin {
-  width: 1320px;
-  border: 1px solid #d32b50;
+  width: 100%;
   z-index: 1;
   position: relative;
 }
@@ -2870,6 +2867,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: var(--clr-theme-primary);
 }
 
+/* TEAM */
+
+/* TEAM */
+
 .jm-tab-link-1:hover span {
   border-color: var(--clr-theme-primary);
   -webkit-transition: all 0.3s linear 0s;
@@ -2960,8 +2961,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   align-items: center;
 }
 .jm-banner-area-2.jm-overlay {
-  position: relative;
-  z-index: 1;
+
 }
 
 .display-flex {
