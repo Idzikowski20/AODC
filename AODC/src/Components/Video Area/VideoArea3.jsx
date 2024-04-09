@@ -1,15 +1,18 @@
-import React from 'react'
-import VideoTab from './VideoTab'
-import Counter from './Counter'
-import VideoModalArea from './VideoModalArea'
+import React, { useContext } from 'react';
+import { JobContext } from '../../Context/JobContext';
+import VideoModal from '../Modal/VideoModal';
 
-const VideoArea2 = () => {
-  return (
-    <div>
-        <script src="https://static.elfsight.com/platform/platform.js"></script>
-        <div class="elfsight-app-b7232d43-1d78-44ab-8aa8-3e8a98642112"></div>
-    </div>
-  )
-}
+const VideoArea = () => {
+  const {handleOpenModal} = useContext(JobContext)
+    return (
+      <div className="jm-video-area">
+        <div className="container-fluid p-0">
+          <div className="jm-video-wrap bg-default">
+          </div>
+        </div>
+      </div>
+    );
+  };
+  
 
-export default VideoArea2
+export default VideoArea
