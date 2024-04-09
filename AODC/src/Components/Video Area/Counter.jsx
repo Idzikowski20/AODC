@@ -7,6 +7,7 @@ const Counter = () => {
         <span>Realizacje</span>
             <h2>Firma AoDC zrealizowała</h2>
                 <span class="bg-watermark">AoDC</span>
+                <div className='bluur'></div>
                     <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
                        <div className="row justify-content-center width-100%">
                             <div className="#">

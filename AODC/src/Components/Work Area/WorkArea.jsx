@@ -15,6 +15,7 @@ const WorkArea = () => {
                         </div>
                     </div>
                 </div>
+                <img className='bigbluur' src='public/assets/img/Bluur/Bluur.png'></img>
                 <div className="col-xl-9">
                     <div className="jm-work-wrap-2 ml-40 mb-40">
                         <div className="row g-0">

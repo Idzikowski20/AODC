@@ -1770,7 +1770,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .light-bg {
-  position: relative;
   isolation: isolate;
   overflow: hidden;
 }
@@ -2045,6 +2044,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .jm-header-area-2.header-sticky.sticky {
+  opacity: 0.85;
   position: fixed;
   top: 0;
   background-color: #031229;
@@ -2965,7 +2965,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .bluur {
   width: 30vw;
   height: 60vh;
-  opacity: .77;
+  opacity: .55;
   background-image: radial-gradient(circle farthest-side at 0%, #0055f1, #0000 51%);
   position: absolute;
   /* top: -20%; */
@@ -5609,6 +5609,40 @@ blog sidebar area
 12. video
 ******************************************************* 
 *************************************************************** */
+.homepage {
+  height: 900px;
+  background: center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.homepage::before {
+  --tw-border-opacity: 1;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.75;
+}
+@media (max-width: 767px) {
+  .homepage {
+    min-height: 500px;
+  }
+}
+
+.homepage{
+  background-image: url(../img/video/video-4.jpg);
+}
+
+
 .jm-video-wrap {
   height: 400px;
   background: center/cover no-repeat fixed;
@@ -5643,6 +5677,17 @@ blog sidebar area
   z-index: 1;
 }
 
+.bigbluur {
+  width: 70vw;
+  height: 60vh;
+  opacity: .77;
+  position: absolute;
+  /* top: -20%; */
+  bottom: auto;
+  left: 30%;
+  right: auto;
+}
+
 .jm-video-text .title {
   font-size: 200px;
   color: #fff;
@@ -5656,6 +5701,20 @@ blog sidebar area
     font-size: 160px;
   }
 }
+
+@media only screen and (min-width: 390px) and (max-width: 991px) {
+  .bigbluur {
+    width: 90vw;
+    height: 160vh;
+    opacity: .77;
+    position: absolute;
+    /* top: -20%; */
+    bottom: auto;
+    left: 0%;
+    right: auto;
+  }
+}
+
 @media (max-width: 767px) {
   .jm-video-text .title {
     font-size: 80px;
@@ -11142,10 +11201,10 @@ blog sidebar area
   width: 35px;
   height: 35px;
   line-height: 35px;
-  background: var(--clr-common-white);
+  background: #d32b50;
   text-align: center;
   border-radius: 50%;
-  color: var(--clr-body-text);
+  color: #fff;
   font-size: 15px;
   margin-right: 10px;
 }

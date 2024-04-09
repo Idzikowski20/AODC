@@ -5,15 +5,15 @@ import WorkArea from '../Work Area/WorkArea'
 import VideoArea from '../Video Area/VideoArea'
 import VideoArea2 from '../Video Area/VideoArea2'
 import VideoArea3 from '../Video Area/VideoArea3'
+import VideoArea4 from '../Video Area/VideoArea4'
 import SidePanel from '../../Components/Side Panel/SidePanel'
 import Linkedin from '../../Components/Linkedin/Linkedin'
 
 const HomePageMain2 = () => {
   return (
     <main className='homepage-2-main'>
-        <Banner2/>
+        <VideoArea4/>
         <Linkedin />
-        <VideoArea3/>
         <VideoArea2 />
         <SidePanel/>
         <Team/>
