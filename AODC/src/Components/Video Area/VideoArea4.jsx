@@ -10,7 +10,7 @@ const VideoArea = () => {
           <div className="homepage bg-default">
             <div className="jm-video-text">
               <h1 className="title">Sztuka rozwiązań</h1>
-              <h2 className='title'>Dla data center</h2>
+              <h2 className=''>Dla data center</h2>
             </div>
           </div>
         </div>

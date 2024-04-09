@@ -5609,6 +5609,15 @@ blog sidebar area
 12. video
 ******************************************************* 
 *************************************************************** */
+.homepage-container {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .homepage {
   height: 900px;
   background: center/cover no-repeat fixed;
@@ -5686,6 +5695,10 @@ blog sidebar area
   bottom: auto;
   left: 30%;
   right: auto;
+}
+
+.jm-video-text {
+  text-align: center;
 }
 
 .jm-video-text .title {
