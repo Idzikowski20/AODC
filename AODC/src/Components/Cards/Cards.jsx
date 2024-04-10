@@ -5,7 +5,7 @@ const Cards = () => {
   return (
     <section>
       <div className="recipe-container">
-        <h1>The Dessert Recipes</h1>
+        <h1>Czym się zajmujemy</h1>
         <div className="swiper">
           <div className="swiper-wrapper">
             <div className="swiper-slide post">
