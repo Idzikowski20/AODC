@@ -57,6 +57,8 @@ body {
 }
 
 /* LOADER */
+
+
 .site{
   position: absolute;
   top: 50%;
@@ -67,12 +69,13 @@ body {
   text-transform: uppercase;
 }
 .loader-wrapper {
+  opacity: 0.5;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #252525;
+  background-color: #031229;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -1838,6 +1841,21 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   z-index: 1;
   position: relative;
+}
+
+@media only screen and (min-width: 390px) and (max-width: 400px) {
+  .linkedin-conteiner {
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkedin {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
 }
 
 .light-bg {
@@ -5676,6 +5694,125 @@ blog sidebar area
   margin-bottom: 0;
 }
 
+/* COOKIES */
+@media only screen and (min-width: 380px) and (max-width: 767px) {
+  .cookie-message {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    border-radius: 10px;
+    padding: 15px 0;
+    background: #f7f8fb;
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 0 16px 2px rgba(221, 220, 220, 0.30), 0 10px 10px 2px rgba(107, 106, 106, 0.20);
+    font-size: 15px;
+    line-height: 40px;
+    border-top: 1px solid #e4e4e4;
+    position: fixed;
+    z-index: 100;
+    bottom: 5%;
+    right: 2%;
+    margin: auto;
+    height: 200px;
+    max-width: 767px;
+    min-width: 390px;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cookie-message img {
+    height: 50px;
+    width: 50px;
+    margin: 0 15px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  
+  .close-container {
+  
+  }
+  
+  .close {
+    position: relative;
+    bottom: 0;
+    top: 0;
+    margin: 5px;
+    padding: 5px;
+  color: #000000;
+  outline: medium none;
+  }  
+}
+/* /////////////////////////////// */
+
+.cookie-message {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-radius: 10px;
+  padding: 15px 0;
+  background: #f7f8fb;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 0 16px 2px rgba(221, 220, 220, 0.30), 0 10px 10px 2px rgba(107, 106, 106, 0.20);
+  font-size: 15px;
+  line-height: 40px;
+  border-top: 1px solid #e4e4e4;
+  position: fixed;
+  z-index: 50;
+  bottom: 5%;
+  right: 2%;
+  margin: auto;
+  max-width: 800px;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cookie-message img {
+  height: 50px;
+  width: 50px;
+  margin: 0 15px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.close-container {
+
+}
+
+.close {
+  position: relative;
+  bottom: 0;
+  top: 0;
+  margin: 5px;
+  padding: 5px;
+color: #000000;
+outline: medium none;
+}
+
+.cookie-message span {
+  color: #000000;
+  display: inline-block;
+  line-height: 1.5;
+  padding-right: 16px;
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+.cookie-message a.close {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border: none;
+  font-size: 24px;
+  padding: 0 20px 0 16px;
+  position: relative;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  color: #919191;
+  transition: color 0.2s;
+}
+.cookie-message a.close:hover { color: #795548; }
+.cookie-message a {
+  display: inline-block;
+  color: red;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+/* COOKIES */
+
 /*
 ************
 *************************
@@ -5764,7 +5901,8 @@ blog sidebar area
   height: 60vh;
   opacity: .77;
   position: absolute;
-  top: 770px;
+  top: 850px;
+  left: 20%;
   bottom: auto;
   right: auto;
 }
@@ -5801,7 +5939,7 @@ blog sidebar area
 
   .bigbluur2 {
     width: 90vw;
-    height: 160vh;
+    height: 100vh;
     opacity: .77;
     position: absolute;
     /* top: -20%; */
@@ -5824,6 +5962,7 @@ blog sidebar area
 
 @supports (text-stroke: 2px black) or (-webkit-text-stroke: 2px black) {
   .jm-video-text .title {
+    opacity: .15;
     color: #031229;
     -webkit-text-stroke: 5px white;
     text-shadow: none;

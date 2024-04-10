@@ -1,8 +1,14 @@
+.preloader-logo {
+  width: 350px;
+  height: 150px;
+}
+
 .preloader {
+    opacity: 0.96;
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: #01050c;
+    background: #031229;
     color: #fff;
     position: fixed;
     bottom: 0;
@@ -16,6 +22,7 @@
 }
 
 .preloader .texts-container {
+    height: 45px;
     text-align: center;
     width: 600px;
     display: flex;

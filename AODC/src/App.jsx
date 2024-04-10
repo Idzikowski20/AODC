@@ -23,8 +23,12 @@ import PostJobPage from "./Pages/PostJobPage"
 import AddResumePage from "./Pages/AddResumePage"
 import { useEffect } from "react"
 import PreLoader from "./Components/PreLoader/PreLoader"
+import CookieConsent from "./Components/CookieConsent/CookieConsent"
+import { useCookies } from 'react-cookie';
 
 function App() {
+  const [cookies] = useCookies(["cookieConsent"]);
+
   const ScrollToTop = () => {
     const { pathname } = useLocation();
   
@@ -37,6 +41,7 @@ function App() {
   return (
     <>
     <PreLoader />
+    {!cookies.cookieConsent && <CookieConsent />}
    <Router>
     <ScrollToTop/>
       <Routes>

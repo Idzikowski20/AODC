@@ -13,9 +13,11 @@ const PreLoader = () => {
   return (
     <div className='preloader'>
         <div>
-            <img src='assets/img/logo/logo.png'></img>
+            <img className='preloader-logo' src='assets/img/logo/logodark.png'></img>
         </div>
-        <h1>Ładowanie</h1>
+        <div className='texts-container'>
+        <span>Witaj!👋</span>
+        </div>
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
   )
