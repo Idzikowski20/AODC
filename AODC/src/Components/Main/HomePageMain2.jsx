@@ -7,6 +7,7 @@ import VideoArea2 from '../Video Area/VideoArea2'
 import VideoArea4 from '../Video Area/VideoArea4'
 import SidePanel from '../../Components/Side Panel/SidePanel'
 import Linkedin from '../../Components/Linkedin/Linkedin'
+import Cards from '../../Components/Cards/Cards'
 
 const HomePageMain2 = () => {
   return (
@@ -14,6 +15,7 @@ const HomePageMain2 = () => {
         <VideoArea4/>
         <Linkedin />
         <VideoArea2 />
+        <Cards />
         <SidePanel/>
         <Team/>
         <WorkArea/>
