@@ -12,12 +12,9 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: radial-gradient(
     circle,
-    rgba(115, 12, 50, 1) 5%,
+    rgb(88, 23, 39) 5%,
     #031229 60%
   );
   min-height: 100vh;

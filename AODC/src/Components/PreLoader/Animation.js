@@ -6,13 +6,13 @@ const tl = gsap.timeline();
 // Preloader Animation
 export const preLoaderAnim = () => {
   tl.to("body", {
-    duration: 0.1,
-    css: { overflowY: "hidden" },
+    duration: 0.05,
+    css: { },
     ease: "power3.inOut",
   })
     .to(".landing", {
       duration: 0.05,
-      css: { overflowY: "hidden", height: "90vh" },
+      css: {  height: "90vh" },
     })
     .to(".texts-container", {
       duration: 0,
@@ -36,13 +36,12 @@ export const preLoaderAnim = () => {
     })
 
     .to(".landing", {
-      duration: 0.05,
-      css: { overflowY: "hidden", height: "unset" },
+      duration: 0.1,
+      css: {   height: "unset" },
     })
     .to("body", {
       duration: 0.1,
-      css: { overflowY: "scroll" },
-      ease: "power3.inOut",
+      css: {  },
     })
     .from(".landing__top .sub", {
       duration: 1,
@@ -104,7 +103,7 @@ export const openMenu = () => {
   const tl = gsap.timeline();
   tl.to("body", {
     duration: 0.1,
-    css: { overflowY: "hidden" },
+    css: { },
     ease: "power3.out",
   })
     .to(".hamburger-menu", {
@@ -158,7 +157,7 @@ export const closeMenu = () => {
   const tl = gsap.timeline();
   tl.to("body", {
     duration: 0.05,
-    css: { overflowY: "scroll" },
+    css: { },
     ease: "power3.inOut",
   })
     .to([".nav-primary", ".nav-secondary"], {

@@ -7,7 +7,6 @@ const Linkedin = () => {
     <span>Sprawdź</span>
     <h2>Aktualności</h2>
     <p>Zapraszamy do zapoznania się z naszym Linkedinem</p>
-    <img className='bigbluur2' src='public/assets/img/Bluur/Bluur.png'></img>
     <div className='bluur'></div>
     <span class="bg-watermark">News</span>
     <div className='linkedin-conteiner'>

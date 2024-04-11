@@ -1,17 +1,17 @@
 import React from 'react'
 import SearchForm from '../Components/Search Form/SearchForm'
 import SidePanel from '../Components/Side Panel/SidePanel'
-import Header from '../Components/Header/Header'
+import Header2 from '../Components/Header/Header2'
 import HomeMain1 from '../Components/Main/HomeMain1'
-import Footer from '../Components/Footer/Footer'
+import Footer2 from '../Components/Footer/Footer2'
 
 const HomePage1 = () => {
   return (
     <>
       <SidePanel/>
-      <Header/>
+      <Header2/>
       <HomeMain1/>
-      <Footer/>
+      <Footer2/>
     </>
   )
 }
