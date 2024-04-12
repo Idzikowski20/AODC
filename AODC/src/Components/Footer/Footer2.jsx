@@ -20,7 +20,7 @@ const Footer2 = () => {
                         </div>
                         <div className="col-xl-5 col-lg-5 col-md-12 order-3 order-lg-2">
                             <div className="jm-footer-copyright-text-3 text-center">
-                                <p>&copy; Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez <Link to="#" target="_blank">Patryk Idzikowski</Link>.</p>
+                                <p>&copy; Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez <Link to="https://github.com/Idzikowski20" target="_blank">Patryk Idzikowski</Link>.</p>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6  col-sm-5 order-2 order-lg-3">

@@ -10,6 +10,19 @@ body {
   line-height: 26px;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #031229;
+  background: radial-gradient(
+    circle,
+    rgb(109, 18, 51) 1%,
+    #031229 60%
+  );
+  min-height: 100vh;
+}
+
 /* LOADER */
 
 

@@ -8,14 +8,16 @@ import VideoArea4 from '../Video Area/VideoArea4'
 import SidePanel from '../../Components/Side Panel/SidePanel'
 import Linkedin from '../../Components/Linkedin/Linkedin'
 import Cards from '../../Components/Cards/Cards'
+import AboutUs from '../AboutUs/AboutUs'
 
 const HomePageMain2 = () => {
   return (
     <main className='homepage-2-main'>
         <VideoArea4/>
         <Linkedin />
-        <VideoArea2 />
+        <AboutUs />
         <Cards />
+        <VideoArea2 />
         <SidePanel/>
         <Team/>
         <WorkArea/>

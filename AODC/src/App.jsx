@@ -10,6 +10,7 @@ import { useEffect } from "react"
 import PreLoader from "./Components/PreLoader/PreLoader"
 import CookieConsent from "./Components/CookieConsent/CookieConsent"
 import { useCookies } from 'react-cookie';
+import Realizations from "./Pages/Realizations"
 
 function App() {
   const [cookies] = useCookies(["cookieConsent"]);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/jobListPage" element={<JobListPage/>}/>
           <Route path="/aboutPage" element={<AboutPage/>}/>
           <Route path="/contactPage" element={<ContactPage/>}/>
+          <Route path="/Realizacje" element={<Realizations/>}/>
           <Route path="*" element={<ErrorPage/>}/>
       </Routes>
    </Router>

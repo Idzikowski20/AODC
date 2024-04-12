@@ -30,13 +30,7 @@ const Header2 = () => {
                                         <Link to="/kariera">Kariera</Link>
                                     </li>
                                     <li className="menu-has-children">
-                                        <Link to="#">Realizacje</Link>
-                                        <ul className="sub-menu">
-                                            <li><Link to="#">Realizacje1</Link></li>
-                                            <li><Link to="#">Realizacje2</Link></li>
-                                            <li><Link to="#">Realizacje3</Link></li>
-                                            <li><Link to="#">Realizacje4</Link></li>
-                                        </ul>
+                                        <Link to="/Realizacje">Realizacje</Link>
                                     </li>
                                     <li className="menu-has-children">
                                         <Link to="#">Kontakt</Link>
