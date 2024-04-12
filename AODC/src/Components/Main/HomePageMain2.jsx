@@ -15,8 +15,8 @@ const HomePageMain2 = () => {
     <main className='homepage-2-main'>
         <VideoArea4/>
         <Linkedin />
-        <AboutUs />
         <Cards />
+        <AboutUs />
         <VideoArea2 />
         <SidePanel/>
         <Team/>

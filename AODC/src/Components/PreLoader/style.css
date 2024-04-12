@@ -4,9 +4,8 @@
 }
 
 .preloader {
-    opacity: 0.99;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: #031229;
     color: #fff;

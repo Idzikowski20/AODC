@@ -14,11 +14,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #031229;
   background: radial-gradient(
     circle,
-    rgb(109, 18, 51) 1%,
-    #031229 60%
+    rgb(109, 28, 28) 0.5%,
+    #031229 80%
   );
   min-height: 100vh;
 }
@@ -3552,7 +3551,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .side-info {
   width: 100%;
   max-width: 400px;
-  background-color: #0C1308;
+  background-color: #0c1308b0;
   box-shadow: 0 13px 29px rgba(4, 0, 23, 0.1);
   height: 100%;
   position: fixed;
@@ -5678,7 +5677,7 @@ blog sidebar area
     bottom: 5%;
     right: 2%;
     margin: auto;
-    height: 200px;
+    height: 130px;
     max-width: 767px;
     min-width: 390px;
     display: -ms-flexbox;
@@ -5738,7 +5737,9 @@ blog sidebar area
 }
 
 .close-container {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close {
@@ -11706,7 +11707,6 @@ a.meanmenu-reveal {
 }
 
 .mean-container .mean-nav {
-	background: #0c1308 none repeat scroll 0 0;
 	float: left;
 	margin-top: 15px;
 	width: 100%;

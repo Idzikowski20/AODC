@@ -5,9 +5,9 @@ import VideoModalArea from './VideoModalArea'
 
 const VideoArea2 = () => {
   return (
-    <div>
+    <section>
         <Counter/>
-    </div>
+    </section>
   )
 }
 
