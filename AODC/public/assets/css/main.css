@@ -11,15 +11,24 @@ body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(
-    circle,
-    rgb(109, 28, 28) 0.5%,
-    #031229 80%
-  );
-  min-height: 100vh;
+	background: linear-gradient(-45deg, #031229,#051a3a,#02204e,#021f4b,#031229);
+	background-size: 1000% 1000%;
+	animation: gradient 25s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 25%;
+	}
+  25% {
+    background-position: 25% 50%;
+  }
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* LOADER */
@@ -155,7 +164,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
   color: #fff;
   margin-top: 0px;
   line-height: 1.4;
@@ -1811,7 +1819,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 @media only screen and (min-width: 390px) and (max-width: 400px) {
   .linkedin-conteiner {
-    width: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6205,6 +6212,8 @@ outline: medium none;
 }
 @media (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .jm-video-counter-3 {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 }
@@ -6220,7 +6229,6 @@ outline: medium none;
 
 .jm-video-counter-item-3 {
   flex: 0 0 25%;
-  max-width: 25%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .jm-video-counter-item-3 {
@@ -6241,7 +6249,6 @@ outline: medium none;
 @media (max-width: 767px) {
   .jm-video-counter-item-3 {
     flex: 0 0 50%;
-    max-width: 50%;
     text-align: center;
     margin-bottom: 30px;
   }

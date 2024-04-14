@@ -9,9 +9,6 @@ $main-blue: #0076bd !default;
 $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 
 /* This pen */
-body {
-}
-
 a, a:hover {
 	text-decoration: none;
 	transition: color 0.3s ease-in-out;
@@ -28,31 +25,30 @@ a, a:hover {
   font-size: 18px;
 }
 
+.title-before {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-read-more {
+  font-weight: 500;
+  color: #bd150b;
+}
+
 .postcard {
-  transition: transform 500ms;
+  max-height: 350px;
+  z-index: 1;
+  transition: max-height 500ms ease-in-out;  
   width: 100%;
-}
 
-.postcard:hover .title-after{
-  width: 100%;
-}
-
-
-.postcard .title-after {
-  display: none;
-}
-
-.postcard:hover .title-before {
-  display: none
-}
-
-.postcard__text {
-  text-align: center;
-}
-
-.postcard:hover .title-after{
-  display:block;
-  
+  &:hover {
+    .card-read-more {
+      opacity: 0;
+    }
+    box-shadow: 0 0 8px #d3d3d3;    
+    cursor: pointer;
+    max-height: 1000px;
+  }
 }
 
 /* Cards */
@@ -164,6 +160,29 @@ a, a:hover {
 
   &:hover .postcard__bar {
     width: 100px;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 750px){
+
+  .title-before {
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .postcard {
+    max-height: 650px;
+    z-index: 1;
+    transition: max-height 500ms ease-in-out;  
+    width: 100%;
+  
+    &:hover {
+      .card-read-more {
+        opacity: 0;
+      }
+      box-shadow: 0 0 8px #d3d3d3;    
+      cursor: pointer;
+      max-height: 3000px;
+    }
   }
 }
 

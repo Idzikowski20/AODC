@@ -4,8 +4,8 @@ import CountUp from 'react-countup'
 const Counter = () => {
   return (
     <section>
-        <span>Realizacje</span>
-            <h2>ZREALIZOWALIŚMY</h2>
+        <span>Wykonane</span>
+            <h2>REALIZACJE</h2>
                 <span class="bg-watermark">AoDC</span>
                     <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
                        <div className="row justify-content-center width-100%">

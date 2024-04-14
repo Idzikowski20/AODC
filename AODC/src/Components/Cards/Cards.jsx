@@ -18,14 +18,14 @@ const Cards = () => {
           <div className="postcard__bar"></div>
           <div className="postcard__preview-txt">
              <div className='title-before'>
-              Właściwie zaprojektowane Data Center to połowa sukcesu na drodze, do powodzenia całej inwestycji. Wykonujemy kompleksowe projekty zaczynając od opracowania razem z inwestorem koncepcji gdzie określamy wszystkie parametry Data Center.
+              Właściwie zaprojektowane Data Center to połowa sukcesu na drodze, do powodzenia całej inwestycji. Wykonujemy kompleksowe projekty zaczynając od opracowania razem z inwestorem koncepcji gdzie określamy wszystkie parametry Data Center. <span className='card-read-more'>Czytaj dalej..</span>
               </div>
               <div className='title-after'>
               Właściwie zaprojektowane Data Center to połowa sukcesu na drodze, do powodzenia całej inwestycji. Wykonujemy kompleksowe projekty, zaczynając od opracowania razem z inwestorem koncepcji gdzie określamy wszystkie parametry Data Center min. takie jak kwestie architektoniczne, aranżacyjne, poziomy niezawodności, dobieramy w sposób zoptymalizowany parametry oraz technologię chłodzenia, zasilania, ilość szaf serwerowych, zapotrzebowanie na moc elektryczną oraz moc chłodniczą, przy założeniu minimalizacji zużycia prądu (energoefektywność PUE).
 
-Po określeniu i zaaprobowaniu przez inwestora powyższych parametrów rozpoczynamy fazę projektowania (projekty budowlane i wykonawcze).
+              Po określeniu i zaaprobowaniu przez inwestora powyższych parametrów rozpoczynamy fazę projektowania (projekty budowlane i wykonawcze).
 
-Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytorycznych, posiadający certyfikaty potwierdzające wiedzę ekspercką z zakresu projektowania Data Center (m.in. ATD wydany przez Uptime Institute, TIA).
+              Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytorycznych, posiadający certyfikaty potwierdzające wiedzę ekspercką z zakresu projektowania Data Center (m.in. ATD wydany przez Uptime Institute, TIA).
               </div>
               </div>
         </div>
@@ -39,7 +39,7 @@ Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytoryczn
           <div className="postcard__bar"></div>
           <div className="postcard__preview-txt">
           <div className='title-before'>
-             Zmieniające się potrzeby w zakresie wdrażania obiektów typu Data Center wymagają elastyczności w prowadzeniu procesu inwestycyjnego przy jednoczesnym zachowaniu wysokich standardów realizacji.
+             Zmieniające się potrzeby w zakresie wdrażania obiektów typu Data Center wymagają elastyczności w prowadzeniu procesu inwestycyjnego przy jednoczesnym zachowaniu wysokich standardów realizacji. <span className='card-read-more'>Czytaj dalej..</span>
               </div>
               <div className='title-after'>
               Zmieniające się potrzeby w zakresie wdrażania obiektów typu Data Center wymagają elastyczności w prowadzeniu procesu inwestycyjnego przy jednoczesnym zachowaniu wysokich standardów realizacji.
@@ -71,7 +71,7 @@ Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytoryczn
           <div className="postcard__bar"></div>
           <div className="postcard__preview-txt">
           <div className='title-before'>
-             Zarządzanie obiektami typu Data Center, to zapewnienie bezpieczeństwa zasobom krytycznym oraz konieczność posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii.
+             Zarządzanie obiektami typu Data Center, to zapewnienie bezpieczeństwa zasobom krytycznym oraz konieczność posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii. <span className='card-read-more'>Czytaj dalej..</span>
               </div>
               <div className='title-after'>
               Zarządzanie obiektami typu Data Center rozumiemy jako zapewnienie bezpieczeństwa zasobom krytycznym z koniecznością posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii.
@@ -94,7 +94,7 @@ Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytoryczn
           <div className="postcard__bar"></div>
           <div className="postcard__preview-txt">
           <div className='title-before'>
-             W dzisiejszych czasach serwerownie stają się technicznym sercem i mózgiem każdej organizacji. Każda przerwa w ich działaniu powoduje, iż firmy lub instytucje tracą setki tysięcy złotych związane z brakiem dostępu do poczty, stron www, czy też kluczowych danych i procesów, a awarie i zdarzenia krytyczne z tym związane, mogą doprowadzić do nieodwracalnych uszkodzeń danych na serwerach.
+             W dzisiejszych czasach serwerownie stają się technicznym sercem i mózgiem każdej organizacji. Każda przerwa w ich działaniu powoduje, iż firmy lub instytucje tracą setki tysięcy złotych związane z brakiem dostępu do poczty, stron www, czy też kluczowych danych i procesów, a awarie i zdarzenia krytyczne z tym związane, mogą doprowadzić do nieodwracalnych uszkodzeń danych na serwerach. <span className='card-read-more'>Czytaj dalej..</span>
               </div>
               <div className='title-after'>
               W dzisiejszych czasach serwerownie stają się technicznym sercem i mózgiem każdej organizacji. Każda przerwa w ich działaniu powoduje, iż firmy lub instytucje tracą setki tysięcy złotych związane z brakiem dostępu do poczty, stron www czy też kluczowych danych a awarie które mogą wystąpić mogą doprowadzić do nieodwracalnych uszkodzeń danych na serwerach .
@@ -135,7 +135,7 @@ Dysponujemy zespołem projektantów o bardzo wysokich kwalifikacjach merytoryczn
           <div className="postcard__bar"></div>
           <div className="postcard__preview-txt">
           <div className='title-before'>
-             Kluczem do sukcesu w budowaniu nowego obiektu DATA CENTER, a także w procesie modernizacji istniejącej już u Klienta infrastruktury jest optymalizacja obiektów/obszarów Data Center pod kątem zużycia energii, potrzebnego minimalnego miejsca, aranżacji wymaganej przestrzeni oraz efektywnego wykorzystania systemów klimatyzacji.
+             Kluczem do sukcesu w budowaniu nowego obiektu DATA CENTER, a także w procesie modernizacji istniejącej już u Klienta infrastruktury jest optymalizacja obiektów/obszarów Data Center pod kątem zużycia energii, potrzebnego minimalnego miejsca, aranżacji wymaganej przestrzeni oraz efektywnego wykorzystania systemów klimatyzacji. <span className='card-read-more'>Czytaj dalej..</span>
               </div>
               <div className='title-after'>
               AODC zatrudnia w swoich szeregach ekspertów z różnych kluczowych branż i obszarów będących  kluczem do sukcesu w budowaniu nowego obiektu DATA CENTER ale przede wszystkim modernizacji istniejącej już u Klienta infrastruktury
