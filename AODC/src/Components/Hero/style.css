@@ -30,13 +30,12 @@
 :root {
   font-family: Inter, sans-serif;
 
-  --stripe-color: #1e035c;
+  --stripe-color: #2c0a7a;
   --bg: var(--stripe-color);
   --maincolor: var(--bg);
 }
 
 body {
-  width: 100cqw;
   min-height: 100cqh;
   display: flex;
   place-content: center;

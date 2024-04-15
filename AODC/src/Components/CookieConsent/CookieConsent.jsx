@@ -8,13 +8,13 @@ const CookieConsent = () => {
   };
   
   return (
-    <div class="cookie-message">
+    <div className="cookie-message">
       <div className='display-flex'>
       <img src="https://img.icons8.com/plasticine/100/000000/cookie.png"/>
     <span>Witamy cie pierwszy raz na naszej stronie! 👋 Używamy plików cookie, aby zapewnić Ci najlepszą możliwą obsługę. Nie udostępnimy żadnych Twoich danych. Więcej informacji na temat naszych plików cookie znajdziesz  <a href="#">Tutaj</a>.</span>
       </div>
     <div className='close-container'>
-    <button className='close' href='#' onClick={giveCookieConsent}>Zamknij</button>
+    <button className='close' onClick={giveCookieConsent}>Zamknij</button>
     </div>
     </div>
   )

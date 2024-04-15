@@ -8,6 +8,7 @@ import Hero from '../Hero/Hero'
 import SidePanel from '../../Components/Side Panel/SidePanel'
 import Linkedin from '../../Components/Linkedin/Linkedin'
 import Cards from '../../Components/Cards/Cards'
+import ContactForm from '../../Components/ContactForm/ContactForm'
 import AboutUs from '../AboutUs/AboutUs'
 
 const HomePageMain2 = () => {
@@ -22,6 +23,7 @@ const HomePageMain2 = () => {
         <WorkArea/>
         <Team/>
         <VideoArea/>
+        <ContactForm />
 
     </main>
   )

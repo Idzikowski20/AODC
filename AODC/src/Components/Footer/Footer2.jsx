@@ -25,10 +25,7 @@ const Footer2 = () => {
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6  col-sm-5 order-2 order-lg-3">
                             <div className="jm-footer-bottom-social-3 text-sm-end text-center mb-3 mb-sm-2 mb-lg-0">
-                                <Link to="#"><i className="fab fa-facebook-f"></i></Link>
-                                <Link to="#"><i className="fab fa-pinterest-p"></i></Link>
-                                <Link to="#"><i className="fab fa-twitter"></i></Link>
-                                <Link to="#"><i className="fab fa-instagram"></i></Link>
+                                <Link to="https://pl.linkedin.com/company/aodc"><i className="fab fa-instagram"></i></Link>
                             </div>
                         </div>
                     </div>

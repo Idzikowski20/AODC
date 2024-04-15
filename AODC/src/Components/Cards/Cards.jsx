@@ -6,16 +6,14 @@ const Cards = () => {
     <>
     <section className="dark">
   <h2>CZYM SIĘ ZAJMUJEMY</h2>
-  <span class="bg-watermark">TASK</span>
     <div className="container py-4">
-  
+      <div className='bluur2'></div>
       <article className="postcard dark blue">
         <a className="postcard__img_link" href="#">
           <img className="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title blue"><a href="#">Projektowanie</a></h1>
-          <div className="postcard__bar"></div>
+          <h1 className="postcard__title blue"><a href="#">Projektowanie 💻</a></h1>
           <div className="postcard__preview-txt">
              <div className='title-before'>
               Właściwie zaprojektowane Data Center to połowa sukcesu na drodze, do powodzenia całej inwestycji. Wykonujemy kompleksowe projekty zaczynając od opracowania razem z inwestorem koncepcji gdzie określamy wszystkie parametry Data Center. <span className='card-read-more'>Czytaj dalej..</span>
@@ -35,8 +33,7 @@ const Cards = () => {
           <img className="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title red"><a href="#">Wdrażanie</a></h1>
-          <div className="postcard__bar"></div>
+          <h1 className="postcard__title red"><a href="#">Wdrażanie 🔗</a></h1>
           <div className="postcard__preview-txt">
           <div className='title-before'>
              Zmieniające się potrzeby w zakresie wdrażania obiektów typu Data Center wymagają elastyczności w prowadzeniu procesu inwestycyjnego przy jednoczesnym zachowaniu wysokich standardów realizacji. <span className='card-read-more'>Czytaj dalej..</span>
@@ -62,13 +59,13 @@ const Cards = () => {
               </div>
         </div>
       </article>
+      <div className='bluur2'></div>
       <article className="postcard dark green">
         <a className="postcard__img_link" href="#">
           <img className="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title green"><a href="#">Serwis</a></h1>
-          <div className="postcard__bar"></div>
+          <h1 className="postcard__title green"><a href="#">Serwis 🛠 </a></h1>
           <div className="postcard__preview-txt">
           <div className='title-before'>
              Zarządzanie obiektami typu Data Center, to zapewnienie bezpieczeństwa zasobom krytycznym oraz konieczność posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii. <span className='card-read-more'>Czytaj dalej..</span>
@@ -90,8 +87,7 @@ const Cards = () => {
           <img className="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title yellow"><a href="#">Audyt</a></h1>
-          <div className="postcard__bar"></div>
+          <h1 className="postcard__title yellow"><a href="#">Audyt 📝</a></h1>
           <div className="postcard__preview-txt">
           <div className='title-before'>
              W dzisiejszych czasach serwerownie stają się technicznym sercem i mózgiem każdej organizacji. Każda przerwa w ich działaniu powoduje, iż firmy lub instytucje tracą setki tysięcy złotych związane z brakiem dostępu do poczty, stron www, czy też kluczowych danych i procesów, a awarie i zdarzenia krytyczne z tym związane, mogą doprowadzić do nieodwracalnych uszkodzeń danych na serwerach. <span className='card-read-more'>Czytaj dalej..</span>
@@ -131,8 +127,7 @@ const Cards = () => {
           <img className="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title blue"><a href="#">Optymalizacja</a></h1>
-          <div className="postcard__bar"></div>
+          <h1 className="postcard__title blue"><a href="#">Optymalizacja 🔋</a></h1>
           <div className="postcard__preview-txt">
           <div className='title-before'>
              Kluczem do sukcesu w budowaniu nowego obiektu DATA CENTER, a także w procesie modernizacji istniejącej już u Klienta infrastruktury jest optymalizacja obiektów/obszarów Data Center pod kątem zużycia energii, potrzebnego minimalnego miejsca, aranżacji wymaganej przestrzeni oraz efektywnego wykorzystania systemów klimatyzacji. <span className='card-read-more'>Czytaj dalej..</span>
@@ -149,6 +144,7 @@ const Cards = () => {
               </div>
         </div>
       </article>
+      <div className='bluur2'></div>
     </div>
   </section>
   </>
