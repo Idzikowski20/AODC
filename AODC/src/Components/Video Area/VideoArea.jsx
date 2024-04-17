@@ -14,7 +14,7 @@ const VideoArea = () => {
               </div>
             </div>
             <div className="jm-video-text">
-              <h2 className="title">AoDC</h2>
+              <h2 className="title">Prezentacja</h2>
             </div>
           </div>
         </div>

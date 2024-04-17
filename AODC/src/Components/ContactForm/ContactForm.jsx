@@ -41,8 +41,15 @@ export default function BasicForm() {
 
 
   return (
-<section class="formcarry-container">
-  <form action="https://formcarry.com/s/IMcEpQS-Erb" method="POST" enctype="multipart/form-data">
+<section>
+<span>Masz sprawę?</span>
+  <h2>Skontaktuj się</h2>
+  <div className='formcarry-container'>
+    <div>
+      <img className='contact-img' src='assets/img/banner/banner-5.png' />
+    </div>
+    <div>
+    <form action="https://formcarry.com/s/IMcEpQS-Erb" method="POST" enctype="multipart/form-data">
     
     <div class="formcarry-block">
       <label for="fc-generated-1-name">Imię i Nazwisko</label>
@@ -50,20 +57,22 @@ export default function BasicForm() {
     </div>
   	
     <div class="formcarry-block">
-      <label for="fc-generated-1-email">Twój Adres E-mail</label>
+      <label for="fc-generated-1-email">Twój adres E-mail</label>
       <input type="email" name="email" id="fc-generated-1-email" placeholder="twoj-email@gmail.com" />
     </div>
   	
     <div class="formcarry-block">
       <label for="fc-generated-1-message">Wiadomość</label>
-      <textarea name="text" name="message" id="fc-generated-1-message" placeholder="Wpisz tutaj wiadomość..."></textarea>
+      <textarea type="text" name="message" id="fc-generated-1-message" placeholder="Wpisz tutaj wiadomość..."></textarea>
     </div>
   	
     <div class="formcarry-block">  
-      <button type="submit"></button>
+      <button type="submit">Wyślij</button>
     </div>
   
   </form>
+    </div>
+  </div>
 </section>
   )
 }
