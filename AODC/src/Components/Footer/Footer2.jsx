@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Partnerzy from '../Carousel/Partnerzy/Partnerzy'
 
 const Footer2 = () => {
   return (
@@ -30,6 +31,7 @@ const Footer2 = () => {
                         </div>
                     </div>
                 </div>
+                <Partnerzy />
             </div>
         </footer>
   )

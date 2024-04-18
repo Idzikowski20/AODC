@@ -37,7 +37,23 @@ body {
 .aboutus-container {
   height: 100%;
   background: transparent;
-  background-image: radial-gradient(circle closest-corner at 50% 0, rgba(25, 13, 131, 0.178), #0000 58%);
+  background-image: radial-gradient(circle at 50% 100%, rgb(51, 95, 177), #2e3077a8 40%);
+  border-bottom: 1px solid #06163000;
+  border-radius: 30px;
+  padding: 35px;
+  box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
+  transition: transform 250ms;
+}
+
+.aboutus-container:hover {
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(circle at 50% 100%, rgb(51, 95, 177), #2e3077a8 40%);
+  border-bottom: 1px solid #06163000;
+  border-radius: 30px;
+  padding: 35px;
+  box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
+  transform: translateY(-10px);
 }
 
 .aboutus-servers-container {
@@ -2190,12 +2206,18 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-main-menu ul li:last-child {
   margin-right: 0;
 }
+
 .jm-header-main-menu ul li a {
   font-size: 17px;
   padding: 35px 0;
   display: inline-block;
-  color: var(--clr-body-heading);
+  transition: transform 250ms;
 }
+
+.jm-header-main-menu ul li a:hover{
+  transform: translateY(-10px);
+}
+
 
 .jm-header-main-menu ul li .sub-menu {
   position: absolute;
@@ -2596,7 +2618,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-logo .jm-logo img {
   max-width: 180px;
   display: inline-block;
+  transition: transform 250ms;
 }
+
+.jm-header-logo .jm-logo img:hover {
+  max-width: 180px;
+  display: inline-block;
+  transform: scale(1.2)
+}
+
 @media (max-width: 767px) {
   .jm-header-logo .jm-logo img {
     max-width: 140px;
@@ -11461,6 +11491,7 @@ outline: medium none;
 }
 
 .jm-footer-area-3 {
+  height: 350px;
   border-top: 1px solid #061630;
   background-image: radial-gradient(circle at 50% 100%, rgb(23 70 155 / 55%), #0000 40%);
   border-top: 1px solid #06163000;
