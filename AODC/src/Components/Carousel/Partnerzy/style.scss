@@ -22,8 +22,6 @@ $animationSpeed: 40s;
 
 // Styling
 .slider {
-	background-color: #031229;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100px;
 	margin: auto;
 	overflow:hidden;
@@ -35,7 +33,8 @@ $animationSpeed: 40s;
 	
 	&::before,
 	&::after {
-		background: linear-gradient(to right, rgb(21 20 81) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 30px;
+		background: linear-gradient(to right, #031229 0%, rgba(255, 255, 255, 0) 100%);
 		content: "";
 		height: 100px;
 		position: absolute;
