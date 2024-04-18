@@ -24,7 +24,7 @@ const HomePageMain2 = () => {
         <Team/>
         <ContactForm />
         <VideoArea/>
-
+        
     </main>
   )
 }

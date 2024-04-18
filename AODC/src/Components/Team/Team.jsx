@@ -3,7 +3,6 @@ import './style.scss'
 
 const Team = () => {
   return (
-    <div>
 <section>
   <span>Poznaj nasz</span>
   <h2>ZESPÓŁ</h2>
@@ -49,7 +48,6 @@ const Team = () => {
     </div>
   </div>
 </section>
-    </div>
   )
 }
 

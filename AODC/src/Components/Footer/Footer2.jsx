@@ -31,7 +31,7 @@ const Footer2 = () => {
                         </div>
                     </div>
                 </div>
-                <Partnerzy />
+                {/* <Partnerzy /> */}
             </div>
         </footer>
   )
