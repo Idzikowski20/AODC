@@ -16,10 +16,9 @@ const BrowseJob = ({view}) => {
     };
   return (
     <div>    
-          <div className="jobswidget" style={{ width: '100%', minHeight: '500px' }}>
-          <iframe src="https://jobswidget.com/pl/jobs/136/0734e16382"  id="jobswidget"  style={{ width: '1px', minWidth: '100%',border: "none", minHeight: '700px',}}></iframe>
-          <script src="https://jobswidget.com/scripts/jobswidget.js" defer></script>
-        </div>
+    <div className=''>
+    <iframe className="" src='https://44e2a842c2384d15b8e783f00a6fd3ff.elf.site' width='100%' height='800' frameborder='0'></iframe>
+  </div>
     </div>
   );
 };

@@ -44,13 +44,10 @@ const SidePanel = () => {
               <i className="fal fa-envelope"></i>
               <span><span>biuro@aodc.pl</span></span>
             </Link>
-          </div>
-
-          <div className="jm-sidebar-social mt-40 mb-30">
-            <Link to="#" target="_blank" className="facebook"><i className="fab fa-facebook-f"></i></Link>
-            <Link to="#" target="_blank" className="twitter"><i className="fab fa-pinterest-p"></i></Link>
-            <Link to="#" target="_blank" className="linkedin"><i className="fab fa-twitter"></i></Link>
-            <Link to="#" target="_blank" className="youtube"><i className="fab fa-instagram"></i></Link>
+            <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
+              <i className="fab fa-instagram"></i>
+              <span><span>Linkedin</span></span>
+              </Link>
           </div>
         </div>
       </div>
