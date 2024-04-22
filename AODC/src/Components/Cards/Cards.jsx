@@ -13,7 +13,7 @@ const Cards = () => {
           <img className="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title blue"><a href="#">Projektowanie 💻</a></h1>
+          <h1 className="postcard__title"><a href="#">Projektowanie 💻</a></h1>
           <div className="postcard__preview-txt">
              <div className='title-before'>
               Właściwie zaprojektowane Data Center to połowa sukcesu na drodze, do powodzenia całej inwestycji. Wykonujemy kompleksowe projekty zaczynając od opracowania razem z inwestorem koncepcji gdzie określamy wszystkie parametry Data Center. <span className='card-read-more'>Czytaj dalej..</span>
@@ -28,7 +28,7 @@ const Cards = () => {
               </div>
         </div>
       </article>
-      <article className="postcard dark red">
+      <article className="postcard dark blue">
         <a className="postcard__img_link" href="#">
           <img className="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />	
         </a>
@@ -60,29 +60,25 @@ const Cards = () => {
         </div>
       </article>
       <div className='bluur2'></div>
-      <article className="postcard dark green">
+      <article className="postcard dark blue">
         <a className="postcard__img_link" href="#">
-          <img className="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+          <img className="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
         </a>
         <div className="postcard__text">
-          <h1 className="postcard__title green"><a href="#">Serwis 🛠 </a></h1>
-          <div className="postcard__preview-txt">
-          <div className='title-before'>
-             Zarządzanie obiektami typu Data Center, to zapewnienie bezpieczeństwa zasobom krytycznym oraz konieczność posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii. <span className='card-read-more'>Czytaj dalej..</span>
-              </div>
-              <div className='title-after'>
-              Zarządzanie obiektami typu Data Center rozumiemy jako zapewnienie bezpieczeństwa zasobom krytycznym z koniecznością posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii.
-
-              Dla Klienta oznacza to konieczność zatrudnienia wykwalifikowanych pracowników posiadających doświadczenie w wielu obszarach, co wiąże się z wysokimi kosztami stałymi.
-
-              Proponujemy więc usługę utrzymania obiektów Data Center prowadzona przez naszych doświadczonych inżynierów. Prowadzimy zarówno stałą opiekę, doraźne konsultacje dotyczące optymalizacji kosztów, jak i doraźne wsparcie w przypadku zaistnienia sytuacji krytycznych.  Oferujemy wsparcie w modelu 24/7/365: 24 godziny na dobę, 7 dni w tygodniu, 365 dni roku z uzgodnionym z każdym Klientem wymaganym czasem reakcji.
-
-              Nasze działania gwarantują utrzymanie infrastruktury pozwalające na ciągłą i stabilną pracę Centrum Przetwarzania Danych.
-              </div>
-              </div>
+          <h1 className="postcard__title yellow"><a href="#">Serwis 🛠</a></h1>
+          <div className="postcard__preview-txt"> 
+          <div className='title-before'> 
+          Zarządzanie obiektami typu Data Center, to zapewnienie bezpieczeństwa zasobom krytycznym oraz konieczność posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii.
+           <span className='card-read-more'>Czytaj dalej..
+           </span> 
+           </div> 
+           <div className='title-after'>
+             Zarządzanie obiektami typu Data Center rozumiemy jako zapewnienie bezpieczeństwa zasobom krytycznym z koniecznością posiadania eksperckiej wiedzy, by móc podejmować właściwe decyzje w przypadku zaistnienia awarii. 
+             Dla Klienta oznacza to konieczność zatrudnienia wykwalifikowanych pracowników posiadających doświadczenie w wielu obszarach, co wiąże się z wysokimi kosztami stałymi. Proponujemy więc usługę utrzymania obiektów Data Center prowadzona przez naszych doświadczonych inżynierów. Prowadzimy zarówno stałą opiekę, doraźne konsultacje dotyczące optymalizacji kosztów, jak i doraźne wsparcie w przypadku zaistnienia sytuacji krytycznych. 
+              Oferujemy wsparcie w modelu 24/7/365: 24 godziny na dobę, 7 dni w tygodniu, 365 dni roku z uzgodnionym z każdym Klientem wymaganym czasem reakcji. Nasze działania gwarantują utrzymanie infrastruktury pozwalające na ciągłą i stabilną pracę Centrum Przetwarzania Danych. </div> </div>
         </div>
       </article>
-      <article className="postcard dark yellow">
+      <article className="postcard dark blue">
         <a className="postcard__img_link" href="#">
           <img className="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
         </a>

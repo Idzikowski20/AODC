@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Partnerzy from '../Carousel/Partnerzy/Partnerzy'
+import Carousel from '../../Components/Carousel/Carousel'
 
 const Footer2 = () => {
   return (
@@ -31,7 +31,7 @@ const Footer2 = () => {
                         </div>
                     </div>
                 </div>
-                {/* <Partnerzy /> */}
+                <Carousel />
             </div>
         </footer>
   )

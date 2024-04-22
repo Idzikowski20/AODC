@@ -13,7 +13,7 @@ body {
 }
 
 body {
-	background: linear-gradient(-45deg, #031229,#082755,#02204e,#0c2853,#031229);
+	background: linear-gradient(-45deg, #031229,#051731,#021229,#041022,#031229);
 	background-size: 1000% 1000%;
 	animation: gradient 25s ease infinite;
 }
@@ -52,8 +52,9 @@ body {
   border-bottom: 1px solid #06163000;
   border-radius: 30px;
   padding: 35px;
-  box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
-  transform: translateY(-10px);
+  box-shadow: 0 4px 21px -12px rgba(175, 175, 175, 0.66);
+  transform: translateY(-15px);
+  transform: scale(1.05)
 }
 
 .aboutus-servers-container {
@@ -232,7 +233,7 @@ body {
       width: 100%;
       height: 42px;
       border: 2px dotted #521320;
-      color: #000000;
+      color: #ffffff;
       border-radius: 6px;
       padding: 8px 12px;
       
@@ -586,6 +587,12 @@ textarea:-ms-input-placeholder {
 
 input:focus::placeholder, textarea:focus::placeholder {
   opacity: 0;
+}
+
+.hero-container {
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 100px;
 }
 
 /* <<<<<<<    Common Classes   >>>>>>>>> */
@@ -6046,17 +6053,10 @@ outline: medium none;
 12. video
 ******************************************************* 
 *************************************************************** */
-.homepage-container {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+
 
 .homepage {
-  height: 500px;
+  height: 700px;
   background: center/cover no-repeat fixed;
   display: flex;
   flex-direction: column;
@@ -6139,7 +6139,7 @@ outline: medium none;
 }
 
 .jm-video-text .title {
-  font-size: 200px;
+  font-size: 150px;
   color: #fff;
   font-family: "Red Hat Text", sans-serif;
   line-height: 1;
@@ -6148,7 +6148,25 @@ outline: medium none;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .jm-video-text .title {
-    font-size: 160px;
+    font-size: 100px;
+  }
+}
+
+.jm-video-text {
+  text-align: center;
+}
+
+.jm-video-text .sub-title {
+  font-size: 80px;
+  color: #fff;
+  font-family: "Red Hat Text", sans-serif;
+  line-height: 1;
+  margin-bottom: 0;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jm-video-text .sub-title {
+    font-size: 50px;
   }
 }
 
@@ -6178,19 +6196,27 @@ outline: medium none;
 
 @media (max-width: 767px) {
   .jm-video-text .title {
-    font-size: 80px;
+    font-size: 65px;
+  }
+  .jm-video-text .sub-title {
+    font-size: 30px;
+    color: #fff;
+    font-family: "Red Hat Text", sans-serif;
+    line-height: 1;
+    margin-bottom: 0;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .jm-video-text .title {
-    font-size: 140px;
+    font-size: 90px;
   }
 }
 
 @supports (text-stroke: 2px black) or (-webkit-text-stroke: 2px black) {
   .jm-video-text .title {
-    opacity: .15;
-    color: #031229;
+    opacity: .35;
+    color: #00000000;
     -webkit-text-stroke: 5px white;
     text-shadow: none;
   }
@@ -11490,7 +11516,6 @@ outline: medium none;
 }
 
 .jm-footer-area-3 {
-  height: 350px;
   border-top: 1px solid #061630;
   background-image: radial-gradient(circle at 50% 100%, rgb(23 70 155 / 55%), #0000 40%);
   border-top: 1px solid #06163000;
@@ -12072,7 +12097,6 @@ a.meanmenu-reveal {
 }
 
 .mean-nav .wrapper {
-	width: 100%;
 	padding: 0;
 	margin: 0;
 }
