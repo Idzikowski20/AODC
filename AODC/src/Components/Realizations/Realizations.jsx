@@ -1,29 +1,98 @@
 import React from 'react'
+import './style.scss'
 // import gsap from "gsap";
-
 
 const Realizations = () => {
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const heroGrid = document.querySelector(".tiltgrid");
+    const hero = document.querySelector(".hero");
+    const tiltDegree = 7;
+    function isElementInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.bottom > 0 &&
+        rect.right > 0 &&
+        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.top < (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+    function mapRange(value, inMin, inMax, outMin, outMax) {
+      return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+    }
+    function updateScrollPos() {
+      const scrollPos = window.scrollY;
+      const rect = heroGrid.getBoundingClientRect();
+      const scrollPercent = (scrollPos * 100) / rect.height;
+  
+      let mappedValue = mapRange(scrollPercent, 0, 100, tiltDegree * -1, tiltDegree);
+      heroGrid.style.setProperty("--scroll-tilt", `${mappedValue}`);
+      let heroOpacity = mapRange(scrollPercent, 0, 10, 1, 0);
+      let heroScale = mapRange(scrollPercent, 0, 10, 1, 0);
+      let heroTransformY = mapRange(scrollPercent, 0, 10, 0, -100);
+      let heroBlur = mapRange(scrollPercent, 0, 10, 0, 20);
+      hero.style.opacity = heroOpacity;
+      hero.style.filter = `blur(${heroBlur}px)`;
+      hero.style.transform = `translateY(${heroTransformY}px)`;
+    }
+  
+    function handleScroll() {
+      if (heroGrid && isElementInViewport(heroGrid)) {
+        updateScrollPos();
+      }
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    handleScroll();
+  });
+  
+
   return (
-    <div>
-    <h1 class="text">Scrolly Images</h1>
-    <h1 aria-hidden="true" class="text outline-text">Scrolly Images</h1>
-    <h1 aria-hidden="true" class="text filter-text">Scrolly Images</h1>
-    <div id="wrapper">
-        <section id="content">
-            <section class="images">
-                <img data-speed="0.8" src="https://images.unsplash.com/photo-1556856425-366d6618905d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt=""/>
-                <img data-speed="0.9" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt=""/>
-                <img data-speed="1" src="https://images.unsplash.com/photo-1609166214994-502d326bafee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt=""/>
-                <img data-speed="1.1" src="https://images.unsplash.com/photo-1589882265634-84f7eb9a3414?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=434&q=80" alt=""/>
-                <img data-speed="0.9" src="https://images.unsplash.com/photo-1514689832698-319d3bcac5d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=434&q=80" alt=""/>
-                <img data-speed="1.2" src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt=""/>
-                <img data-speed="0.8" src="https://images.unsplash.com/photo-1588007375246-3ee823ef4851?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt=""/>
-                <img data-speed="1" src="https://images.unsplash.com/photo-1571450669798-fcb4c543f6a4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt=""/>
-            </section>
-        </section>
-    </div>
-    </div>
+    <>
+<section class="hero p-x">
+	<div class="container">
+		<h1>Firmy które nam zaufały</h1>
+	</div>
+</section>
+<section class="tiltgrid">
+	<div class="tiltgrid__container">
+  <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/krakow.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/MON.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/GAGAGA.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/KPKPKP.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/asasasasa.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/ritaaa.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/uwuwuwu.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/nbp.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/kozienice.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/aa.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/atos.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/a111.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/instytu.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/aq.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/aza.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/a3.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/a1.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/mb.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/accenture.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/mbank-logo-ind.gif" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/knf-1.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pzuu.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/logo.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/logo_internet_dla_mazowsza_big_logo.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/images.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pobrane-2.jpg" alt=""/></div>
+	</div>
+	
+</section>
+<section class="p-x bottom">
+	<div class="container">
+		This is some content after the Tilted Grid
+	</div>
+</section>
+</>
   )
 }
 
