@@ -13,7 +13,7 @@ const PreLoader = () => {
   return (
     <div className='preloader'>
         <div>
-            <img className='preloader-logo' src='assets/img/logo/logodark.png'></img>
+            <img className='preloader-logo' src='assets/img/logo/logoloader.png'></img>
         </div>
         <div className='texts-container'>
         <span>Witaj!👋</span>

@@ -24,9 +24,14 @@ const Footer2 = () => {
                                 <p>&copy; Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez <Link to="https://github.com/Idzikowski20" target="_blank">Patryk Idzikowski</Link>.</p>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-6  col-sm-5 order-2 order-lg-3">
-                            <div className="jm-footer-bottom-social-3 text-sm-end text-center mb-3 mb-sm-2 mb-lg-0">
-                                <Link to="https://pl.linkedin.com/company/aodc"><i className="fab fa-instagram"></i></Link>
+                        <div className="linkedin col-xl-3 col-lg-3 col-md-6  col-sm-5 order-2 order-lg-3">
+                                                <div className="jm-sidebar-contact-wrapper mt-40">
+                            <div className="jm-sidebar-contact mb-40">
+                                <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
+                                <i className="fab fa-instagram"></i>
+                                <span><span>Linkedin</span></span>
+                                </Link>
+                            </div>
                             </div>
                         </div>
                     </div>

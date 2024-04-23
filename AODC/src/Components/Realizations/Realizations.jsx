@@ -50,12 +50,10 @@ const Realizations = () => {
 
   return (
     <>
-<section class="hero p-x">
-	<div class="container">
-		<h1>Firmy które nam zaufały</h1>
-	</div>
-</section>
 <section class="tiltgrid">
+    <div>
+      	<h1>Firmy które nam zaufały</h1>
+    </div>
 	<div class="tiltgrid__container">
   <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/krakow.jpg" alt=""/></div>
@@ -88,9 +86,6 @@ const Realizations = () => {
 	
 </section>
 <section class="p-x bottom">
-	<div class="container">
-		This is some content after the Tilted Grid
-	</div>
 </section>
 </>
   )

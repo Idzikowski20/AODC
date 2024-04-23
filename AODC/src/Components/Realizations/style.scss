@@ -1,8 +1,10 @@
 .tiltgrid {
+	margin-top: 250px;
 	&__container {
+		margin-bottom: 50px;
+		margin-top: 50px;
 		--skew-y: calc(var(--scroll-tilt, -7) * 1deg) ;
-  --easing: cubic-bezier(1,.45,.7,1.05);
-  transform: skewY(var(--skew-y)) scale(1.05);
+ 		 --easing: cubic-bezier(1,.45,.7,1.05);
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		@media screen and (min-width:720px) {
@@ -101,7 +103,7 @@ img {
 	display: block;
 }
 .container {
-	max-width: 1000px;
+	max-width: 1500px;
 	margin: 0 auto;
 }
 body {
