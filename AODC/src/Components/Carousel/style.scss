@@ -123,6 +123,7 @@ $animationSpeed: 40s;
 }
 
 .slider {
+	cursor: pointer;;
 	height: 100px;
 	margin: auto;
 	overflow:hidden;
@@ -131,6 +132,10 @@ $animationSpeed: 40s;
 	left: 0%;
 	right: auto;
 	width: 700px;
+
+	a {
+		z-index: 3;
+	}
 	
 	&::before,
 	&::after {
