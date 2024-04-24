@@ -1,11 +1,7 @@
 import { BrowserRouter as Router,Routes,Route,useLocation } from "react-router-dom"
-import HomePageCarrier from "./Pages/HomePageCarrier"
 import JobPage from "./Pages/JobPage"
-import AboutPage from "./Pages/AboutPage"
 import ErrorPage from "./Pages/ErrorPage"
-import ContactPage from "./Pages/ContactPage"
 import HomePage from "./Pages/HomePage"
-import JobListPage from "./Pages/JobListPage"
 import { useEffect } from "react"
 import PreLoader from "./Components/PreLoader/PreLoader"
 import CookieConsent from "./Components/CookieConsent/CookieConsent"
@@ -32,11 +28,7 @@ function App() {
     <ScrollToTop/>
       <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/kariera" element={<HomePageCarrier/>}/>
-          <Route path="/jobPage" element={<JobPage/>}/>
-          <Route path="/jobListPage" element={<JobListPage/>}/>
-          <Route path="/aboutPage" element={<AboutPage/>}/>
-          <Route path="/contactPage" element={<ContactPage/>}/>
+          <Route path="/Kariera" element={<JobPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
           <Route path="*" element={<ErrorPage/>}/>
       </Routes>

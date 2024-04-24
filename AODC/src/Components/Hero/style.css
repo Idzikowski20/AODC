@@ -37,9 +37,6 @@
 
 body {
   min-height: 100cqh;
-  display: flex;
-  place-content: center;
-  place-items: flex-start center;
   background: #031229;
 }
 

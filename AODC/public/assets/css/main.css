@@ -228,6 +228,61 @@ body {
       margin-top: 16px;
     }
 
+    .job-container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .job-cards {
+      position: relative;
+      width: 100%;
+      height: 1000px;
+    }
+
+    @media only screen and (min-width: 380px) and (max-width: 850px) {
+      .job-cards {
+        position: relative;
+        width: 100%;
+        height: 3000px;
+      }
+    }
+
+    /* SERVICE CARDS */
+    .service-container {
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .service-card {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      margin: 15px;
+      height: 300px;
+      width: 500px;
+      box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
+      background-image: radial-gradient(circle at 50% 100%, rgb(51, 95, 177), #2e3077a8 40%);
+      border-radius: 25px;
+      flex: 1;
+      padding: 5px;
+    }
+
+    .service-card-height {
+      height: 300px;
+    }
+    .service-card1 {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+    }
+    /* SERVICE CARDS */
+
     /*=============================================
     =            Fields           =
     =============================================*/
@@ -597,7 +652,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .hero-container {
   width: 100%;
-  min-height: 100vh;
   margin-bottom: 100px;
 }
 
