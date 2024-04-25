@@ -38,10 +38,12 @@ const Footer2 = () => {
                         <div className="footer-adress-container">
                              <div className="footer-adress jm-sidebar-contact mb-40">
                                     <h4 className="jm-sidebar-contact-title">Adres</h4>
+                                    <Link to="https://maps.app.goo.gl/ji16fg5J91BRAjbw8" target="_blank" className="youtube">
                                          <span className="sidebar-address">
-                                            <i className="fal fa-map-marker-alt"></i>
-                                               <span>Działkowa 37, 02-234 Warszawa</span>
-                                                   </span>
+                                                 <i className="fal fa-map-marker-alt"></i>
+                                                    <span>Działkowa 37, 02-234 Warszawa</span>
+                                                    </span>
+                                                 </Link>
                                              <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
                                           <i className="fab fa-instagram"></i>
                                     <span><span>Linkedin</span></span>

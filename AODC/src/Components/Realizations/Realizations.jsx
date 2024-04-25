@@ -1,5 +1,8 @@
 import React from 'react'
 import './style.scss'
+import Header2 from '../Header/Header2';
+import SidePanel from '../Side Panel/SidePanel';
+import VideoArea3 from '../Video Area/VideoArea3';
 // import gsap from "gsap";
 
 const Realizations = () => {
@@ -50,6 +53,9 @@ const Realizations = () => {
 
   return (
     <>
+    <VideoArea3 />
+    <SidePanel />
+    <Header2 />
 <section class="tiltgrid">
     <div>
       	<h1>Firmy które nam zaufały</h1>
