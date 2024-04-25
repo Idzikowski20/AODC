@@ -123,6 +123,8 @@ $animationSpeed: 40s;
 }
 
 .slider {
+	border-radius: 30px;
+    background: linear-gradient(rgb(17 37 69 / 33%) 0%, rgba(255, 255, 255, 0) 100%);
 	cursor: pointer;;
 	height: 100px;
 	margin: auto;
@@ -139,13 +141,7 @@ $animationSpeed: 40s;
 	
 	&::before,
 	&::after {
-		border-radius: 30px;
-		background: linear-gradient(to right, #03122954 0%, rgba(255, 255, 255, 0) 100%);
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
+
 	}
 	
 	&::after {

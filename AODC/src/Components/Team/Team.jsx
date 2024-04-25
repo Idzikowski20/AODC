@@ -21,6 +21,7 @@ const Team = () => {
       </div>
     </div>
     <div className='bluur2'></div>
+    <div className='bluur'></div>
     <div class="card">
       <img className='height-full' src="./assets/img/employers/maciek.jpeg" alt="Maciej Wiśniewski photo"/>
       <div class="card-content">

@@ -7,6 +7,8 @@ const Cards = () => {
     <section>
   <h2>CZYM SIĘ ZAJMUJEMY</h2>
   <div className='service-container'>
+  <div className='bluur2'></div>
+  <div className='bluur'></div>
   <div className='service-card1'>
     <div className='service-card'>
       <div className='service-icon'>
