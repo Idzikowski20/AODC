@@ -19,6 +19,7 @@ const HomePageMain2 = () => {
         {/* <VideoArea4 /> */}
         <Linkedin />
         <Cards />
+        <VideoArea3 />
         <AboutUs />
         <Counter />
         <VideoArea3 />

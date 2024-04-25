@@ -9,7 +9,7 @@ const Team = () => {
   <p>AODC tworzą ludzie, którzy od prawie 20 lat czynnie zajmują się realizacją obiektów Data Center i z powodzeniem projektowali i nadzorowali proces implementacji największych tego typu ośrodków w Polsce, tak dla instytucji publicznych i samorządowych, jak i dla podmiotów komercyjnych.</p>
   <div class="cards">
     <div class="card">
-      <img className='height-full' src="./assets/img/employers/robert.jpeg" alt="Robert Kabza photo"/>
+      <img className='height-full' src="./assets/img/employers/robert.jpeg" loading="lazy" alt="Robert Kabza photo"/>
       <div class="card-content">
         <h3>Robert Kabza</h3>
         <p>Członek Zarządu</p>
@@ -23,7 +23,7 @@ const Team = () => {
     <div className='bluur2'></div>
     <div className='bluur'></div>
     <div class="card">
-      <img className='height-full' src="./assets/img/employers/maciek.jpeg" alt="Maciej Wiśniewski photo"/>
+      <img className='height-full' src="./assets/img/employers/maciek.jpeg" loading="lazy" alt="Maciej Wiśniewski photo"/>
       <div class="card-content">
         <h3>Maciej Wiśniewski</h3>
         <p>Prezes Zarządu</p>
@@ -36,7 +36,7 @@ const Team = () => {
       </div>
     </div>
     <div class="card">
-      <img className='height-full' src="./assets/img/employers/ewa.jpeg" alt="Ewa Filipiak photo"/>
+      <img className='height-full' src="./assets/img/employers/ewa.jpeg" loading="lazy" alt="Ewa Filipiak photo"/>
       <div class="card-content">
         <h3>Ewa Filipiak</h3>
         <p>Dyrektor ds. Handlowych</p>
