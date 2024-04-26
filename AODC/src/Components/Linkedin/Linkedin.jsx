@@ -4,9 +4,7 @@ const Linkedin = () => {
   return (
     <>
     <section>
-    <span>Sprawdź</span>
-    <h2>Aktualności</h2>
-    <p>Zapraszamy do zapoznania się z naszym Linkedinem</p>
+    <h2>AKTUALNOŚCI</h2>
     <div className='bluur'></div>
     <div className='bluur2'></div>
     <div className='linkedin-conteiner'>

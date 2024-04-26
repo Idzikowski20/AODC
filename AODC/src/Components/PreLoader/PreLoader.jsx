@@ -16,9 +16,10 @@ const PreLoader = () => {
             <img className='preloader-logo' src='assets/img/logo/logoloader.png'></img>
         </div>
         <div className='texts-container'>
-        <span>Witaj!👋</span>
+        <span>Witaj!</span>
         </div>
         <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        <span>Ładowanie..</span>
     </div>
   )
 }

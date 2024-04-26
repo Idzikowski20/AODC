@@ -16,6 +16,7 @@ const VideoModal = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
         ></iframe>
+        <button>Pobierz prezentacje</button>
         </Modal.Body>
     </Modal>
   )

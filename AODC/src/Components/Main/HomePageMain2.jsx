@@ -12,6 +12,14 @@ import Cards from '../../Components/Cards/Cards'
 import AboutUs from '../AboutUs/AboutUs'
 import Counter from '../Video Area/Counter'
 
+const { useState, useEffect } = React;
+
+
+function App() {
+  
+  };
+
+
 const HomePageMain2 = () => {
   return (
     <main className='homepage-2-main'>
