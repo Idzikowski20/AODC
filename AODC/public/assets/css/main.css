@@ -543,20 +543,8 @@ label {
   font-weight: 400;
 }
 
-*::-moz-selection {
-  background-color: var(--clr-theme-primary);
-  color: var(--clr-common-white);
-  text-shadow: none;
-}
-
-::-moz-selection {
-  background-color: var(--clr-theme-primary);
-  color: var(--clr-common-white);
-  text-shadow: none;
-}
-
 ::selection {
-  background-color: var(--clr-theme-primary);
+  background: #272c75;
   color: var(--clr-common-white);
   text-shadow: none;
 }
