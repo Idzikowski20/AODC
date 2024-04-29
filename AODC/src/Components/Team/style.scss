@@ -104,6 +104,7 @@ section {
     }
 
     .card {
+      z-index: 1;
       border: 1px  #d32b50;
       position: relative;
       cursor: pointer;

@@ -10,6 +10,7 @@ import 'swiper/css/autoplay';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import { ToastContainer } from 'react-toastify';
+import "./i18n.js";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

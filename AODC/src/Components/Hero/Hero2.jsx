@@ -1,13 +1,14 @@
 import React from 'react'
 import './style.scss'
+import { withNamespaces } from 'react-i18next';
 
-const Hero2 = () => {
+function Hero2 ({ t }) {
   return (
     <div>
 <div className='hero-container'>
 <div class='content'>
-    <h1 class='h1--scalingSize'>Sztuka rozwiązań</h1>
-    <h3 class='h1--scalingSize'>Dla data center.</h3>
+    <h1 class='h1--scalingSize'>{t('Welcome to React')}</h1>
+    <h3 class='h1--scalingSize'>{t('for data center')}</h3>
   </div>
   <div class="scroll-downs">
   <div class="mousey">
@@ -19,4 +20,4 @@ const Hero2 = () => {
   )
 }
 
-export default Hero2
+export default withNamespaces()(Hero2);
