@@ -1,10 +1,11 @@
 import React from 'react'
+import { withNamespaces } from 'react-i18next'
 
-const Linkedin = () => {
+function Linkedin({ t }) {
   return (
     <>
     <section>
-    <h2>AKTUALNOŚCI</h2>
+    <h2>{t('title1')}</h2>
     <div className='bluur'></div>
     <div className='bluur2'></div>
     <div className='linkedin-conteiner'>
@@ -15,4 +16,4 @@ const Linkedin = () => {
   )
 }
 
-export default Linkedin
+export default withNamespaces()(Linkedin);

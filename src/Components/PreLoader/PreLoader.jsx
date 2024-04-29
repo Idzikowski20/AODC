@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import  PreLoaderAnim from './Animation'
 import './style.css'
+import { withNamespaces } from 'react-i18next';
 
 
 
-const PreLoader = () => {
+function PreLoader({ t }) {
 
     useEffect(()=>{
         PreLoaderAnim()
@@ -16,12 +17,12 @@ const PreLoader = () => {
             <img className='preloader-logo' src='assets/img/logo/logoloader.png'></img>
         </div>
         <div className='texts-container'>
-        <span>Witaj!</span>
+        <span>{t('title8')}</span>
         </div>
         <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        <span>Ładowanie..</span>
+        <span>{t('title8.1')}</span>
     </div>
   )
 }
 
-export default PreLoader
+export default withNamespaces()(PreLoader);

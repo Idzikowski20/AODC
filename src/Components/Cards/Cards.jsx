@@ -1,11 +1,10 @@
 import React from 'react'
-import { AiFillDatabase } from "react-icons/ai";
+import { withNamespaces } from 'react-i18next';
 
-const Cards = () => {
+function Cards({ t }) {
   return (
-    <>
     <section>
-  <h2>CZYM SIĘ ZAJMUJEMY</h2>
+  <h2>{t('title2')}</h2>
   <div className='service-container'>
   <div className='bluur2'></div>
   <div className='bluur'></div>
@@ -15,7 +14,7 @@ const Cards = () => {
         {/* <AiFillDatabase /> */}
       </div>
       <div className='service-title'>
-        <h2>Projektowanie</h2>
+      <h2>{t('title2.projektowanie')}</h2>
       </div>
     </div>
     <div className='service-card'>
@@ -23,7 +22,7 @@ const Cards = () => {
         {/* <AiFillDatabase /> */}
       </div>
       <div className='service-title'>
-        <h2>Wdrażanie</h2>
+      <h2>{t('title2.wdrazanie')}</h2>
       </div>
     </div>
     </div>
@@ -33,7 +32,7 @@ const Cards = () => {
         {/* <AiFillDatabase /> */}
       </div>
       <div className='service-title'>
-        <h2>Serwis</h2>
+      <h2>{t('title2.serwis')}</h2>
       </div>
     </div>
     <div className='service-card'>
@@ -41,7 +40,7 @@ const Cards = () => {
         {/* <AiFillDatabase /> */}
       </div>
       <div className='service-title'>
-        <h2>Audyt</h2>
+      <h2>{t('title2.audyt')}</h2>
       </div>
     </div>
     <div className='service-card'>
@@ -49,14 +48,13 @@ const Cards = () => {
         {/* <AiFillDatabase /> */}
       </div>
       <div className='service-title'>
-        <h2>Optymalizacja</h2>
+      <h2>{t('title2.optymalizacja')}</h2>
       </div>
     </div>
     </div>
   </div>
   </section>
-  </>
   )
 }
 
-export default Cards;
+export default withNamespaces()(Cards);

@@ -1,13 +1,14 @@
 import React from 'react'
 import "./style.scss"
+import { withNamespaces } from 'react-i18next';
 
-const Carousel = () => {
+function Carousel({ t }) {
   return (
     <div className='slider-container'>
 
     <div className='carousel'>
     <div>
-    <span>Nasi Partnerzy</span>
+    <span>{t('title7.1')}</span>
   </div>
     <div className="slider">
 	<div className="slide-track">
@@ -65,7 +66,7 @@ const Carousel = () => {
 
     <div className='carousel'>
     <div>
-    <span>Certyfikaty</span>
+    <span>{t('title7.2')}</span>
   </div>
     <div className="slider">
 	<div className="slide-track">
@@ -132,4 +133,4 @@ const Carousel = () => {
   )
 }
 
-export default Carousel
+export default withNamespaces()(Carousel);

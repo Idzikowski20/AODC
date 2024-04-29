@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { JobContext } from '../../Context/JobContext';
 import VideoModal from '../Modal/VideoModal';
+import { withNamespaces } from 'react-i18next';
 
-const VideoArea = () => {
+function VideoArea({ t }) {
   const {handleOpenModal} = useContext(JobContext)
     return (
       <div className="jm-video-area">
@@ -14,7 +15,7 @@ const VideoArea = () => {
               </div>
             </div>
             <div className="jm-video-text">
-              <h2 className="title">Prezentacja</h2>
+              <h2 className="title">{t('title7')}</h2>
             </div>
           </div>
         </div>
@@ -24,4 +25,4 @@ const VideoArea = () => {
   };
   
 
-export default VideoArea
+  export default withNamespaces()(VideoArea);

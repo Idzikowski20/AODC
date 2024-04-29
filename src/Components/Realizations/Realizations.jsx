@@ -3,9 +3,10 @@ import './style.scss'
 import Header2 from '../Header/Header2';
 import SidePanel from '../Side Panel/SidePanel';
 import VideoArea3 from '../Video Area/VideoArea3';
-// import gsap from "gsap";
+import { withNamespaces } from 'react-i18next';
 
-const Realizations = () => {
+
+function Realizations({ t }) {
 
   document.addEventListener("DOMContentLoaded", function () {
     const heroGrid = document.querySelector(".tiltgrid");
@@ -58,7 +59,7 @@ const Realizations = () => {
     <Header2 />
 <section class="tiltgrid">
     <div>
-      	<h1>Firmy które nam zaufały</h1>
+      	<h1>{t('title10')}</h1>
     </div>
 	<div class="tiltgrid__container">
   <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
@@ -97,4 +98,4 @@ const Realizations = () => {
   )
 }
 
-export default Realizations
+export default withNamespaces()(Realizations);

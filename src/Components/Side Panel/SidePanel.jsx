@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { JobContext } from '../../Context/JobContext';
 import MobileMenu from './MobileMenu';
+import { withNamespaces } from 'react-i18next';
 
-const SidePanel = () => {
+function SidePanel({ t }) {
     const {sidePanelOpen,handleClose} = useContext(JobContext)
   return (
     <>
@@ -31,7 +32,7 @@ const SidePanel = () => {
 
         <div className="jm-sidebar-contact-wrapper mt-40">
           <div className="jm-sidebar-contact mb-40">
-            <h4 className="jm-sidebar-contact-title">Kontakt</h4>
+            <h4 className="jm-sidebar-contact-title">{t('title9')}</h4>
             <span className="sidebar-address">
               <i className="fal fa-map-marker-alt"></i>
               <span>Działkowa 37, 02-234 Warszawa</span>
@@ -56,4 +57,4 @@ const SidePanel = () => {
   );
 };
 
-export default SidePanel;
+export default withNamespaces()(SidePanel);

@@ -1,21 +1,11 @@
 import React from 'react'
 import CountUp from 'react-countup'
+import { withNamespaces } from 'react-i18next';
 
-const Counter = () => {
-
-    // document.addEventListener("scroll", function() {
-
-    //     if (window.pageYOffset > 3500) {
-    //       document.getElementById('counter').style.display = "block";
-    //     }else{
-    //       document.getElementById('counter').style.display = "none";
-    //     }
-        
-    //   });
-
+function Counter({ t }) {
   return (
     <section id='counter'>
-            <h2>REALIZACJE</h2>
+            <h2>{t('title4')}</h2>
                     <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
                        <div className="row justify-content-center width-100%">
                             <div className="#">
@@ -30,7 +20,7 @@ const Counter = () => {
                                                         <span className="odometer mainCounter" data-count="140">
                                                             <CountUp enableScrollSpy={true} duration={4} end={94}/>
                                                         </span></h2>
-                                                    <span className="subtitle">Serwerownie</span>
+                                                    <span className="subtitle">{t('title4.serwerownie')}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -42,7 +32,7 @@ const Counter = () => {
                                                         <span className="odometer mainCounter" data-count="250">
                                                             <CountUp enableScrollSpy={true} duration={4} end={73}/>
                                                         </span></h2>
-                                                    <span className="subtitle">Serwisy</span>
+                                                    <span className="subtitle">{t('title4.serwisy')}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -54,7 +44,7 @@ const Counter = () => {
                                                         <span className="odometer mainCounter" data-count="199">
                                                             <CountUp enableScrollSpy={true} duration={4} end={98}/>
                                                         </span></h2>
-                                                    <span className="subtitle">Koncepcje</span>
+                                                    <span className="subtitle">{t('title4.koncepcje')}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +56,7 @@ const Counter = () => {
                                                         <span className="odometer mainCounter" data-count="199">
                                                             <CountUp enableScrollSpy={true} duration={4} end={79}/>
                                                         </span></h2>
-                                                    <span className="subtitle">Projekty</span>
+                                                    <span className="subtitle">{t('title4.projekty')}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -80,4 +70,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default withNamespaces()(Counter);

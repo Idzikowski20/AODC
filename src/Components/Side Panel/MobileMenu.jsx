@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { withNamespaces } from 'react-i18next';
 
-const MobileMenu = () => {
+function MobileMenu({ t }) {
   const [expandedMenus, setExpandedMenus] = useState([]);
 
   // const handleMenuClick = (index) => {
@@ -33,16 +34,16 @@ const MobileMenu = () => {
             </div>
             <ul>
               <li className="menu-has-children">
-                <Link to="/">Strona główna</Link>
+                <Link to="/">{t('title9.1')}</Link>
               </li>
               <li className="menu-has-children">
-                <Link to="/O-nas">O nas</Link>
+                <Link to="/">{t('title9.2')}</Link>
               </li>
               <li className="menu-has-children">
-                <Link to="/Kariera">Kariera</Link>
+                <Link to="/Kariera">{t('title9.3')}</Link>
               </li>
               <li className="menu-has-children">
-                <Link to="/Realizacje">Realizacje</Link>
+                <Link to="/Realizacje">{t('title9.4')}</Link>
               </li>
             </ul>
           </nav>
@@ -52,4 +53,4 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu;
+export default withNamespaces()(MobileMenu);

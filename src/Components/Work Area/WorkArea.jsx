@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { withNamespaces } from 'react-i18next';
 
-const WorkArea = () => {
+function WorkArea({ t }) {
   return (
     <section>
-        <h2>OBSZARY DZIAŁALNOŚCI</h2>
+        <h2>{t('title5')}</h2>
         <div className='bluur2'></div>
         <div className="container light-bg">
             <div className="display-flex row align-items-center">
@@ -19,7 +19,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Instytucje publiczne</h4>
+                                        <h4 className="title">{t('title5.1')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Służby mundorowe</h4>
+                                        <h4 className="title">{t('title5.2')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Szpitale</h4>
+                                        <h4 className="title">{t('title5.3')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Przemysł</h4>
+                                        <h4 className="title">{t('title5.4')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Sektor finansowy</h4>
+                                        <h4 className="title">{t('title5.5')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ const WorkArea = () => {
                                         </svg>
                                     </div>
                                     <div className="jm-work-item-content-2">
-                                        <h4 className="title">Podmioty komercyjne</h4>
+                                        <h4 className="title">{t('title5.6')}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -96,4 +96,4 @@ const WorkArea = () => {
   )
 }
 
-export default WorkArea
+export default withNamespaces()(WorkArea);

@@ -23,6 +23,8 @@ body {
 
 @media only screen and (min-width: 380px) and (max-width: 800px) {
   .aboutus-container {
+    align-items: center;
+    justify-content: center;
     display: flex;
     padding: 15px;
     flex-direction: column;
@@ -30,12 +32,15 @@ body {
 }
 
 .aboutus-container {
+  align-items: center;
+  justify-content: center;
   display: flex;
   padding: 15px;
 }
 
 .aboutus-box {
-  min-height: 500px;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
   margin: 20px;
   background: transparent;
@@ -43,19 +48,16 @@ body {
   background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #0a186887 40%);
   border-bottom: 1px solid #06163000;
   border-radius: 30px;
-  padding: 35px;
+  padding: 50px;
   box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
   transition: transform 250ms;
 }
 
 .aboutus-box:hover {
-  margin: 20px;
   background: transparent;
   background-color: #181c2a;
-  background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #180e4d87 40%);
+  background-image: radial-gradient(circle at 50% 100%, rgb(52, 83, 141), #0b245a87 40%);
   border-bottom: 1px solid #06163000;
-  border-radius: 30px;
-  padding: 35px;
   box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
   transform: translateY(-15px);
   transform: scale(1.05)

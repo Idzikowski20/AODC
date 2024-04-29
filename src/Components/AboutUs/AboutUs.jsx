@@ -1,9 +1,10 @@
 import React from 'react'
+import { withNamespaces } from 'react-i18next';
 
-const AboutUs = () => {
+function AboutUs({ t }) {
   return (
     <section>
-        <h2>O NAS</h2>
+        <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
       <div className='bluur2'></div>
       <img className='aboutus-servers' src='assets/img/banner/banner-4.png' alt='servers image' />
@@ -12,21 +13,13 @@ const AboutUs = () => {
       <div className='aboutus-container'>
     <div className='aboutus-box'>
           <div>
-              AODC to firma, która powstała z pasji tworzenia najlepszych serwerowni, a jej zarząd i pracownicy, to osoby z prawie dwudziestoletnim doświadczeniem i wiedzą operacyjną w tworzeniu i zarządzaniu implementacją centrów przetwarzania danych od etapu koncepcji, projektu, po etapy budowy, wdrożenia, optymalizacji oraz serwisu.
+          <h4>{t('title3.about1')}</h4>
               </div>
               <div>
-              AODC posiada unikatowy zakres wiedzy praktycznej oraz teoretycznej zweryfikowany udanymi wdrożeniami wielu serwerowni, oraz potwierdzony certyfikatami, w tym ATD, CDCP, CDCS, TSI-Professional. Spółka wdrożyła sprawdzone procedury, które pozwalają właściwie diagnozować potrzeby klientów w zakresie infrastruktury Data Center i zamieniać je na realne opracowania koncepcyjne i projekty wykonawcze.
-              </div>
-              </div>
-              <div className='aboutus-box'>
-          <div>
-              AODC to firma, która powstała z pasji tworzenia najlepszych serwerowni, a jej zarząd i pracownicy, to osoby z prawie dwudziestoletnim doświadczeniem i wiedzą operacyjną w tworzeniu i zarządzaniu implementacją centrów przetwarzania danych od etapu koncepcji, projektu, po etapy budowy, wdrożenia, optymalizacji oraz serwisu.
+              <h4>{t('title3.about2')}</h4>
               </div>
               <div>
-              AODC posiada unikatowy zakres wiedzy praktycznej oraz teoretycznej zweryfikowany udanymi wdrożeniami wielu serwerowni, oraz potwierdzony certyfikatami, w tym ATD, CDCP, CDCS, TSI-Professional. Spółka wdrożyła sprawdzone procedury, które pozwalają właściwie diagnozować potrzeby klientów w zakresie infrastruktury Data Center i zamieniać je na realne opracowania koncepcyjne i projekty wykonawcze.
-              <br>
-              </br>
-              Nasza firma jest w stanie realizować projekty oparte o ochronę informacji niejawnych w rozumieniu ustawy z dnia 5 sierpnia 2010 r. (Dz.U. z 2016 r. poz. 1167). Posiada do dyspozycji system ochrony informacji niejawnych wraz ze strukturą odpowiedzialną za zapewnienie ich bezpieczeństwa.
+              <h4>{t('title3.about3')}</h4>
               </div>
               </div>
               </div>
@@ -34,4 +27,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default withNamespaces()(AboutUs);
