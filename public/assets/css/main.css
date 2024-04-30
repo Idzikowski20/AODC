@@ -271,6 +271,22 @@ body {
       border-radius: 25px;
       flex: 1;
       padding: 5px;
+      transition: 500ms;
+    }
+    .service-card:hover {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      margin: 15px;
+      height: 300px;
+      width: 320px;
+      box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
+      background-image: radial-gradient(circle at 50% 100%, rgb(51, 95, 177), #47498aa8 40%);
+      border-radius: 25px;
+      flex: 1;
+      padding: 5px;
+      transform: scale(1.05);
     }
 
     .service-card-height {
@@ -6116,6 +6132,7 @@ svg {
 }
 
 .close {
+  border-radius: 10px;
   position: relative;
   bottom: 0;
   top: 0;
@@ -6123,6 +6140,20 @@ svg {
   padding: 5px;
 color: #000000;
 outline: medium none;
+transition: 500ms;
+}
+
+.close:hover {
+  border-radius: 10px;
+  background: #df4747;
+  position: relative;
+  bottom: 0;
+  top: 0;
+  margin: 5px;
+  padding: 5px;
+color: #fff;
+outline: medium none;
+transform: scale(1.1);
 }
 
 .cookie-message span {
@@ -6647,7 +6678,7 @@ outline: medium none;
   display: contents;
 }
 .jm-video-counter-item-3 .jm-icon {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .jm-video-counter-item-3 .jm-icon i {
   font-size: 50px;
