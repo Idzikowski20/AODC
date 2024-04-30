@@ -1,7 +1,0 @@
-RewriteEngine On
-RewriteBase /
-
-# Redirect all requests to the main index.html file
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L]
