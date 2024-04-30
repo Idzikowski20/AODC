@@ -13,13 +13,13 @@ function AboutUs({ t }) {
       <div className='aboutus-container'>
     <div className='aboutus-box'>
           <div>
-          <h4>{t('title3.about1')}</h4>
+          {t('title3.about1')}
               </div>
               <div>
-              <h4>{t('title3.about2')}</h4>
+              {t('title3.about2')}
               </div>
               <div>
-              <h4>{t('title3.about3')}</h4>
+              {t('title3.about3')}
               </div>
               </div>
               </div>
