@@ -259,6 +259,7 @@ body {
     }
 
     .service-card {
+      z-index: 2;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -2157,13 +2158,19 @@ input:focus::placeholder, textarea:focus::placeholder {
 02. header
 ******************************************************* 
 *************************************************************** */
+.menu-mobile {
+  width: 5%;
+}
+
 @media (max-width: 991px) {
   .languageFlag{
+    top: -30px;
+    align-items: center;
+    justify-content: flex-start;
     width: 60px;
-    display:none !important;
     flex-direction:column;
     transform: scale(0.7);
-      /* position: absolute; */
+    position: relative !important;
       padding: 10px 0 0 20px;
   }
 }
