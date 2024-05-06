@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { withNamespaces } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 function Team({ t }) {
   return (
@@ -13,7 +14,9 @@ function Team({ t }) {
       <div class="card-content">
         <h3>Robert Kabza</h3>
         <p>{t('title6.2')}</p>
+        <Link to="tel:(+48)690017317">
         <p className='card-phone'>+48 690 017 317</p>
+        </Link>
         <ul>
           <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -28,7 +31,9 @@ function Team({ t }) {
         <h3>Maciej Wiśniewski</h3>
         <p>{t('title6.3')}</p>
         <p>{t('title6.4')} </p>
+        <Link to="tel:(+48)697902145">
         <p className='card-phone'>+48 697 902 145</p>
+        </Link>
         <ul>
           <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -40,7 +45,9 @@ function Team({ t }) {
       <div class="card-content">
         <h3>Ewa Filipiak</h3>
         <p>{t('title6.5')}</p>
+        <Link to="tel:(+48)577414900">
         <p className='card-phone'>+48 577 414 900</p>
+        </Link>
         <ul>
           <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>

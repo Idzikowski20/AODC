@@ -59,15 +59,13 @@ function Header2 ({ t }) {
                                 <img src="https://cdn.countryflags.com/thumbs/poland/flag-400.png"/>
                                 </button>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-5">
-                        <div className="jm-header-right jm-header-right-2 text-end  d-flex align-items-center justify-content-end">
+                        <div className="menu-mobile jm-header-right jm-header-right-2 text-end  d-flex justify-content-center">
                             <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick={handleOpen}>
                                 <span className="dr-line-1"></span>
                                 <span className="dr-line-2"></span>
                                 <span className="dr-line-3"></span>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
