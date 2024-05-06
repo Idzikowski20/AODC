@@ -30,7 +30,7 @@ ul {
   list-style-type: none;
 
   i {
-    color: #006efd;
+    color: #5f0d20;
     font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
 
     &:hover {
@@ -134,8 +134,7 @@ section {
         height: 6.25rem;
         z-index: 0;
         transition: 0.3s ease-in-out;
-        background: #81041f;
-        background: #d32b50;
+        background: #5f0d20;
         top: $position;
         left: $position;
       }

@@ -16,7 +16,6 @@ $animationSpeed: 40s;
 
 .slider-container {
 	margin: 10px;
-	width: 100%;
 	display: flex;
 	text-align: center;
 	justify-content: space-between;
@@ -123,6 +122,8 @@ $animationSpeed: 40s;
 }
 
 .slider {
+	border-left: 2px solid #5f0d20;
+	border-right: 2px solid #5f0d20;
 	border-radius: 30px;
     background: linear-gradient(rgb(17 37 69 / 33%) 0%, rgba(255, 255, 255, 0) 100%);
 	cursor: pointer;;
