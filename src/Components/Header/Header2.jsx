@@ -19,7 +19,7 @@ function Header2 ({ t }) {
                     <div className="col-xl-3 col-lg-3 col-7">
                         <div className="jm-header-logo jm-header-logo-2">
                             <Link className="jm-logo" to="/">
-                                <img src="assets/img/logo/logodark.png" alt="logo"/>
+                                <img src="assets/img/logo/logodark.png" alt="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </Link>
                         </div>
                     </div>
@@ -28,11 +28,11 @@ function Header2 ({ t }) {
                         <div className="jm-header-main-menu text-center jm-header-menu-2">
                             <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                 <ul>
-                                    <li className="menu-has-children">
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
-                                    <li className="menu-has-children">
-                                        <Link to="#">{t('Header2')}</Link>
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 2800, behavior: "smooth" })}>
+                                        <Link to="/">{t('Header2')}</Link>
                                     </li>
                                     <li className="menu-has-children">
                                         <Link to="/kariera">{t('Header3')}</Link>
@@ -40,7 +40,7 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children">
                                         <Link to="/Realizacje">{t('Header4')}</Link>
                                     </li>
-                                    <li className="menu-has-children">
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 7000, behavior: "smooth" })}>
                                         <Link to="#">{t('Header5')}</Link>
                                     </li>
                                 </ul>
