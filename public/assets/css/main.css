@@ -2124,6 +2124,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .linkedin-conteiner {
+  flex-direction: column;
   width: 100%;
   display: flex;
   justify-content: center;
