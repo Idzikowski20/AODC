@@ -4,7 +4,7 @@ import { withNamespaces } from 'react-i18next';
 
 function Hero2 ({ t }) {
   return (
-    <div>
+    <div id='#id1'>
 <div className='hero-container'>
 <div class='content'>
     <h1 class='h1--scalingSize'>{t('Welcome to React')}</h1>
