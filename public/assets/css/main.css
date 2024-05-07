@@ -11794,6 +11794,7 @@ transform: scale(1.1);
 
 @media only screen and (min-width: 380px) and (max-width: 999px) {
   .footer-container {
+    width: 100%;
       align-items: center !important;
       justify-content: center !important;
       display: flex;
@@ -11849,8 +11850,9 @@ height: 154px;
 }
 
 .footer-container {
+  width: 100%;
   align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
 }
 
