@@ -8,7 +8,7 @@ function Footer2({ t }) {
     <footer className="jm-footer-area-3">
                         <Carousel />
             <div className="jm-footer-bottom-3">
-                <div className="footer-container container">
+                <div className="footer-container">
                     <div className='footer-logo'>
                         <img  src='assets/img/logo/logodark.png' alt=''/>
                     </div>
