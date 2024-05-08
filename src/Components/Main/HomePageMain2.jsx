@@ -25,7 +25,7 @@ const HomePageMain2 = () => {
         <VideoArea3 />
         <SidePanel/>
         <WorkArea/>
-        {/* <Team/> */}
+        <Team/>
         <VideoArea/>
     </main>
   )
