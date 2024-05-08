@@ -6374,7 +6374,7 @@ transform: scale(1.1);
   .jm-video-text .title {
     opacity: .35;
     color: #00000000;
-    -webkit-text-stroke: 5px white;
+    -webkit-text-stroke: 4px white;
     text-shadow: none;
   }
 }
