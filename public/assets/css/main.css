@@ -12,7 +12,7 @@ body {
   line-height: 26px;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
   h2 {
     font-size: 36px !important;
   }
@@ -26,7 +26,7 @@ body {
 
 /* Abous us */
 
-@media only screen and (min-width: 380px) and (max-width: 800px) {
+@media only screen and (min-width: 350px) and (max-width: 800px) {
   .aboutus-container {
     align-items: center;
     justify-content: center;
@@ -192,7 +192,7 @@ body {
       
     }
 
-    @media only screen and (min-width: 380px) and (max-width: 800px) {
+    @media only screen and (min-width: 350px) and (max-width: 800px) {
       .formcarry-container {
         flex-direction: column;
         display: flex;
@@ -245,7 +245,7 @@ body {
       height: 1000px;
     }
 
-    @media only screen and (min-width: 380px) and (max-width: 850px) {
+    @media only screen and (min-width: 350px) and (max-width: 850px) {
       .job-cards {
         position: relative;
         width: 100%;
@@ -2135,7 +2135,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
 }
 
-@media only screen and (min-width: 390px) and (max-width: 400px) {
+@media only screen and (min-width: 350px) and (max-width: 400px) {
   .linkedin-conteiner {
     display: flex;
     justify-content: center;
@@ -3979,7 +3979,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .side-info:is(.info-open) {
   right: 0;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scrollbar-width: thin;
 }
 
@@ -6065,7 +6065,7 @@ svg {
 }
 
 /* COOKIES */
-@media only screen and (min-width: 380px) and (max-width: 450px) {
+@media only screen and (min-width: 350px) and (max-width: 450px) {
   .cookie-message {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     border-radius: 10px;
@@ -6319,7 +6319,7 @@ transform: scale(1.1);
   }
 }
 
-@media only screen and (min-width: 390px) and (max-width: 991px) {
+@media only screen and (min-width: 350px) and (max-width: 991px) {
   .bigbluur {
     width: 90vw;
     height: 160vh;
@@ -9854,7 +9854,7 @@ transform: scale(1.1);
     align-items: center;
   }
 }
-@media only screen and (min-width: 380px) and (max-width: 575px) {
+@media only screen and (min-width: 350px) and (max-width: 575px) {
   .jm-blog-item-content-meta-2 {
     flex-direction: row;
     gap: 0;
@@ -11793,7 +11793,7 @@ transform: scale(1.1);
   }
 }
 
-@media only screen and (min-width: 380px) and (max-width: 999px) {
+@media only screen and (max-width: 999px) {
   .footer-container {
     width: 100%;
       align-items: center !important;
