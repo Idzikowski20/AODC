@@ -3,6 +3,13 @@
   height: 150px;
 }
 
+@media (max-width: 467px) {
+  .preloader-logo {
+    width: 250px;
+    height: 100px;
+  }
+  }
+
 .preloader {
     flex-direction: column;
     height: 100%;
