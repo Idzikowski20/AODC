@@ -31,17 +31,17 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 2800, behavior: "smooth" })}>
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 3000, behavior: "smooth" })}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
-                                    <li className="menu-has-children">
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/kariera">{t('Header3')}</Link>
                                     </li>
-                                    <li className="menu-has-children">
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/Realizacje">{t('Header4')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 7000, behavior: "smooth" })}>
-                                        <Link to="/">{t('Header5')}</Link>
+                                        <Link to="#">{t('Header5')}</Link>
                                     </li>
                                 </ul>
                             </nav>
