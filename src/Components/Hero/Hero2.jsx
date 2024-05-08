@@ -11,7 +11,7 @@ function Hero2 ({ t }) {
   <video className='video-background' src={video} autoPlay loop muted/>
 <div class='content'>
     <h1 class='h1--scalingSize'>{t('Welcome to React')}</h1>
-    <h3 class='h1--scalingSize'>{t('for data center')}</h3>
+    <h3 class='h3--scalingSize'>{t('for data center')}</h3>
   </div>
 </div>
     </div>

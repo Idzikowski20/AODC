@@ -35,7 +35,7 @@ function Header2 ({ t }) {
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                        <Link to="/kariera">{t('Header3')}</Link>
+                                        <Link to="/Kariera">{t('Header3')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/Realizacje">{t('Header4')}</Link>
