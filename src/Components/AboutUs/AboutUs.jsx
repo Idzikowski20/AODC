@@ -7,7 +7,6 @@ function AboutUs({ t }) {
         <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
       <div className='bluur2'></div>
-      <img className='aboutus-servers' src='assets/img/banner/banner-4.png' alt='servers image' />
       </div>
       <div className='bluur'></div>
       <div className='aboutus-container'>

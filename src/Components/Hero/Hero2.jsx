@@ -1,20 +1,18 @@
 import React from 'react'
 import './style.scss'
 import { withNamespaces } from 'react-i18next';
+import video from '../../../public/assets/background-video.mp4';
 
 function Hero2 ({ t }) {
   return (
     <div id='#id1'>
 <div className='hero-container'>
+  <div className='overlay-video'></div>
+  <video className='video-background' src={video} autoPlay loop muted/>
 <div class='content'>
     <h1 class='h1--scalingSize'>{t('Welcome to React')}</h1>
     <h3 class='h1--scalingSize'>{t('for data center')}</h3>
   </div>
-  <div class="scroll-downs">
-  <div class="mousey">
-    <div class="scroller"></div>
-  </div>
-</div>
 </div>
     </div>
   )
