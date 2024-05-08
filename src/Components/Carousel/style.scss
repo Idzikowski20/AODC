@@ -107,18 +107,20 @@ $animationSpeed: 40s;
 
   @media (max-width: 420px) {
 	.slider-container {
-		width: 370px;
+		flex-direction: column;
+		width: 100%;
 		display: flex;
 		text-align: center;
 		justify-content: space-between !important;
 		.slider {
-			width: 180px !important;
+			width: 100% !important;
 		}
 	}
   }
 
 // Styling
 .carousel {
+	width: 100%;
 }
 
 .slider {
@@ -134,7 +136,8 @@ $animationSpeed: 40s;
 	bottom: auto;
 	left: 0%;
 	right: auto;
-	width: 700px;
+	max-width: 700px;
+	width: 100%;
 
 	a {
 		z-index: 3;
