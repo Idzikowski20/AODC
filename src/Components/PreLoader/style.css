@@ -33,6 +33,15 @@
     color: #fff;
 }
 
+.content-container-preloader {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(at 50% 44%, rgba(38, 31, 133, 0.712), rgba(0, 0, 0, 0) 58%);
+}
+
 .lds-ellipsis {
     /* change color here */
     color: #1c4c5b

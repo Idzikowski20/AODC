@@ -6263,13 +6263,14 @@ transform: scale(1.1);
 }
 
 .bigbluur2 {
-  width: 70vw;
-  height: 60vh;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  max-height: 500px;
+  background-image: radial-gradient(circle at 50% 100%, rgb(23 70 155 / 55%), #0000 40%);
   opacity: .77;
   position: absolute;
-  top: 850px;
-  left: 20%;
-  bottom: auto;
+  bottom: 0;
   right: auto;
 }
 

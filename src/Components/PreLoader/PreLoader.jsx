@@ -13,6 +13,7 @@ function PreLoader({ t }) {
     
   return (
     <div className='preloader'>
+      <div className='content-container-preloader'>
         <div>
             <img className='preloader-logo' src='assets/img/logo/logoloader.png'></img>
         </div>
@@ -21,6 +22,7 @@ function PreLoader({ t }) {
         </div>
         <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         <span>{t('title8.1')}</span>
+      </div>
     </div>
   )
 }
