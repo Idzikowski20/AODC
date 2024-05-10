@@ -6,6 +6,7 @@ import { withNamespaces } from 'react-i18next';
 import { Trans } from 'react-i18next';
 
 
+
 function Header2 ({ t }) {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -31,7 +32,7 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 3300, behavior: "smooth" })}>
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 3000, behavior: "smooth" })}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
