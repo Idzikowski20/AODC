@@ -6070,10 +6070,8 @@ svg {
     z-index: 5;
     bottom: 5%;
     right: 0% !important;
-    margin: 0px !important;
-    height: 250px;
+    margin: 10px !important;
     max-width: 767px;
-    min-width: 390px !important;
     display: -ms-flexbox;
     display: flex;
   }
