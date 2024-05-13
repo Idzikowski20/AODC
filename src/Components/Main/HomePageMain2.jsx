@@ -19,10 +19,8 @@ const HomePageMain2 = () => {
         <Hero2 />
         <Linkedin />
         <Cards />
-        <VideoArea3 />
         <AboutUs />
         <Counter />
-        <VideoArea3 />
         <SidePanel/>
         <WorkArea/>
         <Team/>
