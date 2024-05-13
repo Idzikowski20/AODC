@@ -10,6 +10,7 @@ function Footer2({ t }) {
                 <div className="footer-container">
                     <div className='footer-logo'>
                         <img  src='assets/img/logo/logodark.png' alt=''/>
+                        <span>NIP: 679-311-76-21, REGON: 362779750</span>
                     </div>
                         <div className="footer-contact-container">
                              <div className="footer-contact jm-sidebar-contact mb-40">
