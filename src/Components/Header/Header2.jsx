@@ -32,7 +32,7 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 3000, behavior: "smooth" })}>
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 2500, behavior: "smooth" })}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
