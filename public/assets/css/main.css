@@ -11877,6 +11877,8 @@ height: 154px;
 }
 
 .jm-video-area {
+  margin-top: 50px;
+  margin-bottom: 100px;
   background: linear-gradient(to bottom, #031229 0%, rgba(3, 18, 41, 0.4039215686) 100%);
 }
 
