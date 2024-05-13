@@ -15,7 +15,7 @@ $animationSpeed: 40s;
 
 
 .slider-container {
-	margin: 10px;
+	width: 100%;
 	display: flex;
 	text-align: center;
 	justify-content: space-between;
@@ -124,8 +124,9 @@ $animationSpeed: 40s;
 }
 
 .slider {
-	border-left: 2px solid #5f0d20;
-	border-right: 2px solid #5f0d20;
+	align-items: center;
+    display: flex;
+    justify-content: center;
 	border-radius: 30px;
     background: linear-gradient(rgb(17 37 69 / 33%) 0%, rgba(255, 255, 255, 0) 100%);
 	cursor: pointer;;
@@ -138,6 +139,11 @@ $animationSpeed: 40s;
 	right: auto;
 	max-width: 700px;
 	width: 100%;
+
+	img {
+		width: 350px;
+		height: 100px;
+	}
 
 	a {
 		z-index: 3;
@@ -162,10 +168,11 @@ $animationSpeed: 40s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 14);
 	}
 	
 	.slide {
+		margin-left: 15px;
+		margin-right: 15px;
 		height: 100px;
 		width: 250px;
 	}
