@@ -258,21 +258,22 @@ body {
     }
 
     .service-card1 {
+      flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .service-card {
+      margin: 20px;
       flex-direction: column;
       z-index: 2;
       align-items: center;
       justify-content: center;
       display: flex;
       text-align: center;
-      margin: 15px;
-      min-height: 250px;
-      min-width: 585px;
+      min-height: 300px;
+      min-width: 400px;
       height: 100%;
       width: 100%;
       max-width: 290px;
@@ -286,6 +287,12 @@ body {
       transition: 500ms;
     }
 
+    .service-card1-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .service-card-service {
       flex-direction: column;
       z-index: 2;
@@ -294,8 +301,8 @@ body {
       display: flex;
       text-align: center;
       margin: 15px;
-      min-height: 150px;
-      min-width: 1200px;
+      min-height: 300px;
+      min-width: 750px;
       height: 100%;
       width: 100%;
       max-width: 290px;
@@ -313,7 +320,7 @@ body {
       .service-subtitle {
         opacity: 1;
       }
-      max-width: 1171px;
+      max-width: 700px;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -343,7 +350,7 @@ body {
       .service-subtitle {
         opacity: 1;
       }
-      max-width: 500px;
+      max-width: 350px;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -356,7 +363,6 @@ body {
       background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #081a8087 40%);
       border-radius: 25px;
       flex: 1;
-      padding: 5px;
       transform: scale(1.05);
     }
 
