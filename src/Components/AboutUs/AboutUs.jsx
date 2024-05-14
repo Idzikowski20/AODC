@@ -21,6 +21,17 @@ function AboutUs({ t }) {
               {t('title3.about3')}
               </div>
               </div>
+              <div className='aboutus-box'>
+          <div>
+          {t('title3.about1')}
+              </div>
+              <div>
+              {t('title3.about2')}
+              </div>
+              <div>
+              {t('title3.about3')}
+              </div>
+              </div>
               </div>
   </section>
   )

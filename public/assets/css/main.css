@@ -55,7 +55,7 @@ body {
 .aboutus-box:hover {
   background: transparent;
   background-color: #181c2a;
-  background-image: radial-gradient(circle at 50% 100%, rgb(52, 83, 141), #0b245a87 40%);
+  background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #081a8087 40%);
   border-bottom: 1px solid #06163000;
   box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
   transform: translateY(-15px);
