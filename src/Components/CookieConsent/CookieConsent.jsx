@@ -6,7 +6,7 @@ import { withNamespaces } from 'react-i18next';
 function CookieConsent({ t }) {
   const [cookies, setCookie] = useCookies(["cookieConsent"]);
   const giveCookieConsent = () => {
-    setCookie("cookieConsent", true, { path: "#" });
+    setCookie("cookieConsent", true);
   };
   
   return (
