@@ -9,6 +9,7 @@ function Cards({ t }) {
   <div className='bluur2'></div>
   <div className='bluur'></div>
   <div className='service-card1'>
+  <div className='service-card1-flex'>
     <div className='service-card'>
       <div className='service-icon'>
         {/* <AiFillDatabase /> */}
@@ -39,6 +40,7 @@ function Cards({ t }) {
     </div>
     </div>
     <div className='service-card1'>
+      <div className='service-card1-flex'>
     <div className='service-card'>
       <div className='service-icon'>
         {/* <AiFillDatabase /> */}
@@ -52,6 +54,7 @@ function Cards({ t }) {
         <div>-{t('title2.budowa4')}</div>
       </div>
     </div>
+    <div></div>
     <div className='service-card'>
       <div className='service-icon'>
         {/* <AiFillDatabase /> */}
@@ -63,6 +66,7 @@ function Cards({ t }) {
         <div>-{t('title2.commissioning2')}</div>
         <div>-{t('title2.commissioning3')}</div>
       </div>
+    </div>
     </div>
     <div className='service-card-service'>
       <div className='service-icon'>
@@ -76,6 +80,7 @@ function Cards({ t }) {
         <div>-{t('title2.serwis3')}</div>
         <div>-{t('title2.serwis4')}</div>
       </div>
+    </div>
     </div>
     </div>
   </div>
