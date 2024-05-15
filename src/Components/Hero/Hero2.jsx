@@ -9,7 +9,7 @@ function Hero2 ({ t }) {
     <div id='#id1'>
 <div className='hero-container'>
   <div className='overlay-video'></div>
-  <video className='video-background' src={video} autoPlay loop muted/>
+  {/* <video className='video-background' src={video} autoPlay loop muted/> */}
 <div class='content'>
     <h1 class='h1--scalingSize animate__animated animate__backInDown'>{t('Welcome to React')}</h1>
     <h3 class='h3--scalingSize animate__animated animate__backInUp'>{t('for data center')}</h3>

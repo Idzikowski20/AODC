@@ -248,20 +248,8 @@ body {
     }
 
     /* SERVICE CARDS */
-    .service-container {
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-    }
 
-    .service-card1 {
-      flex-direction: column;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    @media only screen and (min-width: 260px) and (max-width: 850px) {
     }
 
     .service-card {
@@ -272,11 +260,6 @@ body {
       justify-content: center;
       display: flex;
       text-align: center;
-      min-height: 300px;
-      min-width: 400px;
-      height: 100%;
-      width: 100%;
-      max-width: 290px;
       transition: max-width 1s linear;
       box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
       background-color: #181c2a;
@@ -287,12 +270,6 @@ body {
       transition: 500ms;
     }
 
-    .service-card1-flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .service-card-service {
       flex-direction: column;
       z-index: 2;
@@ -301,11 +278,6 @@ body {
       display: flex;
       text-align: center;
       margin: 15px;
-      min-height: 300px;
-      min-width: 750px;
-      height: 100%;
-      width: 100%;
-      max-width: 290px;
       transition: max-width 1s linear;
       box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
           background-color: #181c2a;
@@ -320,14 +292,11 @@ body {
       .service-subtitle {
         opacity: 1;
       }
-      max-width: 700px;
       align-items: center;
       justify-content: center;
       display: flex;
       text-align: center;
       margin: 15px;
-      height: 100%;
-      width: 100%;
       box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
       background-color: #181c2a;
       background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #081a8087 40%);
@@ -350,14 +319,11 @@ body {
       .service-subtitle {
         opacity: 1;
       }
-      max-width: 350px;
       align-items: center;
       justify-content: center;
       display: flex;
       text-align: center;
       margin: 15px;
-      height: 100%;
-      width: 100%;
       box-shadow: 0 4px 21px -12px rgba(167, 165, 165, 0.66);
       background-color: #181c2a;
       background-image: radial-gradient(circle at 50% 100%, rgb(36 74 145), #081a8087 40%);
@@ -366,14 +332,14 @@ body {
       transform: scale(1.05);
     }
 
-    .service-card-height {
-      height: 300px;
+    .service-container {
+      position: relative;
+      margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    gap: 2rem;
     }
-    .service-card1 {
-      width: 100%;
-      flex-wrap: wrap;
-      display: flex;
-    }
+
     /* SERVICE CARDS */
 
     /*=============================================
