@@ -7,13 +7,13 @@ const ErrorArea = () => {
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-xl-8">
-                    <div className="jm-error-img mb-40 text-center">
+                    <div className="flex-class jm-error-img mb-40 text-center">
                         <img src="assets/img/error/error.png" alt=""/>
                     </div>
                     <div className="jm-error-content text-center">
-                        <h3 className="jm-error-title">Opps! Page Not Found</h3>
-                        <p className="text mb-30">Sorry This Page Not found take a look at our most popular</p>
-                        <Link to="/" className="jm-theme-btn">GO TO HOME</Link>
+                        <h3 className="jm-error-title">Ups! Nie ma takiej strony.</h3>
+                        <p className="text mb-30">Sprawdź czy poprawnie wpisałeś adres</p>
+                        <Link to="/" className="jm-theme-btn">Strona główna</Link>
                     </div>
                 </div>
             </div>

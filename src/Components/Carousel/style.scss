@@ -123,6 +123,13 @@ $animationSpeed: 40s;
 	width: 100%;
 }
 
+@media only screen and (max-height: 700px) {
+	.slider {
+		max-width: 500px !important;
+		height: 60px !important;
+	}
+}
+
 .slider {
 	align-items: center;
     display: flex;
@@ -130,7 +137,7 @@ $animationSpeed: 40s;
 	border-radius: 30px;
     background: linear-gradient(rgb(17 37 69 / 33%) 0%, rgba(255, 255, 255, 0) 100%);
 	cursor: pointer;;
-	height: 100px;
+	height: 70px;
 	margin: auto;
 	overflow:hidden;
 	position: relative;

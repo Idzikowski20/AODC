@@ -6,10 +6,10 @@ function WorkArea({ t }) {
     <section>
         <h2>{t('title5')}</h2>
         <div className='bluur2'></div>
-        <div className="container light-bg">
+        <div className="">
             <div className="display-flex row align-items-center">
-                <div className="col-xl-9">
-                    <div className="jm-work-wrap-2 ml-40 mb-40">
+                <div className="col-xl-9 width-100">
+                    <div className="jm-work-wrap-2">
                         <div className="row g-0">
                             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 jm-border-2">
                                 <div className="jm-work-item-2">
