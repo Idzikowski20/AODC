@@ -33,6 +33,17 @@ body {
   font-size: 50px;
 }
 
+@media only screen and (max-height: 700px) {
+  .h1--scalingSize {
+    text-align: center;
+    font-size: 40px !important;
+}
+.h3--scalingSize {
+  text-align: center;
+  font-size: 30px;
+}
+}
+
 @media only screen and (max-width: 1000px) {
   .h1--scalingSize {
     text-align: center;

@@ -39,7 +39,11 @@ ul {
   }
 }
 
-
+@media only screen and (max-height: 700px) {
+  section {
+    width: min(50rem, 90%) !important;
+  }
+}
 
 section {
   background-image: radial-gradient(at 50% 44%, rgba(41, 34, 141, 0.288), rgba(0, 0, 0, 0) 58%);

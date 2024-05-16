@@ -10,7 +10,7 @@ function Counter({ t }) {
                        <div className="row justify-content-center width-100%">
                             <div className="#">
                              <div className="jm-video-content-wrapper text-center text-xl-start">
-                                  <div className="jm-video-content-3 ml-80">
+                                  <div className="jm-video-content-3">
                                     <div className="jm-video-counter-3">
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">

@@ -39,6 +39,7 @@ body {
 }
 
 .aboutus-box {
+  z-index: 2;
   width: 100%;
   max-width: 1200px;
   height: 100%;
@@ -205,7 +206,7 @@ body {
         width: 100%;
     }
   }
-    
+  
 
     .formcarry-container * {
       align-items: center;
@@ -248,14 +249,27 @@ body {
       }
     }
 
+    /* LAPTOP HEIGHT */
+    @media only screen and (max-height: 700px) {
+      .jm-video-text .title {
+        font-size: 90px !important;
+      }
+    }
+
+
+  .flex-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     /* SERVICE CARDS */
 
-    @media only screen and (max-width: 1570px) {
+    @media only screen and (max-width: 900px) {
       .service-card1 {
-        /* flex-direction: column;
+        flex-direction: column;
         display: flex;
         margin: 5px;
-        position: relative; */
+        position: relative;
       }
     }
 
@@ -344,8 +358,8 @@ body {
       width: 100%;
       line-height: 35px;
       visibility: hidden; 
-      opacity: 1; 
-      transition: visibility 0s, opacity 1s linear; 
+      opacity: 0; 
+      transition: visibility 0s, opacity 0.8s linear; 
     
     }
 
@@ -5981,6 +5995,9 @@ blog sidebar area
     padding-bottom: 35px;
   }
 }
+.width-100 {
+  width: 100%;
+}
 
 .download-btn {
   padding: 5px;
@@ -5988,7 +6005,7 @@ blog sidebar area
 }
 
 .jm-work-item-2 {
-  padding: 35px 30px;
+  padding: 50px 30px;
   text-align: center;
 }
 
@@ -6719,7 +6736,7 @@ transform: scale(1.1);
   display: flex;
   flex-wrap: wrap;
 }
-@media (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 767px), only screen and (min-width: 500px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .jm-video-counter-3 {
     display: flex;
     flex-direction: column;
