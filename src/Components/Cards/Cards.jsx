@@ -5,9 +5,9 @@ function Cards({ t }) {
   return (
     <section>
   <h2>{t('title2')}</h2>
-  <div className='service-container'>
   <div className='bluur2'></div>
   <div className='bluur'></div>
+  <div className='service-container'>
   <div className='service-card1'>
     <div className='service-card'>
       <div className='service-icon'>
@@ -17,10 +17,12 @@ function Cards({ t }) {
       <h2>{t('title2.doradzctwo')}</h2>
       </div>
       <div className='service-subtitle'>
-        <div>-{t('title2.doradzctwo2')}</div>
-        <div>-{t('title2.doradzctwo3')}</div>
-        <div>-{t('title2.doradzctwo4')}</div>
-        <div>-{t('title2.doradzctwo5')}</div>
+        <div>
+        <p>-{t('title2.doradzctwo2')}</p>
+        <p>-{t('title2.doradzctwo3')}</p>
+        <p>-{t('title2.doradzctwo4')}</p>
+        <p>-{t('title2.doradzctwo5')}</p>
+        </div>
       </div>
     </div>
     <div className='service-card'>
@@ -31,10 +33,12 @@ function Cards({ t }) {
       <h2>{t('title2.projekty')}</h2>
       </div>
       <div className='service-subtitle'>
-        <div>-{t('title2.projekty2')}</div>
-        <div>-{t('title2.projekty3')}</div>
-        <div>-{t('title2.projekty4')}</div>
-        <div>-{t('title2.projekty5')}</div>
+        <div>
+        <p>-{t('title2.projekty2')}</p>
+        <p>-{t('title2.projekty3')}</p>
+        <p>-{t('title2.projekty4')}</p>
+        <p>-{t('title2.projekty5')}</p>
+        </div>
       </div>
     </div>
     <div className='service-card'>
@@ -45,9 +49,11 @@ function Cards({ t }) {
       <h2>{t('title2.budowa')}</h2>
       </div>
       <div className='service-subtitle'>
-        <div>-{t('title2.budowa2')}</div>
-        <div>-{t('title2.budowa3')}</div>
-        <div>-{t('title2.budowa4')}</div>
+        <div>
+        <p>-{t('title2.budowa2')}</p>
+        <p>-{t('title2.budowa3')}</p>
+        <p>-{t('title2.budowa4')}</p>
+        </div>
       </div>
     </div>
     </div>
@@ -61,8 +67,10 @@ function Cards({ t }) {
       <h2>{t('title2.commissioning')}</h2>
       </div>
       <div className='service-subtitle'>
-        <div>-{t('title2.commissioning2')}</div>
-        <div>-{t('title2.commissioning3')}</div>
+        <div>
+        <p>-{t('title2.commissioning2')}</p>
+        <p>-{t('title2.commissioning3')}</p>
+        </div>
       </div>
     </div>
     <div className='service-card-service'>
@@ -73,9 +81,11 @@ function Cards({ t }) {
       <h2>{t('title2.serwis')}</h2>
       </div>
       <div className='service-subtitle'>
-        <div>-{t('title2.serwis2')}</div>
-        <div>-{t('title2.serwis3')}</div>
-        <div>-{t('title2.serwis4')}</div>
+        <div>
+        <p>-{t('title2.serwis2')}</p>
+        <p>-{t('title2.serwis3')}</p>
+        <p>-{t('title2.serwis4')}</p>
+        </div>
       </div>
     </div>
     </div>
