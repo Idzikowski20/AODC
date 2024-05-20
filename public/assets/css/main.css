@@ -148,6 +148,13 @@ body {
 }
 /* LOADER */
 
+.jobpage-desc-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+}
+
 /* Contact form */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
@@ -232,7 +239,7 @@ body {
     .job-container {
       position: relative;
       width: 100%;
-      min-height: 100vh;
+      height: 100%;
     }
 
     .job-cards {
@@ -11959,8 +11966,203 @@ height: 154px;
   transform: scale(1.2);
 }
 
-.jm-video-area {
+.carrier-container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carrier-card-container {
+  width: 100%;
+  margin-top: 150px;
+  max-width: 1366px;
+  min-height: 400px;
+}
+
+.carrier-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carrier-card-img {
+  margin-left: 50px;
+  width: 35%;
+  height: auto;
+}
+
+.carrier-card-img img {
+  object-fit: fill;
+}
+
+.carrier-card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background: #aa3f44b0;
+  color: #fff;
+  padding: 7px;
+}
+
+.carrier-card-desc-container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.carrier-card-desc {
+  max-width: 1330px;
+}
+
+.carrier-card-desc p {
+  color: #fff;
+}
+
+.carrier-card-why-container {
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.carrier-card-why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1330px;
+}
+
+.carrier-card-why-img {
+  /* width: 112px; */
+}
+
+.carrier-card-why-inside {
   margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.carrier-card-aboutus-container {
+  max-width: 1366px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid;
+}
+
+.carrier-card-aboutus-button {
+  margin: 10px;
+  padding: 10px;
+  max-width: 270px;
+  width: 100%;
+  color: #fff;
+  border: 1px solid;
+  background: #00000000;
+}
+
+.carrier-aboutus-container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carrier-card-aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.carrier-card-aboutus-buttons {
+  margin: 35px;
+  width: 70%;
+  height: 100%;
+}
+
+.carrier-card-aboutus-img {
+  margin-left: 50px;
+  width: 70%;
+  height: auto;
+}
+
+.carrier-card-aboutus-img img {
+  object-fit: fill;
+}
+
+.carrier-card-benefit-container {
+  max-width: 1366px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid;
+}
+
+.carrier-card-benefit-button {
+  margin: 10px;
+  padding: 10px;
+  max-width: 270px;
+  width: 100%;
+  color: #fff;
+  border: 1px solid;
+  background: #00000000;
+}
+
+.carrier-benefit-container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carrier-card-benefit {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carrier-card-benefit-img {
+  margin-left: 50px;
+  width: 70%;
+  height: auto;
+}
+
+.carrier-card-benefit-img img {
+  object-fit: fill;
+}
+
+
+
+.jm-video-area {
   margin-bottom: 100px;
   background: linear-gradient(to bottom, #031229 0%, rgba(3, 18, 41, 0.4039215686) 100%);
 }
