@@ -83,7 +83,7 @@ const JobPageMain = () => {
         <div className="carrier-card-benefit-container">
         <div className="carrier-card-benefit">
           <div>
-            <h1>Nasze wartości</h1>
+            <h1>Benefity</h1>
             <p>Poznaj wartości, na których budujemy zarówno kulturę organizacyjną, jak i relacje z otoczeniem zewnętrznym.</p>
             <p>Każda z nich została zdefiniowana w Kodeksie Etyki przez przykłady zachowań, które wspierają realizację strategii biznesowej AODC.</p>
           </div>
