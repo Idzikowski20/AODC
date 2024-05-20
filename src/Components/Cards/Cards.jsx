@@ -6,7 +6,6 @@ function Cards({ t }) {
     <section>
   <h2>{t('title2')}</h2>
   <div className='bluur2'></div>
-  <div className='bluur'></div>
   <div className='service-container'>
   <div className='service-card1'>
     <div className='service-card'>
