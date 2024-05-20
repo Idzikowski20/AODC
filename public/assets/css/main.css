@@ -12023,7 +12023,7 @@ height: 154px;
 
 .carrier-card {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -12065,6 +12065,7 @@ height: 154px;
 }
 
 .carrier-card-desc p {
+  text-align: left;
   color: #fff;
 }
 
@@ -12090,6 +12091,7 @@ height: 154px;
 }
 
 .carrier-card-why-inside {
+  text-align: left;
   margin-top: 50px;
   margin-left: 10px;
   margin-right: 10px;
@@ -12104,7 +12106,6 @@ height: 154px;
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
-  border-bottom: 1px solid;
 }
 
 .carrier-card-aboutus-button {
@@ -12117,7 +12118,13 @@ height: 154px;
   background: #00000000;
 }
 
+.job-title {
+  width: 100%;
+  text-align: center;
+}
+
 .carrier-aboutus-container {
+  margin-top: 150px;
   min-height: 60vh;
   display: flex;
   justify-content: center;
@@ -12127,6 +12134,7 @@ height: 154px;
 }
 
 .carrier-card-aboutus {
+  text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12136,9 +12144,9 @@ height: 154px;
 
 
 .carrier-card-aboutus-buttons {
-  margin: 35px;
+  /* margin: 35px;
   width: 70%;
-  height: 100%;
+  height: 100%; */
 }
 
 .carrier-card-aboutus-img {
@@ -12152,18 +12160,28 @@ height: 154px;
 }
 
 .carrier-card-benefit-container {
+  margin-top: 150px;
+  min-height: 350px;
   max-width: 1366px;
   flex-direction: column;
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: flex-start;
-  border-bottom: 1px solid;
+  justify-content: flex-start; 
+  padding: 20px;
+}
+
+.carrier-card-benefit-buttons {
+  max-width: 1330px;
+  width: 90%;
+  height: 100%;
 }
 
 .carrier-card-benefit-button {
+  min-width: 270px;
+  min-height: 70px;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
   max-width: 270px;
   width: 100%;
   color: #fff;
@@ -12181,7 +12199,7 @@ height: 154px;
 }
 
 .carrier-card-benefit {
-  text-align: center;
+  text-align: right;
   flex-direction: row-reverse;
   display: flex;
   justify-content: center;
@@ -12192,7 +12210,7 @@ height: 154px;
 
 .carrier-card-benefit-img {
   margin-left: 50px;
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 

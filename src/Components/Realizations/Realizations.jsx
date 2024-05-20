@@ -2,8 +2,8 @@ import React from 'react'
 import './style.scss'
 import Header2 from '../Header/Header2';
 import SidePanel from '../Side Panel/SidePanel';
-import VideoArea3 from '../Video Area/VideoArea3';
 import { withNamespaces } from 'react-i18next';
+import JobPageImage from '../Video Area/JobPageImage';
 
 
 function Realizations({ t }) {
@@ -54,13 +54,10 @@ function Realizations({ t }) {
 
   return (
     <>
-    <VideoArea3 />
+    <JobPageImage/>
     <SidePanel />
     <Header2 />
-<section class="tiltgrid">
-    <div>
-      	<h1>{t('title10')}</h1>
-    </div>
+<section>
 	<div class="tiltgrid__container">
   <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/krakow.jpg" alt=""/></div>
