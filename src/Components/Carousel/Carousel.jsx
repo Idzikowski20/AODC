@@ -13,13 +13,13 @@ function Carousel({ t }) {
     <div className="slider">
 	<div className="slide-track">
 		<div className="slide">
-			<img src="assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/aodcserwis.webp" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/logo_secthor.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/logo_secthor.svg" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/blt.png" height="100" width="250" alt="" />
@@ -34,13 +34,13 @@ function Carousel({ t }) {
 		<img src="assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/aodcserwis.webp" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/logo_secthor.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/logo_secthor.svg" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/blt.png" height="100" width="250" alt="" />
@@ -55,13 +55,13 @@ function Carousel({ t }) {
 		<img src="assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/aodcserwis.webp" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/logo_secthor.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/logo_secthor.svg" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/blt.png" height="100" width="250" alt="" />
@@ -76,13 +76,13 @@ function Carousel({ t }) {
 		<img src="assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/aodcserwis.webp" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="assets/img/Carousel/logo_secthor.png" height="100" width="250" alt="" />
+			<img src="assets/img/Carousel/logo_secthor.svg" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="assets/img/Carousel/blt.png" height="100" width="250" alt="" />

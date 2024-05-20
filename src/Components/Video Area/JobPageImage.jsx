@@ -1,13 +1,14 @@
 import React from 'react';
+import { withNamespaces } from 'react-i18next';
 
-const JobPageImage = () => {
+function JobPageImage({ t }) {
     return (
       <>
       <div className="jm-video-area">
         <div className="container-fluid p-0">
           <div className="jm-video-wrap bg-default">
             <div className='content'>
-              <h1>Lista dostępnych prac</h1> 
+              <h1>{t('title10')}</h1> 
             </div>
           </div>
         </div>
@@ -17,4 +18,4 @@ const JobPageImage = () => {
   };
   
 
-export default JobPageImage
+  export default withNamespaces()(JobPageImage);
