@@ -148,8 +148,9 @@ $animationSpeed: 40s;
 	width: 100%;
 
 	img {
-		width: 250px;
-		height: 100px;
+		object-fit: fill;
+		width: 200px;
+		height: 70px;
 	}
 
 	a {
@@ -180,7 +181,6 @@ $animationSpeed: 40s;
 	.slide {
 		margin-left: 15px;
 		margin-right: 15px;
-		height: 100px;
 		width: 250px;
 	}
 }
