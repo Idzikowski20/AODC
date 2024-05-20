@@ -3533,7 +3533,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .bluur2 {
-  z-index: -1;
   transform: rotate(180deg);
   width: 30vw;
   height: 60vh;
@@ -11975,6 +11974,46 @@ height: 154px;
   height: 100%;
 }
 
+
+@media only screen and (max-width: 991px) {
+  .carrier-card {
+    flex-direction: column !important;
+  }
+  .carrier-card-why {
+    flex-direction: column !important;
+  }
+  .carrier-card-why-inside {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+  }
+  .carrier-card-why-img {
+    max-width: 300px;
+    width: 100%;
+  }
+  .carrier-card-aboutus {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+  }
+  .carrier-card-aboutus-img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+  }
+  .carrier-card-aboutus-container {
+    align-items: center !important;
+  }
+  .carrier-card-benefit {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+  }
+  .carrier-card-img { 
+    width: 90% !important;
+  }
+}
+
 .carrier-card-container {
   width: 100%;
   margin-top: 150px;
@@ -12142,6 +12181,7 @@ height: 154px;
 }
 
 .carrier-card-benefit {
+  text-align: center;
   flex-direction: row-reverse;
   display: flex;
   justify-content: center;

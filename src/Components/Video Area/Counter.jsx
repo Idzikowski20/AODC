@@ -14,7 +14,7 @@ function Counter({ t }) {
                                     <div className="jm-video-counter-3">
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fas fa-server"></i></div>
+                                                <div className="jm-icon"><img src='assets/img/counter/servers.webp' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="140">
