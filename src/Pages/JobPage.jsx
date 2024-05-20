@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoArea3 from '../Components/Video Area/VideoArea3'
+import VideoArea3 from '../Components/Video Area/JobPageImage'
 import Footer2 from '../Components/Footer/Footer2'
 import Header2 from '../Components/Header/Header2'
 import SidePanel from '../Components/Side Panel/SidePanel'
