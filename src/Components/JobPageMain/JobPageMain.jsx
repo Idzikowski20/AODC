@@ -9,7 +9,7 @@ const JobPageMain = () => {
           <div>
             <h1>Kariera w AODC</h1>
             <p>Łączymy najnowsze technologie i ludzi,którzy je tworzą.</p>
-            <button className="carrier-card-button">Sprawdź oferty</button>
+            <button className="carrier-card-button"  onClick={() => window.scrollTo({ top: 2800, behavior: "smooth" })}>Sprawdź oferty</button>
           </div>
           <div className="carrier-card-img">
           <img src="assets/img/carrier/header.svg"></img>

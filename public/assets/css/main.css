@@ -12175,15 +12175,17 @@ height: 154px;
 .carrier-card-benefit-buttons {
   justify-content: center;
   display: flex;
-  max-width: 1330px;
-  width: 90%;
+  width: 100%;
   height: 100%;
 }
 
 .carrier-card-benefit-button {
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
   min-width: 270px;
   min-height: 70px;
-  margin: 10px;
+  /* margin: 10px; */
   padding: 20px;
   max-width: 300px;
   width: 100%;
