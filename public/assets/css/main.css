@@ -583,6 +583,7 @@ h6 a {
 }
 
 h1 {
+  z-index: 1;
   font-size: 53px;
 }
 
@@ -12172,6 +12173,8 @@ height: 154px;
 }
 
 .carrier-card-benefit-buttons {
+  justify-content: center;
+  display: flex;
   max-width: 1330px;
   width: 90%;
   height: 100%;
@@ -12182,7 +12185,7 @@ height: 154px;
   min-height: 70px;
   margin: 10px;
   padding: 20px;
-  max-width: 270px;
+  max-width: 300px;
   width: 100%;
   color: #fff;
   border: 1px solid;
