@@ -1,67 +1,69 @@
-import React from 'react'
+import React, { useState } from "react";
 import { withNamespaces } from 'react-i18next';
-
-const indexes = document.querySelectorAll('.indexes li');
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
-
-function reset() {
-  for (let i = 0; i < tabs.length; i++) {
-    indexes[i].style.borderColor = 'transparent';
-    tabs[i].style.zIndex = 0;
-    tabs[i].classList.remove('active');
-    contents[i].classList.remove('active');
-  }
-}
-
-function showTab(i) {
-  indexes[i].style.borderColor = 'rgba(211,38,38,0.6)';
-  tabs[i].style.opacity = 1;
-  tabs[i].style.zIndex = 5;
-  tabs[i].classList.add('active');
-  contents[i].classList.add('active');
-}
-
-function activate(e) {
-  if (!e.target.matches('.indexes li')) return;
-  reset();
-  showTab(e.target.dataset.index);
-}
-
-const init = () => showTab(0);
-
-window.addEventListener('load',init,false);
-window.addEventListener('click',activate,false);
+import FirstTab from './FirstTab';
+import SecondTab from "./SecondTab";
+import ThirdTab from "./ThirdTab";
+import FourthTab from "./FourthTab";
+import FifthTab from "./FifthTab"; 
 
 function Cards({ t }) {
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  const handleTab1 = () => {
+    setActiveTab("tab1");
+  };
+  const handleTab2 = () => {
+    setActiveTab("tab2");
+  };
+  const handleTab3 = () => {
+    setActiveTab("tab3");
+  };
+  const handleTab4 = () => {
+    setActiveTab("tab4");
+  };
+  const handleTab5 = () => {
+    setActiveTab("tab5");
+  };
+
   return (
     <section>
-  <h2>{t('title2')}</h2>
-  <div className="carrier-benefit-container">
+      <h2>{t('title2')}</h2>
+      <div className="carrier-benefit-container">
         <div className="carrier-card-benefit-container">
-        <div className="carrier-card-benefit">
-          <div>
-            <h1>Doradzctwo</h1>
-            <p>Wiemy, że komfort pracy w wysokim stopniu wpływa na efektywność pracowników, dlatego zapewniamy najwyższej jakości sprzęt i komfortowe, nowoczesne biuro. W przerwie między obowiązkami zachęcamy do skorzystania ze strefy relaksu z konsolą Xbox i profesjonalnym symulatorem jazdy.</p>
-          </div>
-          <div className="carrier-card-benefit-img">
-          <img src="assets/img/carrier/benefit-workplace.svg"></img>
-          </div>
-        </div>
-        <div className='carrier-card-benefit-container'>
-          <div className='carrier-card-benefit-buttons'>
-            <button data-index='0' className='whatwedo-active carrier-card-benefit-button'><img src='assets/img/carrier/benefit-workplace.svg'/>Doradzctwo</button>
-            <button data-index='1' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-goal.svg'/>Projekty</button>
-            <button data-index='2' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-balance.svg'/>Budowa</button>
-            </div>
-            <div className='carrier-card-benefit-buttons'>
-            <button data-index='3' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-welcome.svg'/>Commissioning</button>
-            <button data-index='4' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-coworking.svg'/>Serwis</button>
-          </div>
-        </div>
+          {activeTab === "tab1" && <FirstTab />}
+          {activeTab === "tab2" && <SecondTab />}
+          {activeTab === "tab3" && <ThirdTab />}
+          {activeTab === "tab4" && <FourthTab />}
+          {activeTab === "tab5" && <FifthTab />}
         </div>
       </div>
-  </section>
+      <div className='carrier-card-benefit-container'>
+        <div className='carrier-card-benefit-buttons'>
+          <button onClick={handleTab1} className={activeTab === "tab1" ? "active" : "carrier-card-benefit-button"}>
+            <img src='assets/img/carrier/benefit-workplace.svg'/>
+            <h3>Doradztwo</h3>
+          </button>
+          <button onClick={handleTab2} className={activeTab === "tab2" ? "active" : "carrier-card-benefit-button"}>
+            <img src='assets/img/carrier/benefit-goal.svg'/>
+            <h3>Projekty</h3>
+          </button>
+          <button onClick={handleTab3} className={activeTab === "tab3" ? "active" : "carrier-card-benefit-button"}>
+            <img src='assets/img/carrier/benefit-balance.svg'/>
+            <h3>Budowa</h3>
+          </button>
+        </div>
+        <div className='carrier-card-benefit-buttons'>
+          <button onClick={handleTab4} className={activeTab === "tab4" ? "active" : "carrier-card-benefit-button"}>
+            <img src='assets/img/carrier/benefit-welcome.svg'/>
+            <h3>Commissioning</h3>
+          </button>
+          <button onClick={handleTab5} className={activeTab === "tab5" ? "active" : "carrier-card-benefit-button"}>
+            <img src='assets/img/carrier/benefit-coworking.svg'/>
+            <h3>Serwis</h3>
+          </button>
+        </div>
+      </div>
+    </section>
   )
 }
 
