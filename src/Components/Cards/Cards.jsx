@@ -40,25 +40,25 @@ function Cards({ t }) {
       <div className='carrier-card-benefit-container'>
         <div className='carrier-card-benefit-buttons'>
           <button onClick={handleTab1} className={activeTab === "tab1" ? "active" : "carrier-card-benefit-button"}>
-            <img src='assets/img/carrier/benefit-workplace.svg'/>
+            <img className="whatwedo-img" src='assets/img/carrier/benefit-workplace.svg'/>
             <h3>Doradztwo</h3>
           </button>
           <button onClick={handleTab2} className={activeTab === "tab2" ? "active" : "carrier-card-benefit-button"}>
-            <img src='assets/img/carrier/benefit-goal.svg'/>
+            <img className="whatwedo-img" src='assets/img/carrier/benefit-goal.svg'/>
             <h3>Projekty</h3>
           </button>
           <button onClick={handleTab3} className={activeTab === "tab3" ? "active" : "carrier-card-benefit-button"}>
-            <img src='assets/img/carrier/benefit-balance.svg'/>
+            <img className="whatwedo-img" src='assets/img/carrier/benefit-balance.svg'/>
             <h3>Budowa</h3>
           </button>
         </div>
         <div className='carrier-card-benefit-buttons'>
           <button onClick={handleTab4} className={activeTab === "tab4" ? "active" : "carrier-card-benefit-button"}>
-            <img src='assets/img/carrier/benefit-welcome.svg'/>
+            <img className="whatwedo-img" src='assets/img/carrier/benefit-welcome.svg'/>
             <h3>Commissioning</h3>
           </button>
           <button onClick={handleTab5} className={activeTab === "tab5" ? "active" : "carrier-card-benefit-button"}>
-            <img src='assets/img/carrier/benefit-coworking.svg'/>
+            <img className="whatwedo-img" src='assets/img/carrier/benefit-coworking.svg'/>
             <h3>Serwis</h3>
           </button>
         </div>

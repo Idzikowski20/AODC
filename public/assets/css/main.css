@@ -12166,6 +12166,11 @@ height: 154px;
   height: auto;
 }
 
+.whatwedo-img {
+  width: 260px;
+  height: 120px;
+}
+
 .carrier-card-aboutus-img img {
   object-fit: fill;
 }
