@@ -18,12 +18,12 @@ const HomePageMain2 = () => {
     <main className='homepage-2-main'>
         <Hero2 />
         <Linkedin />
-        <Cards />
         <AboutUs />
+        <Team/>
+        <Cards />
         <Counter />
         <SidePanel/>
         <WorkArea/>
-        <Team/>
         <VideoArea/>
     </main>
   )
