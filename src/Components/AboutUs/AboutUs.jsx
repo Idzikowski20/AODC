@@ -6,12 +6,11 @@ function AboutUs({ t }) {
     <section>
         <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
-      </div>
       <div className='bluur'></div>
       <div className='aboutus-container'>
     <div className='aboutus-box'>
           <div>
-          {t('title3.about1')}
+          <p>{t('title3.about1')}</p>
               </div>
               <div>
               {t('title3.about2')}
@@ -20,15 +19,8 @@ function AboutUs({ t }) {
               {t('title3.about3')}
               </div>
               </div>
-              <div className='aboutus-box'>
-          <div>
-          {t('title3.about1')}
-              </div>
-              <div>
-              {t('title3.about2')}
-              </div>
-              <div>
-              {t('title3.about3')}
+              <div className='aboutus-img-container'>
+              <img className="aboutus-img" src='assets/img/aboutus/aboutus.png'></img>
               </div>
               </div>
               </div>

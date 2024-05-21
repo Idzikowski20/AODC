@@ -6,7 +6,7 @@ import 'animate.css';
 
 function Hero2 ({ t }) {
   return (
-    <div id='#id1'>
+    <div id='id1'>
         <div className='bluur'></div>
 <div className='hero-container'>
   <div className='bluur2'></div>
