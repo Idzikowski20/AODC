@@ -12,7 +12,7 @@ function SecondTab({ t }) {
       <p>{t('title2.projekty5')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/carrier/benefit-goal.svg"></img>
+    <img src="assets/img/blog/blog-quote.jpg"></img>
     </div>
   </div>
   );

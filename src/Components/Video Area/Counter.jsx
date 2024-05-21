@@ -14,7 +14,7 @@ function Counter({ t }) {
                                     <div className="jm-video-counter-3">
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><img src='assets/img/counter/servers.webp' /></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/serwerownie.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="140">
@@ -26,7 +26,7 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fas fa-cogs"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/serwis.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="250">
@@ -38,7 +38,7 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-pen-fancy"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/koncepcje.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
@@ -50,7 +50,7 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-project-diagram"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/projekty.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
