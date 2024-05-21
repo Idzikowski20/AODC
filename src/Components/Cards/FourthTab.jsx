@@ -4,7 +4,7 @@ import { withNamespaces } from 'react-i18next';
 function FourthTab({ t }) {
   return (
     <div className="carrier-card-benefit">
-    <div>
+    <div className="what-we-do-title-container">
     <h1>{t('title2.commissioning')}</h1>
       <p>{t('title2.commissioning2')}</p>
       <p>{t('title2.commissioning3')}</p>

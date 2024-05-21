@@ -4,7 +4,7 @@ import { withNamespaces } from 'react-i18next';
 function SecondTab({ t }) {
   return (
     <div className="carrier-card-benefit">
-    <div>
+    <div className="what-we-do-title-container">
     <h1>{t('title2.projekty')}</h1>
       <p>{t('title2.projekty2')}</p>
       <p>{t('title2.projekty3')}</p>
