@@ -11,7 +11,7 @@ function ThirdTab({ t }) {
       <p>{t('title2.budowa4')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/carrier/benefit-balance.svg"></img>
+    <img src="assets/img/blog/blog-quote.jpg"></img>
     </div>
   </div>
   );

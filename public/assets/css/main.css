@@ -6804,8 +6804,16 @@ transform: scale(1.1);
     text-align: center;
     margin-bottom: 30px;
   }
+  
 
 }
+
+.jm-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .jm-video-counter-item-3 .jm-video-inner {
   text-align: center;
   display: contents;
@@ -12163,6 +12171,11 @@ height: 154px;
 .carrier-card-aboutus-img {
   margin-left: 50px;
   width: 70%;
+  height: auto;
+}
+
+.counter-img {
+  width: 200px;
   height: auto;
 }
 
