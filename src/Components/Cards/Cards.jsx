@@ -1,94 +1,66 @@
 import React from 'react'
 import { withNamespaces } from 'react-i18next';
 
+const indexes = document.querySelectorAll('.indexes li');
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
+
+function reset() {
+  for (let i = 0; i < tabs.length; i++) {
+    indexes[i].style.borderColor = 'transparent';
+    tabs[i].style.zIndex = 0;
+    tabs[i].classList.remove('active');
+    contents[i].classList.remove('active');
+  }
+}
+
+function showTab(i) {
+  indexes[i].style.borderColor = 'rgba(211,38,38,0.6)';
+  tabs[i].style.opacity = 1;
+  tabs[i].style.zIndex = 5;
+  tabs[i].classList.add('active');
+  contents[i].classList.add('active');
+}
+
+function activate(e) {
+  if (!e.target.matches('.indexes li')) return;
+  reset();
+  showTab(e.target.dataset.index);
+}
+
+const init = () => showTab(0);
+
+window.addEventListener('load',init,false);
+window.addEventListener('click',activate,false);
+
 function Cards({ t }) {
   return (
     <section>
   <h2>{t('title2')}</h2>
-  <div className='bluur2'></div>
-  <div className='service-container'>
-  <div className='service-card1'>
-    <div className='service-card'>
-      <div className='service-icon'>
-        {/* <AiFillDatabase /> */}
-      </div>
-      <div className='service-title'>
-      <h2>{t('title2.doradzctwo')}</h2>
-      </div>
-      <div className='service-subtitle'>
-        <div>
-        <p>-{t('title2.doradzctwo2')}</p>
-        <p>-{t('title2.doradzctwo3')}</p>
-        <p>-{t('title2.doradzctwo4')}</p>
-        <p>-{t('title2.doradzctwo5')}</p>
+  <div className="carrier-benefit-container">
+        <div className="carrier-card-benefit-container">
+        <div className="carrier-card-benefit">
+          <div>
+            <h1>Doradzctwo</h1>
+            <p>Wiemy, że komfort pracy w wysokim stopniu wpływa na efektywność pracowników, dlatego zapewniamy najwyższej jakości sprzęt i komfortowe, nowoczesne biuro. W przerwie między obowiązkami zachęcamy do skorzystania ze strefy relaksu z konsolą Xbox i profesjonalnym symulatorem jazdy.</p>
+          </div>
+          <div className="carrier-card-benefit-img">
+          <img src="assets/img/carrier/benefit-workplace.svg"></img>
+          </div>
+        </div>
+        <div className='carrier-card-benefit-container'>
+          <div className='carrier-card-benefit-buttons'>
+            <button data-index='0' className='whatwedo-active carrier-card-benefit-button'><img src='assets/img/carrier/benefit-workplace.svg'/>Doradzctwo</button>
+            <button data-index='1' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-goal.svg'/>Projekty</button>
+            <button data-index='2' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-balance.svg'/>Budowa</button>
+            </div>
+            <div className='carrier-card-benefit-buttons'>
+            <button data-index='3' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-welcome.svg'/>Commissioning</button>
+            <button data-index='4' className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-coworking.svg'/>Serwis</button>
+          </div>
+        </div>
         </div>
       </div>
-    </div>
-    <div className='service-card'>
-      <div className='service-icon'>
-        {/* <AiFillDatabase /> */}
-      </div>
-      <div className='service-title'>
-      <h2>{t('title2.projekty')}</h2>
-      </div>
-      <div className='service-subtitle'>
-        <div>
-        <p>-{t('title2.projekty2')}</p>
-        <p>-{t('title2.projekty3')}</p>
-        <p>-{t('title2.projekty4')}</p>
-        <p>-{t('title2.projekty5')}</p>
-        </div>
-      </div>
-    </div>
-    <div className='service-card'>
-      <div className='service-icon'>
-        {/* <AiFillDatabase /> */}
-      </div>
-      <div className='service-title'>
-      <h2>{t('title2.budowa')}</h2>
-      </div>
-      <div className='service-subtitle'>
-        <div>
-        <p>-{t('title2.budowa2')}</p>
-        <p>-{t('title2.budowa3')}</p>
-        <p>-{t('title2.budowa4')}</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div className='service-card1'>
-    <div></div>
-    <div className='service-card'>
-      <div className='service-icon'>
-        {/* <AiFillDatabase /> */}
-      </div>
-      <div className='service-title'>
-      <h2>{t('title2.commissioning')}</h2>
-      </div>
-      <div className='service-subtitle'>
-        <div>
-        <p>-{t('title2.commissioning2')}</p>
-        <p>-{t('title2.commissioning3')}</p>
-        </div>
-      </div>
-    </div>
-    <div className='service-card-service'>
-      <div className='service-icon'>
-        {/* <AiFillDatabase /> */}
-      </div>
-      <div className='service-title'>
-      <h2>{t('title2.serwis')}</h2>
-      </div>
-      <div className='service-subtitle'>
-        <div>
-        <p>-{t('title2.serwis2')}</p>
-        <p>-{t('title2.serwis3')}</p>
-        <p>-{t('title2.serwis4')}</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
   </section>
   )
 }
