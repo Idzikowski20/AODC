@@ -58,6 +58,11 @@ function Realizations({ t }) {
     <SidePanel />
     <Header2 />
 <section>
+  <div>
+    <p>
+    Zaufało nam już ponad 300 organizacji, dla których świadczymy usługi chmurowe — od onboardingu, przez doradztwo, migracje i modernizacje aplikacji. Wspieramy je w zakresie cyberbezpieczeństwa i zgodności z regulacjami, budujemy rozwiązania cloud native, a także realizujemy projekty z zakresu sztucznej inteligencji, uczenia maszynowego i analityki danych. Pomagamy optymalizować wykorzystanie infrastruktury oraz zapewniamy usługi zarządzania.
+    </p>
+  </div>
 	<div class="tiltgrid__container">
   <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/krakow.jpg" alt=""/></div>
