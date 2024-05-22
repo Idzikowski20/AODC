@@ -29,19 +29,19 @@ function Header2 ({ t }) {
                         <div className="jm-header-main-menu text-center jm-header-menu-2">
                             <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                 <ul>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <li className="menu-has-children" onClick={() => window.location.replace("/#home")}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 2500, behavior: "smooth" })}>
+                                    <li className="menu-has-children"  onClick={() => window.location.replace("/#aboutus")}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <li className="menu-has-children"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/Kariera">{t('Header3')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                         <Link to="/Realizacje">{t('Header4')}</Link>
                                     </li>
-                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 7000, behavior: "smooth" })}>
+                                    <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
                                         <Link to="#">{t('Header5')}</Link>
                                     </li>
                                 </ul>

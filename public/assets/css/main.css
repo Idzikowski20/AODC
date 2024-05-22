@@ -12236,16 +12236,14 @@ height: 154px;
 }
 
 .carrier-card-benefit-container {
-  max-width: 1366px;
+  max-width: 1500px;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: flex-start; 
-  padding: 20px;
 }
 
 .carrier-card-benefit-buttons {
-  gap: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
   justify-content: center;
@@ -12298,7 +12296,6 @@ height: 154px;
   color: #fff;
   border-bottom: 3px solid #d32b50;
   background: #00000000;
-  transform: scale(1.2);
 }
 
 .carrier-benefit-container {
