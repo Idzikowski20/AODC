@@ -5,7 +5,7 @@ import { withNamespaces } from 'react-i18next';
 
 function Footer2({ t }) {
   return (
-    <footer className="jm-footer-area-3">
+    <footer id='footer' className="jm-footer-area-3">
              <Carousel />
             <div className="jm-footer-bottom-3">
                 <div className="footer-container">

@@ -3,7 +3,7 @@ import { withNamespaces } from 'react-i18next';
 
 function AboutUs({ t }) {
   return (
-    <section>
+    <section id='aboutus'>
         <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
       <div className='aboutus-container'>

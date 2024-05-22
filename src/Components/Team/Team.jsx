@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Team({ t }) {
   return (
-<section>
+<section id='team'>
 <h2>{t('title6')}</h2>
   <div className='team-servers-container'>
       <div className='bluur'></div>
