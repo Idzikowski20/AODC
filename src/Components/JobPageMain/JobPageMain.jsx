@@ -81,7 +81,7 @@ const JobPageMain = () => {
       
 
       <div className="carrier-benefit-container">
-        <div className="carrier-card-benefit-container">
+        <div className="carrier-card-benefit-container column margin-bottom margin-top">
         <div className="carrier-card-benefit">
           <div>
             <h1>Benefity</h1>
