@@ -94,14 +94,14 @@ const JobPageMain = () => {
         </div>
         <div className='carrier-card-benefit-container'>
           <div className='carrier-card-benefit-buttons'>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-workplace.svg'/>Nowoczesne i przyjazne miejsce pracy</button>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-goal.svg'/>Twój rozwój jest dla nas najważniejszy</button>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-balance.svg'/>Dbamy o Twoje zdrowie i samopoczucie  </button>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-workplace.svg'/>Nowoczesne i przyjazne miejsce pracy</a>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-goal.svg'/>Twój rozwój jest dla nas najważniejszy</a>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-balance.svg'/>Dbamy o Twoje zdrowie i samopoczucie  </a>
             </div>
             <div className='carrier-card-benefit-buttons'>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-welcome.svg'/>Przyjmiemy Cię z otwartymi rękami</button>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-coworking.svg'/>Pracujemy w przestrzeni coworkingowej</button>
-            <button className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-elastic.svg'/>Cenimy sobie elastyczne podejście</button>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-welcome.svg'/>Przyjmiemy Cię z otwartymi rękami</a>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-coworking.svg'/>Pracujemy w przestrzeni coworkingowej</a>
+            <a className='carrier-card-benefit-button'><img src='assets/img/carrier/benefit-elastic.svg'/>Cenimy sobie elastyczne podejście</a>
           </div>
         </div>
         </div>
