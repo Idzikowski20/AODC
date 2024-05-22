@@ -18,7 +18,11 @@ function Footer2({ t }) {
                              <h4 className="jm-sidebar-contact-title">{t('title7.3')}</h4>
                              <Link to="mailto:biuro@aodc.pl" className="theme-3">
                                 <i className="fal fa-envelope"></i>
-                                    <span><span>biuro@aodc.pl | faktury@aodc.pl</span></span>
+                                    <span><span>biuro@aodc.pl</span></span>
+                                        </Link>
+                                        <Link to="mailto:faktury@aodc.pl" className="theme-3">
+                                <i className="fal fa-envelope"></i>
+                                    <span><span>faktury@aodc.pl</span></span>
                                         </Link>
                                              <Link to="tel:(+22)8463515">
                                                 <i className="fal fa-phone"></i>

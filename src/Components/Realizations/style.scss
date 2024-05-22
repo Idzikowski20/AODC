@@ -1,16 +1,18 @@
 .tiltgrid {
 	margin-top: 250px;
 	&__container {
-		margin-bottom: 50px;
-		margin-top: 50px;
-		--skew-y: calc(var(--scroll-tilt, -7) * 1deg) ;
- 		 --easing: cubic-bezier(1,.45,.7,1.05);
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		@media screen and (min-width:720px) {
-		}
-		gap: clamp(0.25rem, -0.0714285714285714rem + 1.4285714285714286vw, 1rem);
-		transition: gap 0.3s ease;
+border-radius: 20px;
+    background: rgb(17, 46, 90);
+    background: linear-gradient(0deg, rgba(17, 46, 90, 1) 0%, rgba(3, 18, 41, 1) 100%);
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    --skew-y: calc(var(--scroll-tilt, -7) * 1deg);
+    --easing: cubic-bezier(1,.45,.7,1.05);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.25rem, -0.0714285714rem + 1.4285714286vw, 1rem);
+    transition: gap 0.3s ease;
 		&:hover {
 			img {
 				transition: scale 0.8s, filter 1s;

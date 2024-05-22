@@ -6,7 +6,6 @@ function AboutUs({ t }) {
     <section>
         <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
-      <div className='bluur'></div>
       <div className='aboutus-container'>
     <div className='aboutus-box'>
           <div>
