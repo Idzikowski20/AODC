@@ -1,23 +1,10 @@
 import React from 'react'
+import CarrierPageImage from '../Video Area/CarrierPageImage'
 
 const JobPageMain = () => {
   return (
     <div>
-      <div className="carrier-container">
-        <div className="carrier-card-container">
-        <div className="carrier-card">
-          <div>
-            <h1>Kariera w AODC</h1>
-            <p>Łączymy najnowsze technologie i ludzi,którzy je tworzą.</p>
-            <button className="carrier-card-button"  onClick={() => window.scrollTo({ top: 2800, behavior: "smooth" })}>Sprawdź oferty</button>
-          </div>
-          <div className="carrier-card-img">
-          <img src="assets/img/carrier/header.svg"></img>
-          </div>
-        </div>
-        </div>
-      </div>
-
+      <CarrierPageImage />
         <div className="carrier-aboutus-container">
         <div className="carrier-card-aboutus-container">
         <div className="carrier-card-aboutus">
