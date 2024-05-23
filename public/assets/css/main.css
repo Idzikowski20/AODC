@@ -12167,7 +12167,8 @@ height: 154px;
 }   
 
 .carrier-card-aboutus-container {
-  max-width: 1366px;
+  margin: 50px;
+  max-width: 1500px;
   flex-direction: column;
   display: flex;
   width: 100%;
