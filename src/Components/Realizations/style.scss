@@ -1,9 +1,9 @@
 .tiltgrid {
 	margin-top: 250px;
 	&__container {
-border-radius: 20px;
-    background: rgb(17, 46, 90);
-    background: linear-gradient(0deg, rgba(17, 46, 90, 1) 0%, rgba(3, 18, 41, 1) 100%);
+	border-radius: 20px;
+	// background: rgb(13, 56, 105);
+	// background: linear-gradient(0deg, rgba(13, 56, 105, 1) 0%, rgb(42, 131, 161) 100%);
     padding: 30px;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -19,6 +19,9 @@ border-radius: 20px;
 			}
 		}
   & > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     opacity: 0;
@@ -31,8 +34,9 @@ border-radius: 20px;
       }
     }
     img {
-		background: #fff;
-		aspect-ratio: 16 / 9;
+		width: 100%;
+    	height: 100%;
+		background-image: radial-gradient(at 50% 44%, rgba(63, 56, 161, 0.473), rgba(0, 0, 0, 0) 58%);
 		min-width: 100%;
 		object-fit:scale-down; 
 		object-position: 50% 50%;
