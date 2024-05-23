@@ -85,7 +85,7 @@ function Realizations({ t }) {
   <div><img loading="lazy" src="assets/img/trustus/knf-1.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/pzuu.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/logo.png" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/logo." alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/logo.jpg" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/logo_internet_dla_mazowsza_big_logo.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/images.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/pobrane-2.png" alt=""/></div>

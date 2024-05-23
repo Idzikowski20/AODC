@@ -11972,6 +11972,8 @@ height: 154px;
 }
 
 .footer-logo {
+  max-width: 260px;
+  width: 100%;
   flex-direction: column;
   display: flex;
   justify-content: center;
