@@ -19,7 +19,7 @@ function AboutUs({ t }) {
               </div>
               </div>
               <div className='aboutus-img-container'>
-              <img className="aboutus-img" src='assets/img/aboutus/aboutus.png'></img>
+              {/* <img className="aboutus-img" src='assets/img/aboutus/aboutus.png'></img> */}
               </div>
               </div>
               </div>

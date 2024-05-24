@@ -23,7 +23,7 @@ function Team({ t }) {
               </div>
               </div>
               <div className='team-img-container'>
-              <img className="team-img" src='assets/img/aboutus/aboutus.png'></img>
+              {/* <img className="team-img" src='assets/img/aboutus/aboutus.png'></img> */}
               </div>
               </div>
               </div>
