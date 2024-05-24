@@ -9,10 +9,16 @@ function Footer2({ t }) {
              <Carousel />
             <div className="jm-footer-bottom-3">
                 <div className="footer-container">
+                    <div className='logo-container'>
                     <div className='footer-logo'>
                         <img  src='assets/img/logo/logodark.png' alt=''/>
                         <span>NIP: 679-311-76-21, REGON: 362779750</span>
                     </div>
+                    <div>
+                    <span><Link to='#'>Polityka prywatności</Link></span>
+                    </div>
+                    </div>
+
                         <div className="footer-contact-container">
                              <div className="footer-contact jm-sidebar-contact mb-40">
                              <h4 className="jm-sidebar-contact-title">{t('title7.3')}</h4>
