@@ -12009,6 +12009,30 @@ height: 154px;
     align-items: center;
 }
 
+.footer-copyright-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.workarea-img { 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-copyright {
+  width: 100%;
+  height: 100%;
+}
+
 .team-container {
   flex-direction: row-reverse;
   height: 100%;
