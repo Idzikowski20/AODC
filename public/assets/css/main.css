@@ -3530,10 +3530,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: flex;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .bluur {
-  width: 30vw;
-  height: 60vh;
-  opacity: .55;
+  width: 35vw;
+  height: 70vh;
+  opacity: .75;
   background-image: radial-gradient(circle farthest-side at 0%, #0055f1a1, #0000 51%);
   position: absolute;
   /* top: -20%; */

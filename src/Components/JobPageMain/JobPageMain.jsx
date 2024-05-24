@@ -3,8 +3,9 @@ import CarrierPageImage from '../Video Area/CarrierPageImage'
 
 const JobPageMain = () => {
   return (
-    <div>
-      <CarrierPageImage />
+    <>
+    <CarrierPageImage />
+    <section>
         <div className="carrier-aboutus-container">
         <div className="carrier-card-aboutus-container">
         <div className="carrier-card-aboutus">
@@ -36,7 +37,8 @@ const JobPageMain = () => {
     <div className='job-container'>
     <iframe loading='lazy' className='job-cards' src="https://widgets.commoninja.com/iframe/c0f6ec33-7637-4a93-becc-210c8c6b6b9c" frameborder="0" scrolling="no"></iframe>
   </div>
-    </div>
+    </section>
+    </>
   )
 }
 
