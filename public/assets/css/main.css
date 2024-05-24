@@ -12308,6 +12308,7 @@ height: 154px;
 }
 
 .carrier-benefit-container {
+  background-image: radial-gradient(at 50% 56%, rgb(47 43 211 / 31%), rgba(0, 0, 0, 0) 58%);
   min-height: 60vh;
   display: flex;
   justify-content: center;
