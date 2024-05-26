@@ -17,11 +17,11 @@ const HomePageMain2 = () => {
         <Hero2 />
         <Linkedin />
         <AboutUs />
+        <WorkArea/>
         <Team/>
         <Cards />
         <Counter />
         <SidePanel/>
-        <WorkArea/>
         <VideoArea/>
     </main>
   )
