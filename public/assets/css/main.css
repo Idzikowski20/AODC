@@ -4158,6 +4158,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #da4968;
 }
 .jm-sidebar-contact > a i {
+  border-radius: 20px;
+  box-shadow: -4px 2px 20px #ff0909;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -4179,6 +4181,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 5px;
 }
 .sidebar-address i {
+  border-radius: 20px;
+  box-shadow: -4px 2px 20px #ff0909;
   max-width: 40px;
   height: 40px;
   background-color: #d32b50;
@@ -11976,6 +11980,7 @@ transform: scale(1.1);
 }
 
 .socialmedia-container {
+  margin-top: 40px;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
@@ -12341,10 +12346,12 @@ height: 154px;
 }
 
 .socialmedia-icon:hover {
-transform:translateY(10px);
+transform:translateY(-10px);
 }
 
 .socialmedia-icon img{
+  border-radius: 20px;
+  box-shadow: -4px 2px 20px #ff0909;
   width: 100%;
   height: 100%;
 }
