@@ -4182,11 +4182,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sidebar-address i {
   max-width: 40px;
   height: 40px;
-  background-color: #5f0d20;
+  background-color: #d32b50;
   line-height: 40px;
   text-align: center;
   margin-right: 15px;
   flex: 0 0 40px;
+}
+
+.sidebar-address i:hover {
+  background-color: #da4968;
 }
 
 .jm-sidebar-social a {
@@ -11972,8 +11976,23 @@ transform: scale(1.1);
   }
 }
 
+.socialmedia-container {
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.footer-adress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .footer-contact {
-width: 300px; 
+width: 267px; 
 height: 154px;
 }
 
@@ -11989,6 +12008,10 @@ height: 154px;
   align-items: center;
   padding-bottom: 0;
   transition: 500ms;
+}
+
+.footer-logo img {
+  margin-bottom: 20px;
 }
 
 .footer-logo span {
@@ -12303,6 +12326,22 @@ height: 154px;
   color: #fff;
   border-bottom: 1px solid #362bd3;
   background: #00000000;
+}
+
+.socialmedia-icon {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  transition: 500ms;
+}
+
+.socialmedia-icon:hover {
+transform:translateY(10px);
+}
+
+.socialmedia-icon img{
+  width: 100%;
+  height: 100%;
 }
 
 .what-we-do-title-container {
