@@ -5,10 +5,10 @@ function ThirdTab({ t }) {
   return (
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
-    <h1 className='animate__animated animate__backInDown'>{t('title2.budowa')}</h1>
-      <p className='animate__animated animate__backInDown'>• {t('title2.budowa')}</p>
-      <p className='animate__animated animate__backInDown'>• {t('title2.budowa3')}</p>
-      <p className='animate__animated animate__backInDown'>• {t('title2.budowa4')}</p>
+    <h1 className='animate__bounceIn'>{t('title2.budowa')}</h1>
+      <p className='animate__bounceIn'>• {t('title2.budowa')}</p>
+      <p className='animate__bounceIn'>• {t('title2.budowa3')}</p>
+      <p className='animate__bounceIn'>• {t('title2.budowa4')}</p>
     </div>
     <div className="carrier-card-benefit-img">
     <img className='animate__animated animate__backInDown' src="assets/img/whatwedo/budowa.png"></img>

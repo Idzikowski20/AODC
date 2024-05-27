@@ -6,7 +6,7 @@ function Counter({ t }) {
   return (
     <section id='counter'>
             <h2>{t('title4')}</h2>
-            <div className='bluur'></div>
+            <div className='bluur2'></div>
                     <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
                        <div className="row justify-content-center width-100%">
                             <div className="#">
