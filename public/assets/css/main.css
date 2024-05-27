@@ -6431,6 +6431,7 @@ transform: scale(1.1);
 
 @media only screen and (max-width: 320px) {
   .jm-video-text .title {
+    -webkit-text-stroke: 2px #d32b50;
     font-size: 40px !important;
   }
 }
@@ -11979,9 +11980,16 @@ transform: scale(1.1);
   }
 }
 
-.socialmedia-container {
-  margin-top: 40px;
+.socialmedia-icon-container {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.socialmedia-container {
+  flex-direction: column;
+  margin-top: 5px;
+  align-items:flex-start;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
@@ -12002,6 +12010,7 @@ transform: scale(1.1);
 }
 
 .footer-contact {
+margin-bottom: 50px;
 width: 267px; 
 height: 154px;
 }
@@ -12314,7 +12323,7 @@ height: 154px;
 .carrier-card-benefit-buttons {
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
   justify-content: center;
   width: 100%;
   height: 100%;
