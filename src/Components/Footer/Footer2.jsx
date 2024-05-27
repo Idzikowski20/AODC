@@ -30,21 +30,41 @@ function Footer2({ t }) {
                                 </Link>
                             </div>
                         </div>
+
+
                         <div className="footer-adress-container">
-                             <div className="footer-adress jm-sidebar-contact mb-40">
+                             <div className="footer-adress jm-sidebar-contact">
                                     <h4 className="jm-sidebar-contact-title">{t('title7.4')}</h4>
+                                    <div>
                                     <Link to="https://maps.app.goo.gl/ji16fg5J91BRAjbw8" target="_blank" className="youtube">
                                          <span className="sidebar-address">
                                                  <i className="fal fa-map-marker-alt"></i>
-                                                    <span>Działkowa 37, 02-234 Warszawa</span>
-                                                    </span>
-                                                 </Link>
-                                             <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
-                                          <i className="fab fa-instagram"></i>
-                                    <span><span>Linkedin</span></span>
-                                 </Link>
-                            </div>
+                                                <span>Działkowa 37, 02-234 Warszawa</span>
+                                        </span>
+                                     </Link>
+                                    </div>
+                                    </div>
+                                    
+                                    <div className='socialmedia-container'>
+                                        <div className='socialmedia-icon'>
+                                        <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
+                                        <img src='assets/img/footer/linkedin.png'/>
+                                         </Link>
+                                        </div>
+                                        <div className='socialmedia-icon'>
+                                        <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
+                                          <img src='assets/img/footer/youtube.png'/>
+                                         </Link>
+                                        </div>
+                                        <div className='socialmedia-icon'>
+                                        <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
+                                        <img src='assets/img/footer/tiktok.png'/>
+                                        </Link>
+                                        </div>
+                                 </div>
                         </div>
+
+
                 </div>
                 <div className="footer-copyright-container">
                             <div className="footer-copyright">
