@@ -11,7 +11,7 @@ function FifthTab({ t }) {
       <p>• {t('title2.serwis4')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/blog/blog-quote.jpg"></img>
+    <img src="assets/img/whatwedo/serwis.png"></img>
     </div>
   </div>
   );

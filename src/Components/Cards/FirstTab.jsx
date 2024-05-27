@@ -12,7 +12,7 @@ function FirstTab({ t }) {
       <p>• {t('title2.doradzctwo5')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/blog/blog-quote.jpg"></img>
+    <img src="assets/img/whatwedo/doradzctwo.png"></img>
     </div>
   </div>
   );

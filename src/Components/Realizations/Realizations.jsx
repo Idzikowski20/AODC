@@ -56,7 +56,7 @@ function Realizations({ t }) {
     <>
     <RealizationsPageImage />
 <section id='realizations'>
-  <div>
+  <div className='realizations-title'>
     <p>
     Zaufało nam już ponad 300 organizacji, dla których świadczymy usługi chmurowe — od onboardingu, przez doradztwo, migracje i modernizacje aplikacji. Wspieramy je w zakresie cyberbezpieczeństwa i zgodności z regulacjami, budujemy rozwiązania cloud native, a także realizujemy projekty z zakresu sztucznej inteligencji, uczenia maszynowego i analityki danych. Pomagamy optymalizować wykorzystanie infrastruktury oraz zapewniamy usługi zarządzania.
     </p>

@@ -31,23 +31,18 @@ function Cards({ t }) {
       <div className='carrier-card-benefit-container'>
         <div className='carrier-card-benefit-buttons'>
           <a onClick={handleTab1} className={activeTab === "tab1" ? "active" : "carrier-card-benefit-button"}>
-            {/* <img className="whatwedo-img" src='assets/img/blog/admin-1.jpg'/> */}
             <h4>{t('title2.doradzctwo')}</h4>
           </a>
           <a onClick={handleTab2} className={activeTab === "tab2" ? "active" : "carrier-card-benefit-button"}>
-            {/* <img className="whatwedo-img" src='assets/img/blog/admin-1.jpg'/> */}
             <h4>{t('title2.projekty')}</h4>
           </a>
           <a onClick={handleTab3} className={activeTab === "tab3" ? "active" : "carrier-card-benefit-button"}>
-            {/* <img className="whatwedo-img" src='assets/img/blog/admin-1.jpg'/> */}
             <h4>{t('title2.budowa')}</h4>
           </a>
           <a onClick={handleTab4} className={activeTab === "tab4" ? "active" : "carrier-card-benefit-button"}>
-            {/* <img className="whatwedo-img" src='assets/img/blog/admin-1.jpg'/> */}
             <h4>{t('title2.commissioning')}</h4>
           </a>
           <a onClick={handleTab5} className={activeTab === "tab5" ? "active" : "carrier-card-benefit-button"}>
-            {/* <img className="whatwedo-img" src='assets/img/blog/admin-1.jpg'/> */}
             <h4>{t('title2.serwis')}</h4>
           </a>
         </div>

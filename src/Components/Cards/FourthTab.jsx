@@ -10,7 +10,7 @@ function FourthTab({ t }) {
       <p>• {t('title2.commissioning3')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/blog/blog-quote.jpg"></img>
+    <img src="assets/img/whatwedo/commissioning.png"></img>
     </div>
   </div>
   );
