@@ -4143,7 +4143,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* sidebar contact info */
 .jm-sidebar-contact-title {
-  text-align: center;
   font-size: 24px;
   color: var(--clr-common-white);
 }

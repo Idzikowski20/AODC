@@ -5,13 +5,13 @@ function FifthTab({ t }) {
   return (
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
-      <h1>{t('title2.serwis')}</h1>
-      <p>• {t('title2.serwis2')}</p>
-      <p>• {t('title2.serwis3')}</p>
-      <p>• {t('title2.serwis4')}</p>
+      <h1 className='animate__animated animate__backInDown'>{t('title2.serwis')}</h1>
+      <p className='animate__animated animate__backInDown'>• {t('title2.serwis2')}</p>
+      <p className='animate__animated animate__backInDown'>• {t('title2.serwis3')}</p>
+      <p className='animate__animated animate__backInDown'>• {t('title2.serwis4')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/whatwedo/serwis.png"></img>
+    <img className='animate__animated animate__backInDown' src="assets/img/whatwedo/serwis.png"></img>
     </div>
   </div>
   );

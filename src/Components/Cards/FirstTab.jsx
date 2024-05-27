@@ -1,18 +1,19 @@
 import React from "react";
 import { withNamespaces } from 'react-i18next';
+import 'animate.css';
 
 function FirstTab({ t }) {
   return (
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
-    <h1>{t('title2.doradzctwo')}</h1>
-      <p>• {t('title2.doradzctwo2')}</p>
-      <p>• {t('title2.doradzctwo3')}</p>
-      <p>• {t('title2.doradzctwo4')}</p>
-      <p>• {t('title2.doradzctwo5')}</p>
+    <h1 className='animate__animated animate__backInDown'>{t('title2.doradzctwo')}</h1>
+      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo2')}</p>
+      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo3')}</p>
+      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo4')}</p>
+      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo5')}</p>
     </div>
     <div className="carrier-card-benefit-img">
-    <img src="assets/img/whatwedo/doradzctwo.png"></img>
+    <img className='animate__animated animate__backInDown' src="assets/img/whatwedo/doradzctwo.png"></img>
     </div>
   </div>
   );
