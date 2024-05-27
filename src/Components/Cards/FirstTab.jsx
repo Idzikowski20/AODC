@@ -6,10 +6,10 @@ function FirstTab({ t }) {
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
     <h1>{t('title2.doradzctwo')}</h1>
-      <p>{t('title2.doradzctwo2')}</p>
-      <p>{t('title2.doradzctwo3')}</p>
-      <p>{t('title2.doradzctwo4')}</p>
-      <p>{t('title2.doradzctwo5')}</p>
+      <p>• {t('title2.doradzctwo2')}</p>
+      <p>• {t('title2.doradzctwo3')}</p>
+      <p>• {t('title2.doradzctwo4')}</p>
+      <p>• {t('title2.doradzctwo5')}</p>
     </div>
     <div className="carrier-card-benefit-img">
     <img src="assets/img/blog/blog-quote.jpg"></img>
