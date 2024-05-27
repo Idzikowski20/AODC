@@ -72,7 +72,6 @@ function Realizations({ t }) {
   <div><img loading="lazy" src="assets/img/trustus/kozienice.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/nbp.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/aa.png" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/logo.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/atos.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/a111.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/aq.png" alt=""/></div>

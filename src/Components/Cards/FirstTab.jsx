@@ -6,11 +6,11 @@ function FirstTab({ t }) {
   return (
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
-    <h1 className='animate__animated animate__backInDown'>{t('title2.doradzctwo')}</h1>
-      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo2')}</p>
-      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo3')}</p>
-      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo4')}</p>
-      <p className='animate__animated animate__backInDown'>• {t('title2.doradzctwo5')}</p>
+    <h1 className='animate__bounceIn'>{t('title2.doradzctwo')}</h1>
+      <p className='animate__bounceIn'>• {t('title2.doradzctwo2')}</p>
+      <p className='animate__bounceIn'>• {t('title2.doradzctwo3')}</p>
+      <p className='animate__bounceIn'>• {t('title2.doradzctwo4')}</p>
+      <p className='animate__bounceIn'>• {t('title2.doradzctwo5')}</p>
     </div>
     <div className="carrier-card-benefit-img">
     <img className='animate__animated animate__backInDown' src="assets/img/whatwedo/doradzctwo.png"></img>
