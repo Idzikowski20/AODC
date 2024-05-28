@@ -18,6 +18,37 @@ body {
   align-items: center;
 }
 
+.career-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.career-button {
+  box-shadow: -4px 2px 20px #ff0909;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  padding: 7px;
+  background: #d32b50;
+  color: #fff;
+  transition: 500ms;
+}
+
+.privacy-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  
+}
+
+.career-button:hover {
+  transform: translateY(-10px);
+  background-color: #da4968;
+}
+
 /* Abous us */
 
 @media only screen and (max-width: 800px) {
@@ -32,6 +63,7 @@ body {
 }
 
 .aboutus-img-container {
+  max-width: 500px;
   width: 100%;
   height: 100%;
 }
