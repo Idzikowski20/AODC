@@ -1,7 +1,5 @@
 import React from 'react'
 import './style.scss'
-import Header2 from '../Header/Header2';
-import SidePanel from '../Side Panel/SidePanel';
 import { withNamespaces } from 'react-i18next';
 import RealizationsPageImage from '../Video Area/RealizationsPageImage';
 
@@ -57,9 +55,7 @@ function Realizations({ t }) {
     <RealizationsPageImage />
 <section id='realizations'>
   <div className='realizations-title'>
-    <p>
-    Zaufało nam już ponad 300 organizacji, dla których świadczymy usługi chmurowe — od onboardingu, przez doradztwo, migracje i modernizacje aplikacji. Wspieramy je w zakresie cyberbezpieczeństwa i zgodności z regulacjami, budujemy rozwiązania cloud native, a także realizujemy projekty z zakresu sztucznej inteligencji, uczenia maszynowego i analityki danych. Pomagamy optymalizować wykorzystanie infrastruktury oraz zapewniamy usługi zarządzania.
-    </p>
+  <p>{t('title10.2')}</p>
   </div>
 	<div class="tiltgrid__container">
   <div><img loading="lazy" src="assets/img/trustus/KATOWICE.png" alt=""/></div>
