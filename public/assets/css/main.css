@@ -12393,6 +12393,7 @@ transform:translateY(-10px);
 }
 
 .socialmedia-icon img{
+  background-color: #d32b50;
   border-radius: 20px;
   box-shadow: -4px 2px 20px #ff0909;
   width: 100%;
