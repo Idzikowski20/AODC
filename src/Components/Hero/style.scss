@@ -36,7 +36,6 @@ body {
 
 .hero-container {
   flex-direction: column;
-  background: linear-gradient(to top, #031229 0%, #03122967 100%);
       width: 100%;
       height: 100%;
       position: relative;
@@ -114,7 +113,7 @@ body {
   
 .content {
   height: 40vh;
-  background-image: radial-gradient(circle at 50% 100%, rgb(23 70 155), #0000 40%);
+  background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%);
   margin-top: 150px;
   flex-direction: column;
   align-items: center;
