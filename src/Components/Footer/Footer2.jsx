@@ -61,7 +61,7 @@ function Footer2({ t }) {
                                          </Link>
                                         </div>
                                         <div className='socialmedia-icon'>
-                                        <Link to="#" target="_blank" className="youtube">
+                                        <Link to="https://www.tiktok.com/@aodcartofdatacenter" target="_blank" className="youtube">
                                         <img src='assets/img/footer/tiktok.png'/>
                                         </Link>
                                         </div>
