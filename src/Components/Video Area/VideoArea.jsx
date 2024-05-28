@@ -15,6 +15,7 @@ function VideoArea({ t }) {
               </div>
             </div>
             <div className="jm-video-text">
+            <h2 className="title">{t('title77')}</h2>
               <h2 className="title">{t('title7')}</h2>
             </div>
           </div>
