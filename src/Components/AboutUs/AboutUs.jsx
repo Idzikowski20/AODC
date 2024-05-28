@@ -12,10 +12,10 @@ function AboutUs({ t }) {
           <p>{t('title3.about1')}</p>
               </div>
               <div>
-              {t('title3.about2')}
+              <p>{t('title3.about2')}</p>
               </div>
               <div>
-              {t('title3.about3')}
+              <p>{t('title3.about3')}</p>
               </div>
               </div>
               <div className='aboutus-img-container'>
