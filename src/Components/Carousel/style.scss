@@ -152,6 +152,10 @@ $animationSpeed: 40s;
 		height: 70px;
 	}
 
+	h2 {
+		margin: 0 !important;
+	}
+
 	a {
 		z-index: 3;
 	}
@@ -178,8 +182,12 @@ $animationSpeed: 40s;
 	}
 	
 	.slide {
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		display: flex;
 		margin-left: 15px;
 		margin-right: 15px;
-		width: 250px;
+		width: 250px
 	}
 }
