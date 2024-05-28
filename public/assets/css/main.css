@@ -41,7 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  
+
 }
 
 .career-button:hover {
@@ -12130,11 +12130,13 @@ height: 154px;
 }
 
 .team-img-container {
+  max-width: 500p;
   width: 100%;
   height: 100%;
 }
 
 .team-img {
+  border-radius: 20px;
   width: 100%;
   height: 100%;
 }
