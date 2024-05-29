@@ -12373,6 +12373,11 @@ height: 154px;
   transform: scale(1.2);
 }
 
+#realizations {
+/* background-image: linear-gradient(0deg, rgba(255,115,146,1) 0%, rgba(211,43,80,1) 52%, rgba(211,43,80,1) 100%) !important;
+background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%); */
+}
+
 .carrier-card-benefit-button {
   margin: 5px;
   width: 100%;
