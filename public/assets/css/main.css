@@ -53,12 +53,18 @@ body {
 
 @media only screen and (max-width: 800px) {
   .aboutus-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     display: flex;
     padding: 15px;
-    flex-direction: column;
+  }
+  .team-container {
+    flex-direction: column-reverse !important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
   }
 }
 
