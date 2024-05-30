@@ -67,6 +67,7 @@ function Realizations({ t }) {
 
   <div><img loading="lazy" src="assets/img/trustus/aq.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/instytu.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/cms.png" alt=""/></div>
 
   <div><img loading="lazy" src="assets/img/trustus/a3.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/a1.png" alt=""/></div>
@@ -76,11 +77,11 @@ function Realizations({ t }) {
   <div><img loading="lazy" src="assets/img/trustus/GAGAGA.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/KPKPKP.png" alt=""/></div>
 
-  <div><img loading="lazy" src="assets/img/trustus/pobrane-2.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/uksw.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/logo_internet_dla_mazowsza_big_logo.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/bankpolski.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/data4.png" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/cms.png" alt=""/></div>
+
   <div><img loading="lazy" src="assets/img/trustus/dr.png" alt=""/></div>
 
 
