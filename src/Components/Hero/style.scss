@@ -11,6 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 450px) {
+  .video-background-container {
+    height: 350px !important;
+  }
+}
+
 .video-background-container {
   margin: 15px;
   position: relative;
