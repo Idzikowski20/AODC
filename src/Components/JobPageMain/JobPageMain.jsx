@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { withNamespaces } from 'react-i18next';
 import CarrierPageImage from '../Video Area/CarrierPageImage'
 
-const JobPageMain = () => {
+function JobPageMain({ t }) {
   return (
     <>
     <CarrierPageImage />
     <div className='career-title'>
     <div>
-    <p>Przed aplikacją na dane stanowisko prosimy o zapoznanie się z Polityką Prywatności.</p>
+    <p>{t('polityka2')}</p>
     </div>
     <div>
       <Link to="/Polityka">
-      <button className="career-button">Polityka Prywatności</button>
+      <button className="career-button">{t('polityka3')}</button>
       </Link>
     </div>
     </div>
@@ -23,4 +24,4 @@ const JobPageMain = () => {
   )
 }
 
-export default JobPageMain
+export default withNamespaces()(JobPageMain);

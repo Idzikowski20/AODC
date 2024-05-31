@@ -42,6 +42,8 @@ ul {
 @media only screen and (max-height: 700px) {
   section {
     width: min(50rem, 90%) !important;
+  }
+  section p {
     font-size: clamp(0.8rem,.700rem + -0.7vw,1.0rem) !important;
   }
 }
