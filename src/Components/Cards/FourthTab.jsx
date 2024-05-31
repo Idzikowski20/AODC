@@ -5,9 +5,9 @@ function FourthTab({ t }) {
   return (
     <div className="carrier-card-benefit">
     <div className="what-we-do-title-container">
-    <h1 className='animate__bounceIn'>{t('title2.commissioning')}</h1>
-      <p className='animate__bounceIn'>• {t('title2.commissioning2')}</p>
-      <p className='animate__bounceIn'>• {t('title2.commissioning3')}</p>
+    <h2 className='what-we-do-title animate__bounceIn'>{t('title2.commissioning')}</h2>
+      <p className='what-we-do-text-center animate__bounceIn'>• {t('title2.commissioning2')}</p>
+      <p className='what-we-do-text-center animate__bounceIn'>• {t('title2.commissioning3')}</p>
     </div>
     <div className="carrier-card-benefit-img">
     <img className='animate__animated animate__backInDown' src="assets/img/whatwedo/commissioning.png"></img>
