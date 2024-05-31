@@ -31,9 +31,9 @@
   "title2.serwis3": "24/7/365 Infrastructure Support: 24 hours a day, 7 days a week, 365 days a year based on the expected SLA level",
   "title2.serwis4": "24/7 Dedicated Service Hotline",
   "title3": "ABOUT US",
-  "title3.about1": "???",
-  "title3.about2": "???",
-  "title3.about3": "???",
+  "title3.about1": "AODC has been designing, building, and servicing the largest server rooms and Data Center facilities in Poland for almost a decade. We can responsibly say that we execute the most projects, participating in the investment processes of key data processing centers for both public institutions and commercial clients. This translates into our unique experience and special knowledge, enabling us to undertake the largest and most challenging projects in this field.",
+  "title3.about2": "",
+  "title3.about3": "",
   "title4": "OUR ACHIEVEMENTS",
   "title4.serwerownie": "Data Centers",
   "title4.serwisy": "Services",
@@ -52,7 +52,7 @@
   "title6.3": "CEO",
   "title6.4": "Director of Technical Affairs",
   "title6.5": "Director of Sales",
-  "title7": "Presentation",
+  "title7": "Video Presentation",
   "title7.1": "Partners",
   "title7.2": "Certificates",
   "title7.3": "Contact",
@@ -68,12 +68,18 @@
   "title9.3": "CARIER",
   "title9.4": "REALIZATIONS",
   "title10": "THEY TRUSTED US",
-  "title10.1": "AoDC Career",
+  "title10.1": "AODC CAREER",
+  "title10.2": "Over 150 completed server rooms, more than 100 projects, over 100 active service contracts, hundreds of concepts, and dozens of audits are not just numbers, but indicators of clients' trust in AODC. Every day, we strive not to betray this trust and to be a responsible partner.",
   "title11": "Welcome to our website! 👋 We use cookies to provide you with the best possible experience. We won't share any of your data. For more information about our cookies, please find it",
   "title11.1": "Here",
   "title11.2": "Close",
   "videomodal": "https://www.youtube.com/embed/Tvr_I3kNP4U",
-  "polityka": "Privacy policy"
+  "polityka": "PRIVACY POLICY",
+  "polityka2": "Before applying for the position, please review our Privacy Policy.",
+  "polityka3": "Privacy Policy",
+  "title12": "Oops! This page does not exist.",
+  "title12.1": "Please check if you entered the address correctly.",
+  "title12.2": "Home Page"
   
 
 
