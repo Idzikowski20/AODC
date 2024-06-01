@@ -46,6 +46,9 @@ function Cards({ t }) {
             <h4 className="what-we-do-h4">{t('title2.serwis')}</h4>
           </a>
         </div>
+        <div className="what-we-do-swipe">
+          <p>{t('title13')}</p>
+        </div>
       </div>
       <div className="carrier-benefit-container">
         <div className="carrier-card-benefit-container">
