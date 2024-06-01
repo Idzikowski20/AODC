@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { withNamespaces } from 'react-i18next';
-import video from '../../../public/assets/hero.mp4'
+import video from '../../../public/assets/hero.mov'
 import 'animate.css';
 
 function Hero2 ({ t }) {
