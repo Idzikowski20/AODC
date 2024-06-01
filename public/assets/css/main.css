@@ -12361,6 +12361,15 @@ height: 154px;
   justify-content: center; 
 }
 
+.px115 {
+  height: 115px;
+}
+
+.px100 {
+  height: 100px;
+}
+
+
 .what-we-do-swipe {
   animation: Swipe 3s ease 0s 999 normal forwards;
   display: none;

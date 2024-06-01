@@ -15,9 +15,9 @@ function Header2 ({ t }) {
   return (
     <header className="heater-transparent">
         <div className={`jm-header-area-2 jm-header-padding header-sticky ${isSticky? 'sticky': ''}`}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-3 col-lg-3 col-7">
+            <div className="px115 container">
+                <div className="px100 row">
+                    <div className="px100 col-xl-3 col-lg-3 col-7">
                         <div className="jm-header-logo jm-header-logo-2">
                             <Link className="jm-logo" to="/">
                                 <img src="assets/img/logo/logodark.png" alt="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
@@ -60,7 +60,7 @@ function Header2 ({ t }) {
                                 <img src="https://cdn.countryflags.com/thumbs/poland/flag-400.png"/>
                                 </button>
                     </div>
-                        <div className="menu-mobile jm-header-right jm-header-right-2 text-end  d-flex justify-content-center">
+                        <div className="px100 menu-mobile jm-header-right jm-header-right-2 text-end  d-flex justify-content-center">
                             <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick={handleOpen}>
                                 <span className="dr-line-1"></span>
                                 <span className="dr-line-2"></span>
