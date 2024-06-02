@@ -4102,7 +4102,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .side-info {
   width: 100%;
   max-width: 400px;
-  background-color: #000000fc;
+  background-color: #000000b6;
   box-shadow: 0 13px 29px rgba(4, 0, 23, 0.1);
   height: 100%;
   position: fixed;

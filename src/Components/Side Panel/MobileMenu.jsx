@@ -36,16 +36,16 @@ function MobileMenu({ t }) {
             </div>
             <ul>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/">{t('title9.1')}</Link>
+                <Link to="/" onClick={() => window.location.replace("/#home")}>{t('title9.1')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/">{t('title9.2')}</Link >
+                <Link to="/" onClick={() => window.location.replace("/#aboutus")}>{t('title9.2')}</Link >
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/Kariera">{t('title9.3')}</Link>
+                <Link to="/Kariera" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.3')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/Realizacje">{t('title9.4')}</Link>
+                <Link to="/Realizacje" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.4')}</Link>
               </li>
             </ul>
           </nav>
