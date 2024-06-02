@@ -15,7 +15,7 @@ function Hero2 ({ t }) {
     <h3  className='h3--scalingSize animate__animated animate__backInUp'>{t('for data center')}</h3>
   </div>
   <div className='video-background-container'>
-    <video className='video-background' src={video} autoPlay muted loop/>
+    <video className='video-background' type="video/mp4" src={video} playsInline autoPlay muted loop/>
   </div>
 </div>
     </div>
