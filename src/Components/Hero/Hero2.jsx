@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { withNamespaces } from 'react-i18next';
-import video from '../../../public/assets/img/hero/hero.gif'
+import video from '../../../public/assets/background-video.mp4'
 import 'animate.css';
 
 function Hero2 ({ t }) {
@@ -15,7 +15,7 @@ function Hero2 ({ t }) {
     <h3  className='h3--scalingSize animate__animated animate__backInUp'>{t('for data center')}</h3>
   </div>
   <div className='video-background-container'>
-    <img className='video-background' src={video}/>
+    <video className='video-background' src={video} autoPlay muted loop/>
   </div>
 </div>
     </div>
