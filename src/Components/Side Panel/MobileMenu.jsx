@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+import { JobContext } from '../../Context/JobContext';
 
 function MobileMenu({ t }) {
   const [expandedMenus, setExpandedMenus] = useState([]);
+  const {sidePanelOpen,handleClose} = useContext(JobContext)
 
   // const handleMenuClick = (index) => {
   //   const updatedMenus = [...expandedMenus];
@@ -33,17 +35,17 @@ function MobileMenu({ t }) {
               </Link>
             </div>
             <ul>
-              <li className="menu-has-children">
-                <Link to="/">{t('title9.1')}</Link>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/" onClick={() => window.location.replace("/#home")}>{t('title9.1')}</Link>
               </li>
-              <li className="menu-has-children">
-                <Link to="/">{t('title9.2')}</Link>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/" onClick={() => window.location.replace("/#aboutus")}>{t('title9.2')}</Link >
               </li>
-              <li className="menu-has-children">
-                <Link to="/Kariera">{t('title9.3')}</Link>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/Kariera" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.3')}</Link>
               </li>
-              <li className="menu-has-children">
-                <Link to="/Realizacje">{t('title9.4')}</Link>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/Realizacje" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.4')}</Link>
               </li>
             </ul>
           </nav>

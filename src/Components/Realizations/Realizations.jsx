@@ -1,9 +1,7 @@
 import React from 'react'
 import './style.scss'
-import Header2 from '../Header/Header2';
-import SidePanel from '../Side Panel/SidePanel';
-import VideoArea3 from '../Video Area/VideoArea3';
 import { withNamespaces } from 'react-i18next';
+import RealizationsPageImage from '../Video Area/RealizationsPageImage';
 
 
 function Realizations({ t }) {
@@ -54,41 +52,69 @@ function Realizations({ t }) {
 
   return (
     <>
-    <VideoArea3 />
-    <SidePanel />
-    <Header2 />
-<section class="tiltgrid">
-    <div>
-      	<h1>{t('title10')}</h1>
-    </div>
+    <RealizationsPageImage />
+<section id='realizations'>
+  <div className='realizations-title'>
+  <p>{t('title10.2')}</p>
+  </div>
 	<div class="tiltgrid__container">
-  <div><img loading="lazy" src="assets/img/trustus/KATOWICE.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/krakow.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/MON.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/GAGAGA.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/KPKPKP.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/asasasasa.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/ritaaa.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/uwuwuwu.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/nbp.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/kozienice.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/aa.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/atos.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/a111.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/instytu.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/aq.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/aza.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/a3.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/a1.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/mb.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/accenture.png" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/mbank-logo-ind.gif" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/knf-1.jpg" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/pzuu.jpg" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/asasasasa.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/uwuwuwu.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/kozienice.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/nbp.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/aa.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/aq.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/instytu.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/cms.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/a3.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/a1.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/mb.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/logo.jpg" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/accenture.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/GAGAGA.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/KPKPKP.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/uksw.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/logo_internet_dla_mazowsza_big_logo.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/bankpolski.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/data4.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/dr.png" alt=""/></div>
+
+
+  <div><img loading="lazy" src="assets/img/trustus/millennium.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/msit.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/nask.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/ncbj.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/netia.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/pansa.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pb.png" alt=""/></div>
+
+  <div><img loading="lazy" src="assets/img/trustus/pse.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pwpw.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/tvp.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/utk.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/KATOWICE.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/budimex.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/krakow.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/atos.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/MON.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/mbank-logo-ind.gif" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pzuu.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/orlen.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/ifj.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/itwl.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/knf.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pg.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/pocztapolska.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/energa.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/a111.png" alt=""/></div>
+  <div><img loading="lazy" src="assets/img/trustus/aza.png" alt=""/></div>
   <div><img loading="lazy" src="assets/img/trustus/images.png" alt=""/></div>
-  <div><img loading="lazy" src="assets/img/trustus/pobrane-2.jpg" alt=""/></div>
 	</div>
 	
 </section>

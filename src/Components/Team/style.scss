@@ -30,7 +30,7 @@ ul {
   list-style-type: none;
 
   i {
-    color: #006efd;
+    color: #5f0d20;
     font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
 
     &:hover {
@@ -39,16 +39,22 @@ ul {
   }
 }
 
-
+@media only screen and (max-height: 700px) {
+  section {
+    width: min(50rem, 90%) !important;
+  }
+  section p {
+    font-size: clamp(0.8rem,.700rem + -0.7vw,1.0rem) !important;
+  }
+}
 
 section {
-  background-image: radial-gradient(at 50% 44%, rgba(41, 34, 141, 0.288), rgba(0, 0, 0, 0) 58%);
+  background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%);
   margin-top: 100px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   text-align: center;
-  width: min(90rem, 90%);
+  width: min(80rem, 90%);
   margin-inline: auto;
   margin-bottom: 150px;
 
@@ -60,10 +66,10 @@ section {
   }
 
   p {
+    text-align: left;
     line-height: 1.6;
     color: #a3a3a3;
     max-width: 50rem;
-    margin: 0 auto;
     font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
   }
 
@@ -134,7 +140,6 @@ section {
         height: 6.25rem;
         z-index: 0;
         transition: 0.3s ease-in-out;
-        background: #81041f;
         background: #d32b50;
         top: $position;
         left: $position;

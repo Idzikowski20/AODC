@@ -1,66 +1,71 @@
 .tiltgrid {
 	margin-top: 250px;
 	&__container {
-		margin-bottom: 50px;
-		margin-top: 50px;
-		--skew-y: calc(var(--scroll-tilt, -7) * 1deg) ;
- 		 --easing: cubic-bezier(1,.45,.7,1.05);
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		@media screen and (min-width:720px) {
-		}
-		gap: clamp(0.25rem, -0.0714285714285714rem + 1.4285714285714286vw, 1rem);
-		transition: gap 0.3s ease;
+	border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    --skew-y: calc(var(--scroll-tilt, -7) * 1deg);
+    --easing: cubic-bezier(1,.45,.7,1.05);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.25rem, -0.0714285714rem + 1.4285714286vw, 1rem);
+    transition: gap 0.3s ease;
 		&:hover {
 			img {
-				filter: saturate(0);
 				transition: scale 0.8s, filter 1s;
 			}
 		}
   & > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     opacity: 0;
     animation: tiltslide 6s forwards;
     @for $i from 1 through 128 {
       &:nth-child(#{$i}) {
-        animation-delay: #{0.3 * $i}s;
-        animation-duration: 0.7s;
+        // animation-delay: #{0.3 * $i}s;
+        // animation-duration: 0.7s;
 							
       }
     }
     img {
-		background: #fff;
-		aspect-ratio: 16 / 9;
+		background-color: #d32b4f8e;
+		width: 100%;
+    	height: 100%;
 		min-width: 100%;
-		/* object-fit: cover; */
+		object-fit: contain; 
 		object-position: 50% 50%;
 		pointer-events: none;
-		filter: saturate(1);
+		// filter: saturate(1);
 		/* transform: skewY(calc(var(--skew-y)* -1)); */
 		/* scale: 1.4; */
-		transition: scale 0.8s, filter 0.6s;
+		// transition: scale 0.8s, filter 0.6s;
     }
     &:hover {
       img {
-        scale: 1.2;
-        filter: saturate(1);
-								transition: scale 0.8s, filter 0.6s;
+        // scale: 1.2;
+		// transition: scale 0.8s, filter 0.6s;
       }
     }
   }
 	}
 }
+
+.logo-dark {
+	background-image: radial-gradient(at 50% 44%, rgba(63, 56, 161, 0.473), rgba(0, 0, 0, 0) 58%);
+}
+
 @keyframes tiltslide {
   from {
     opacity: 0;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-				filter: saturate(0);
   }
   to {
     opacity: 1;
     clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
-				filter: saturate(1);
   }
 }
 //Unrelated
