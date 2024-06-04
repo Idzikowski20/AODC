@@ -20,7 +20,7 @@ i18n
   .init({
     debug: true,
     resources,
-    // fallbackLng: "pl", // use en if detected lng is not available
+    fallbackLng: "pl",
 
     keySeparator: false, // we do not use keys in form messages.welcome
 

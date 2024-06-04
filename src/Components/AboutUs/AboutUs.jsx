@@ -3,23 +3,23 @@ import { withNamespaces } from 'react-i18next';
 
 function AboutUs({ t }) {
   return (
-    <section>
+    <section id='aboutus'>
         <h2>{t('title3')}</h2>
       <div className='aboutus-servers-container'>
-      <div className='bluur2'></div>
-      <img className='aboutus-servers' src='assets/img/banner/banner-4.png' alt='servers image' />
-      </div>
-      <div className='bluur'></div>
       <div className='aboutus-container'>
     <div className='aboutus-box'>
           <div>
-          <h4>{t('title3.about1')}</h4>
+          <p>{t('title3.about1')}</p>
               </div>
               <div>
-              <h4>{t('title3.about2')}</h4>
+              <p>{t('title3.about2')}</p>
               </div>
               <div>
-              <h4>{t('title3.about3')}</h4>
+              <p>{t('title3.about3')}</p>
+              </div>
+              </div>
+              <div className='aboutus-img-container'>
+              <img className="aboutus-img" src='assets/img/aboutus/aboutus2.png'></img>
               </div>
               </div>
               </div>

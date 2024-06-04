@@ -7,8 +7,8 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const Realizations = () => {
   return (
     <div>
-      <Header2 />
         <SidePanel />
+        <Header2 />
         <RealizationsSRC />
         <Footer2 />
     </div>

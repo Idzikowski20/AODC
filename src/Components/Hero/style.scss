@@ -11,14 +11,41 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 450px) {
+  .video-background-container {
+    height: 350px !important;
+  }
+}
+
+.video-background-container {
+  margin: 15px;
+  position: relative;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  height: 530px;
+  
+}
+
+.video-background {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bluur3 {
+  width: 100%;
+  height: 420px;
+  opacity: .95;
+    background-image: radial-gradient(circle closest-corner at 50% 0, rgba(156, 30, 51, 0.45), #00000000 58%);
+}
+
 
 .hero-container {
-  background: linear-gradient(to top, #031229 0%, #03122967 100%),
-    url("https://as1.ftcdn.net/v2/jpg/03/50/46/24/1000_F_350462469_w9xTWh0c8K8ZQAas1L3RLIc63zQ7mjCY.jpg")
-     fixed no-repeat 50% 20% / cover;
+  flex-direction: column;
       width: 100%;
       height: 100%;
-      min-height: 65vh;
       position: relative;
       display: flex;
       place-content: center;
@@ -26,9 +53,85 @@ body {
 }
 
 .h1--scalingSize {
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0 !important;
     text-align: center;
+    font-size: 100px;
 }
 
+.h3--scalingSize {
+  font-weight: 800 !important;
+  text-align: center;
+  font-size: 80px;
+}
+
+@media only screen and (max-height: 700px) {
+  .h1--scalingSize {
+    text-align: center;
+    font-size: 70px !important;
+}
+.h3--scalingSize {
+  text-align: center;
+  font-size: 60px;
+}
+.video-background-container {
+  margin: 15px;
+  position: relative;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  height: 300px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+  .h1--scalingSize {
+    text-align: center;
+    font-size: 90px !important;
+}
+.h3--scalingSize {
+  text-align: center;
+  font-size: 80px !important;
+}
+}
+
+@media only screen and (max-width: 650px) {
+  .h1--scalingSize {
+    text-align: center;
+    font-size: 70px !important;
+}
+.h3--scalingSize {
+  text-align: center;
+  font-size: 60px !important;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  .h1--scalingSize {
+    text-align: center;
+    font-size: 50px !important;
+}
+.h3--scalingSize {
+  text-align: center;
+  font-size: 40px !important;
+}
+}
+
+
+
+  
+.content {
+  text-shadow: -8px -20px 20px #0000009c;
+  background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%);
+  margin-top: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
 
 .scroll-downs {
     position: absolute;

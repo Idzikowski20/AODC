@@ -15,7 +15,6 @@ $animationSpeed: 40s;
 
 
 .slider-container {
-	margin: 10px;
 	width: 100%;
 	display: flex;
 	text-align: center;
@@ -108,32 +107,54 @@ $animationSpeed: 40s;
 
   @media (max-width: 420px) {
 	.slider-container {
-		width: 370px;
+		flex-direction: column;
+		width: 100%;
 		display: flex;
 		text-align: center;
 		justify-content: space-between !important;
 		.slider {
-			width: 180px !important;
+			width: 100% !important;
 		}
 	}
   }
 
 // Styling
 .carousel {
+	width: 100%;
+}
+
+@media only screen and (max-height: 700px) {
+	.slider {
+		max-width: 500px !important;
+		height: 60px !important;
+	}
 }
 
 .slider {
-	border-radius: 30px;
-    background: linear-gradient(rgb(17 37 69 / 33%) 0%, rgba(255, 255, 255, 0) 100%);
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, #d32b50 1%, rgb(3, 18, 41) 92%, rgb(3, 18, 41) 100%);
 	cursor: pointer;;
-	height: 100px;
+	height: 70px;
 	margin: auto;
 	overflow:hidden;
 	position: relative;
 	bottom: auto;
 	left: 0%;
 	right: auto;
-	width: 700px;
+	max-width: 700px;
+	width: 100%;
+
+	img {
+		object-fit: scale-down;
+		width: 200px;
+		height: 70px;
+	}
+
+	h2 {
+		margin: 0 !important;
+	}
 
 	a {
 		z-index: 3;
@@ -158,11 +179,15 @@ $animationSpeed: 40s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 14);
 	}
 	
 	.slide {
-		height: 100px;
-		width: 250px;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		margin-left: 15px;
+		margin-right: 15px;
+		width: 250px
 	}
 }

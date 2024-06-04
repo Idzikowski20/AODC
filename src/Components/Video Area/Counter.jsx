@@ -6,19 +6,20 @@ function Counter({ t }) {
   return (
     <section id='counter'>
             <h2>{t('title4')}</h2>
-                    <div className="container light-bg pt-uptolg-100 pt-60 pb-60">
+            <div className='bluur2'></div>
+                    <div className="container light-bg pt-60 pb-60">
                        <div className="row justify-content-center width-100%">
                             <div className="#">
                              <div className="jm-video-content-wrapper text-center text-xl-start">
-                                  <div className="jm-video-content-3 ml-80">
+                                  <div className="jm-video-content-3">
                                     <div className="jm-video-counter-3">
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-user"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/serwerownie.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="140">
-                                                            <CountUp enableScrollSpy={true} duration={4} end={94}/>
+                                                            <CountUp enableScrollSpy={true} duration={4} end={151}/>
                                                         </span></h2>
                                                     <span className="subtitle">{t('title4.serwerownie')}</span>
                                                 </div>
@@ -26,11 +27,11 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-gem"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/serwis.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="250">
-                                                            <CountUp enableScrollSpy={true} duration={4} end={73}/>
+                                                            <CountUp enableScrollSpy={true} duration={3} end={110}/>
                                                         </span></h2>
                                                     <span className="subtitle">{t('title4.serwisy')}</span>
                                                 </div>
@@ -38,11 +39,11 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-address-card"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/koncepcje.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
-                                                            <CountUp enableScrollSpy={true} duration={4} end={98}/>
+                                                            <CountUp enableScrollSpy={true} duration={4} end={101}/>
                                                         </span></h2>
                                                     <span className="subtitle">{t('title4.koncepcje')}</span>
                                                 </div>
@@ -50,11 +51,11 @@ function Counter({ t }) {
                                         </div>
                                         <div className="jm-video-counter-item-3">
                                             <div className="jm-video-inner">
-                                                <div className="jm-icon"><i className="fa-thin fa-address-card"></i></div>
+                                                <div className="jm-icon"><img className='counter-img' src='assets/img/counter/projekty.png' /></div>
                                                 <div className="jm-video-counter-item-content">
                                                     <h2 className="title">
                                                         <span className="odometer mainCounter" data-count="199">
-                                                            <CountUp enableScrollSpy={true} duration={4} end={79}/>
+                                                            <CountUp enableScrollSpy={true} duration={3} end={108}/>
                                                         </span></h2>
                                                     <span className="subtitle">{t('title4.projekty')}</span>
                                                 </div>

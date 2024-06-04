@@ -1,9 +1,6 @@
-import React, { useContext } from 'react';
-import { JobContext } from '../../Context/JobContext';
-import VideoModal from '../Modal/VideoModal';
+import React from 'react';
 
-const VideoArea = () => {
-  const {handleOpenModal} = useContext(JobContext)
+const VideoArea3= () => {
     return (
       <div className="jm-video-area">
         <div className="container-fluid p-0">
@@ -15,4 +12,4 @@ const VideoArea = () => {
   };
   
 
-export default VideoArea
+export default VideoArea3
