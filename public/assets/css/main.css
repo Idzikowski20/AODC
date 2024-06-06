@@ -12447,6 +12447,11 @@ transform:translateY(-10px);
   height: 100%;
 }
 
+.polityka-desc {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 500px) {
   .carrier-card-benefit-buttons {
     z-index: 2;

@@ -23,7 +23,7 @@ function Cookies({ t }) {
   buttonStyle={{ background: "#d32b50", color: "#fff", fontSize: "15px", borderRadius: "20px" }}
   expires={150}
 >
-    <span style={{ fontSize: "20px", alignItems: "center", justifyContent: "center", display: "flex", textAlign: "center", color: "#2B373B"}}>{t('title11')} <a href='/'>{t('title11.1')}</a></span>
+    <span style={{ fontSize: "18px", alignItems: "center", justifyContent: "center", display: "flex", textAlign: "center", color: "#2B373B"}}>{t('title11')} <a href='/'>{t('title11.1')}</a></span>
 </CookieConsent>
     </>
   )
