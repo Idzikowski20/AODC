@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { withNamespaces } from 'react-i18next';
+import CookieConsent from "react-cookie-consent";
 
 
-function CookieConsent({ t }) {
+function Cookies({ t }) {
   const [cookies, setCookie] = useCookies(["cookieConsent"]);
   const giveCookieConsent = () => {
     setCookie("cookieConsent", true);
   };
   
   return (
-    <div className="cookie-message">
-      <div className='display-flex'>
-      <img src="https://img.icons8.com/plasticine/100/000000/cookie.png"/>
-    <span>{t('title11')} <a href='/'>{t('title11.1')}</a></span>
-      </div>
-    <div className='close-container'>
-    <button className='close' onClick={giveCookieConsent}>{t('title11.2')}</button>
-    </div>
-    </div>
+    <>
+<CookieConsent
+  enableDeclineButton
+  declineButtonText={t('title11.3')}
+  location="bottom"
+  buttonText={t('title11.2')}
+  cookieName="myAwesomeCookieName2"
+  style={{ opacity: "0.9", color: "#2B373B", background: "#fff" }}
+  declineButtonStyle={{ border: "2px solid #888", background: "transparent", color: "#888", fontSize: "15px", borderRadius: "20px"}}
+  buttonStyle={{ background: "#d32b50", color: "#fff", fontSize: "15px", borderRadius: "20px" }}
+  expires={150}
+>
+    <span style={{ fontSize: "20px", alignItems: "center", justifyContent: "center", display: "flex", textAlign: "center", color: "#2B373B"}}>{t('title11')} <a href='/'>{t('title11.1')}</a></span>
+</CookieConsent>
+    </>
   )
 }
 
-export default withNamespaces()(CookieConsent);
+export default withNamespaces()(Cookies);
