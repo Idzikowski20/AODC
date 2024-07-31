@@ -5,28 +5,13 @@ import HomePage from "./Pages/HomePage"
 // import Privacy from "./Pages/Privacy"
 // import { useEffect } from "react"
 import PreLoader from "./Components/PreLoader/PreLoader"
-import CookieConsent from "./Components/CookieConsent/CookieConsent"
-import { useCookies } from 'react-cookie';
 import Realizations from "./Pages/Realizations"
 
 function App() {
-  const [cookies] = useCookies(["cookieConsent"]);
-
-  const ScrollToTop = () => {
-    const { pathname } = useLocation();
-  
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-  
-    return null;
-  };
   return (
     <>
     <PreLoader />
-    {!cookies.cookieConsent && <CookieConsent />}
    <Router>
-    <ScrollToTop/>
       <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/Kariera" element={<JobPage/>}/>
