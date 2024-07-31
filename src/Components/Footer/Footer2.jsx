@@ -79,11 +79,6 @@ function Footer2({ t }) {
                                 <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272">{t('polityka3')}</a>
                                 <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272/cookie-policy" >{t('polityka3.1')}</a>
                              </div>
-                            <div>
-                                <span>
-                                <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272">{t('polityka3')}</a>
-                                    </span>
-                            </div>
                         </div>
                   </div>
         </footer>
