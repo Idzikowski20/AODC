@@ -20,7 +20,7 @@ function Header2 ({ t }) {
                     <div className="px100 col-xl-3 col-lg-3 col-7">
                         <div className="jm-header-logo jm-header-logo-2">
                             <Link className="jm-logo" to="/">
-                                <img src="assets/img/logo/logodark.png" alt="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
+                                <img src="https://aodc.pl/assets/img/logo/logodark.png" alt="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
                             </Link>
                         </div>
                     </div>
@@ -49,14 +49,14 @@ function Header2 ({ t }) {
                         </div>
                         </Trans>
                     </div>
-                    <div class="languageFlag">
-                                <button class="first" >
-                                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="languageIconTitle" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="languageIconTitle">Language</title> <circle cx="12" cy="12" r="10"></circle> <path stroke-linecap="round" d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"></path> <path stroke-linecap="round" d="M2.5 9L21.5 9M2.5 15L21.5 15"></path> </g></svg>
+                    <div className="languageFlag">
+                                <button className="first" >
+                                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="languageIconTitle" stroke="#ffffff" strokeWidth="1" strokeLinecap="square" strokeLinejoin="miter" fill="none" color="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="languageIconTitle">Language</title> <circle cx="12" cy="12" r="10"></circle> <path strokeLinecap="round" d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"></path> <path strokeLinecap="round" d="M2.5 9L21.5 9M2.5 15L21.5 15"></path> </g></svg>
                                 </button>
-                                <button class="second" onClick={() => changeLanguage('en')} >
+                                <button className="second" onClick={() => changeLanguage('en')} >
                                 <img src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-400.png"/>
                                 </button>
-                                <button class="third" onClick={() => changeLanguage('pl')}>
+                                <button className="third" onClick={() => changeLanguage('pl')}>
                                 <img src="https://cdn.countryflags.com/thumbs/poland/flag-400.png"/>
                                 </button>
                     </div>
