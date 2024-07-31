@@ -9,7 +9,7 @@ function Linkedin({ t }) {
     <div className='bluur'></div>
     <div className='bluur2'></div>
     <div className='linkedin-conteiner'>
-    <iframe className="linkedin" src='https://c4a908e0931c4074a96dcdb0fd2ea7ba.elf.site' width='100%' height='800' frameborder='0'></iframe>
+    <iframe className="linkedin" src='https://c4a908e0931c4074a96dcdb0fd2ea7ba.elf.site' width='100%' height='800' frameBorder='0'></iframe>
   </div>
     </section>
   </>

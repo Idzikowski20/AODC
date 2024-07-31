@@ -12,6 +12,15 @@ body {
   line-height: 26px;
 }
 
+.polityka-container {
+  width: 100%;
+}
+
+.polityka-container a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .linkedin {
   display: flex;
   justify-content: center;
@@ -279,6 +288,31 @@ body {
       margin-top: 16px;
     }
 
+    .policy-flex {
+      display: flex;
+    }
+
+    .policy-warning {
+      margin-bottom: 15px;
+    text-align: center !important;
+    }
+
+    .policy-text p {
+      color: #a52929;
+      font-weight: 600;
+    }
+
+    .policy-text2 {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .policy-text2 p {
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
     .job-container {
       position: relative;
       width: 100%;
@@ -295,7 +329,7 @@ body {
       .job-cards {
         position: relative;
         width: 100%;
-        height: 3000px;
+        height: 1670px;
       }
     }
 
@@ -12445,6 +12479,11 @@ transform:translateY(-10px);
   box-shadow: -4px 2px 20px #ff0909;
   width: 100%;
   height: 100%;
+}
+
+.polityka-desc {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 500px) {

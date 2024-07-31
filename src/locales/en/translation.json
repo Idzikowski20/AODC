@@ -75,19 +75,21 @@
   "title11.2": "Accept",
   "title11.3": "Decline",
   "videomodal": "https://www.youtube.com/embed/Tvr_I3kNP4U",
-  "polityka": "Privacy policy.",
-  "polityka2": "Before applying for the position, please review our Privacy Policy.",
+  "polityka": "PRIVACY POLICY.",
+  "polityka2": "Before applying for the position, please review our Privacy Policy",
   "polityka3": "Privacy Policy",
+  "polityka3.1": "Privacy Cookies",
+  "polityka4": "AoDC (Art of Data Center) is a team of engineers with 20 years of experience in designing, building, and servicing Data Center facilities for public and commercial institutions in Poland. Due to the dynamic growth of the company, we are looking for a person to join our team in the position of:",
   "title12": "Oops! This page does not exist.",
   "title12.1": "Please check if you entered the address correctly.",
   "title12.2": "Home Page",
-  "title13": "← Swipe →"
-  
-
-
-
-
-
-
-
+  "title13": "← Swipe →",
+  "politykadesc": "The Privacy Policy describes the principles of processing information about you, including personal data and cookies, also known as cookies.",
+  "politykadesc1": "1. This policy pertains to the website operating under the URL: aodc.pl. The operator of the website and the Data Controller is: AODC SP. Z O.O. Ul. Działkowa 37, 02-234 Warsaw, Poland. Contact email address of the operator: rodo@aodc.pl. The operator is the Data Controller of your personal data with regard to data voluntarily provided on the website. The website uses personal data for the following purposes: Handling inquiries via the contact form, Presenting an offer or information. The website performs functions to gather information about users and their behavior in the following ways: Through voluntarily entered data in forms, which are entered into the operator’s systems. By saving cookies on end devices.",
+  "politykadesc2": "2. Login and personal data entry areas are protected at the transmission layer (SSL certificate). This ensures that personal data and login information entered on the site are encrypted on the user's computer and can only be read on the target server. Personal data stored in the database are encrypted in such a way that only the Operator, who possesses the key, can read them. This ensures data protection in case the database is stolen from the server. The Operator periodically changes its administrative passwords. A crucial element of data protection is the regular updating of all software used by the Operator for processing personal data, which particularly includes regular updates of software components.",
+  "politykadesc3": "3. The website is hosted (technically maintained) on the operator's servers: smarthost.pl. The hosting company, to ensure technical reliability, keeps logs at the server level. The logs may include: resources specified by URL identifier (addresses of requested resources – pages, files), time of the request, time of the response, the client's station name – identification carried out by the HTTP protocol, information about errors that occurred during the HTTP transaction, the URL address of the page previously visited by the user (referrer link) – in case the transition to the website was made through a link, information about the user's browser, IP address information, diagnostic information related to the self-ordering process through the recorders on the website, information related to the handling of email directed to and sent by the Operator.",
+  "politykadesc4": "4. Your Rights and Additional Information on Data Usage: In certain situations, the Administrator has the right to transfer your personal data to other recipients if it is necessary to perform the contract concluded with you or to fulfill obligations imposed on the Administrator. This applies to the following groups of recipients: authorized employees and associates who use the data to achieve the purpose of the website's operation. Your personal data processed by the Administrator are not stored longer than necessary to perform the related activities specified by separate regulations (e.g., accounting regulations). Regarding marketing data, they will not be processed for more than 3 years. You have the right to request from the Administrator: access to your personal data, rectification, deletion, restriction of processing, and data portability. You have the right to object to the processing specified in point 3.2 regarding the processing of personal data for the purpose of legitimate interests pursued by the Administrator, including profiling, provided that the objection cannot be executed if there are valid, legitimate grounds for processing that override your interests, rights, and freedoms, particularly the establishment, exercise, or defense of legal claims. You have the right to lodge a complaint regarding the Administrator's actions with the President of the Personal Data Protection Office, ul. Stawki 2, 00-193 Warsaw. Providing personal data is voluntary but necessary for the service operation. Automated decision-making, including profiling, may be performed in relation to you for the purpose of providing services under the concluded agreement and for the Administrator's direct marketing. Personal data are not transferred to third countries within the meaning of data protection regulations. This means that we do not send them outside the European Union.",
+  "politykadesc5": "5. Administrator Logs: Information about user behavior on the website may be logged. This data is used for the purpose of administering the website.",
+  "politykadesc6": "6. Essential Marketing Techniques: The operator employs statistical analysis of website traffic through Google Analytics (Google Inc., based in the USA). The operator does not transfer personal data to the operator of this service, only anonymized information. The service is based on the use of cookies on the user's end device. Regarding information about user preferences collected by the Google advertising network, the user can view and edit information derived from cookies using the tool: https://www.google.com/ads/preferences/.",
+  "politykadesc7": "7. The website uses cookies, which are IT data stored on the user's end device for website functionality, including session maintenance and marketing purposes; two main types are employed: session and persistent cookies, with user control over settings, while cooperation with entities like Google, Facebook, and Twitter may utilize these cookies."
 }
