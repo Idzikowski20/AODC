@@ -10,9 +10,10 @@ function VideoArea({ t }) {
         <div className="container-fluid p-0">
           <div className="jm-video-wrap bg-default">
             <div className="jm-video-icon mb-30">
-              <div role='button' className="jm-play-btn" onClick={handleOpenModal}>
+              <a role='button' className="jm-play-btn" target='_blank' href={t('videomodal')}
+              >
                 <i className="fa-solid fa-play"></i>
-              </div>
+              </a>
             </div>
             <div className="jm-video-text">
               <h2 className="title">{t('title7')}</h2>
