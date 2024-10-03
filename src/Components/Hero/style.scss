@@ -22,7 +22,7 @@ body {
   position: relative;
   border-radius: 20px;
   max-width: 1000px;
-  width: 100%;
+  width: min(90rem, 90%);
   height: 530px;
   
 }
@@ -122,8 +122,8 @@ body {
 
   
 .content {
-  text-shadow: -8px -20px 20px #0000009c;
-  background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%);
+  filter: drop-shadow(2px 4px 6px rgb(148, 147, 147));
+  text-shadow: -8px -20px 20px rgba(0, 0, 0, 0.6117647059);
   margin-top: 150px;
   flex-direction: column;
   align-items: center;
