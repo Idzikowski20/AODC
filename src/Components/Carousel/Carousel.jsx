@@ -12,26 +12,8 @@ function Carousel({ t }) {
   </div>
     <div className="slider">
 	<div className="slide-track">
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
+	<div className="slide">
+			<img src="assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
@@ -55,6 +37,9 @@ function Carousel({ t }) {
 		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
+			<img src="assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
 			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
@@ -74,6 +59,33 @@ function Carousel({ t }) {
 		</div>
 		<div className="slide">
 		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide">
+			<img src="assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
 			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />

@@ -8,8 +8,6 @@ function Team({ t }) {
 <section id='team'>
 <h2>{t('title6')}</h2>
   <div className='team-servers-container'>
-      <div className='bluur'></div>
-      <div className='bluur2'></div>
       <div className='team-container'>
     <div className='team-box'>
           <div>
