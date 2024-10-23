@@ -3611,7 +3611,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 120vh;
   opacity: .75;
   background-image: radial-gradient(circle farthest-side at 0%, #0007f152, #0000 51%);
-  position: absolute;
+  position: fixed;
   /* top: -20%; */
   bottom: auto;
   left: 0%;
@@ -3625,7 +3625,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 120vh;
   opacity: .75;
   background-image: radial-gradient(circle farthest-side at 0%, #f1002088, #0000 51%);
-  position: absolute;
+  position: fixed;
   /* top: -20%; */
   bottom: auto;
   right: 0%;
@@ -6436,7 +6436,7 @@ transform: scale(1.1);
   position: relative;
 }
 .jm-video-wrap::before {
-  
+  box-shadow: 3px -1px 100px 50px rgba(3, 15, 35, 1);
   position: absolute;
   left: 0;
   top: 0;

@@ -10,13 +10,7 @@ function VideoModal({ t}) {
   return (
     <Modal show={showModal} onHide={handleCloseModal} size='lg' centered>
         <Modal.Body>
-         <iframe 
-         frameborder="0"
-          type="text/html"
-           src="https://www.dailymotion.com/embed/video/x94csfw?autoplay=1" 
-           width="100%"
-            height="400"
-             allowfullscreen title="Dailymotion Video Player" allow="autoplay; web-share"> </iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lYkVhmQUq9I?si=uJuIgniS3mWHhBIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </Modal.Body>
     </Modal>
   )
