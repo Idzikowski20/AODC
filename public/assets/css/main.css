@@ -2320,7 +2320,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 @media (max-width: 991px) {
   .languageFlag{
-    top: -30px;
+    top: -30px !important;
     align-items: center;
     justify-content: flex-start;
     width: 60px;
@@ -2332,6 +2332,8 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .languageFlag{
+  top: -15px;
+  position: relative;
   width: 60px;
   display:flex;
   flex-direction:column;
@@ -2519,7 +2521,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .jm-header-main-menu ul li a {
   font-size: 17px;
-  padding: 35px 0;
+  padding: 2px 0;
   display: inline-block;
   transition: transform 250ms;
 }
@@ -2586,6 +2588,28 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-main-menu ul .menu-has-children {
   position: relative;
 }
+
+.aodcserwislogo {
+  /* border-left: 1px solid rgba(255, 255, 255, 0.438); */
+  margin: 10px;
+  max-width: 100%;
+    height: auto;
+    display: inline !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .aodcserwislogo {
+    position: relative;
+    left: -20px;
+    /* border-left: 1px solid rgba(255, 255, 255, 0.438); */
+    margin: 10px;
+    max-width: 100%;
+      height: auto;
+      display: inline !important;
+  }
+}
+  
+
 .jm-header-right a {
   font-size: 18px;
   display: inline-block;
@@ -2664,7 +2688,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .jm-header-area-2.header-sticky.sticky {
-  max-height: 100px;
+  max-height: 80px;
   height: 100%;
   opacity: 0.95;
   position: fixed;
@@ -2690,6 +2714,27 @@ input:focus::placeholder, textarea:focus::placeholder {
 .jm-header-area-2 .jm-header-main-menu ul li a {
   color: var(--clr-common-white);
 }
+
+.O-Red {
+text-shadow: -8px -20px 20px #0000009c;
+opacity: 0.99;
+color: #7b1f3d !important;
+-webkit-text-stroke: 1px #7b1f3d !important;
+font-weight: bold;
+}
+
+
+.jm-header-area-2 .jm-header-main-menu #aodcserwislink > a {
+  padding: 10px;
+    border-left: 1px solid rgba(128, 128, 128, 0.308);
+  text-shadow: -8px -20px 20px #0000009c;
+  opacity: 0.99;
+  color: #00000000;
+  -webkit-text-stroke: 1px #d1d1d1;
+  color: #f7f7f7;
+  font-weight: bold;
+}
+
 .jm-header-area-2 .jm-header-main-menu ul li a:hover {
   text-shadow: rgb(20, 19, 19) 1px 0 10px;
   font-weight: 900;
@@ -3632,6 +3677,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: auto;
 }
 
+
 .jm-banner-content-title-2 {
   color: var(--clr-common-white);
   font-size: 53px;
@@ -4139,7 +4185,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .side-info {
   width: 100%;
   max-width: 400px;
-  background-color: #000000b6;
+  background-color: #000000db;
   box-shadow: 0 13px 29px rgba(4, 0, 23, 0.1);
   height: 100%;
   position: fixed;
@@ -6458,19 +6504,6 @@ transform: scale(1.1);
 .jm-video-icon {
   position: relative;
   z-index: 1;
-}
-
-.bigbluur2 {
-  filter: blur(10px);
-  height: 100%;
-  width: 100%;
-  max-width: 600px;
-  max-height: 500px;
-  background-image: radial-gradient(circle at 50% 100%, rgb(23 70 155 / 55%), #0000 40%);
-  opacity: .77;
-  position: absolute;
-  bottom: 0;
-  right: auto;
 }
 
 .jm-video-text {
@@ -12130,6 +12163,7 @@ height: 154px;
 }
 
 .footer-copyright-container {
+  z-index: 10;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -12137,6 +12171,10 @@ height: 154px;
   text-align: center;
   width: 100%;
   height: 100%;
+}
+
+#aodcserwislink {
+  color: #c12e2e !important;
 }
 
 .workarea-img { 

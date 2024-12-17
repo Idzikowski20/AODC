@@ -47,6 +47,10 @@ function MobileMenu({ t }) {
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/Realizacje" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.4')}</Link>
               </li>
+              <li className="menu-has-children">
+                 {/* <Link to="#">A<span className="O-Red">O</span>DC SERWIS</Link> */}
+                <Link target="_blank" to="https://aodcserwis.pl"><img className='aodcserwislogo' src="assets/img/logo/aodc_biale.svg" height="110" width="110" alt="" /></Link>
+                </li>
             </ul>
           </nav>
         </div>

@@ -44,6 +44,10 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
                                         <Link to="#">{t('Header5')}</Link>
                                     </li>
+                                    <li className="menu-has-children">
+                                        {/* <Link to="#">A<span className="O-Red">O</span>DC SERWIS</Link> */}
+                                        <Link target="_blank" to="https://aodcserwis.pl"><img className='aodcserwislogo' src="assets/img/logo/aodc_biale.svg" height="90" width="90" alt="" /></Link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

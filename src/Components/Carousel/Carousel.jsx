@@ -7,7 +7,7 @@ function Carousel({ t }) {
     <div className='slider-container'>
 
     <div className='carousel'>
-    <div>
+    <div className='carousel-span'>
     <span>{t('title7.1')}</span>
   </div>
     <div className="slider">
@@ -113,7 +113,7 @@ function Carousel({ t }) {
 </div>
 
     <div className='carousel'>
-    <div>
+    <div className='carousel-span'>
     <span>{t('title7.2')}</span>
   </div>
     <div className="slider">
