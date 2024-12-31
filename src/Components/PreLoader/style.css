@@ -49,7 +49,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(at 50% 44%, #d32b4f7c, rgba(0, 0, 0, 0) 58%);
+  /* background-image: radial-gradient(at 50% 44%, #d32b4f7c, rgba(0, 0, 0, 0) 58%); */
 }
 
 .lds-ellipsis {

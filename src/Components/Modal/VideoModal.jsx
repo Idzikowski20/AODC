@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import { JobContext } from '../../Context/JobContext';
 import { withNamespaces } from 'react-i18next';
-
+import YouTube from "react-youtube";
 
 
 function VideoModal({ t}) {
@@ -10,7 +10,10 @@ function VideoModal({ t}) {
   return (
     <Modal show={showModal} onHide={handleCloseModal} size='lg' centered>
         <Modal.Body>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lYkVhmQUq9I?si=uJuIgniS3mWHhBIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <YouTube videoId="lYkVhmQUq9I"/>  
+        <iframe class="youtube-player" type="text/html" width="640" height="385" 
+src="https://youtu.be/lYkVhmQUq9I?si=FBvqZc66GJlthrt9" frameborder="0">
+</iframe>
         </Modal.Body>
     </Modal>
   )
