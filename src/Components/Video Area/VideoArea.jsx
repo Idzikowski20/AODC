@@ -12,9 +12,9 @@ function VideoArea({ t }) {
           <div className="jm-video-wrap bg-default">
             <div className="jm-video-icon mb-30">
               <Link  target="_blank" to="https://youtu.be/lYkVhmQUq9I?si=PWvs5e4dkzUfUMvD">
-              <a role='button' className="jm-play-btn" target='_blank'>
+              <div role='button' className="jm-play-btn" target='_blank'>
                 <i className="fa-solid fa-play"></i>
-                </a>
+                </div>
               </Link>
             </div>
             <div className="jm-video-text">
