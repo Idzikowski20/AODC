@@ -24,31 +24,41 @@ function Header2 ({ t }) {
                             </Link>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 d-none d-lg-block">
+                    <div className="col-xl-6 col-lg-8 d-none d-lg-block">
                     <Trans>
                         <div className="jm-header-main-menu text-center jm-header-menu-2">
                             <nav className="jm-mobile-menu" id="jm-mobile-menu">
-                                <ul>
+                                <ol>
                                     <li className="menu-has-children" onClick={() => window.location.replace("/#home")}>
                                         <Link to="/">{t('Header1')}</Link>
                                     </li>
                                     <li className="menu-has-children"  onClick={() => window.location.replace("/#aboutus")}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
+                                    <li className="menu-has-children" ><Link to="/">{t('Header3')}</Link>
+                                        <ul>
+                                            <div className='oferta-container'>
+                                                <li><Link to="/">{t('Header3.1')}</Link></li>
+                                                <li><Link to="/">{t('Header3.2')}</Link></li>
+                                                <li><Link to="/">{t('Header3.3')}</Link></li>
+                                                <li><Link to="/">{t('Header3.4')}</Link></li>
+                                            </div>
+                                        </ul>
+                                    </li>
                                     <li className="menu-has-children"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                        <Link to="/Kariera">{t('Header3')}</Link>
+                                        <Link to="/Kariera">{t('Header4')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                        <Link to="/Realizacje">{t('Header4')}</Link>
+                                        <Link to="/Realizacje">{t('Header5')}</Link>
                                     </li>
                                     <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
-                                        <Link to="#">{t('Header5')}</Link>
+                                        <Link to="#">{t('Header6')}</Link>
                                     </li>
                                     <li className="menu-has-children">
                                         {/* <Link to="#">A<span className="O-Red">O</span>DC SERWIS</Link> */}
                                         <Link target="_blank" to="https://aodcserwis.pl"><img className='aodcserwislogo' src="assets/img/logo/aodc_biale.svg" height="90" width="90" alt="" /></Link>
                                     </li>
-                                </ul>
+                                </ol>
                             </nav>
                         </div>
                         </Trans>

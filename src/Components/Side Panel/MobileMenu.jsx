@@ -29,18 +29,26 @@ function MobileMenu({ t }) {
             <span><span><span /></span></span>
           </Link>
           <nav className="mean-nav">
+            <ol>
             <div className="mean-bar">
               <Link to="#nav" className="meanmenu-reveal">
                 <span><span><span /></span></span>
               </Link>
             </div>
-            <ul>
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/" onClick={() => window.location.replace("/#home")}>{t('title9.1')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/" onClick={() => window.location.replace("/#aboutus")}>{t('title9.2')}</Link >
               </li>
+              <li className="menu-has-children" ><Link to="/">{t('Header3')}</Link>
+                  <ul className='oferta-container-mobile'>
+                        <li><Link to="/">{t('Header3.1')}</Link></li>
+                        <li><Link to="/">{t('Header3.2')}</Link></li>
+                        <li><Link to="/">{t('Header3.3')}</Link></li>
+                        <li><Link to="/">{t('Header3.4')}</Link></li>
+                  </ul>
+               </li>
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/Kariera" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.3')}</Link>
               </li>
@@ -51,7 +59,7 @@ function MobileMenu({ t }) {
                  {/* <Link to="#">A<span className="O-Red">O</span>DC SERWIS</Link> */}
                 <Link target="_blank" to="https://aodcserwis.pl"><img className='aodcserwislogo' src="assets/img/logo/aodc_biale.svg" height="110" width="110" alt="" /></Link>
                 </li>
-            </ul>
+            </ol>
           </nav>
         </div>
       </div>
