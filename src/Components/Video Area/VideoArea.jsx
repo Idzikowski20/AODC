@@ -11,7 +11,7 @@ function VideoArea({ t }) {
         <div className="container-fluid p-0">
           <div className="jm-video-wrap bg-default">
             <div className="jm-video-icon mb-30">
-              <Link  target="_blank" to="https://youtu.be/lYkVhmQUq9I?si=PWvs5e4dkzUfUMvD">
+              <Link  target="_blank" to={t('videomodal')}>
               <div role='button' className="jm-play-btn" target='_blank'>
                 <i className="fa-solid fa-play"></i>
                 </div>
