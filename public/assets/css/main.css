@@ -3,7 +3,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   --tw-bg-opacity: 1;
-  background: #030f23;
+  background: #04122c;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   line-height: 26px;
 }
+
 
 .polityka-container {
   width: 100%;
@@ -3761,6 +3762,35 @@ font-weight: bold;
   left: auto;
 }
 
+.bluur4 {
+  z-index: -1;
+  filter: blur(100px);
+  width: 100vw;
+  height: 100vh;
+  opacity: .65;
+  background-image: radial-gradient(circle farthest-side at 0%, #0008f154, #0000 51%);
+  position: fixed;
+  /* top: -20%; */
+  bottom: auto;
+  left: 0%;
+  right: auto;
+}
+
+.bluur5 {
+  z-index: -1;
+  filter: blur(100px);
+  transform: rotate(180deg);
+  width: 60vw;
+  height: 120vh;
+  opacity: .75;
+  background-image: radial-gradient(circle farthest-side at 0%, #030f23, #0000 51%);
+  position: fixed;
+  /* top: -20%; */
+  bottom: auto;
+  right: 0%;
+  left: auto;
+}
+
 
 .jm-banner-content-title-2 {
   color: var(--clr-common-white);
@@ -6586,7 +6616,7 @@ transform: scale(1.1);
   position: relative;
 }
 .jm-video-wrap::before {
-  box-shadow: 3px -1px 100px 50px rgba(3, 15, 35, 1);
+  box-shadow: 3px 15px 100px 50px rgba(3, 15, 35, 1);
   position: absolute;
   left: 0;
   top: 0;
@@ -13411,4 +13441,21 @@ a.meanmenu-reveal {
     width: 90%;
     padding: 0 30px;
   }
+}
+
+.description-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.description-box {
+  margin-bottom: 100px;
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
 }

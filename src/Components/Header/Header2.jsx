@@ -38,10 +38,10 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" ><Link to="/">{t('Header3')}</Link>
                                         <ul>
                                             <div className='oferta-container'>
-                                                <li><Link to="/">{t('Header3.1')}</Link></li>
-                                                <li><Link to="/">{t('Header3.2')}</Link></li>
-                                                <li><Link to="/">{t('Header3.3')}</Link></li>
-                                                <li><Link to="/">{t('Header3.4')}</Link></li>
+                                                <li><Link to="/Budowa-Data-Center">{t('Header3.1')}</Link></li>
+                                                <li><Link to="/Audyt-Data-Center">{t('Header3.2')}</Link></li>
+                                                <li><Link to="/Projektowanie-Data-Center">{t('Header3.3')}</Link></li>
+                                                <li><Link to="/Serwis-Data-Center">{t('Header3.4')}</Link></li>
                                             </div>
                                         </ul>
                                     </li>
