@@ -19,7 +19,7 @@ function AboutUs({ t }) {
               </div>
               </div>
               <div className='aboutus-img-container'>
-              <img className="aboutus-img" src='assets/img/aboutus/aboutus2.png'></img>
+              <img className="aboutus-img" src='assets/img/aboutus/aboutus2.png' alt='serwer'></img>
               </div>
               </div>
               </div>
