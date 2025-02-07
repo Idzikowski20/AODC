@@ -15,7 +15,7 @@ function Team({ t }) {
               </div>
               </div>
               <div className='team-img-container'>
-              <img className="team-img" src='assets/img/team/team.png'></img>
+              <img className="team-img" src='assets/img/team/team.png' alt='serwerownia'></img>
               </div>
               </div>
               </div>
