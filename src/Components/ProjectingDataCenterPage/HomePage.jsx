@@ -21,7 +21,8 @@ function HomePageProjecting({ t }) {
     <div className='description-container'>
      <div className='description-box-container'>
         <div className='description-box'>
-          <p>{t('Header3.3.2')}</p><br></br>
+        <br></br>
+          <p>{t('Header3.3.2')}</p>
         </div>
         <div className='description-title'>
            <h4>{t('Header3.3.3')}</h4> 

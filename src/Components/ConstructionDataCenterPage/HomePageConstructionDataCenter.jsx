@@ -21,6 +21,7 @@ function HomePageConstructionDataCenter({ t }) {
     <div className='description-container'>
      <div className='description-box-container'>
         <div className='description-box'>
+        <br></br>
           <p>{t('Header3.1.2')}</p><br></br>
           <p>{t('Header3.1.3')}</p>
         </div>
