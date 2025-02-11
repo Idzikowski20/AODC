@@ -13,7 +13,7 @@ body {
 }
 
 .jm-building-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
 }
 
 .jm-audit-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ body {
 }
 
 .jm-projecting-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
 }
 
 .jm-service-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -96,6 +96,20 @@ body {
   background: linear-gradient(0deg, #030f23 0%, #03122970 100%, #030f23 100%), url(../img/offer/serwis.webp) fixed no-repeat 50% 20% / cover;
 }
 
+.content h1 {
+  font-size: calc(2rem + 1.8vw) !important;
+}
+
+.description-title {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 5px;
+  text-align: center;
+}
 
 .polityka-container {
   width: 100%;
@@ -791,10 +805,13 @@ svg {
   width: 100%;
 }
 
+
+
 .cards-button {
+  box-shadow: 0px 0px 30px 0px rgba(3, 15, 35, 1);
   left: 40px;
   position: relative;
-  --clr: #020812a1;
+  --clr: #02081269;
   line-height: 1;
   text-decoration: none;
   display: inline-flex;
@@ -852,7 +869,7 @@ svg {
 
 .aodcserwis-button {
   position: relative;
-  --clr: #0808088a;
+  --clr: #02081269;
   line-height: 1;
   text-decoration: none;
   display: inline-flex;
@@ -886,11 +903,11 @@ svg {
 }
 
 .aodcserwis-button:hover {
-  background-color: #000;
+  background-color: #020812be;
 }
 
 .aodcserwis-button:hover .aodcserwis-button__icon-wrapper {
-  color: #000;
+  color: #020812be;
 }
 
 .aodcserwis-button__icon-svg--copy {
@@ -2847,6 +2864,7 @@ ol > li:hover > ul {
 }
 
 .oferta-container {
+  box-shadow: 0px 0px 30px 0px rgba(3, 15, 35, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2854,7 +2872,7 @@ ol > li:hover > ul {
   width: 260px;
   right: -100px;
   position: absolute;
-  background: #080f23;
+  background: #080f23f6;
 }
 
 .oferta-container li {
@@ -2866,11 +2884,15 @@ ol > li:hover > ul {
 .oferta-container-mobile {
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   width: 280px;
   right: 0;
   position: relative;
+}
+
+.oferta-container-mobile a {
+  width: 90%;
 }
 
 .oferta-container-mobile li {
@@ -12488,6 +12510,17 @@ transform: scale(1.1);
   align-items: center;
 }
 
+.realizations-container {
+  width: 100%;
+  height: 3100px;
+}
+
+.realizations-container iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
 .footer-adress-container {
   display: flex;
   justify-content: center;
@@ -13690,6 +13723,10 @@ a.meanmenu-reveal {
   color:#0029ff;
   padding: 10px;
   text-align: center;
+}
+
+.description-box p {
+  margin-bottom: 0 !important;
 }
 
 .description-box-container {
