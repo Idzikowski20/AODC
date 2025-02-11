@@ -13,7 +13,7 @@ body {
 }
 
 .jm-building-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
 }
 
 .jm-audit-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ body {
 }
 
 .jm-projecting-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
 }
 
 .jm-service-wrap {
-  height: 550px;
+  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;

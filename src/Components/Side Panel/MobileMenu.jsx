@@ -43,10 +43,10 @@ function MobileMenu({ t }) {
               </li>
               <li className="menu-has-children" ><Link to="/">{t('Header3')}</Link>
                   <ul className='oferta-container-mobile'>
-                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link to="/Budowa-Data-Center">{t('Header3.1')}</Link></li>
-                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link to="/Audyt-Data-Center">{t('Header3.2')}</Link></li>
-                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link to="/Projektowanie-Data-Center">{t('Header3.3')}</Link></li>
-                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link to="/Serwis-Data-Center">{t('Header3.4')}</Link></li>
+                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link  onClick={handleClose} to="/Budowa-Data-Center">{t('Header3.1')}</Link></li>
+                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link  onClick={handleClose} to="/Audyt-Data-Center">{t('Header3.2')}</Link></li>
+                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link  onClick={handleClose}  to="/Projektowanie-Data-Center">{t('Header3.3')}</Link></li>
+                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Link  onClick={handleClose} to="/Serwis-Data-Center">{t('Header3.4')}</Link></li>
                   </ul>
                </li>
               <li className="menu-has-children" onClick={handleClose}>
