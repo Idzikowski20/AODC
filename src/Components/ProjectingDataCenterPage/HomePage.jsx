@@ -8,7 +8,7 @@ function HomePageProjecting({ t }) {
   return (
     <>
       <div className="jm-video-area">
-      <div className='bluur4'></div>
+      <div className='bluur'></div>
       <div className='bluur2'></div>
         <div className="container-fluid p-0">
           <div className="jm-projecting-wrap bg-default">
@@ -23,16 +23,20 @@ function HomePageProjecting({ t }) {
         <div className='description-box'>
           <p>{t('Header3.3.2')}</p><br></br>
         </div>
-      <h4>{t('Header3.3.3')}</h4> 
+        <div className='description-title'>
+           <h4>{t('Header3.3.3')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.3.4')}</p><br></br>
           <p>{t('Header3.3.5')}</p><br></br>
           <p>{t('Header3.3.6')}</p>
           <p>{t('Header3.3.7')}</p>
-          <p>{t('Header3.3.8')}</p>
-          <p>{t('Header3.3.9')}</p><br></br>
+          <p>{t('Header3.3.8')}</p><br></br>
+          <p>{t('Header3.3.9')}</p>
         </div>
-      <h4>{t('Header3.3.10')}</h4> 
+        <div className='description-title'>
+        <h4>{t('Header3.3.10')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.3.11')}</p><br></br>
           <p>{t('Header3.3.12')}</p><br></br>

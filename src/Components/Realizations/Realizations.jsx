@@ -57,7 +57,11 @@ function Realizations({ t }) {
   <div className='realizations-title'>
   <p>{t('title10.2')}</p>
   </div>
-	<div class="tiltgrid__container">
+  <div className='realizations-container'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"></script>
+  <iframe onload="iFrameResize(this)" src="https://7d0ad29c1c8041cc961fdc6c4876eaf3.elf.site" ></iframe>
+  </div>
+	{/* <div class="tiltgrid__container">
 
   <div><img loading="lazy" src="https://aodc.pl/assets/img/trustus/asasasasa.png" alt=""/></div>
   <div><img loading="lazy" src="https://aodc.pl/assets/img/trustus/uwuwuwu.png" alt=""/></div>
@@ -115,7 +119,7 @@ function Realizations({ t }) {
   <div><img loading="lazy" src="https://aodc.pl/assets/img/trustus/a111.png" alt=""/></div>
   <div><img loading="lazy" src="https://aodc.pl/assets/img/trustus/aza.png" alt=""/></div>
   <div><img loading="lazy" src="https://aodc.pl/assets/img/trustus/images.png" alt=""/></div>
-	</div>
+	</div> */}
 	
 </section>
 <section class="p-x bottom">
