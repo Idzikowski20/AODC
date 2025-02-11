@@ -21,7 +21,8 @@ function HomePageAudit({ t }) {
     <div className='description-container'>
       <div className='description-box-container'>
       <div className='description-box'>
-          <p>{t('Header3.2.1')}</p><br></br>
+      <br></br>
+          <p>{t('Header3.2.1')}</p>
         </div>
         <div className='description-title'>
           <h4>{t('Header3.2.2')}</h4> 
