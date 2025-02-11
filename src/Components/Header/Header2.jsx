@@ -35,7 +35,7 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children"  onClick={() => window.location.replace("/#aboutus")}>
                                         <Link to="/">{t('Header2')}</Link>
                                     </li>
-                                    <li className="menu-has-children" ><Link to="/">{t('Header3')}</Link>
+                                    <li className="menu-has-children" ><Link to="">{t('Header3')}</Link>
                                         <ul>
                                             <div className='oferta-container'>
                                                 <li><Link to="/Budowa-Data-Center">{t('Header3.1')}</Link></li>
