@@ -8,7 +8,7 @@ function HomePageConstructionDataCenter({ t }) {
   return (
     <>
       <div className="jm-video-area">
-      <div className='bluur4'></div>
+      <div className='bluur'></div>
       <div className='bluur2'></div>
         <div className="container-fluid p-0">
           <div className="jm-building-wrap bg-default">
@@ -24,15 +24,19 @@ function HomePageConstructionDataCenter({ t }) {
           <p>{t('Header3.1.2')}</p><br></br>
           <p>{t('Header3.1.3')}</p>
         </div>
-      <h4>{t('Header3.1.4')}</h4> 
+        <div className='description-title'>
+        <h4>{t('Header3.1.4')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.1.5')}</p><br></br>
-          <p>{t('Header3.1.6')}</p><br></br>
+          <p>{t('Header3.1.6')}</p>
           <p>{t('Header3.1.7')}</p>
           <p>{t('Header3.1.8')}</p>
           <p>{t('Header3.1.9')}</p>
         </div>
-      <h4>{t('Header3.1.10')}</h4> 
+        <div className='description-title'>
+        <h4>{t('Header3.1.10')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.1.11')}</p><br></br>
           <p>{t('Header3.1.12')}</p><br></br>
@@ -41,11 +45,15 @@ function HomePageConstructionDataCenter({ t }) {
           <p>{t('Header3.1.15')}</p>
           <p>{t('Header3.1.16')}</p>
         </div>
-      <h4>{t('Header3.1.17')}</h4>
+        <div className='description-title'>
+        <h4>{t('Header3.1.17')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.1.18')}</p><br></br>
         </div>
-      <h4>{t('Header3.1.19')}</h4>
+        <div className='description-title'>
+        <h4>{t('Header3.1.19')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.1.20')}</p><br></br>
         </div>

@@ -8,7 +8,7 @@ function HomePageAudit({ t }) {
   return (
     <>
       <div className="jm-video-area">
-        <div className='bluur4'></div>
+        <div className='bluur'></div>
         <div className='bluur2'></div>
         <div className="container-fluid p-0">
           <div className="jm-audit-wrap bg-default">
@@ -23,14 +23,18 @@ function HomePageAudit({ t }) {
       <div className='description-box'>
           <p>{t('Header3.2.1')}</p><br></br>
         </div>
-      <h4>{t('Header3.2.2')}</h4> 
+        <div className='description-title'>
+          <h4>{t('Header3.2.2')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.2.3')}</p><br></br>
         </div>
-      <h4>{t('Header3.2.4')}</h4> 
+        <div className='description-title'>
+          <h4>{t('Header3.2.4')}</h4> 
+        </div>
         <div className='description-box'>
           <p>{t('Header3.2.5')}</p><br></br>
-          <p>{t('Header3.2.6')}</p><br></br>
+          <p>{t('Header3.2.6')}</p>
           <p>{t('Header3.2.7')}</p>
           <p>{t('Header3.2.8')}</p>
           <p>{t('Header3.2.9')}</p><br></br>
