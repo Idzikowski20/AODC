@@ -22,14 +22,14 @@ function HomePageConstructionDataCenter({ t }) {
      <div className='description-box-container'>
         <div className='description-box'>
         <br></br>
-          <span>{t('Header3.1.2')}</span><br></br>
-          <span>{t('Header3.1.3')}</span>
+          <span className='border-radius20'>{t('Header3.1.2')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.3')}</span>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.4')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.1.5')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.5')}</span><br></br>
           <span>{t('Header3.1.6')}</span>
           <span>{t('Header3.1.7')}</span>
           <span>{t('Header3.1.8')}</span>
@@ -39,8 +39,8 @@ function HomePageConstructionDataCenter({ t }) {
         <h4>{t('Header3.1.10')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.1.11')}</span><br></br>
-          <span>{t('Header3.1.12')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.11')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.12')}</span><br></br>
           <span>{t('Header3.1.13')}</span>
           <span>{t('Header3.1.14')}</span>
           <span>{t('Header3.1.15')}</span>
@@ -50,13 +50,13 @@ function HomePageConstructionDataCenter({ t }) {
         <h4>{t('Header3.1.17')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.1.18')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.18')}</span><br></br>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.19')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.1.20')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.1.20')}</span><br></br>
         </div>
         </div>
     </div>

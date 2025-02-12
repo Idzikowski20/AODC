@@ -20,26 +20,27 @@ function HomePageAudit({ t }) {
       </div>
     <div className='description-container'>
       <div className='description-box-container'>
-      <div className='description-box'>
+      <div className='description-box-top'>
+        {/* <img className='offer-img' src="assets/img/whatwedo/commissioning.png"/> */}
       <br></br>
-          <span>{t('Header3.2.1')}</span>
+          <span className='border-radius20'>{t('Header3.2.1')}</span>
         </div>
         <div className='description-title'>
           <h4>{t('Header3.2.2')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.2.3')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.2.3')}</span><br></br>
         </div>
         <div className='description-title'>
           <h4>{t('Header3.2.4')}</h4> 
         </div>
         <div className='description-box'>
-          <span>{t('Header3.2.5')}</span><br></br>
+          <span className='border-radius20'>{t('Header3.2.5')}</span><br></br>
           <span>{t('Header3.2.6')}</span>
           <span>{t('Header3.2.7')}</span>
           <span>{t('Header3.2.8')}</span>
           <span>{t('Header3.2.9')}</span><br></br>
-          <span>{t('Header3.2.10')}</span>
+          <span className='border-radius20'>{t('Header3.2.10')}</span>
         </div>
       </div>
     </div>
