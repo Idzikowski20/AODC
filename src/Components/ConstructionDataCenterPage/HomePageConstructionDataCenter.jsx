@@ -22,41 +22,41 @@ function HomePageConstructionDataCenter({ t }) {
      <div className='description-box-container'>
         <div className='description-box'>
         <br></br>
-          <p>{t('Header3.1.2')}</p><br></br>
-          <p>{t('Header3.1.3')}</p>
+          <span>{t('Header3.1.2')}</span><br></br>
+          <span>{t('Header3.1.3')}</span>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.4')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.1.5')}</p><br></br>
-          <p>{t('Header3.1.6')}</p>
-          <p>{t('Header3.1.7')}</p>
-          <p>{t('Header3.1.8')}</p>
-          <p>{t('Header3.1.9')}</p>
+          <span>{t('Header3.1.5')}</span><br></br>
+          <span>{t('Header3.1.6')}</span>
+          <span>{t('Header3.1.7')}</span>
+          <span>{t('Header3.1.8')}</span>
+          <span>{t('Header3.1.9')}</span>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.10')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.1.11')}</p><br></br>
-          <p>{t('Header3.1.12')}</p><br></br>
-          <p>{t('Header3.1.13')}</p>
-          <p>{t('Header3.1.14')}</p>
-          <p>{t('Header3.1.15')}</p>
-          <p>{t('Header3.1.16')}</p>
+          <span>{t('Header3.1.11')}</span><br></br>
+          <span>{t('Header3.1.12')}</span><br></br>
+          <span>{t('Header3.1.13')}</span>
+          <span>{t('Header3.1.14')}</span>
+          <span>{t('Header3.1.15')}</span>
+          <span>{t('Header3.1.16')}</span>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.17')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.1.18')}</p><br></br>
+          <span>{t('Header3.1.18')}</span><br></br>
         </div>
         <div className='description-title'>
         <h4>{t('Header3.1.19')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.1.20')}</p><br></br>
+          <span>{t('Header3.1.20')}</span><br></br>
         </div>
         </div>
     </div>
