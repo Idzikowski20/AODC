@@ -8,7 +8,7 @@ function VideoArea({ t }) {
   // const {handleOpenModal} = useContext(JobContext)
     return (
       <div className="jm-video-area">
-        <div className="container-fluid p-0">
+        <div className="width-90 container-fluid p-0">
           <div className="jm-video-wrap bg-default">
             <div className="jm-video-icon mb-30">
               <Link  target="_blank" to={t('videomodal')}>
