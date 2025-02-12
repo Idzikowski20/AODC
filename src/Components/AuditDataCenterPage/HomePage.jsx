@@ -22,24 +22,24 @@ function HomePageAudit({ t }) {
       <div className='description-box-container'>
       <div className='description-box'>
       <br></br>
-          <p>{t('Header3.2.1')}</p>
+          <span>{t('Header3.2.1')}</span>
         </div>
         <div className='description-title'>
           <h4>{t('Header3.2.2')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.2.3')}</p><br></br>
+          <span>{t('Header3.2.3')}</span><br></br>
         </div>
         <div className='description-title'>
           <h4>{t('Header3.2.4')}</h4> 
         </div>
         <div className='description-box'>
-          <p>{t('Header3.2.5')}</p><br></br>
-          <p>{t('Header3.2.6')}</p>
-          <p>{t('Header3.2.7')}</p>
-          <p>{t('Header3.2.8')}</p>
-          <p>{t('Header3.2.9')}</p><br></br>
-          <p>{t('Header3.2.10')}</p>
+          <span>{t('Header3.2.5')}</span><br></br>
+          <span>{t('Header3.2.6')}</span>
+          <span>{t('Header3.2.7')}</span>
+          <span>{t('Header3.2.8')}</span>
+          <span>{t('Header3.2.9')}</span><br></br>
+          <span>{t('Header3.2.10')}</span>
         </div>
       </div>
     </div>
