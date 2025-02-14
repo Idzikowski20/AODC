@@ -13730,3 +13730,49 @@ a.meanmenu-reveal {
 .border-radius20 {
   border-radius: 20px;
 }
+
+.contact-form-container {
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-labels {
+  gap: 2rem;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.contact-label {
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.contact-input {
+  height: 100%;
+  margin: 5px;
+    width: 100%;
+  background-color: rgba(0, 0, 0, 0.301);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-weight: 500;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border: 0;
+}

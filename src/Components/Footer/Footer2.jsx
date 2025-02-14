@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from '../../Components/Carousel/Carousel'
 import { withNamespaces } from 'react-i18next';
+import ContactForm from '../ContactForm/ContactForm';
 
 function Footer2({ t }) {
   return (
@@ -71,6 +72,7 @@ function Footer2({ t }) {
 
 
                 </div>
+                {/* <ContactForm /> */}
                 <div className="footer-copyright-container">
                             <div className="footer-copyright">
                                 <span>{t('title7.5')}<a href='https://www.linkedin.com/in/patrykidzikowski/' target='_blank'>  {t('title7.6')}</a></span>
