@@ -8,6 +8,7 @@ import ConstructionDataCenter from "./Pages/ConstructionDataCenter"
 import AuditDataCenter from "./Pages/AuditDataCenter"
 import ServiceDataCenter from "./Pages/ServiceDataCenter"
 import ProjectingDataCenter from "./Pages/ProjectingDataCenter"
+import DataCenterContener from "./Pages/DataCenterContener"
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Budowa-Data-Center" element={<ConstructionDataCenter/>}/>
           <Route path="/Audyt-Data-Center" element={<AuditDataCenter/>}/>
           <Route path="/Projektowanie-Data-Center" element={<ProjectingDataCenter/>}/>
+          <Route path="/Serwerownia-kontenerowa" element={<DataCenterContener/>}/>
           <Route path="/Serwis-Data-Center" element={<ServiceDataCenter/>}/>
           <Route path="/Kariera" element={<JobPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
