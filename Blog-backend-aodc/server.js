@@ -54,6 +54,16 @@ app.post("/api/blogs", upload.single("image"), async (req, res) => {
     res.status(500).json({ message: "❌ Błąd serwera" });
   }
 });
+// 📄 Pobieranie wszystkich postów
+app.get("/api/blogs", async (req, res) => {
+  try {
+    const blogs = await Blog.find().sort({ createdAt: -1 }); // Pobiera wszystkie posty, najnowsze pierwsze
+    res.json(blogs);
+  } catch (err) {
+    console.error("❌ Błąd pobierania postów:", err);
+    res.status(500).json({ message: "❌ Błąd serwera przy pobieraniu postów" });
+  }
+});
 
 // 📄 Pobieranie posta
 app.get("/api/blogs/:id", async (req, res) => {
