@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SectionWrapper from "../../hoc/SectionWrapper";
 
 // ✅ Funkcja do przycinania tekstu
 const truncateText = (text, maxLength = 150) => {
@@ -14,13 +13,13 @@ const truncateText = (text, maxLength = 150) => {
 };
 
 const ProjectCard = ({ name, description, tags, image, source_code_link }) => (
-<Tilt
-  tiltMaxAngleX={45}
-  tiltMaxAngleY={45}
-  scale={1}
-  transitionSpeed={450}
-  className="background-dark blog-post"
->
+  <Tilt
+    tiltMaxAngleX={45}
+    tiltMaxAngleY={45}
+    scale={1}
+    transitionSpeed={450}
+    className="background-dark blog-post"
+  >
     <div className="relative w-full h-[270px]">
       {image ? (
         <img
@@ -82,18 +81,17 @@ const Works = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/blogs`
-        );
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
+        console.log("📄 Dane z API:", response.data);
         setBlogs(Array.isArray(response.data) ? response.data : []);
       } catch (err) {
-        console.error("❌ Błąd podczas pobierania blogów:", err);
+        console.error("❌ Błąd podczas pobierania blogów:", err.response?.data || err.message);
         setError("Nie udało się pobrać blogów. Spróbuj ponownie później.");
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchBlogs();
   }, []);
 
@@ -139,7 +137,7 @@ const Works = () => {
 
   return (
     <section id="news" className="px-4">
-      <h2 className={`${styles.sectionHeadText} text-center mb-8`}>
+      <h2 className="text-3xl font-bold text-center mb-8">
         📰 Blog informacyjny
       </h2>
       <Slider {...sliderSettings} className="blog-slider">
@@ -159,4 +157,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default Works;

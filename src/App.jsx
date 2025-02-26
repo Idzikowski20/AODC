@@ -10,6 +10,7 @@ import ServiceDataCenter from "./Pages/ServiceDataCenter"
 import ProjectingDataCenter from "./Pages/ProjectingDataCenter"
 import DataCenterContener from "./Pages/DataCenterContener"
 import Blogpage from "./Pages/Blogpage"
+import CreatePostPage from "./Pages/CreatePostPage"
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Serwis-Data-Center" element={<ServiceDataCenter/>}/>
           <Route path="/Kariera" element={<JobPage/>}/>
           <Route path="/Blog" element={<Blogpage/>}/>
+          <Route path="/CreatePost" element={<CreatePostPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
           {/* <Route path="/Polityka" element={<Privacy/>}/> */}
           <Route path="*" element={<ErrorPage/>}/>
