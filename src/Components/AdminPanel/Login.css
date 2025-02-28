@@ -1,0 +1,24 @@
+.gradient-custom-2 {
+    border-radius: 20px;
+    background: #0000001a;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    height: fit-content;
+  }
+
+  .login-button {
+    border: 1px solid blue;
+  }
+
+  .login-button:Hover {
+    border: 1px solid blue;
+    background: #29057c1a;
+  }
+  
+  .login-container {
+    margin-top: 150px;
+  }
+
+  .login-container label {
+    color: #Fff;
+  }
