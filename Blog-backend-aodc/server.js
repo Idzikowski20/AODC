@@ -77,6 +77,19 @@ app.get("/api/blogs/:id", async (req, res) => {
   }
 });
 
+// 🗑️ Usuwanie posta
+app.delete("/api/blogs/:id", async (req, res) => {
+  try {
+    const deletedBlog = await Blog.findByIdAndDelete(req.params.id);
+    if (!deletedBlog) return res.status(404).json({ message: "❌ Post nie znaleziony" });
+    res.json({ message: "✅ Post usunięty" });
+  } catch (err) {
+    console.error("❌ Błąd usuwania posta:", err);
+    res.status(500).json({ message: "❌ Błąd serwera przy usuwaniu posta" });
+  }
+});
+
+
 // 🚀 Połączenie z MongoDB i uruchomienie serwera
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,

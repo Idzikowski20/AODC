@@ -11,9 +11,12 @@ import ProjectingDataCenter from "./Pages/ProjectingDataCenter"
 import DataCenterContener from "./Pages/DataCenterContener"
 import Blogpage from "./Pages/Blogpage"
 import CreatePostPage from "./Pages/CreatePostPage"
+import DashboardPage from "./Pages/DashboardPage"
+import BlogDetail from "./Pages/BlogDetailPage"
 function App() {
   return (
     <>
+    <img className="herobg" src="/assets/herobg.png" alt="background"/>
     <PreLoader />
    <Router>
       <Routes>
@@ -25,7 +28,9 @@ function App() {
           <Route path="/Serwis-Data-Center" element={<ServiceDataCenter/>}/>
           <Route path="/Kariera" element={<JobPage/>}/>
           <Route path="/Blog" element={<Blogpage/>}/>
+          <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/CreatePost" element={<CreatePostPage/>}/>
+          <Route path="/AdminPanel" element={<DashboardPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
           {/* <Route path="/Polityka" element={<Privacy/>}/> */}
           <Route path="*" element={<ErrorPage/>}/>
