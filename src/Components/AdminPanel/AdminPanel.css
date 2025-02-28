@@ -1,7 +1,11 @@
 .admin-container {
     display: flex;
     min-height: 100vh;
-    background-color: #0a0a0a;
+    background-color: #ffffff;
+  }
+
+  .admin-container h1 {
+    color: #121212 !important;
   }
   
   /* Sidebar */
@@ -46,7 +50,6 @@
   
   .sidebar-menu li a:hover {
     background: #222;
-    border-radius: 5px;
   }
   
   /* Główna zawartość */
@@ -72,6 +75,7 @@
   }
   
   .post-item {
+    margin: 10px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
