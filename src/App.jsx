@@ -15,7 +15,9 @@ import DashboardPage from "./Pages/DashboardPage"
 import BlogDetail from "./Pages/BlogDetailPage"
 import EditPostPage from "./Pages/EditPostPage"
 import LoginPage from "./Pages/LoginPage"
+import { auth } from "./config/firebaseConfig";
 function App() {
+  console.log("Firebase auth:", auth);
   return (
     <>
     <img className="herobg" src="/assets/herobg.png" alt="background"/>
