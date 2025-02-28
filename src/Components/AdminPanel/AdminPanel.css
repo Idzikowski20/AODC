@@ -1,11 +1,25 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .admin-container {
     display: flex;
     min-height: 100vh;
-    background-color: #ffffff;
+    color: #fff;
+  }
+
+  .admin-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
   }
 
   .admin-container h1 {
-    color: #121212 !important;
+    color: #ffffff !important;
   }
   
   /* Sidebar */
@@ -55,7 +69,6 @@
   /* Główna zawartość */
   .content {
     flex: 1;
-    margin-left: 250px;
     padding: 20px;
     color: white;
   }
@@ -69,9 +82,15 @@
   }
   
   .posts {
-    background: #1a1a1a;
-    padding: 20px;
+    backdrop-filter: blur(20px);
+    background: #00000069;
+    padding: 40px;
     border-radius: 8px;
+  }
+
+  .posts-box {
+    display: flex;
+    justify-content: space-between;
   }
   
   .post-item {
@@ -79,7 +98,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2a2a2a;
+    background: #181818;
+    transition: 0.5s !important;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -112,24 +132,169 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    border-radius: 4px;
+    border-radius: 20px;
   }
   
   .edit-btn {
-    background: #007bff;
+    background: #2f2d3a;
     color: white;
   }
   
-  .delete-btn {
-    background: #dc3545;
-    color: white;
-  }
   
   .edit-btn:hover {
-    background: #0056b3;
+    scale: 1.1;
   }
   
   .delete-btn:hover {
     background: #c82333;
+  }
+  
+  .cssbuttons-io-button {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 167, 62, 1) 0%,
+      rgba(102, 247, 113, 1) 100%
+    );
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+  }
+
+  .cssbuttons-io-button svg {
+    margin-right: 6px;
+  }
+  
+  .cssbuttons-io-button:hover {
+    box-shadow: 0 1m 1.5em 1em #14a73e98;
+    scale: 1.1;
+  }
+  
+  .cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
+
+  .delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 0px solid transparent;
+    background-color: rgba(100,77,237,0.08);
+    border-radius: 1.25em;
+    transition: all 0.2s linear;
+   }
+   
+   .delete:hover {
+     scale: 1.1;
+   }
+   
+.posts button svg {
+    width: 30px ;
+    height: 25px;
+}
+
+
+.component-title {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 30px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #888;
+    text-align: center;
+  }
+  
+  .tab-container {
+    right: 40px;
+    top: 250px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px;
+    border-radius: 9px;
+  }
+
+  .tab-container label {
+    color: #fff;
+  }
+  
+  .scroller {
+    content: "";
+    width: 15px;
+    height: 135px;
+    opacity: 0.4;
+    background: #888;
+    position: absolute;
+    top: 5px;
+    right: -17px;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+    animation-name: none;
+  }
+  
+  .indicator {
+    content: "";
+    width: 10px;
+    height: 28px;
+    background: #3dff00;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    z-index: 9;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .tab {
+    width: 130px;
+    height: 28px;
+    position: absolute;
+    z-index: 99;
+    outline: none;
+    opacity: 0;
+  }
+  
+  .tab_label {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .tab--1:checked ~ .indicator {
+    top: 8px;
+  }
+  
+  .tab--2:checked ~ .indicator {
+    top: calc(28px * 2 + 2px);
+  }
+  
+  .tab--3:checked ~ .indicator {
+    top: calc(26.5px * 4 + 1px);
   }
   

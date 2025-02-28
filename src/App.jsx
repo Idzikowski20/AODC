@@ -14,6 +14,7 @@ import CreatePostPage from "./Pages/CreatePostPage"
 import DashboardPage from "./Pages/DashboardPage"
 import BlogDetail from "./Pages/BlogDetailPage"
 import EditPostPage from "./Pages/EditPostPage"
+import LoginPage from "./Pages/LoginPage"
 function App() {
   return (
     <>
@@ -32,8 +33,9 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/CreatePost" element={<CreatePostPage/>}/>
           <Route path="/AdminPanel" element={<DashboardPage/>}/>
+          <Route path="/Login" element={<LoginPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
-          <Route path="/admin/edit/:id" element={<EditPostPage />} />
+          <Route path="/AdminPanel/edit/:id" element={<EditPostPage />} />
           {/* <Route path="/Polityka" element={<Privacy/>}/> */}
           <Route path="*" element={<ErrorPage/>}/>
       </Routes>

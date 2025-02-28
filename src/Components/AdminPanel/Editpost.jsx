@@ -62,7 +62,7 @@ const EditPost = () => {
       });
 
       setMessage("✅ Post zaktualizowany pomyślnie!");
-      setTimeout(() => navigate("/admin"), 2000); // Przekierowanie do panelu admina po 2 sek.
+      setTimeout(() => navigate("/AdminPanel"), 2000); // Przekierowanie do panelu admina po 2 sek.
     } catch (error) {
       console.error("❌ Błąd aktualizacji posta:", error);
       setMessage(`❌ Wystąpił błąd: ${error.response?.data?.message || "Spróbuj ponownie"}`);
