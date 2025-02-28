@@ -13,6 +13,7 @@ import Blogpage from "./Pages/Blogpage"
 import CreatePostPage from "./Pages/CreatePostPage"
 import DashboardPage from "./Pages/DashboardPage"
 import BlogDetail from "./Pages/BlogDetailPage"
+import EditPostPage from "./Pages/EditPostPage"
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
           <Route path="/CreatePost" element={<CreatePostPage/>}/>
           <Route path="/AdminPanel" element={<DashboardPage/>}/>
           <Route path="/Realizacje" element={<Realizations/>}/>
+          <Route path="/admin/edit/:id" element={<EditPostPage />} />
           {/* <Route path="/Polityka" element={<Privacy/>}/> */}
           <Route path="*" element={<ErrorPage/>}/>
       </Routes>

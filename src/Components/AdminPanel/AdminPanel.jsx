@@ -102,7 +102,7 @@ const AdminPanel = () => {
 
         {/* Lista postów */}
         <div className="posts">
-          <h2>Ostatnie Posty</h2>
+          <h2>Wszystkie posty</h2>
 
           {loading ? (
             <p>Ładowanie postów...</p>
