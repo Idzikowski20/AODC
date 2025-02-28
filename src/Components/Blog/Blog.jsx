@@ -1,160 +1,137 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Header2 from "../Header/Header2";
+import Footer2 from "../Footer/Footer2";
+import "./Blog.css"; // Import pliku CSS
 
-// ✅ Funkcja do przycinania tekstu
-const truncateText = (text, maxLength = 150) => {
-  if (!text) return "";
-  return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
-};
-
-const ProjectCard = ({ name, description, tags, image, source_code_link }) => (
-  <Tilt
-    tiltMaxAngleX={45}
-    tiltMaxAngleY={45}
-    scale={1}
-    transitionSpeed={450}
-    className="background-dark blog-post"
-  >
-    <div className="relative w-full h-[270px]">
-      {image ? (
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-[270px] object-cover rounded-2xl"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = "/placeholder-image.jpg";
-          }}
-        />
-      ) : (
-        <div className="w-full h-full flex items-center justify-center bg-gray-700 text-gray-400 rounded-2xl">
-          Brak obrazka
-        </div>
-      )}
-    </div>
-    <div className="blog-box">
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[22px] text-center">
-          {name || "Bez tytułu"}
-        </h3>
-        <p className="mt-2 text-gray-300 text-[14px] text-center">
-          {truncateText(description || "Brak opisu dla tego posta.")}
-        </p>
-      </div>
-    </div>
-
-    <div className="mt-4 text-center">
-      <Link to={source_code_link} className="learn-more inline-block">
-        <button className="button-blog">
-          Czytaj więcej
-          <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
-            <path
-              clipRule="evenodd"
-              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              fillRule="evenodd"
-            ></path>
-          </svg>
-        </button>
-      </Link>
-    </div>
-
-    {tags?.length > 0 && (
-      <div className="mt-4 flex flex-wrap justify-center gap-2">
-        {tags.map((tag, i) => (
-          <p key={i} className="text-[13px] text-gray-400">#{tag}</p>
-        ))}
-      </div>
-    )}
-  </Tilt>
-);
-
-const Works = () => {
+const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [rating, setRating] = useState(0);
+
+const handleRating = (value) => {
+  setRating(value);
+  alert(`Dziękujemy za ocenę ${value} ⭐!`);
+};
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
-        console.log("📄 Dane z API:", response.data);
         setBlogs(Array.isArray(response.data) ? response.data : []);
       } catch (err) {
-        console.error("❌ Błąd podczas pobierania blogów:", err.response?.data || err.message);
+        console.error("❌ Błąd pobierania blogów:", err.response?.data || err.message);
         setError("Nie udało się pobrać blogów. Spróbuj ponownie później.");
       } finally {
         setLoading(false);
       }
     };
-  
+
     fetchBlogs();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="loader flex-center">
-        <span className="loader-text">⏳ Ładowanie postów...</span>
-      </div>
-    );
-  }
+  if (loading) return <div className="loading">⏳ Ładowanie postów...</div>;
+  if (error) return <div className="error">{error}</div>;
+  if (blogs.length === 0) return <div className="empty">🙁 Brak postów do wyświetlenia</div>;
 
-  if (error) return <div className="text-center text-red-500">{error}</div>;
-
-  if (blogs.length === 0) {
-    return (
-      <div className="text-center text-gray-400">
-        🙁 Brak postów do wyświetlenia
-      </div>
-    );
-  }
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  const featuredPost = blogs[0]; // Główny post
+  const otherPosts = blogs.slice(1); // Pozostałe posty
 
   return (
-    <section id="news" className="px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        📰 Blog informacyjny
-      </h2>
-      <Slider {...sliderSettings} className="blog-slider">
-        {blogs.map((blog, index) => (
-          <div key={`project-${index}`} className="px-2">
-            <ProjectCard
-              name={blog.title}
-              description={blog.content}
-              tags={blog.tags || []}
-              image={blog.image}
-              source_code_link={`/blog/${blog._id}`}
-            />
+    <>
+      <Header2 />
+      <div className="jm-video-area">
+          <div className='bluur'></div>
+          <div className='bluur2'></div>
+            <div className="container-fluid p-0">
+              <div className="jm-projecting-wrap-blog bg-default">
+                <div className='content'>
+                  <h1></h1> 
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
-      </Slider>
-    </section>
+          <div className="blog-title p-6 text-center max-w-6xl mx-auto mb-6">
+  <h2 className="text-2xl font-bold text-white">💡 Blog AODC</h2>
+  <p className="text-gray-300 mt-2">
+    Zobacz nasze najnowsze wpisy o technologii, data centers i innowacjach.
+  </p>
+</div>
+
+      <div className="blog-container">
+        <div className="main-content">
+          {/* 📌 Wyróżniony wpis */}
+          {featuredPost.tags?.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {featuredPost.tags.map((tag, i) => (
+                <span key={i} className="tags text-white text-sm">{tag}</span>
+              ))}
+            </div>
+          )}
+          <div className="featured-post">
+            <h1 className="post-title">{featuredPost.title}</h1>
+            <div className="post-info">
+              <span>🖊 {featuredPost.author || "AODC"}</span>
+              <span>📅 {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
+            </div>
+            {featuredPost.image && (
+              <img
+                src={featuredPost.image}
+                alt={featuredPost.title}
+                className="post-image"
+                onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+              />
+            )}
+            <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: featuredPost.content.slice(0, 200) + "..." }}></p>
+            <Link to={`/blog/${featuredPost._id}`} className="read-more">
+              Czytaj więcej →
+            </Link>
+            <div className="text-gray-400 text-sm flex gap-4 items-center mb-4">
+              <span>👁️ {Math.floor(Math.random() * 500)} wyświetleń</span>
+              <span>👥 Czytają: {Math.floor(Math.random() * 1) + 2}</span>
+            </div>
+            <div className="flex gap-2 mt-4">
+  {[1, 2, 3, 4, 5].map((star) => (
+    <span
+      key={star}
+      className={`cursor-pointer text-2xl ${star <= rating ? "text-yellow-400" : "text-gray-500"}`}
+      onClick={() => handleRating(star)}
+    >
+      ⭐
+    </span>
+  ))}
+</div>
+          </div>
+        </div>
+        
+
+        {/* 📌 Inne wpisy */}
+        <aside className="sidebar">
+          <h2 className="sidebar-title">📢 Najnowsze posty</h2>
+          <div className="post-list">
+            {otherPosts.map((post) => (
+              <Link key={post._id} to={`/blog/${post._id}`} className="post-item">
+                <img
+                  src={post.image || "/placeholder-image.jpg"}
+                  alt={post.title}
+                  className="post-thumbnail"
+                  onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+                />
+                <div>
+                  <h3 className="post-item-title">{post.title}</h3>
+                  <span className="post-date">{new Date(post.createdAt).toLocaleDateString()}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </aside>
+      </div>
+      <Footer2 />
+    </>
   );
 };
 
-export default Works;
+export default Blog;

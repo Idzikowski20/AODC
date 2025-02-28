@@ -16,7 +16,7 @@ function PreLoader({ t }) {
     <div className='preloader'>
       <div className='content-container-preloader'>
         <div>
-            <img className='preloader-logo animate__animated animate__bounceIn' src='assets/img/logo/logoloader.png'></img>
+            <img className='preloader-logo animate__animated animate__bounceIn' src='/assets/img/logo/logoloader.png'></img>
         </div>
         <div className='texts-container'>
         <span>{t('title8')}</span>

@@ -1,0 +1,159 @@
+
+.blog-title {
+  filter: drop-shadow(2px 4px 6px rgb(99, 98, 98));
+  text-shadow: -8px 0px 20px rgb(0 0 0 / 48%);
+}
+
+/* 📌 Styl dla głównego kontenera */
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  /* 📌 Główna sekcja */
+  .main-content {
+    backdrop-filter: blur(20px);
+    width: 65%;
+    background: #0000001a;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* 📌 Wyróżniony post */
+  .featured-post {
+    text-align: left;
+  }
+  
+  .post-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .post-info {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .post-excerpt {
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    color: #5dade2;
+  }
+  
+  
+  .sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  /* 📌 Lista najnowszych postów */
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .post-item {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  }
+  
+  .post-item:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .post-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    /* background: #222244; */
+    border-radius: 8px;
+    transition: background 0.3s;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .post-item:hover {
+    background: #2929293d;
+  }
+  
+  .post-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .post-item-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .post-date {
+    font-size: 12px;
+    color: #bbb;
+  }
+  
+  /* 📌 Responsywność */
+  @media screen and (max-width: 1024px) {
+    .blog-container {
+      flex-direction: column;
+    }
+    .main-content, .sidebar {
+      width: 100%;
+    }
+    .post-image {
+      height: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .post-item {
+      flex-direction: row;
+      align-items: center;
+    }
+    .post-thumbnail {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .tags {
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 5px;
+    background: #1b1b3b;
+  }
+  

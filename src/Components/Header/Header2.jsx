@@ -88,7 +88,7 @@ function Header2 ({ t }) {
                                                 ></path>
                                             </svg>
                                             </span>
-                                        <img className='aodcserwislogo' src="assets/img/logo/aodc_biale.svg" alt="aodcserwislogo" height="50" width="50"/>
+                                        <img className='aodcserwislogo' src="https://aodc.pl/assets/img/logo/aodc_biale.svg" alt="aodcserwislogo" height="50" width="50"/>
                                         </button>
                                         </Link>
                                     </li>

@@ -1,0 +1,131 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+  }
+  
+  /* Sidebar */
+  .sidebar-dashboard {
+    width: 250px;
+    background: #121212;
+    color: white;
+    position: fixed;
+    height: 100vh;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-dashboard.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sidebar-menu {
+    margin-top: 20px;
+  }
+  
+  .sidebar-menu li {
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar-menu li a:hover {
+    background: #222;
+    border-radius: 5px;
+  }
+  
+  /* Główna zawartość */
+  .content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .posts {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .post-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .post-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+  }
+  
+  .edit-btn {
+    background: #007bff;
+    color: white;
+  }
+  
+  .delete-btn {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background: #0056b3;
+  }
+  
+  .delete-btn:hover {
+    background: #c82333;
+  }
+  
