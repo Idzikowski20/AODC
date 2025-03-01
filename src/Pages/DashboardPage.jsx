@@ -13,7 +13,7 @@ const DashboardPage = () => {
     <Header2/>
     <SidePanel/>
       <div className="flex h-screen">
-        <div className="flex flex-col flex-1">
+        <div className="w-full flex flex-col flex-1">
           <main className="p-6">
             <AdminPanel/>
             {/* <BlogStats />
