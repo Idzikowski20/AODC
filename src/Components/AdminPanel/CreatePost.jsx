@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react"; // Import TinyMCE
 import Header2 from "../Header/Header2";
-
+import { Link } from "react-router-dom";
 const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState(""); // Content przechowuje tekst z edytora
@@ -65,7 +65,19 @@ const CreatePost = () => {
       </div>
       <div className="admin-panel-container">
         <div className="admin-panel">
-          <h2>📝 Utwórz nowy post</h2>
+          <div className="edit-post-title">
+            <div className="edit-post-back">
+                <Link to="/AdminPanel">
+                    <img src="/assets/back.png" alt="back"/>
+                </Link>
+            </div>
+              <div>
+                  <h2>📝 Utwórz nowy post</h2>
+              </div>
+            <div className="edit-post-dot">
+                .
+            </div>
+          </div>
           <form onSubmit={handleSubmit} className="admin-form">
             <div>
               <label className="admin-label">Tytuł:</label>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react";
 import Header2 from "../Header/Header2";
 import Footer2 from "../Footer/Footer2";
-
+import { Link } from "react-router-dom";
 const EditPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -87,7 +87,19 @@ const EditPost = () => {
       </div>
       <div className="admin-panel-container">
         <div className="admin-panel">
+        <div className="edit-post-title">
+          <div className="edit-post-back">
+          <Link to="/AdminPanel">
+            <img src="/assets/back.png" alt="back"/>
+          </Link>
+          </div>
+          <div>
           <h2>✏️ Edytuj post</h2>
+          </div>
+          <div className="edit-post-dot">
+            .
+          </div>
+         </div>
           <form onSubmit={handleUpdate} className="admin-form">
             <div>
               <label className="admin-label">Tytuł:</label>

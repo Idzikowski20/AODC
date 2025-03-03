@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 body {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -269,8 +266,6 @@ body {
   align-items: center;
 }
 
-.aboutus-servers {
-}
 /* About us */
 
 /* LOADER */
@@ -388,10 +383,6 @@ body {
       --fc-field-hover-text-color: #B3B8D0;
 
       --fc-border-active-color: #1463FF;
-    }
-
-    .contact-img {
-      
     }
 
     @media only screen and (min-width: 350px) and (max-width: 800px) {
@@ -630,22 +621,6 @@ body {
       max-width: 100%;
       padding-top: 12px;
     }
-
-    .formcarry-container input::placeholder,
-    .formcarry-container textarea::placeholder,
-    .formcarry-container select::placeholder {
-    }
-
-    .formcarry-container input:hover,
-    .formcarry-container textarea:hover,
-    .formcarry-container select:hover {
-    }
-
-    .formcarry-container input:hover::placeholder,
-    .formcarry-container textarea:hover::placeholder,
-    .formcarry-container select:hover::placeholder {
-    }
-
     .formcarry-container input:focus,
     .formcarry-container textarea:focus,
     .formcarry-container select:focus {
@@ -2716,11 +2691,11 @@ input:focus::placeholder, textarea:focus::placeholder {
  }
  
  .languageFlag:hover .second{
-  transform:translateY(0px);
+  transform:translateY(2px);
   opacity:1
 }
 .languageFlag:hover .third{
-  transform:translateY(0px);
+  transform:translateY(2px);
   opacity:1
 }
 
@@ -2843,14 +2818,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 
 .jm-header-main-menu ol li a {
-  font-size: 17px;
+  font-size: 16px;
   padding: 2px 0;
   display: inline-block;
   transition: transform 250ms;
-}
-
-.jm-header-main-menu ol li a:hover{
-  transform: translateY(-5px);
 }
 
 
@@ -2894,7 +2865,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .jm-header-main-menu ol li .sub-menu li:hover > a {
   color: #d32b50;
-  letter-spacing: 0.7px;
 }
 .jm-header-main-menu ol li .sub-menu li .sub-menu {
   left: 100%;
@@ -2912,10 +2882,15 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
 }
 
-
-ol > li {
-  /* float:left; */
+.jm-header-main-menu ol li:hover {
+  transition: 0.2s ease-out;
+  transform: translateY(-5px);
 }
+
+.menu-has-children {
+  height: 40px;
+}
+
 ol, ul {
   padding: 0;
 }
@@ -2944,16 +2919,23 @@ ol > li:hover > ul {
 }
 
 .oferta-container {
-  box-shadow: 0px 0px 30px 0px rgba(3, 15, 35, 1);
+  background-color: #030f23e0;
+  --tw-shadow: 0px 35px 120px -15px #0b014f;
+  --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: #c3c3c3 !important;
+  border-radius: 40px;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0);
   display: flex;
   justify-content: center;
   text-align: left;
   flex-direction: column;
-  width: 260px;
-  right: -100px;
+  width: 300px;
+  right: -120px;
   position: absolute;
-  background: #080f23f6;
+  z-index: 1;
 }
+
 
 .oferta-container li {
   width: 100%;
@@ -3145,13 +3127,12 @@ font-weight: bold;
 
 .jm-header-area-2 .jm-header-main-menu ul li a:hover {
   text-shadow: rgb(20, 19, 19) 1px 0 10px;
-  font-weight: 900;
+  font-weight: 600;
   color: #d32b50;
 }
 
 .jm-header-area-2 .jm-header-main-menu ol li a:hover {
   text-shadow: rgb(20, 19, 19) 1px 0 10px;
-  font-weight: 900;
   color: #d32b50;
 }
 .jm-header-area-2 .jm-header-right-2 .jm-search {
@@ -4048,9 +4029,6 @@ font-weight: bold;
 .jm-banner-area-2 {
   display: flex;
   align-items: center;
-}
-.jm-banner-area-2.jm-overlay {
-
 }
 
 .display-flex {
@@ -6941,6 +6919,44 @@ width: 85% !important;
   width: 100%;
   height: 100%;
   background: linear-gradient(0deg, #030f23 0%, #03122970 48%, #030f23 100%), url(https://i.postimg.cc/23pWdS43/A-modern-data-center-with-rows-of-sleek-high-tech.jpg) fixed no-repeat 50% 20% / cover;
+}
+
+.jm-video-wrap-realizations {
+  height: 400px;
+  background: center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.jm-video-wrap-realizations::before {
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.jm-video-wrap-kariera {
+  height: 400px;
+  background: center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.jm-video-wrap-kariera::before {
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 467px) {
@@ -12160,13 +12176,6 @@ width: 85% !important;
     align-items: center !important;
     flex-direction: column !important;
   }
-  .footer-adress .footer-contact {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center !;
-    width: 250px !important; */
-  }
 }
 
 .socialmedia-icon-container {
@@ -12213,9 +12222,6 @@ width: 85% !important;
 margin-bottom: 50px;
 width: 267px; 
 height: 154px;
-}
-
-.footer-adress {
 }
 
 .footer-logo {
@@ -12447,9 +12453,6 @@ height: 154px;
   max-width: 1330px;
 }
 
-.carrier-card-why-img {
-  /* width: 112px; */
-}
 
 .carrier-card-why-inside {
   text-align: left;
@@ -12502,13 +12505,6 @@ height: 154px;
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-
-.carrier-card-aboutus-buttons {
-  /* margin: 35px;
-  width: 70%;
-  height: 100%; */
 }
 
 .carrier-card-aboutus-img {
@@ -12636,19 +12632,6 @@ height: 154px;
 .carrier-card-benefit-button h3:hover{
   transform: scale(1.1);
 }
-
-#realizations {
-/* background-image: linear-gradient(0deg, rgba(255,115,146,1) 0%, rgba(211,43,80,1) 52%, rgba(211,43,80,1) 100%) !important;
-background-image: radial-gradient(at 50% 44%, #d32b50, rgba(0, 0, 0, 0) 58%); */
-}
-
-/* .carrier-card-benefit-button {
-  width: 100%;
-  margin: 5px;
-  color: #fff;
-  border-bottom: 1px solid #362bd3;
-  background: #00000000;
-} */
 
 .carrier-card-benefit-button {
   border-radius: 20px;
@@ -12908,11 +12891,6 @@ transform:translateY(-10px);
   max-width: 200px;
 }
 
-/*# sourceMappingURL=main.css.map */
-/* Additional CSS */
-.jm-banner-area{
-
-}
 a{
   text-decoration: none !important;
 }
@@ -12953,10 +12931,7 @@ a{
   user-select: none;
   white-space: nowrap;
 }
-.jm-video-wrap{
-/* 
-  background-image: url("https://as1.ftcdn.net/v2/jpg/03/50/46/24/1000_F_350462469_w9xTWh0c8K8ZQAas1L3RLIc63zQ7mjCY.jpg"); */
-}
+
 .progress-wrap{
   position: fixed;
   bottom: 60px;
@@ -12979,9 +12954,7 @@ a{
 .about-main .jm-call-to-action-area{
   padding-top: 100px;
 }
-.homepage-2-main .jm-banner-area-2{
 
-}
 .homepage-2-main .jm-category-area-3{
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -14258,4 +14231,79 @@ i.fas, i.far, i.fal {
 .zalecenia-con img {
 width: 25px;
 height: 25px;
+}
+
+.nav-mobile {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+  display: block !important;
+}
+
+@media (max-width: 1240px) {
+  .nav-mobile {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+    display: none !important;
+  }
+}
+
+.description-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.pagination-button-right-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.pagination-button-left-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-button-left-con img {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.pagination-button-right-con img {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.pagination-button-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid grey;
+  padding-left: 15px;
+}
+
+.pagination-button-right p {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.pagination-button-left p {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.pagination-button-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid grey;
+  padding-right: 15px;
 }

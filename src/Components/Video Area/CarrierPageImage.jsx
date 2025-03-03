@@ -6,7 +6,7 @@ function CarrierPageImage({ t }) {
       <>
       <div className="jm-video-area">
         <div className="container-fluid p-0">
-          <div className="jm-video-wrap bg-default">
+          <div className="jm-video-wrap-kariera bg-default">
             <div className='content'>
               <h1>{t('title10.1')}</h1> 
             </div>

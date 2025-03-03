@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 import Header2 from "../Header/Header2";
 import Footer2 from "../Footer/Footer2";
 import "./BlogDetail.css";
@@ -53,12 +54,18 @@ const BlogDetail = () => {
 
   return (
     <>
+      {/* Dynamiczne ustawienie meta title */}
+      <Helmet>
+        <title>{blog.title ? `${blog.title} | AODC Blog` : "AODC Blog"}</title>
+        <meta name="description" content={blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
+      </Helmet>
+
       <Header2 />
       <div className="bluur"></div>
       <div className="bluur2"></div>
+
       {/* Nagłówek z dużym obrazem */}
       <div className="blog-header">
-      {/* <div className="blog-header" style={{ backgroundImage: `url(${blog.image})` }}> */}
         <div className="blog-header-title">
             <h1 className="blog-title">{blog.title}</h1>
             <p className="blog-subtitle">Ekskluzywne spojrzenie na temat</p>
@@ -67,7 +74,6 @@ const BlogDetail = () => {
               <span>📅 {new Date(blog.createdAt).toLocaleDateString()}</span>
             </div>
         </div>
-
       </div>
 
       {/* Główna treść + Sidebar */}

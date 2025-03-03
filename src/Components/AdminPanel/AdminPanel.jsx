@@ -5,7 +5,7 @@ import { auth } from "../../config/firebaseConfig"; // Import Firebase konfigura
 import { FaEdit } from "react-icons/fa";
 import axios from "axios";
 import "./AdminPanel.css";
-
+import { AiOutlineUserDelete } from "react-icons/ai";
 const AdminPanel = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -66,7 +66,9 @@ const AdminPanel = () => {
 
         <div className="admin-panel-buttons-con">
           <div>
-            <button className="admin-panel-buttons" onClick={handleLogout}>Wyloguj</button>
+            <button className="admin-panel-buttons" onClick={handleLogout}>
+            <AiOutlineUserDelete /> Wyloguj
+              </button>
           </div>
         </div>
     
