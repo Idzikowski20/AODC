@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import JobPage from "./Pages/JobPage";
 import ErrorPage from "./Pages/ErrorPage";
 import HomePage from "./Pages/HomePage";
@@ -15,17 +16,58 @@ import DashboardPage from "./Pages/DashboardPage";
 import BlogDetail from "./Pages/BlogDetailPage";
 import EditPostPage from "./Pages/EditPostPage";
 import LoginPage from "./Pages/LoginPage";
-import PrivateRoute from "./Components/PrivateRoute/PrivateRoute"; // Import PrivateRoute
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./config/firebaseConfig";
+import ContenerDataCenterPage from "./Pages/ContenerDataCenterPage";
+
+const MetaTags = () => {
+  const location = useLocation();
+
+  const metaData = {
+    "/": {
+      title: "Budowa, audyt, projektowanie, chłodzenie Data Center",
+      description: "Doświadczony zespół AODC: projektowanie, budowa i serwis Data Center. Pasja, odpowiedzialność i kompleksowa realizacja każdego projektu!",
+    },
+    "/Budowa-Data-Center": {
+      title: "Budowa serwerowni, Data Center, Serwerownia Kontenerowa",
+      description: "Twoja firma potrzebuje stabilnej, a zarazem innowacyjnej infrastruktury IT? Sprawdź, jak możemy pomóc w budowie niezawodnej serwerowni.",
+    },
+    "/Audyt-Data-Center": {
+      title: "Profesjonalny Audyt Data Center",
+      description: "Wsparcie od audytu data center, przez strategię optymalizacji, po realizację rozwiązań – kompleksowo na każdym etapie. Zapraszamy!",
+    },
+    "/Projektowanie-Data-Center": {
+      title: "Projektowanie Data Center | aodc.pl",
+      description: "Specjalizujemy się w projektowaniu Data Center. Nasze projekty dostosowujemy do indywidualnych potrzeb inwestora oraz standardów branżowych.",
+    },
+    "/Serwis-Data-Center": {
+      title: "Bezpieczeństwo | Chłodzenie | Zasilanie Awaryjne Serwerowni",
+      description: "Zapewniamy kompleksowe podejście do bezpieczeństwa serwerowni, które chroni Twoje centrum danych przed potencjalnymi zagrożeniami.",
+    }
+  };
+
+  const { title, description } = metaData[location.pathname] || {
+    title: "AODC - Data Center",
+    description: "Kompleksowe usługi dla Twojego centrum danych.",
+  };
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+    </Helmet>
+  );
+};
 
 function App() {
   console.log("Firebase auth:", auth);
-  
+
   return (
-    <>
+    <HelmetProvider>
       <img className="herobg" src="/assets/herobg.png" alt="background" />
       <PreLoader />
       <Router>
+        <MetaTags />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Budowa-Data-Center" element={<ConstructionDataCenter />} />
@@ -33,6 +75,7 @@ function App() {
           <Route path="/Projektowanie-Data-Center" element={<ProjectingDataCenter />} />
           <Route path="/Serwerownia-kontenerowa" element={<DataCenterContener />} />
           <Route path="/Serwis-Data-Center" element={<ServiceDataCenter />} />
+          <Route path="/Serwerownie-Kontenerowe" element={<ContenerDataCenterPage />} />
           <Route path="/Kariera" element={<JobPage />} />
           <Route path="/Blog" element={<Blogpage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
@@ -48,7 +91,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
-    </>
+    </HelmetProvider>
   );
 }
 

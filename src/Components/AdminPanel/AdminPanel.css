@@ -83,7 +83,7 @@
   
   .posts {
     backdrop-filter: blur(20px);
-    background: #00000069;
+    background: #4b438b69;
     padding: 20px;
     border-radius: 8px;
   }
@@ -98,7 +98,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #181818;
     transition: 0.5s !important;
     padding: 10px;
     border-radius: 5px;
@@ -128,6 +127,12 @@
     .tab-container {
         opacity: 0;
         display: none;
+    }
+    .post-thumbnail {
+      width: 100% !important;
+      height: 100px !important;
+      border-radius: 5px;
+      object-fit: cover;
     }
 }
   
@@ -166,7 +171,7 @@
   }
   
   .edit-btn {
-    background: #2f2d3a;
+    background: #3c1777;
     color: white;
   }
   
@@ -341,17 +346,45 @@
   }
 
   .admin-panel-buttons {
+    display: flex;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     color: #fff;
-    background: linear-gradient(0deg, rgb(46, 46, 46) 0%, rgb(19, 19, 19) 100%);
+    background: linear-gradient(0deg, rgb(151 18 18) 0%, rgb(177 22 22) 100%);
     border: none;
     box-shadow: 0 0.7em 1.5em -0.5em #31313198;
     backdrop-filter: blur(10px);
   }
 
+  .admin-panel-buttons svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .admin-panel-buttons:hover {
     scale: 1.1;
   }
+
+  .admin-panel h2 {
+    margin-bottom: 0 !important;
+  }
+
+  .edit-post-title {
+    position: relative;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .edit-post-title img:hover {
+    scale: 1.1;
+  }
+
+  .edit-post-dot {
+    opacity: 0;
+  }
+
   

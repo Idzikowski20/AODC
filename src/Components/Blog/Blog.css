@@ -98,7 +98,6 @@
     align-items: center;
     gap: 15px;
     padding: 10px;
-    /* background: #222244; */
     border-radius: 8px;
     transition: background 0.3s;
     text-decoration: none;
@@ -157,3 +156,4 @@
     background: #1b1b3b;
   }
   
+

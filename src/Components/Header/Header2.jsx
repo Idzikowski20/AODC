@@ -24,7 +24,7 @@ function Header2 ({ t }) {
                             </Link>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-8 d-none d-lg-block">
+                    <div className="nav-mobile">
                     <Trans>
                         <div className="jm-header-main-menu text-center jm-header-menu-2">
                             <nav className="jm-mobile-menu" id="jm-mobile-menu">
@@ -38,10 +38,14 @@ function Header2 ({ t }) {
                                     <li className="menu-has-children" ><Link to="">{t('Header3')}</Link>
                                         <ul>
                                             <div className='oferta-container'>
-                                            <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li>{t('Header3.1')}</li></Link>
-                                            <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li>{t('Header3.2')}</li></Link>
-                                            <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li>{t('Header3.3')}</li></Link>
-                                            <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li>{t('Header3.4')}</li></Link>
+                                                <div className='oferta-container-content'>
+                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwerownie-Kontenerowe"><li>{t('Header3.5')}</li></Link>
+                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li>{t('Header3.1')}</li></Link>
+                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li>{t('Header3.2')}</li></Link>
+                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li>{t('Header3.3')}</li></Link>
+                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li>{t('Header3.4')}</li></Link>
+                                                </div>
+                                            
                                             </div>
                                         </ul>
                                     </li>

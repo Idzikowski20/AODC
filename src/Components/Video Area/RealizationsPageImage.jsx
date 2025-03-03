@@ -6,7 +6,7 @@ function RealizationsPageImage({ t }) {
       <>
       <div className="jm-video-area">
         <div className="container-fluid p-0">
-          <div className="jm-video-wrap bg-default">
+          <div className="jm-video-wrap-realizations bg-default">
             <div className='content'>
               <h1>{t('title10')}</h1> 
             </div>

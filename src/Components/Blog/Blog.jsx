@@ -55,7 +55,6 @@ const handleRating = (value) => {
             </div>
           </div>
           <div className="blog-title p-6 text-center max-w-6xl mx-auto mb-6">
-  <h2 className="text-2xl font-bold text-white">💡 Blog AODC</h2>
   <p className="text-gray-300 mt-2">
     Zobacz nasze najnowsze wpisy o technologii, data centers i innowacjach.
   </p>
@@ -74,7 +73,7 @@ const handleRating = (value) => {
           <div className="featured-post">
             <h1 className="post-title">{featuredPost.title}</h1>
             <div className="post-info">
-              <span>🖊 {featuredPost.author || "AODC"}</span>
+              <span>🖊 Autor: {featuredPost.author || "AODC"}</span>
               <span>📅 {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
             </div>
             {featuredPost.image && (
@@ -93,17 +92,6 @@ const handleRating = (value) => {
               <span>👁️ {Math.floor(Math.random() * 500)} wyświetleń</span>
               <span>👥 Czytają: {Math.floor(Math.random() * 1) + 2}</span>
             </div>
-            <div className="flex gap-2 mt-4">
-  {[1, 2, 3, 4, 5].map((star) => (
-    <span
-      key={star}
-      className={`cursor-pointer text-2xl ${star <= rating ? "text-yellow-400" : "text-gray-500"}`}
-      onClick={() => handleRating(star)}
-    >
-      ⭐
-    </span>
-  ))}
-</div>
           </div>
         </div>
         
