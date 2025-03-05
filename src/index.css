@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
   --tw-bg-opacity: 1;
   background: #04122c;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif !important;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -28,6 +28,7 @@ body {
   top: 0;
   right: 0;
 }
+
 
 .jm-building-wrap {
   height: 400px;
@@ -13426,7 +13427,7 @@ a.meanmenu-reveal {
   border-radius: 20px;
   padding: 20px;
   background: #00000020;
-  --tw-shadow: 0px 35px 120px -15px #0b014f98;
+  --tw-shadow: 0px 35px 120px -15px #29292998;
   --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   color: #c3c3c3 !important;
@@ -14306,4 +14307,101 @@ height: 25px;
   align-items: center;
   border-right: 2px solid grey;
   padding-right: 15px;
+}
+
+.datacenter-con-img {
+  border-radius: 20px;
+}
+
+.jm-datacenter-wrap {
+  /* height: 90vh; */
+    background: center / cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.jm-datacenter-wrap::before {
+  /* box-shadow: 3px 15px 100px 50px rgba(3, 15, 35, 1); */
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(0deg, #030f23 0%, #03122970 100%, #030f23 100%), url(../public/assets/datacenterbg2.png) fixed no-repeat 50% 20% / cover; */
+}
+
+#footer {
+  margin-top: 50px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button span{
+  font-weight: 600;
+}
+
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+
+.content-buttons-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 35px;
+}
+
+.serwerownie-video-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.serwerownie-video {
+  backdrop-filter: blur(20px);
+  background: #00000020;
+  --tw-shadow: 0px 35px 120px -15px #29292998;
+  --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  padding: 20px;
+  border-radius: 20px;
+  height: 100%;
 }

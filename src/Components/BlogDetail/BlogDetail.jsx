@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import Firebase Auth
 import Header2 from "../Header/Header2";
 import Footer2 from "../Footer/Footer2";
 import "./BlogDetail.css";
+import { FaHome, FaEdit } from "react-icons/fa";
+import { FaShareAlt } from "react-icons/fa";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -12,6 +15,7 @@ const BlogDetail = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   // Pobieranie szczegółów posta
   useEffect(() => {
@@ -48,6 +52,31 @@ const BlogDetail = () => {
     fetchBlogs();
   }, []);
 
+  // Sprawdzanie statusu zalogowania użytkownika przez Firebase Auth
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsAuthenticated(!!user); // Jeśli user istnieje, oznacza to, że jest zalogowany
+    });
+
+    return () => unsubscribe(); // Cleanup funkcji
+  }, []);
+
+  // Funkcja udostępniania
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: blog.title,
+        text: blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC",
+        url: window.location.href,
+      })
+      .then(() => console.log('Udostępniono!'))
+      .catch((error) => console.log('Błąd przy udostępnianiu', error));
+    } else {
+      alert('Udostępnianie nie jest obsługiwane przez tę przeglądarkę');
+    }
+  };
+
   if (loading) return <div className="text-center text-white">⏳ Ładowanie...</div>;
   if (error) return <div className="text-center text-red-500">{error}</div>;
   if (!blog) return <div className="text-center text-gray-400">🙁 Post nie istnieje</div>;
@@ -68,10 +97,9 @@ const BlogDetail = () => {
       <div className="blog-header">
         <div className="blog-header-title">
             <h1 className="blog-title">{blog.title}</h1>
-            <p className="blog-subtitle">Ekskluzywne spojrzenie na temat</p>
             <div className="blog-meta">
-              <span>✍ {blog.author || "AODC"}</span>
-              <span>📅 {new Date(blog.createdAt).toLocaleDateString()}</span>
+              <span>✍Autor:  {blog.author || "AODC"}</span>
+              <span>📅Opublikowano:  {new Date(blog.createdAt).toLocaleDateString()}</span>
             </div>
         </div>
       </div>
@@ -79,6 +107,32 @@ const BlogDetail = () => {
       {/* Główna treść + Sidebar */}
       <div className="blog-detail">
         <div className="blog-content">
+          <div className="blog-content-buttons-con">
+              <div className="edit-post-back">
+                  <Link to="/Blog">
+                    <img src="/assets/back.png" alt="back"/>
+                  </Link>
+              </div>
+              
+              {/* Wyświetlanie przycisków tylko dla zalogowanych użytkowników */}
+              {isAuthenticated && (
+                <div className="blog-content-adminbuttons">
+                    <Link to={`/AdminPanel/edit/${blog._id}`} className="edit-btn">
+                      <FaEdit /> Edytuj
+                   </Link>
+                    <Link to={`/AdminPanel`} className="edit-btn">
+                    <FaHome /> Panel
+                   </Link>
+                </div>
+              )}
+
+              {/* Ikona udostępniania */}
+              <div className="share-button">
+                <button onClick={handleShare}>
+                  <FaShareAlt /> 
+                </button>
+              </div>
+          </div>
           <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
         </div>
 

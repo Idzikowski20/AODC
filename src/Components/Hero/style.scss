@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Nunito", sans-serif;
   position: relative;
   overflow-x: hidden;
 }
@@ -33,13 +32,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.bluur3 {
-  width: 100%;
-  height: 420px;
-  opacity: .95;
-    background-image: radial-gradient(circle closest-corner at 50% 0, rgba(156, 30, 51, 0.45), #00000000 58%);
 }
 
 
@@ -123,7 +115,6 @@ body {
 
   
 .content {
-  filter: drop-shadow(2px 4px 6px rgb(148, 147, 147));
   text-shadow: -8px 0px 20px rgb(129 129 129 / 48%);
   margin-top: 150px;
   flex-direction: column;

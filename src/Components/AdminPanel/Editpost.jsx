@@ -135,7 +135,7 @@ const EditPost = () => {
               <img src="/assets/info.png" alt="zalecenia"/>
               <span><strong>Zalecenia:</strong></span>
               </div>
-              <p>Pierwszy akapit nie powinien być większy niz 24px.</p>
+              <p>Pierwszy akapit nie powinien być większy niz 15px.</p>
             </div>
 
             <div>
