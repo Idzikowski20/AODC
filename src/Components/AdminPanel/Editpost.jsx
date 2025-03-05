@@ -156,6 +156,7 @@ const EditPost = () => {
                 className="admin-file-input"
               />
               <p>Maksymalny rozmiar to 20MB</p>
+              <p>Dopuszczalne formy: PNG,JPEG,JPG,WEBP</p>
             </div>
 
             <div>
