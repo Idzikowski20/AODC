@@ -41,6 +41,16 @@ const EditPost = () => {
     setContent(newContent);
   };
 
+  // Obsługa zmiany pliku
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file.size > 50 * 1024 * 1024) {
+      alert("❌ Plik jest za duży. Maksymalny rozmiar to 50 MB.");
+      return;
+    }
+    setImageFile(file);
+  };
+
   // Aktualizacja posta
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -73,7 +83,7 @@ const EditPost = () => {
       });
 
       setMessage("✅ Post zaktualizowany pomyślnie!");
-      setTimeout(() => navigate("/AdminPanel"), 2000); // Przekierowanie do panelu admina po 2 sek.
+      setTimeout(() => navigate("/AdminPanel"), 4000); // Przekierowanie do panelu admina po 2 sek.
     } catch (error) {
       console.error("❌ Błąd aktualizacji posta:", error);
       setMessage(`❌ Wystąpił błąd: ${error.response?.data?.message || "Spróbuj ponownie"}`);
@@ -141,8 +151,6 @@ const EditPost = () => {
                 }}
               />
               <div className="zalecenia-con">
-                <img src="/assets/info.png" alt="zalecenia" />
-                <span><strong>Zalecenia:</strong></span>
               </div>
               <p>Pierwszy akapit nie powinien być większy niż 15px.</p>
             </div>
@@ -152,10 +160,10 @@ const EditPost = () => {
               <input
                 type="file"
                 accept="image/*"
-                onChange={(e) => setImageFile(e.target.files[0])}
+                onChange={handleFileChange}
                 className="admin-file-input"
               />
-              <p>Maksymalny rozmiar to 20MB</p>
+              <p>Maksymalny rozmiar to 50MB</p>
               <p>Dopuszczalne formy: PNG,JPEG,JPG,WEBP</p>
             </div>
 
