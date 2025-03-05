@@ -31,10 +31,10 @@ const storage = new CloudinaryStorage({
   },
 });
 
-// Ustawienie limitu rozmiaru pliku na 20 MB (20 * 1024 * 1024)
+// Ustawienie limitu rozmiaru pliku na 50 MB (50 * 1024 * 1024)
 const upload = multer({
   storage,
-  limits: { fileSize: 20 * 1024 * 1024 }, // 20 MB
+  limits: { fileSize: 50 * 1024 * 1024 }, // 50 MB
 });
 
 // ✅ ROUTE testowy — Render sprawdza ten endpoint!
@@ -85,13 +85,21 @@ app.get("/api/blogs/:id", async (req, res) => {
 
 // ✏️ Aktualizacja posta
 app.put("/api/blogs/:id", upload.single("image"), async (req, res) => {
+  // Sprawdzamy, czy plik nie jest za duży
+  if (req.file && req.file.size > 50 * 1024 * 1024) {
+    return res.status(400).json({ message: "❌ Plik jest za duży. Maksymalny rozmiar to 50 MB." });
+  }
+
   try {
     const { title, content, tags } = req.body;
     if (!title || !content) return res.status(400).json({ message: "❌ Brak tytułu lub treści" });
 
     const parsedTags = tags ? JSON.parse(tags) : [];
     const updatedData = { title, content, tags: parsedTags };
-    if (req.file) updatedData.image = req.file.path;
+    if (req.file) {
+      console.log("Plik obrazu:", req.file); // Logowanie przesyłanego pliku
+      updatedData.image = req.file.path;
+    }
 
     const updatedPost = await Blog.findByIdAndUpdate(req.params.id, updatedData, { new: true });
 
