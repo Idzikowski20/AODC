@@ -8,12 +8,24 @@ function ContenerDataCenter({ t }) {
   return (
     <>
       <div className="jm-video-area">
+        {/* <img src='/assets/datacenterbg2.png'/> */}
       <div className='bluur'></div>
       <div className='bluur2'></div>
         <div className="container-fluid p-0">
-          <div className="jm-building-wrap bg-default">
+          <div className="jm-datacenter-wrap bg-default">
             <div className='content'>
               <h1>{t('Header3.5')}</h1> 
+              <div className='serwerownie-video-con'>
+                <video className='serwerownie-video' controls type="video/mp4" src='/assets/serwerownia.mp4' autoPlay />
+              </div>
+              {/* <div className='content-buttons-con'>
+              <button class="cssbuttons-io-button">
+              <span>Sprawdź</span>
+            </button>
+            <button class="cssbuttons-io-button">
+              <span>Kontakt</span>
+            </button>
+              </div> */}
             </div>
           </div>
         </div>
@@ -21,6 +33,7 @@ function ContenerDataCenter({ t }) {
     <div className='description-container'>
      <div className='description-box-container'>
         <div className='description-box'>
+        <img  className="datacenter-con-img" src="/assets/datacenterbg.png" />
         <br></br>
           <span className='border-radius20'>{t('Header3.1.2')}</span><br></br>
           <span className='border-radius20'>{t('Header3.1.3')}</span>
@@ -29,6 +42,7 @@ function ContenerDataCenter({ t }) {
         <h4>{t('Header3.1.4')}</h4> 
         </div>
         <div className='description-box'>
+        <img  className="datacenter-con-img" src="/assets/Serwerownia.png" />
           <span className='border-radius20'>{t('Header3.1.5')}</span><br></br>
           <span>{t('Header3.1.6')}</span>
           <span>{t('Header3.1.7')}</span>

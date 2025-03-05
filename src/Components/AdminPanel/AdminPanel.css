@@ -131,7 +131,7 @@
     .post-thumbnail {
       width: 100% !important;
       height: 100px !important;
-      border-radius: 5px;
+      border-radius: 20px;
       object-fit: cover;
     }
 }
@@ -149,7 +149,7 @@
   .post-thumbnail {
     width: 50px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 20px;
     object-fit: cover;
   }
   
@@ -163,7 +163,7 @@
     padding: 5px 10px;
     border: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 11px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -173,6 +173,16 @@
   .edit-btn {
     background: #3c1777;
     color: white;
+  }
+
+  .edit-btn svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .edit-btn img {
+    width: 25px;
+    height: 25px;
   }
   
   
@@ -184,7 +194,7 @@
     background: #c82333;
   }
   
-  .cssbuttons-io-button {
+  .cssbuttons-io-button-admin {
     max-height: 60px;
     margin-left: 15px;
     display: flex;
@@ -207,16 +217,16 @@
     border-radius: 20em;
   }
 
-  .cssbuttons-io-button svg {
+  .cssbuttons-io-button-admin svg {
     margin-right: 6px;
   }
   
-  .cssbuttons-io-button:hover {
+  .cssbuttons-io-button-admin:hover {
     box-shadow: 0 1m 1.5em 1em #14a73e98;
     scale: 1.1;
   }
   
-  .cssbuttons-io-button:active {
+  .cssbuttons-io-button-admin:active {
     box-shadow: 0 0.3em 1em -0.5em #14a73e98;
   }
 
@@ -227,7 +237,7 @@
     align-items: center;
     padding: 1em;
     border: 0px solid transparent;
-    background-color: rgba(100,77,237,0.08);
+    background-color: rgb(0 0 0 / 8%);
     border-radius: 1.25em;
     transition: all 0.2s linear;
    }
@@ -237,7 +247,7 @@
    }
    
 .posts button svg {
-    width: 30px ;
+    width: 25px ;
     height: 25px;
 }
 

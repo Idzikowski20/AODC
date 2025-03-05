@@ -5,7 +5,7 @@
     width: 75%;
     padding: 20px;
     position: relative;
-    top: -150px;
+    top: 50px;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -27,7 +27,6 @@
   /* ✅ Nagłówek na dużym tle */
   .blog-header {
     width: 100%;
-    height: 500px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -252,49 +251,49 @@
     }
   }
 
-  .blog-detail-action {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .blog-detail-action img {
-    cursor: pointer;
-    object-fit: cover;
-    width: 100%;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .blog-detail-action img:hover {
-    scale: 1.1;
-  }
-
   .blog-detail-share {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  
+.blog-content-buttons-con {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
 
-  .blog-detail-back {
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.blog-content-buttons-con img {
+  width: 30px;
+  height: 30px;
+}
 
-  .blog-detail-admin {
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.blog-content-buttons-con img:hover {
+ scale: 1.1;
+}
 
+.blog-content-adminbuttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog-content-adminbuttons svg {
+width: 25px;
+height: 25px;
+}
+
+.blog-content-dot {
+  opacity: 0;
+}
+
+.share-button svg {
+  width: 25px;
+  height: 25px;
+}
   

@@ -114,6 +114,11 @@ const CreatePost = () => {
                   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:21px }'
                 }}
               />
+              <div className="zalecenia-con">
+              <img src="/assets/info.png" alt="zalecenia"/>
+              <span><strong>Zalecenia:</strong></span>
+              </div>
+              <p>Pierwszy akapit nie powinien być większy niz 15px.</p>
             </div>
 
             <div>
