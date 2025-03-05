@@ -13786,19 +13786,8 @@ a.meanmenu-reveal {
   justify-content: center;
 }
 
-.blog-post .button-container .learn-more {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background-color: #444;
-  color: #fff;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
 
-.blog-post .button-container .learn-more:hover {
-  background-color: #666;
-}
+
 
 /* 📱 Responsywność */
 @media (max-width: 768px) {
@@ -14133,11 +14122,6 @@ a.meanmenu-reveal {
     to {
       left: 100%;
     }
-  }
-  .learn-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
 /* Zwiększenie wysokości paska narzędzi */
