@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from '../../Components/Carousel/Carousel'
 import { withNamespaces } from 'react-i18next';
-import ContactForm from '../ContactForm/ContactForm';
-
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 function Footer2({ t }) {
   return (
     <footer id='footer' className="jm-footer-area-3">
@@ -53,17 +54,17 @@ function Footer2({ t }) {
                                     <div className='socialmedia-icon-container'>
                                     <div className='socialmedia-icon'>
                                         <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
-                                        <img src='https://aodc.pl/assets/img/footer/linkedin.png'/>
+                                        <FaLinkedin />
                                          </Link>
                                         </div>
                                         <div className='socialmedia-icon'>
                                         <Link to="https://www.youtube.com/@AODCSp.zo.o" target="_blank" className="youtube">
-                                          <img src='https://aodc.pl/assets/img/footer/youtube.png'/>
+                                        <FaYoutube />
                                          </Link>
                                         </div>
                                         <div className='socialmedia-icon'>
                                         <Link to="https://www.tiktok.com/@aodcartofdatacenter" target="_blank" className="youtube">
-                                        <img src='https://aodc.pl/assets/img/footer/tiktok.png'/>
+                                        <FaTiktok />
                                         </Link>
                                         </div>
                                     </div>

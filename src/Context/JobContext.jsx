@@ -35,7 +35,7 @@ const JobContextProvider = ({ children }) => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setIsSticky(window.scrollY > 0);
-      }, 200); // Delay of 200 milliseconds
+      }, 100); // Delay of 200 milliseconds
     };
 
     window.addEventListener('scroll', handleScroll);

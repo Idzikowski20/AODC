@@ -55,6 +55,8 @@ function Realizations({ t }) {
     <RealizationsPageImage />
 <section id='realizations'>
   <div className='realizations-title'>
+  <div className='bluur'></div>
+  <div className='bluur2'></div>
   <p>{t('title10.2')}</p>
   </div>
   {/* <div className='realizations-container'>
