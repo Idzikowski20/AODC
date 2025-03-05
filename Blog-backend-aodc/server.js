@@ -30,7 +30,12 @@ const storage = new CloudinaryStorage({
     transformation: [{ width: 800, height: 600, crop: "limit" }],
   },
 });
-const upload = multer({ storage });
+
+// Ustawienie limitu rozmiaru pliku na 20 MB (20 * 1024 * 1024)
+const upload = multer({
+  storage,
+  limits: { fileSize: 20 * 1024 * 1024 }, // 20 MB
+});
 
 // ✅ ROUTE testowy — Render sprawdza ten endpoint!
 app.get("/", (req, res) => {

@@ -66,6 +66,13 @@ function Login() {
     }
   };
 
+  // Funkcja obsługująca naciśnięcie klawisza Enter w polu hasła
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleLogin(e); // Logowanie po naciśnięciu Enter
+    }
+  };
+
   return (
     <MDBContainer className="my-5 gradient-form">
       <div className="row login-container">
@@ -101,6 +108,7 @@ function Login() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={handleKeyDown}  // Obsługuje Enter
               required
             />
 

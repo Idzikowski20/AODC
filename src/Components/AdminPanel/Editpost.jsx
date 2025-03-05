@@ -5,6 +5,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import Header2 from "../Header/Header2";
 import Footer2 from "../Footer/Footer2";
 import { Link } from "react-router-dom";
+
 const EditPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -46,6 +47,12 @@ const EditPost = () => {
     setLoading(true);
     setMessage("");
 
+    if (!title || !content) {
+      setMessage("❌ Brak tytułu lub treści. Wypełnij wszystkie pola.");
+      setLoading(false);
+      return; // Jeśli brak tytułu lub treści, nie wysyłamy zapytania
+    }
+
     try {
       const tagsArray = tags
         ? tags.split(",").map((tag) => tag.trim()).filter((tag) => tag !== "")
@@ -55,9 +62,13 @@ const EditPost = () => {
       formData.append("title", title);
       formData.append("content", content);
       formData.append("tags", JSON.stringify(tagsArray));
-      if (imageFile) formData.append("image", imageFile);
 
-      await axios.put(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`, formData, {
+      if (imageFile) {
+        formData.append("image", imageFile); // Dodajemy plik obrazu
+      }
+
+      // Wysyłanie danych
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -87,19 +98,17 @@ const EditPost = () => {
       </div>
       <div className="admin-panel-container">
         <div className="admin-panel">
-        <div className="edit-post-title">
-          <div className="edit-post-back">
-          <Link to="/AdminPanel">
-            <img src="/assets/back.png" alt="back"/>
-          </Link>
+          <div className="edit-post-title">
+            <div className="edit-post-back">
+              <Link to="/AdminPanel">
+                <img src="/assets/back.png" alt="back" />
+              </Link>
+            </div>
+            <div>
+              <h2>✏️ Edytuj post</h2>
+            </div>
+            <div className="edit-post-dot">.</div>
           </div>
-          <div>
-          <h2>✏️ Edytuj post</h2>
-          </div>
-          <div className="edit-post-dot">
-            .
-          </div>
-         </div>
           <form onSubmit={handleUpdate} className="admin-form">
             <div>
               <label className="admin-label">Tytuł:</label>
@@ -132,10 +141,10 @@ const EditPost = () => {
                 }}
               />
               <div className="zalecenia-con">
-              <img src="/assets/info.png" alt="zalecenia"/>
-              <span><strong>Zalecenia:</strong></span>
+                <img src="/assets/info.png" alt="zalecenia" />
+                <span><strong>Zalecenia:</strong></span>
               </div>
-              <p>Pierwszy akapit nie powinien być większy niz 15px.</p>
+              <p>Pierwszy akapit nie powinien być większy niż 15px.</p>
             </div>
 
             <div>
@@ -146,6 +155,7 @@ const EditPost = () => {
                 onChange={(e) => setImageFile(e.target.files[0])}
                 className="admin-file-input"
               />
+              <p>Maksymalny rozmiar to 20MB</p>
             </div>
 
             <div>
@@ -171,7 +181,7 @@ const EditPost = () => {
           )}
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

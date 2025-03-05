@@ -64,7 +64,7 @@ const handleRating = (value) => {
         <div className="main-content">
           {/* 📌 Wyróżniony wpis */}
           {featuredPost.tags?.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="tags-con flex flex-wrap gap-2">
               {featuredPost.tags.map((tag, i) => (
                 <span key={i} className="tags text-white text-sm">{tag}</span>
               ))}
@@ -84,14 +84,21 @@ const handleRating = (value) => {
                 onError={(e) => (e.target.src = "/placeholder-image.jpg")}
               />
             )}
+            <div className="mt-4 text-center">
             <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: featuredPost.content.slice(0, 200) + "..." }}></p>
-            <Link to={`/blog/${featuredPost._id}`} className="read-more">
-              Czytaj więcej →
+          <Link to={`/blog/${featuredPost._id}`} className="learn-more inline-block">
+            <button className="button-blog">
+        Czytaj więcej
+        <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
+          <path
+            clip-rule="evenodd"
+            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+            </button>
             </Link>
-            <div className="text-gray-400 text-sm flex gap-4 items-center mb-4">
-              <span>👁️ {Math.floor(Math.random() * 500)} wyświetleń</span>
-              <span>👥 Czytają: {Math.floor(Math.random() * 1) + 2}</span>
-            </div>
+          </div>
           </div>
         </div>
         
