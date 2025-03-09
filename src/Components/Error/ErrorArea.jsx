@@ -9,7 +9,7 @@ function ErrorArea({ t }) {
             <div className="row justify-content-center">
                 <div className="col-xl-8">
                     <div className="flex-class jm-error-img mb-40 text-center">
-                        <img src="assets/img/error/error.png" alt=""/>
+                        <img className='error-img' src="assets/img/error/error.png" alt="error 404"/>
                     </div>
                     <div className="jm-error-content text-center">
                         <h3 className="jm-error-title">{t('title12')}</h3>
