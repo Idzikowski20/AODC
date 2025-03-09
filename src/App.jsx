@@ -16,6 +16,7 @@ import DashboardPage from "./Pages/DashboardPage";
 import BlogDetail from "./Pages/BlogDetailPage";
 import EditPostPage from "./Pages/EditPostPage";
 import LoginPage from "./Pages/LoginPage";
+import ContactPage from "./Pages/ContactPage";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./config/firebaseConfig";
 import ContenerDataCenterPage from "./Pages/ContenerDataCenterPage";
@@ -66,7 +67,7 @@ function App() {
     <HelmetProvider>
       <img className="herobg" src="/assets/herobg.png" alt="background" />
       <PreLoader />
-      <Router>
+        <Router>
         <MetaTags />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -80,6 +81,7 @@ function App() {
           <Route path="/Blog" element={<Blogpage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/Realizacje" element={<Realizations />} />
+          <Route path="/Kontakt" element={<ContactPage />} />
           
           {/* 🔐 Zabezpieczone strony */}
           <Route path="/CreatePost" element={<PrivateRoute><CreatePostPage /></PrivateRoute>} />
@@ -88,7 +90,7 @@ function App() {
           
           {/* 🔓 Publiczne strony */}
           <Route path="/Login" element={<LoginPage />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </HelmetProvider>
