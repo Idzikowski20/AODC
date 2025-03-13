@@ -9,7 +9,7 @@ import ContainerFirstTab from '../CardsContainer/ContainerFirstTab';
 import ContainerSecondTab from "../CardsContainer/ContainerSecondTab";
 import ContainerThirdTab from "../CardsContainer/ContainerThirdTab";
 import ContainerFourthTab from "../CardsContainer/ContainerFourthTab";
-
+import { TbInfoSquare } from "react-icons/tb";
 function ContenerDataCenter({ t }) {
 
   const [activeTab, setActiveTab] = useState("tab1");
@@ -81,6 +81,7 @@ function ContenerDataCenter({ t }) {
                 <div className='server-box-column'> 
 
                   <div className='whyaodc-container'>
+                  <TbInfoSquare />
                     <span>Dlaczego Serwerownie Kontenerowe?</span>
                     <p>W dynamicznym środowisku biznesowym elastyczne rozwiązania IT stają się priorytetem. Nasze serwerownie w formie kontenera to:</p>
                   <div className='content-buttons-con'>
