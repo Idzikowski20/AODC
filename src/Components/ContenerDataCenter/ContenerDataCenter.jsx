@@ -53,7 +53,7 @@ function ContenerDataCenter({ t }) {
               <div className='server-box-span-top'>
                 <span>{t('Header3.5.1')}</span>
                 <div className='server-box-btn'>
-                  <button className='server-btn'><FaPlayCircle />Kontakt</button>
+                  <button className='server-btn' onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}><FaPlayCircle />Kontakt</button>
                   <button className='share-button' onClick={handleShare}><FaShareAlt /></button>
                 </div>
               </div>
