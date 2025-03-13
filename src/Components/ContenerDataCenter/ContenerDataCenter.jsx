@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react'; // Dodanie useState
 import { withNamespaces } from 'react-i18next';
 import { 
   FaTruckMoving, FaMagnet, FaFireExtinguisher, FaPlayCircle, FaShareAlt, 
   FaShippingFast, FaCloudscale, FaCoins, FaShieldAlt, FaInfoCircle, 
   FaComments, FaHandsHelping 
 } from 'react-icons/fa';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ContainerFirstTab from '../CardsContainer/ContainerFirstTab';
+import ContainerSecondTab from "../CardsContainer/ContainerSecondTab";
+import ContainerThirdTab from "../CardsContainer/ContainerThirdTab";
+import ContainerFourthTab from "../CardsContainer/ContainerFourthTab";
 
 function ContenerDataCenter({ t }) {
+
+  const [activeTab, setActiveTab] = useState("tab1");
+  
+    const handleTab1 = () => {
+      setActiveTab("tab1");
+    };
+    const handleTab2 = () => {
+      setActiveTab("tab2");
+    };
+    const handleTab3 = () => {
+      setActiveTab("tab3");
+    };
+    const handleTab4 = () => {
+      setActiveTab("tab4");
+    };
   
   const handleShare = () => {
     if (navigator.share) {
@@ -27,7 +40,7 @@ function ContenerDataCenter({ t }) {
       alert('Udostępnianie nie jest obsługiwane przez tę przeglądarkę');
     }
   };
-  
+
   return (
     <div className="jm-server-area">
       <div className='bluur'></div>
@@ -37,7 +50,6 @@ function ContenerDataCenter({ t }) {
           <div className='content'>
             <h1>{t('Header3.5')}</h1> 
             <div className='server-box'>
-              <video className='serwerownie-video' controls type="video/mp4" src='/assets/serwerownia.mp4' />
               <div className='server-box-span-top'>
                 <span>{t('Header3.5.1')}</span>
                 <div className='server-box-btn'>
@@ -46,6 +58,11 @@ function ContenerDataCenter({ t }) {
                 </div>
               </div>
             </div>
+
+            <div className='serwerownie-video-container'>
+                 <video className='serwerownie-video' controls type="video/mp4" src='/assets/serwerownia.mp4' />
+              </div>
+
             
             <div className='content-buttons-con'>
               {[{
@@ -56,25 +73,43 @@ function ContenerDataCenter({ t }) {
                 icon: <FaFireExtinguisher />, text: 'Ochrona przeciwpożarowa'
               }].map(({ icon, text }, index) => (
                 <div key={index} className='content-buttons'>{icon}{text}</div>
-              ))}
+              ))} 
             </div>
 
             <div className='server-box-container-wide'>
               <div className='server-box-row'>
-                <div className='server-box-column'>
+                <div className='server-box-column'> 
+
+                  <div className='whyaodc-container'>
                   <div className='content-buttons-con'>
-                    {[{
-                      icon: <FaShippingFast />, text: t('Header3.5.9')
-                    }, {
-                      icon: <FaCloudscale />, text: t('Header3.5.10')
-                    }, {
-                      icon: <FaCoins />, text: t('Header3.5.11')
-                    }, {
-                      icon: <FaShieldAlt />, text: t('Header3.5.12')
-                    }].map(({ icon, text }, index) => (
-                      <div key={index} className='content-buttons'>{icon}{text}</div>
-                    ))}
+                      {[{
+                        icon: <FaShippingFast />, text: t('Header3.5.9'), handleTab: () => setActiveTab("tab1")
+                      }, {
+                        icon: <FaCloudscale />, text: t('Header3.5.10'), handleTab: () => setActiveTab("tab2")
+                      }, {
+                        icon: <FaCoins />, text: t('Header3.5.11'), handleTab: () => setActiveTab("tab3")
+                      }, {
+                        icon: <FaShieldAlt />, text: t('Header3.5.12'), handleTab: () => setActiveTab("tab4")
+                      }].map(({ icon, text, handleTab }, index) => (
+                        <div 
+                          key={index} 
+                          className={`content-buttons  ${activeTab === `tab${index + 1}` ? "active" : ""}`} 
+                          onClick={handleTab}
+                        >
+                          {icon}{text}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="whyaodcdatacenter-container">
+                      <div className="whyaodcdatacenter-tabs-container">
+                        {activeTab === "tab1" && <ContainerFirstTab />}
+                        {activeTab === "tab2" && <ContainerSecondTab />}
+                        {activeTab === "tab3" && <ContainerThirdTab />}
+                        {activeTab === "tab4" && <ContainerFourthTab />}
+                      </div>
+                    </div>
                   </div>
+
                   <div className='server-box-reverse'>
                     <img className="server-datacenter-con-img" src="/assets/Serwerownia.webp" alt="Serwerownia" />
                     <div className='server-box-span'>
@@ -94,18 +129,18 @@ function ContenerDataCenter({ t }) {
                 ))}
               </div>
               <div className='server-box-bottom-image'>
-                  <img src='/assets/datacenter1.jpg' alt='datacenter' />
+                  <img src='/assets/datacenter2.jpg' alt='datacenter' />
               </div>
             </div>
 
             <div className='server-box-bottom-reverse'>
               <div className='server-box-bottom-span'>
-                <span>Jak działamy?</span>
+                <span>Jak działamy?</span><br></br><br></br>
                 <div className='info-svg'><FaInfoCircle /></div>
                 <span className='border-radius20'>{t('Header3.5.14')}</span>
               </div>
               <div className='server-box-bottom-image-reverse'>
-                  <img  src='/assets/datacenter2.jpg'  alt='datacenter' />
+                  <img  src='/assets/datacenter1.jpg'  alt='datacenter' />
               </div>
             </div>
 
@@ -114,7 +149,8 @@ function ContenerDataCenter({ t }) {
                 <div className='description-box-contact-content'>
                   <div className='info-svg'><FaComments /></div>
                   <div className='description-box-contact-desc'>
-                    <span className='border-radius20'>{t('Header3.5.16')}</span>
+                    <span>{t('Header3.5.15')}</span><br /><br />
+                    <span>{t('Header3.5.16')}</span>
                   </div>
                   <button className='server-btn'>Kontakt</button>
                 </div>

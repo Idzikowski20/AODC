@@ -17,10 +17,18 @@
   /* 📌 Główna sekcja */
   .main-content {
     backdrop-filter: blur(20px);
-    width: 65%;
+    width: 100%;
     background: #0000001a;
     padding: 20px;
     border-radius: 10px;
+  }
+
+  .main-content-container {
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
   }
   
   /* 📌 Wyróżniony post */
