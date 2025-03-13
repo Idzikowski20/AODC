@@ -14947,7 +14947,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .whyaodc-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   width: 100% !important;
+  flex-direction: column;
+  width: 100% !important;
+}
+
+.whyaodc-container svg {
+  width: 35px;
+  height: 35px;
 }
 
 .content-buttons {
