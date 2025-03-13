@@ -81,6 +81,8 @@ function ContenerDataCenter({ t }) {
                 <div className='server-box-column'> 
 
                   <div className='whyaodc-container'>
+                    <span>Dlaczego Serwerownie Kontenerowe?</span>
+                    <p>W dynamicznym środowisku biznesowym elastyczne rozwiązania IT stają się priorytetem. Nasze serwerownie w formie kontenera to:</p>
                   <div className='content-buttons-con'>
                       {[{
                         icon: <FaShippingFast />, text: t('Header3.5.9'), handleTab: () => setActiveTab("tab1")
@@ -135,7 +137,7 @@ function ContenerDataCenter({ t }) {
 
             <div className='server-box-bottom-reverse'>
               <div className='server-box-bottom-span'>
-                <span>Jak działamy?</span><br></br><br></br>
+                <span>{t('Header3.5.13')}</span><br></br><br></br>
                 <div className='info-svg'><FaInfoCircle /></div>
                 <span className='border-radius20'>{t('Header3.5.14')}</span>
               </div>
