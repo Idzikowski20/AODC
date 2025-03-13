@@ -125,7 +125,7 @@ function ContenerDataCenter({ t }) {
 
             <div className='server-box-bottom-row-reverse'>
               <div className='server-box-bottom-span'>
-                <div className='info-svg'><FaHandsHelping /></div>
+              <div className='info-svg'><FaInfoCircle /></div>
                 {[...Array(5).keys()].map(i => (
                   <span key={i}>{t(`Header3.5.${i+2}`)}</span>
                 ))}
@@ -138,7 +138,7 @@ function ContenerDataCenter({ t }) {
             <div className='server-box-bottom-reverse'>
               <div className='server-box-bottom-span'>
                 <span>{t('Header3.5.13')}</span><br></br><br></br>
-                <div className='info-svg'><FaInfoCircle /></div>
+                <div className='info-svg'><FaHandsHelping /></div>
                 <span className='border-radius20'>{t('Header3.5.14')}</span>
               </div>
               <div className='server-box-bottom-image-reverse'>
