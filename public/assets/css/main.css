@@ -13822,6 +13822,10 @@ width: 100%;
     text-align: left;
     flex-direction: column;
     }
+
+    .server-box-span-mid p {
+      font-size: 2vh !important;
+    }
   
 
   .server-box-bottom {
@@ -13890,6 +13894,33 @@ width: 100%;
     width: 100%;
     font-size: 2vh !important;
   }
+
+.loading-blogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+}
+
+.error-blogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+}
+
+.empty-blogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+}
 
 .server-span {
   margin: 10px !important;
