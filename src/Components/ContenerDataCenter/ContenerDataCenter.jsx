@@ -9,7 +9,8 @@ import ContainerFirstTab from '../CardsContainer/ContainerFirstTab';
 import ContainerSecondTab from "../CardsContainer/ContainerSecondTab";
 import ContainerThirdTab from "../CardsContainer/ContainerThirdTab";
 import ContainerFourthTab from "../CardsContainer/ContainerFourthTab";
-import { TbInfoSquare } from "react-icons/tb";
+
+
 function ContenerDataCenter({ t }) {
 
   const [activeTab, setActiveTab] = useState("tab1");
@@ -80,10 +81,38 @@ function ContenerDataCenter({ t }) {
               <div className='server-box-row'>
                 <div className='server-box-column'> 
 
-                  <div className='whyaodc-container'>
-                  <TbInfoSquare />
-                    <span>Dlaczego Serwerownie Kontenerowe?</span>
-                    <p>W dynamicznym środowisku biznesowym elastyczne rozwiązania IT stają się priorytetem. Nasze serwerownie w formie kontenera to:</p>
+
+                  <div className='server-box-reverse'>
+                    <img className="server-datacenter-con-img" src="/assets/Serwerownia.webp" alt="Serwerownia" />
+                    <div className='server-box-span-mid'>
+              <div className='info-svg'><FaInfoCircle /></div>
+                  <span>{t('Header3.5.2')}</span><br></br><br></br>
+                  <p>{t('Header3.5.3')}</p>
+                  <p>{t('Header3.5.4')}</p>
+                  <p>{t('Header3.5.5')}</p>
+                  <p>{t('Header3.5.6')}</p>
+              </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className='server-box-bottom-row-reverse'>
+              <div className='server-box-bottom-span'>
+                <span>{t('Header3.5.7')}</span>
+                <span>{t('Header3.5.8')}</span><br></br>
+                <div className='info-svg'><FaHandsHelping /></div>
+                <span>● {t('Header3.5.9')}</span>
+                <span>● {t('Header3.5.10')}</span>
+                <span>● {t('Header3.5.11')}</span>
+                <span>● {t('Header3.5.12')}</span>
+              </div>
+              <div className='server-box-bottom-image-reverse'>
+                  <img  src='/assets/datacenter1.jpg'  alt='datacenter' />
+              </div>
+            </div>
+
+            <div className='whyaodc-container'>
                   <div className='content-buttons-con'>
                       {[{
                         icon: <FaShippingFast />, text: t('Header3.5.9'), handleTab: () => setActiveTab("tab1")
@@ -93,7 +122,7 @@ function ContenerDataCenter({ t }) {
                         icon: <FaCoins />, text: t('Header3.5.11'), handleTab: () => setActiveTab("tab3")
                       }, {
                         icon: <FaShieldAlt />, text: t('Header3.5.12'), handleTab: () => setActiveTab("tab4")
-                      }].map(({ icon, text, handleTab }, index) => (
+                      },].map(({ icon, text, handleTab }, index) => (
                         <div 
                           key={index} 
                           className={`content-buttons  ${activeTab === `tab${index + 1}` ? "active" : ""}`} 
@@ -112,29 +141,6 @@ function ContenerDataCenter({ t }) {
                       </div>
                     </div>
                   </div>
-
-                  <div className='server-box-reverse'>
-                    <img className="server-datacenter-con-img" src="/assets/Serwerownia.webp" alt="Serwerownia" />
-                    <div className='server-box-span'>
-                      <div className='info-svg'><FaTruckMoving /></div>
-                      <span>{t('Header3.5.20')}.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='server-box-bottom-row-reverse'>
-              <div className='server-box-bottom-span'>
-              <div className='info-svg'><FaInfoCircle /></div>
-                {[...Array(5).keys()].map(i => (
-                  <span key={i}>{t(`Header3.5.${i+2}`)}</span>
-                ))}
-              </div>
-              <div className='server-box-bottom-image'>
-                  <img src='/assets/datacenter2.jpg' alt='datacenter' />
-              </div>
-            </div>
 
             <div className='server-box-bottom-reverse'>
               <div className='server-box-bottom-span'>
