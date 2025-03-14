@@ -33,9 +33,9 @@ const handleRating = (value) => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <div className="loading">⏳ Ładowanie postów...</div>;
-  if (error) return <div className="error">{error}</div>;
-  if (blogs.length === 0) return <div className="empty">🙁 Brak postów do wyświetlenia</div>;
+  if (loading) return <div className="loading-blogs">⏳ Ładowanie postów...</div>;
+  if (error) return <div className="error-blogs">{error}</div>;
+  if (blogs.length === 0) return <div className="empty-blogs">🙁 Brak postów do wyświetlenia</div>;
 
   const featuredPost = blogs[0]; // Główny post
   const otherPosts = blogs.slice(1); // Pozostałe posty
