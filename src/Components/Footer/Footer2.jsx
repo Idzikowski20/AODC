@@ -37,7 +37,7 @@ function Footer2({ t }) {
                         <div className="footer-adress-container">
                              <div className="footer-adress jm-sidebar-contact">
                                     <h4 className="jm-sidebar-contact-title">{t('title7.4')}</h4>
-                                    <div>
+                                    <div className=''>
                                     <Link to="https://maps.app.goo.gl/HEjxiQmK4aHDSqH86" target="_blank" className="youtube">
                                          <span className="sidebar-address">
                                                  <i className="fal fa-map-marker-alt"></i>
@@ -48,7 +48,7 @@ function Footer2({ t }) {
                                     </div>
                                     
                                     <div className='socialmedia-container'>
-                                    <div>
+                                    <div className='jm-sidebar-contact-title'>
                                     <h4 className="">{t('title7.7')}</h4>
                                     </div>
                                     <div className='socialmedia-icon-container'>
