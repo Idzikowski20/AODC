@@ -38,7 +38,7 @@ function Footer2({ t }) {
                              <div className="footer-adress jm-sidebar-contact">
                                     <h4 className="jm-sidebar-contact-title">{t('title7.4')}</h4>
                                     <div>
-                                    <Link to="https://maps.app.goo.gl/ji16fg5J91BRAjbw8" target="_blank" className="youtube">
+                                    <Link to="https://maps.app.goo.gl/HEjxiQmK4aHDSqH86" target="_blank" className="youtube">
                                          <span className="sidebar-address">
                                                  <i className="fal fa-map-marker-alt"></i>
                                                 <span>Działkowa 37, 02-234 Warszawa</span>
