@@ -69,9 +69,9 @@ function Header2 ({ t }) {
                                             <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                                 <Link to="/Blog">Blog</Link>
                                             </li>
-                                            <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
+                                            {/* <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
                                                 <Link to="#">{t('Header6')}</Link>
-                                            </li>
+                                            </li> */}
                                             <li className="menu-has-children">
                                                 <Link target="_blank" to="https://aodcserwis.pl">
                                                     <button href="#" className="aodcserwis-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>

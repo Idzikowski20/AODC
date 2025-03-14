@@ -4530,8 +4530,11 @@ font-weight: bold;
 
 /* sidebar contact info */
 .jm-sidebar-contact-title {
-  font-size: 24px;
-  color: var(--clr-common-white);
+  display: flex;
+      justify-content: center;
+      width: 100%;
+      font-size: 24px;
+      color: var(--clr-common-white);
 }
 
 .jm-sidebar-contact > a {
@@ -12071,8 +12074,8 @@ width: 85% !important;
 .socialmedia-container {
   flex-direction: column;
   margin-top: 5px;
-  align-items:flex-start;
-  justify-content: flex-start;
+  align-items:center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   display: flex;
@@ -12103,9 +12106,14 @@ width: 85% !important;
 }
 
 .footer-contact {
-margin-bottom: 50px;
-width: 267px; 
-height: 154px;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .footer-logo {
