@@ -29,6 +29,10 @@ const MetaTags = () => {
       title: "Budowa, audyt, projektowanie, chłodzenie Data Center",
       description: "Doświadczony zespół AODC: projektowanie, budowa i serwis Data Center. Pasja, odpowiedzialność i kompleksowa realizacja każdego projektu!",
     },
+    "/Serwerownie-Kontenerowe": {
+      title: "Budowa mobilnej serwerowni, Data Center, Mobilna Serwerownia Kontenerowa",
+      description: "Projektujemy i budujemy mobilne centra danych w formie serwerowni kontenerowych, które idealnie dopasowujemy do potrzeb naszych klientów",
+    },
     "/Budowa-Data-Center": {
       title: "Budowa serwerowni, Data Center, Serwerownia Kontenerowa",
       description: "Twoja firma potrzebuje stabilnej, a zarazem innowacyjnej infrastruktury IT? Sprawdź, jak możemy pomóc w budowie niezawodnej serwerowni.",

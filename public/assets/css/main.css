@@ -3891,9 +3891,9 @@ font-weight: bold;
 
 
 .bluur {
-  top: 250px;
+  top: 350px;
   z-index: -1;
-  filter: blur(100px);
+  filter: blur(120px);
   width: 60vw;
   height: 120vh;
   opacity: .75;
@@ -3905,9 +3905,9 @@ font-weight: bold;
 }
 
 .bluur2 {
-  top: 250px;
+  top: 350px;
   z-index: -1;
-  filter: blur(100px);
+  filter: blur(120px);
   width: 60vw;
   height: 120vh;
   opacity: .75;
@@ -3918,11 +3918,6 @@ font-weight: bold;
   left: auto;
   animation: moveBluur2 5s infinite ease-in-out;
 }
-
-@keyframes moveBluur {
-
-}
-
 @keyframes moveBluur2 {
   0%, 100% {
     transform: scale(1) translateX(0) rotate(180deg);
@@ -6877,32 +6872,6 @@ width: 85% !important;
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .jm-video-text .sub-title {
     font-size: 50px;
-  }
-}
-
-@media only screen and (min-width: 350px) and (max-width: 991px) {
-  .bigbluur {
-    filter: blur(10px);
-    width: 90vw;
-    height: 160vh;
-    opacity: .77;
-    position: absolute;
-    /* top: -20%; */
-    bottom: auto;
-    left: 0%;
-    right: auto;
-  }
-
-  .bigbluur2 {
-    filter: blur(10px);
-    width: 90vw;
-    height: 100vh;
-    opacity: .77;
-    position: absolute;
-    /* top: -20%; */
-    bottom: auto;
-    left: 0%;
-    right: auto;
   }
 }
 

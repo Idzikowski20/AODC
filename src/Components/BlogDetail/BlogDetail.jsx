@@ -154,6 +154,7 @@ const BlogDetail = () => {
                 </button>
               </div>
           </div>
+          <img className="blog-detail-image" src={blog.image || "/placeholder-image.jpg"} alt={blog.title} />
           <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
         </div>
         </div>
