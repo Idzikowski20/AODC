@@ -9,6 +9,8 @@ function JobPageMain({ t }) {
     <CarrierPageImage />
     <div className='career-title'>
     <div className='policy-flex'>
+    <div className='bluur'></div>
+    <div className='bluur2'></div>
       <div className='policy-warning'>
       <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272">{t('polityka2')}</a>
       </div>
