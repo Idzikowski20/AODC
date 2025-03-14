@@ -102,10 +102,10 @@ function ContenerDataCenter({ t }) {
                 <span>{t('Header3.5.7')}</span>
                 <span>{t('Header3.5.8')}</span><br></br>
                 <div className='info-svg'><FaHandsHelping /></div>
-                <span>● {t('Header3.5.9')}</span>
-                <span>● {t('Header3.5.10')}</span>
-                <span>● {t('Header3.5.11')}</span>
-                <span>● {t('Header3.5.12')}</span>
+                <p>● {t('Header3.5.9')}</p>
+                <p>● {t('Header3.5.10')}</p>
+                <p>● {t('Header3.5.11')}</p>
+                <p>● {t('Header3.5.12')}</p>
               </div>
               <div className='server-box-bottom-image'>
                   <img  src='/assets/datacenter2.jpg'  alt='datacenter' />
