@@ -146,7 +146,7 @@ function ContenerDataCenter({ t }) {
               <div className='server-box-bottom-span'>
                 <span>{t('Header3.5.13')}</span><br /><br />
                 <div className='info-svg'><GrSettingsOption /></div>
-                <span className='border-radius20'>{t('Header3.5.14')}</span>
+                <p >{t('Header3.5.14')}</p>
               </div>
               <div className='server-box-bottom-image-reverse'>
                 <img  src='/assets/datacenter1.jpg'  alt='datacenter' />

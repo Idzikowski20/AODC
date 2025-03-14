@@ -13814,7 +13814,7 @@ width: 100%;
 
   .server-box-span-mid {
     width: 60%;
-    font-size: 2vh;
+    font-size: 2vh !important;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -13888,6 +13888,7 @@ width: 100%;
 
   .server-box-bottom-span p {
     width: 100%;
+    font-size: 2vh !important;
   }
 
 .server-span {
