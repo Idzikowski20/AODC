@@ -171,7 +171,7 @@
   }
   
   .edit-btn {
-    background: #3c1777;
+    background: #00000045;
     color: white;
   }
 
@@ -231,13 +231,14 @@
   }
 
   .delete {
+    padding: 5px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
     border: 0px solid transparent;
-    background-color: rgb(0 0 0 / 8%);
+    background-color: #00000045;
     border-radius: 1.25em;
     transition: all 0.2s linear;
    }

@@ -110,7 +110,7 @@ const AdminPanel = () => {
                       <img src="/assets/see.png" alt="see post"/>
                     </Link>
                     <Link to={`/AdminPanel/edit/${post._id}`} className="edit-btn">
-                      <FaEdit /> Edytuj
+                      <FaEdit />
                     </Link>
                     <button className="delete" onClick={() => handleDelete(post._id)}>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" height="25" width="25">
