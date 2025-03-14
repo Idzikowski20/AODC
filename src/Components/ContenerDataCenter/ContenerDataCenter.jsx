@@ -174,6 +174,7 @@ function ContenerDataCenter({ t }) {
                   <button className="modal-close" onClick={handleModalToggle}><GrClose /></button>
                   <h2>Kontakt</h2>
                   <BasicForm />
+                  <p>Pozwól nam zadbać o przyszłość Twojej infrastruktury IT – z nami Twoje dane są zawsze bezpieczne i dostępne.</p>
                 </div>
               </div>
             )}
