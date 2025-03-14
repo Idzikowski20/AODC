@@ -5,6 +5,7 @@ import i18n from '../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { Trans } from 'react-i18next';
 
+
 function Header2 ({ t }) {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);

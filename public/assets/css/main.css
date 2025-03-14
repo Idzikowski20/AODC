@@ -2960,12 +2960,17 @@ ol > li:hover > ul {
 
 .oferta-container-mobile {
   display: none;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
   width: 280px;
   right: 0;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.oferta-container-mobile.open {
+  display: flex;
+  opacity: 1;
 }
 
 .oferta-container-mobile a {
@@ -2978,19 +2983,15 @@ ol > li:hover > ul {
   padding: 5px;
 }
 
-ol > li > ul .oferta-container-mobile {
-  display:none;
-  visibility:hidden;
-  opacity:0;
-  transition:visibility 0.4s linear,opacity 0.4s linear;
+.menu-has-children {
+  cursor: pointer;
 }
 
-ol > li > ul .oferta-container-mobile {
-  display: flex;
-  flex-direction: column;
-  visibility:visible;
-  opacity:1;
+.menu-icon {
+  margin-left: 5px;
+  font-size: 14px;
 }
+
 
 .aodcserwislogo {
   position: relative;
@@ -12925,7 +12926,6 @@ transform:translateY(-10px);
 }
 
 .jm-video-area {
-  margin-bottom: 100px;
   /* background: linear-gradient(to bottom, #031229 0%, rgba(3, 18, 41, 0.4039215686) 100%); */
 }
 
@@ -13382,6 +13382,7 @@ a.meanmenu-reveal {
 }
 
 .mean-container .mean-nav  li {
+  height: 100%;
 	border-top: 1px solid #4d4b4b;
 	color: #fff;
 	display: block;
