@@ -108,7 +108,7 @@ function ContenerDataCenter({ t }) {
                 <span>● {t('Header3.5.12')}</span>
               </div>
               <div className='server-box-bottom-image-reverse'>
-                  <img  src='/assets/datacenter1.jpg'  alt='datacenter' />
+                  <img  src='/assets/datacenter2.jpg'  alt='datacenter' />
               </div>
             </div>
 
