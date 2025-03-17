@@ -15129,15 +15129,26 @@ input, textarea {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+@keyframes scaleAnimation {
+  0% {
+    transform: translate(-60%, -340%) scale(1);
+  }
+  50% {
+    transform: translate(-60%, -340%) scale(1.2);
+  }
+  100% {
+    transform: translate(-60%, -340%) scale(1);
+  }
+}
+
 .handlowcy-transfer {
   z-index: 1;
-  width: 50px;
-  height: 50px;
   opacity: 0.19;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-60%, -340%);
+  animation: scaleAnimation 3s infinite;
 }
 
 .handlowcy-transfer svg {
