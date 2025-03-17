@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
-const BasicForm = () => {
+import { withNamespaces } from 'react-i18next';
+import i18n from '../../i18n';
+function BasicForm({ t }) {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -76,31 +77,31 @@ const BasicForm = () => {
       <form onSubmit={(e) => onSubmit(e)}>
 
         <div className="formcarry-block">
-          <label htmlFor="name">Imię i nazwisko</label>
+          <label htmlFor="name">{t('Header3.5.27')}</label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name" placeholder="Imię i nazwisko" />
         </div>
     
         <div className="formcarry-block">
-          <label htmlFor="email">Twój adres email</label>
+          <label htmlFor="email">{t('Header3.5.28')}</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id="email" placeholder="Przykład@email.com" />
         </div>
 
         <div className="formcarry-block">
-          <label htmlFor="phone">Numer telefonu</label>
+          <label htmlFor="phone">{t('Header3.5.29')}</label>
           <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="Numer telefonu" />
         </div>
     
         <div className="formcarry-block">
-          <label htmlFor="message">Twoja wiadomość</label>
+          <label htmlFor="message">{t('Header3.5.30')}</label>
           <textarea value={message} onChange={(e) => setMessage(e.target.value)} id="message" placeholder="Wiadomość..."></textarea>
         </div>
     
         <div className="formcarry-block">  
-          <button type="submit">Wyślij</button>
+          <button type="submit">{t('Header3.5.31')}</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default BasicForm;
+export default withNamespaces()(BasicForm);

@@ -9,7 +9,6 @@ import ConstructionDataCenter from "./Pages/ConstructionDataCenter";
 import AuditDataCenter from "./Pages/AuditDataCenter";
 import ServiceDataCenter from "./Pages/ServiceDataCenter";
 import ProjectingDataCenter from "./Pages/ProjectingDataCenter";
-import DataCenterContener from "./Pages/DataCenterContener";
 import Blogpage from "./Pages/Blogpage";
 import CreatePostPage from "./Pages/CreatePostPage";
 import DashboardPage from "./Pages/DashboardPage";
@@ -20,6 +19,7 @@ import ContactPage from "./Pages/ContactPage";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./config/firebaseConfig";
 import ContenerDataCenterPage from "./Pages/ContenerDataCenterPage";
+import DzialhandlowyPage from "./Pages/Dzialhandlowypage";
 
 const MetaTags = () => {
   const location = useLocation();
@@ -78,7 +78,6 @@ function App() {
           <Route path="/Budowa-Data-Center" element={<ConstructionDataCenter />} />
           <Route path="/Audyt-Data-Center" element={<AuditDataCenter />} />
           <Route path="/Projektowanie-Data-Center" element={<ProjectingDataCenter />} />
-          <Route path="/Serwerownia-kontenerowa" element={<DataCenterContener />} />
           <Route path="/Serwis-Data-Center" element={<ServiceDataCenter />} />
           <Route path="/Serwerownie-Kontenerowe" element={<ContenerDataCenterPage />} />
           <Route path="/Kariera" element={<JobPage />} />
@@ -86,6 +85,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/Realizacje" element={<Realizations />} />
           <Route path="/Kontakt" element={<ContactPage />} />
+          <Route path="/Dzial-handlowy" element={<DzialhandlowyPage />} />
           
           {/* 🔐 Zabezpieczone strony */}
           <Route path="/CreatePost" element={<PrivateRoute><CreatePostPage /></PrivateRoute>} />

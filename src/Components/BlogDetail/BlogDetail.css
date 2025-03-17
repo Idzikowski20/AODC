@@ -2,7 +2,7 @@
 
 
 .blog-detail {
-    width: 75%;
+    width: 80%;
     padding: 20px;
     position: relative;
     top: 50px;
@@ -104,7 +104,7 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    width: 70%;
+    width: 75%;
   }
 
   .blog-content img {
@@ -140,10 +140,8 @@
   /* ✅ Sekcja boczna (inne wpisy) */
   .sidebar {
     border-radius: 20px;
-    background: #0000001a;
-    backdrop-filter: blur(20px);    
     flex: 1;
-    width: 30%;
+    width: 35%;
     padding: 20px;
     height: fit-content;
   }

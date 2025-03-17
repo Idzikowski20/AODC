@@ -65,6 +65,10 @@
     margin-top: 15px;
     line-height: 1.6;
   }
+
+  .post-excerpt h1 {
+    font-size: 22px !important;
+  }
   
   .read-more {
     display: inline-block;
@@ -88,6 +92,8 @@
   
   /* 📌 Lista najnowszych postów */
   .post-list {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -144,6 +150,13 @@
     }
     .post-image {
       height: 250px;
+    }
+    .main-content-container {
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
   
