@@ -11,8 +11,10 @@ import ContainerFirstTab from '../CardsContainer/ContainerFirstTab';
 import ContainerSecondTab from "../CardsContainer/ContainerSecondTab";
 import ContainerThirdTab from "../CardsContainer/ContainerThirdTab";
 import ContainerFourthTab from "../CardsContainer/ContainerFourthTab";
-import BasicForm from '../BasicForm/BasicForm'; // Import formularza
 import { Link } from 'react-router-dom';
+
+
+
 
 function ContenerDataCenter({ t }) {
   const [activeTab, setActiveTab] = useState("tab1");

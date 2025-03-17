@@ -7,7 +7,11 @@ import { Trans } from 'react-i18next';
 import { FaHome } from "react-icons/fa";
 import { IoMdBriefcase } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-
+import { PiShippingContainerDuotone } from "react-icons/pi";
+import { BsDatabaseAdd } from "react-icons/bs";
+import { BsClipboardData } from "react-icons/bs";
+import { MdOutlinePermDataSetting } from "react-icons/md";
+import { BsDatabaseFillGear } from "react-icons/bs";
 
 
 
@@ -55,11 +59,11 @@ function Header2 ({ t }) {
                                                     <ul>
                                                         <div className='oferta-container'>
                                                             <div className='oferta-container-content'>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwerownie-Kontenerowe"><li className='menu-li'>{t('Header3.5')} <IoIosArrowForward /></li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li className='menu-li'>{t('Header3.1')} <IoIosArrowForward /></li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li className='menu-li'>{t('Header3.2')} <IoIosArrowForward /></li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li className='menu-li'>{t('Header3.3')} <IoIosArrowForward /></li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li className='menu-li'>{t('Header3.4')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwerownie-Kontenerowe"><li className='menu-li'><PiShippingContainerDuotone /> {t('Header3.5')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li className='menu-li'><BsDatabaseAdd /> {t('Header3.1')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li className='menu-li'><BsClipboardData /> {t('Header3.2')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li className='menu-li'><MdOutlinePermDataSetting /> {t('Header3.3')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li className='menu-li'><BsDatabaseFillGear /> {t('Header3.4')} <IoIosArrowForward /></li></Link>
                                                             </div>
                                                         </div>
                                                     </ul>
