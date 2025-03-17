@@ -10,13 +10,6 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const [rating, setRating] = useState(0);
-
-const handleRating = (value) => {
-  setRating(value);
-  alert(`Dziękujemy za ocenę ${value} ⭐!`);
-};
-
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
