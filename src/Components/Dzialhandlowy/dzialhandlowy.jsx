@@ -3,6 +3,7 @@ import BasicForm from '../BasicForm/BasicForm'
 import { SlScreenSmartphone } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaExchangeAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const dzialhandlowy = () => {
   return (
@@ -28,8 +29,8 @@ const dzialhandlowy = () => {
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Ewa Filipiak</span></div>
                             <div className='handlowiec-details-desc'>Dyrektor ds. Handlowych</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><MdOutlineEmail /></div> filipiak@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><SlScreenSmartphone /></div> +48 577 414 900</div>
+                            <div className='handlowiec-details-desc'><Link to="mailto:filipiak@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> filipiak@aodc.pl</div>
+                            <div className='handlowiec-details-desc'><Link to="tel:(+48)577414900"><div className='handlowiec-icon'><SlScreenSmartphone /></div></Link>  +48 577 414 900</div>
                         </div>
                     </div>
 
@@ -38,8 +39,8 @@ const dzialhandlowy = () => {
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Łukasz Kazimierak</span></div>
                             <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><MdOutlineEmail /></div> lukasz.kazimierak@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><SlScreenSmartphone /></div> +48 533 342 473</div>
+                            <div className='handlowiec-details-desc'><Link to="mailto:lukasz.kazimierak@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> lukasz.kazimierak@aodc.pl</div>
+                            <div className='handlowiec-details-desc'><Link to="tel:(+48)533 42473"><div className='handlowiec-icon'><SlScreenSmartphone /></div></Link>  +48 533 342 473</div>
                         </div>
                     </div>
 
@@ -48,8 +49,8 @@ const dzialhandlowy = () => {
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Arkadiusz Jaworski</span></div>
                             <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><MdOutlineEmail /></div> arkadiusz.jaworski@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><SlScreenSmartphone /></div> +48 577 703 457</div>
+                            <div className='handlowiec-details-desc'><Link to="mailto:arkadiusz.jaworski@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> arkadiusz.jaworski@aodc.pl</div>
+                            <div className='handlowiec-details-desc'><Link to="tel:(+48)577703457"><div className='handlowiec-icon'><SlScreenSmartphone /></div></Link>  +48 577 703 457</div>
                         </div>
                     </div>
 
@@ -58,8 +59,8 @@ const dzialhandlowy = () => {
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Szymon Judek</span></div>
                             <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><MdOutlineEmail /></div> szymon.judek@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><div className='handlowiec-icon'><SlScreenSmartphone /></div> +48 533 337 897</div>
+                            <div className='handlowiec-details-desc'><Link to="mailto:szymon.judek@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> szymon.judek@aodc.pl</div>
+                            <div className='handlowiec-details-desc'><Link to="tel:(+48)533337897"><div className='handlowiec-icon'><SlScreenSmartphone /></div></Link> +48 533 337 897</div>
                         </div>
                     </div>
 
