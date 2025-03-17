@@ -5,7 +5,6 @@ import i18n from '../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { Trans } from 'react-i18next';
 import { FaHome } from "react-icons/fa";
-import { IoMdBriefcase } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { PiShippingContainerDuotone } from "react-icons/pi";
 import { BsDatabaseAdd } from "react-icons/bs";
@@ -77,7 +76,7 @@ function Header2 ({ t }) {
                                                 <Link to="/Blog">Blog</Link>
                                             </li>
                                             <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                                <Link to="/Dzial-Handlowy"><IoMdBriefcase  />{t('Header6')}</Link>
+                                                <Link to="/Dzial-Handlowy">{t('Header6')}</Link>
                                             </li>
                                             <li className="menu-has-children">
                                                 <Link target="_blank" to="https://aodcserwis.pl">
