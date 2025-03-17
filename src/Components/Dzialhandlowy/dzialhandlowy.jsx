@@ -16,7 +16,7 @@ const dzialhandlowy = () => {
         <div className="jm-datacenter-wrap bg-default">
           <div className='content'>
             <div className='contact-content-title'>
-                <h1>Dział handlowy</h1>
+                <h1>Dział Handlowy</h1>
             </div>
             <div className='handlowy-box-container'>
             <div className='handlowcy-albo'>ALBO</div>
@@ -48,10 +48,10 @@ const dzialhandlowy = () => {
                     <div className='handlowiec-box'>
                         <img src='/assets/img/team/Arkadiusz.png' alt='handlowiec'/>
                         <div className='handlowiec-details'>
-                            <div className='handlowiec-details-desc'><span>Arkadiusz Jaworski</span></div>
-                            <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><Link to="mailto:arkadiusz.jaworski@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> arkadiusz.jaworski@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><Link to="tel:(+48)577703457"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 577 703 457</div>
+                                <div className='handlowiec-details-desc'><span>Arkadiusz Jaworski</span></div>
+                                <div className='handlowiec-details-desc'>Key Account Manager</div>
+                                <div className='handlowiec-details-desc'><Link to="mailto:arkadiusz.jaworski@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> arkadiusz.jaworski@aodc.pl</div>
+                                <div className='handlowiec-details-desc'><Link to="tel:(+48)577703457"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 577 703 457</div>
                         </div>
                     </div>
 

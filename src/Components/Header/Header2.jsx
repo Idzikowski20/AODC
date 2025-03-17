@@ -12,7 +12,7 @@ import { BsDatabaseAdd } from "react-icons/bs";
 import { BsClipboardData } from "react-icons/bs";
 import { MdOutlinePermDataSetting } from "react-icons/md";
 import { BsDatabaseFillGear } from "react-icons/bs";
-
+import { IoIosArrowDown } from "react-icons/io";
 
 
 function Header2 ({ t }) {
@@ -54,8 +54,7 @@ function Header2 ({ t }) {
                                             </li>
                                             {/* Zmiana: Zmieniamy sposób rozwijania menu "Oferta" */}
                                             <li className="menu-has-children" onClick={toggleMenu}>
-                                                <Link to="#">{t('Header3')}</Link>
-                                                {isMenuOpen && (
+                                                <Link to="#">{t('Header3')} <IoIosArrowDown /></Link>
                                                     <ul>
                                                         <div className='oferta-container'>
                                                             <div className='oferta-container-content'>
@@ -67,7 +66,6 @@ function Header2 ({ t }) {
                                                             </div>
                                                         </div>
                                                     </ul>
-                                                )}
                                             </li>
                                             <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                                 <Link to="/Kariera">{t('Header4')}</Link>
@@ -78,17 +76,8 @@ function Header2 ({ t }) {
                                             <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                                 <Link to="/Blog">Blog</Link>
                                             </li>
-                                            <li className="menu-has-children" onClick={toggleMenu}>
-                                                <Link to="#">{t('Header6')}</Link>
-                                                {isMenuOpen && (
-                                                    <ul>
-                                                        <div className='oferta-container'>
-                                                            <div className='oferta-container-content'>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Dzial-handlowy"><li className='menu-li'><IoMdBriefcase /> {t('Header6.1')} <IoIosArrowForward /></li></Link>
-                                                            </div>
-                                                        </div>
-                                                    </ul>
-                                                )}
+                                            <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                                <Link to="/Dzial-Handlowy"><IoMdBriefcase  />{t('Header6')}</Link>
                                             </li>
                                             <li className="menu-has-children">
                                                 <Link target="_blank" to="https://aodcserwis.pl">
