@@ -2,8 +2,9 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import { JobContext } from '../../Context/JobContext';
-// import { PiShippingContainerDuotone } from "react-icons/pi";
 import { FaHome } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoMdBriefcase } from "react-icons/io";
 
 
 function MobileMenu({ t }) {
@@ -57,6 +58,15 @@ function MobileMenu({ t }) {
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/Realizacje">{t('title9.4')}</Link>
               </li>
+                  <li className="menu-has-children">
+                    {t('Header6')}
+                      <ul className={`oferta-container-mobile`}>
+                          <Link onClick={handleClose} to="/Dzial-handlowy">
+                          <li className='menu-li'><IoMdBriefcase />
+                           {t('Header6.1')} <IoIosArrowForward /></li>
+                          </Link>
+                      </ul>
+                 </li>
             </ol>
           </nav>
         </div>
