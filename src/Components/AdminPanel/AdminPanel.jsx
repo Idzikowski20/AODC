@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth"; // Import wylogowania
-import { auth } from "../../config/firebaseConfig"; // Import Firebase konfiguracji
+import { signOut } from "firebase/auth"; 
+import { auth } from "../../config/firebaseConfig";
 import { FaEdit } from "react-icons/fa";
 import axios from "axios";
 import "./AdminPanel.css";
 import { AiOutlineUserDelete } from "react-icons/ai";
+
 const AdminPanel = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(""); // Stan dla wyszukiwania
+  const [visiblePosts, setVisiblePosts] = useState(2); // Liczba widocznych postów
   const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
   const navigate = useNavigate();
-
-  console.log("🔹 API_URL:", API_URL);
 
   // Pobieranie postów
   useEffect(() => {
@@ -32,17 +33,17 @@ const AdminPanel = () => {
     fetchPosts();
   }, [API_URL]);
 
-  // ✅ Obsługa wylogowania
+  // Obsługa wylogowania
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate("/Login"); // Przekierowanie po wylogowaniu
+      navigate("/Login"); 
     } catch (error) {
       console.error("❌ Błąd podczas wylogowywania:", error);
     }
   };
 
-  // ✅ Obsługa usuwania posta
+  // Obsługa usuwania posta
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm("Czy na pewno chcesz usunąć ten post?");
     if (!confirmDelete) return;
@@ -57,8 +58,24 @@ const AdminPanel = () => {
     }
   };
 
+  // Funkcja filtrowania postów na podstawie wyszukiwanego tekstu
+  const filteredPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Funkcja do wyświetlania kolejnych postów
+  const loadMorePosts = () => {
+    setLoading(true); // Ustawienie stanu ładowania
+    setTimeout(() => {
+      setVisiblePosts(visiblePosts + 5); // Dodanie 5 postów
+      setLoading(false); // Zakończenie ładowania
+    }, 1000); // Czas ładowania (1s)
+  };
+
   return (
     <div className="admin-container">
+      <div className="bluur"></div>
+      <div className="bluur2"></div>
       <div className="admin-content">
         <header>
           <h1 className="admin-panel-title">Panel Administracyjny</h1>
@@ -67,11 +84,11 @@ const AdminPanel = () => {
         <div className="admin-panel-buttons-con">
           <div>
             <button className="admin-panel-buttons" onClick={handleLogout}>
-            <AiOutlineUserDelete /> Wyloguj
-              </button>
+              <AiOutlineUserDelete /> Wyloguj
+            </button>
           </div>
         </div>
-    
+
         <div className="posts">
           <div className="posts-box">
             <h2>Wszystkie posty</h2>
@@ -86,22 +103,33 @@ const AdminPanel = () => {
             </Link>
           </div>
 
+          {/* Pole wyszukiwania */}
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Wyszukaj posty..."
+              className="search-input"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)} // Ustawienie wartości wyszukiwania
+            />
+          </div>
+
           {loading ? (
             <p>Ładowanie postów...</p>
           ) : error ? (
             <p className="error">{error}</p>
-          ) : posts.length === 0 ? (
+          ) : filteredPosts.length === 0 ? (
             <p className="empty">Brak postów do wyświetlenia.</p>
           ) : (
             <ul>
-              {posts.map((post) => (
+              {filteredPosts.slice(0, visiblePosts).map((post) => (
                 <li key={post._id} className="post-item">
                   <div className="post-info">
                     <img
-                      src={post.image || "/placeholder-image.jpg"}
+                      src={post.image || "/assets/noimage.png"}
                       alt={post.title}
                       className="post-thumbnail"
-                      onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+                      onError={(e) => (e.target.src = "/assets/noimage.png")}
                     />
                     <span>{post.title}</span>
                   </div>
@@ -126,6 +154,13 @@ const AdminPanel = () => {
                 </li>
               ))}
             </ul>
+          )}
+
+          {/* Przycisk do ładowania więcej postów */}
+          {filteredPosts.length > visiblePosts && (
+            <button className="load-more" onClick={loadMorePosts}>
+              {loading ? "Ładowanie postów..." : "Pokaż więcej postów"}
+            </button>
           )}
         </div>
       </div>

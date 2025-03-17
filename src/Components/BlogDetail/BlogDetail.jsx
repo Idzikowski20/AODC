@@ -154,27 +154,35 @@ const BlogDetail = () => {
                 </button>
               </div>
           </div>
-          <img className="blog-detail-image" src={blog.image || "/placeholder-image.jpg"} alt={blog.title} />
+          <img className="blog-detail-image" src={blog.image || "/assets/noimage.png"} alt={blog.title} />
           <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
         </div>
         </div>
 
         <aside className="sidebar">
-          <h2>Inne wpisy</h2>
-          <div className="sidebar-posts">
-            {blogs
-              .filter((item) => item._id !== id)
-              .map((item) => (
-                <Link key={item._id} to={`/blog/${item._id}`} className="sidebar-post">
-                  <img src={item.image || "/placeholder-image.jpg"} alt={item.title} />
-                  <div>
-                    <h3 className="sidebar-post-title">{item.title}</h3>
-                    <span className="sidebar-post-date">{new Date(item.createdAt).toLocaleDateString()}</span>
-                  </div>
-                </Link>
-              ))}
+  <h2 className="sidebar-title">Inne wpisy</h2>
+  <div className="post-list">
+    {blogs
+      .filter((item) => item._id !== id) // Filtrujemy, aby nie pokazać bieżącego wpisu
+      .map((item) => (
+        <Link key={item._id} to={`/blog/${item._id}`} className="post-item">
+          <img
+            src={item.image || "/assets/noimage.png"}
+            alt={item.title}
+            className="post-thumbnail"
+            onError={(e) => (e.target.src = "/assets/noimage.png")}
+          />
+          <div className="sidebar-posts-details">
+            <h3 className="post-item-title">{item.title}</h3>
+            <span className="post-date">🖊 {item.author || "AODC"}</span>
+            <span className="post-date">📅 {new Date(item.createdAt).toLocaleDateString()}</span>
           </div>
-        </aside>
+        </Link>
+      ))}
+  </div>
+</aside>
+
+
       </div>
 
       <Footer2 />

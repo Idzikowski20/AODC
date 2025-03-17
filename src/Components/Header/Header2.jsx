@@ -4,6 +4,11 @@ import { JobContext } from '../../Context/JobContext';
 import i18n from '../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { Trans } from 'react-i18next';
+import { FaHome } from "react-icons/fa";
+import { IoMdBriefcase } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+
+
 
 
 function Header2 ({ t }) {
@@ -38,7 +43,7 @@ function Header2 ({ t }) {
                                     <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                         <ol>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#home")}>
-                                                <Link to="/">{t('Header1')}</Link>
+                                                <Link to="/"><FaHome /> {t('Header1')}</Link>
                                             </li>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#aboutus")}>
                                                 <Link to="/">{t('Header2')}</Link>
@@ -50,11 +55,11 @@ function Header2 ({ t }) {
                                                     <ul>
                                                         <div className='oferta-container'>
                                                             <div className='oferta-container-content'>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwerownie-Kontenerowe"><li>{t('Header3.5')}</li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li>{t('Header3.1')}</li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li>{t('Header3.2')}</li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li>{t('Header3.3')}</li></Link>
-                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li>{t('Header3.4')}</li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwerownie-Kontenerowe"><li className='menu-li'>{t('Header3.5')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Budowa-Data-Center"><li className='menu-li'>{t('Header3.1')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Audyt-Data-Center"><li className='menu-li'>{t('Header3.2')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Projektowanie-Data-Center"><li className='menu-li'>{t('Header3.3')} <IoIosArrowForward /></li></Link>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Serwis-Data-Center"><li className='menu-li'>{t('Header3.4')} <IoIosArrowForward /></li></Link>
                                                             </div>
                                                         </div>
                                                     </ul>
@@ -69,9 +74,18 @@ function Header2 ({ t }) {
                                             <li className="menu-has-children" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                                 <Link to="/Blog">Blog</Link>
                                             </li>
-                                            {/* <li className="menu-has-children" onClick={() => window.scrollTo({ top: 10000, behavior: "smooth" })}>
+                                            <li className="menu-has-children" onClick={toggleMenu}>
                                                 <Link to="#">{t('Header6')}</Link>
-                                            </li> */}
+                                                {isMenuOpen && (
+                                                    <ul>
+                                                        <div className='oferta-container'>
+                                                            <div className='oferta-container-content'>
+                                                                <Link onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/Dzial-handlowy"><li className='menu-li'><IoMdBriefcase /> {t('Header6.1')} <IoIosArrowForward /></li></Link>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                )}
+                                            </li>
                                             <li className="menu-has-children">
                                                 <Link target="_blank" to="https://aodcserwis.pl">
                                                     <button href="#" className="aodcserwis-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>

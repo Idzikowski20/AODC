@@ -21,7 +21,6 @@ const DashboardPage = () => {
           </main>
         </div>
       </div>
-      <Footer2/>
     </>
   );
 }

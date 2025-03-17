@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'; // Dodanie useState i useRef
 import { withNamespaces } from 'react-i18next';
+import i18n from '../../i18n';
 import { 
   FaTruckMoving, FaMagnet, FaFireExtinguisher, FaPlayCircle, FaShareAlt, 
   FaShippingFast, FaCloudscale, FaCoins, FaShieldAlt, FaInfoCircle, 
@@ -11,6 +12,7 @@ import ContainerSecondTab from "../CardsContainer/ContainerSecondTab";
 import ContainerThirdTab from "../CardsContainer/ContainerThirdTab";
 import ContainerFourthTab from "../CardsContainer/ContainerFourthTab";
 import BasicForm from '../BasicForm/BasicForm'; // Import formularza
+import { Link } from 'react-router-dom';
 
 function ContenerDataCenter({ t }) {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -58,7 +60,7 @@ function ContenerDataCenter({ t }) {
               <div className='server-box-span-top'>
                 <span>{t('Header3.5.1')}</span>
                 <div className='server-box-btn'>
-                  <button className='server-btn' onClick={scrollToForm}><FaPlayCircle />Kontakt</button>
+                  <button className='server-btn' onClick={scrollToForm}><FaPlayCircle />{t('Header3.5.25')}</button>
                   <button className='share-button' onClick={handleShare}><FaShareAlt /></button>
                 </div>
               </div>
@@ -70,15 +72,19 @@ function ContenerDataCenter({ t }) {
 
             <div className='content-buttons-con'>
               {[{
-                icon: <FaTruckMoving />, text: 'Mobilność'
+                icon: <FaTruckMoving />, text: t('Header3.5.21')
               }, {
-                icon: <FaMagnet />, text: 'Szczelność elektromagnetyczna'
+                icon: <FaMagnet />, text: t('Header3.5.22')
               }, {
-                icon: <FaFireExtinguisher />, text: 'Ochrona przeciwpożarowa'
+                icon: <FaFireExtinguisher />, text: t('Header3.5.23')
               }].map(({ icon, text }, index) => (
-                <div key={index} className='content-buttons'>{icon}{text}</div>
-              ))} 
+                <div key={index} className='content-buttons'>
+                  {icon}
+                  {text}
+                </div>
+              ))}
             </div>
+
 
             <div className='server-box-container-wide'>
               <div className='server-box-row'>
@@ -115,13 +121,13 @@ function ContenerDataCenter({ t }) {
             <div className='whyaodc-container'>
               <div className='content-buttons-con'>
                 {[{
-                  icon: <FaShippingFast />, text: t('Header3.5.9'), handleTab: () => setActiveTab("tab1")
+                  icon: <FaShippingFast />, text: t('Header3.5.9.2'), handleTab: () => setActiveTab("tab1")
                 }, {
-                  icon: <FaCloudscale />, text: t('Header3.5.10'), handleTab: () => setActiveTab("tab2")
+                  icon: <FaCloudscale />, text: t('Header3.5.10.2'), handleTab: () => setActiveTab("tab2")
                 }, {
-                  icon: <FaCoins />, text: t('Header3.5.11'), handleTab: () => setActiveTab("tab3")
+                  icon: <FaCoins />, text: t('Header3.5.11.2'), handleTab: () => setActiveTab("tab3")
                 }, {
-                  icon: <FaShieldAlt />, text: t('Header3.5.12'), handleTab: () => setActiveTab("tab4")
+                  icon: <FaShieldAlt />, text: t('Header3.5.12.2'), handleTab: () => setActiveTab("tab4")
                 }].map(({ icon, text, handleTab }, index) => (
                   <div 
                     key={index} 
@@ -162,23 +168,12 @@ function ContenerDataCenter({ t }) {
                     <span>{t('Header3.5.15')}</span><br /><br />
                     <span>{t('Header3.5.16')}</span>
                   </div>
-                  <button className='server-btn' onClick={handleModalToggle}><GrContact />  Formularz kontaktowy</button>
+                  <Link to='/Dzial-handlowy' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                  <button className='server-btn'><GrContact  />{t('Header3.5.24')}</button>
+                  </Link>
                 </div>
               </div>
             </div>
-
-            {/* Modal */}
-            {isModalOpen && (
-              <div className="modal-overlay">
-                <div className="modal">
-                  <button className="modal-close" onClick={handleModalToggle}><GrClose /></button>
-                  <h2>Kontakt</h2>
-                  <BasicForm />
-                  <p>Pozwól nam zadbać o przyszłość Twojej infrastruktury IT – z nami Twoje dane są zawsze bezpieczne i dostępne.</p>
-                </div>
-              </div>
-            )}
-
           </div>
         </div>
       </div>

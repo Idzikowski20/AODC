@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import { JobContext } from '../../Context/JobContext';
 // import { PiShippingContainerDuotone } from "react-icons/pi";
+import { FaHome } from "react-icons/fa";
+
 
 function MobileMenu({ t }) {
   const [expandedMenu, setExpandedMenu] = useState(null);
@@ -22,16 +24,16 @@ function MobileMenu({ t }) {
           <nav className="mean-nav">
             <ol>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/" onClick={() => window.location.replace("/#home")}>{t('title9.1')}</Link>
+                <Link to="/" onClick={() => window.location.replace("/#home")}><FaHome /> {t('title9.1')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/" onClick={() => window.location.replace("/#aboutus")}>{t('title9.2')}</Link>
               </li>
               <li className="menu-has-children">
-                <Link to="#" onClick={() => toggleMenu('oferta')}>
-                  {t('Header3')} <span className="menu-icon">{expandedMenu === 'oferta' ? '▲' : '▼'}</span>
+                <Link to="#">
+                  {t('Header3')}
                 </Link>
-                <ul className={`oferta-container-mobile ${expandedMenu === 'oferta' ? 'open' : ''}`}>
+                <ul className={`oferta-container-mobile`}>
                   <Link onClick={handleClose} to="/Serwerownie-Kontenerowe">
                     <li> {t('Header3.5')}</li>
                   </Link>

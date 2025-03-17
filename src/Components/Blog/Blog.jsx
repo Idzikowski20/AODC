@@ -54,11 +54,14 @@ const handleRating = (value) => {
               </div>
             </div>
           </div>
-          <div className="blog-title p-6 text-center max-w-6xl mx-auto mb-6">
-  <p className="text-gray-300 mt-2">
-    Zobacz nasze najnowsze wpisy o technologii, data centers i innowacjach.
-  </p>
-</div>
+      <div className="blog-header">
+        <div className="blog-header-main-title">
+            <span className="blog-main-title">Zobacz nasze najnowsze wpisy o technologii, data centers i innowacjach.</span>
+            <div className="blog-meta">
+              <span></span>
+            </div>
+        </div>
+      </div>
 
 
       <div className="blog-container">
@@ -86,26 +89,18 @@ const handleRating = (value) => {
                </nav>
           </div>
           <div className="main-content">
-          {/* 📌 Wyróżniony wpis */}
-          {featuredPost.tags?.length > 0 && (
-            <div className="tags-con flex flex-wrap gap-2">
-              {featuredPost.tags.map((tag, i) => (
-                <span key={i} className="tags text-white text-sm">{tag}</span>
-              ))}
-            </div>
-          )}
           <div className="featured-post">
             <h1 className="post-title">{featuredPost.title}</h1>
             <div className="post-info">
               <span>🖊 Autor: {featuredPost.author || "AODC"}</span>
-              <span>📅 {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
+              <span>📅Publikacja: {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
             </div>
             {featuredPost.image && (
               <img
                 src={featuredPost.image}
                 alt={featuredPost.title}
                 className="post-image"
-                onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+                onError={(e) => (e.target.src = "/assets/noimage.png")}
               />
             )}
             <div className="mt-4 text-center">
@@ -123,6 +118,14 @@ const handleRating = (value) => {
             </button>
             </Link>
           </div>
+                    {/* 📌 Wyróżniony wpis */}
+                    {featuredPost.tags?.length > 0 && (
+            <div className="tags-con flex flex-wrap gap-2">
+              {featuredPost.tags.map((tag, i) => (
+                <span key={i} className="tags text-white text-sm">#{tag}</span>
+              ))}
+            </div>
+          )}
           </div>
         </div>
         </div>
@@ -135,14 +138,15 @@ const handleRating = (value) => {
             {otherPosts.map((post) => (
               <Link key={post._id} to={`/blog/${post._id}`} className="post-item">
                 <img
-                  src={post.image || "/placeholder-image.jpg"}
+                  src={post.image || "/assets/noimage.png"}
                   alt={post.title}
                   className="post-thumbnail"
-                  onError={(e) => (e.target.src = "/placeholder-image.jpg")}
+                  onError={(e) => (e.target.src = "/assets/noimage.png")}
                 />
-                <div>
+                <div className="sidebar-posts-details">
                   <h3 className="post-item-title">{post.title}</h3>
-                  <span className="post-date">{new Date(post.createdAt).toLocaleDateString()}</span>
+                  <span className="post-date">🖊 {featuredPost.author || "AODC"}</span>
+                  <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
                 </div>
               </Link>
             ))}
