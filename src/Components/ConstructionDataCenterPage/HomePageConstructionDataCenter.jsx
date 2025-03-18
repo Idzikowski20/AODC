@@ -13,7 +13,7 @@ function HomePageConstructionDataCenter({ t }) {
         <div className="container-fluid p-0">
           <div className="jm-building-wrap bg-default">
             <div className='content'>
-              <h1>{t('Header3.1.1')}</h1> 
+              <h1 className='animate__animated animate__backInDown'>{t('Header3.1.1')}</h1> 
             </div>
           </div>
         </div>

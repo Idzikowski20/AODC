@@ -13,7 +13,7 @@ function HomePageProjecting({ t }) {
         <div className="container-fluid p-0">
           <div className="jm-projecting-wrap bg-default">
             <div className='content'>
-              <h1>{t('Header3.3.1')}</h1> 
+              <h1 className='animate__animated animate__backInDown'>{t('Header3.3.1')}</h1> 
             </div>
           </div>
         </div>

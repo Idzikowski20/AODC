@@ -1,12 +1,12 @@
 .preloader-logo {
-  width: 380px;
-  height: 150px;
+  max-width: 220px;
+  width: 100%;
 }
 
 @media (max-width: 467px) {
   .preloader-logo {
-    width: 250px;
-    height: 100px;
+    max-width: 180px;
+    width: 100%;
   }
   }
 

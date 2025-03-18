@@ -1,12 +1,12 @@
 import React from 'react'
+import { withNamespaces } from 'react-i18next';
 import BasicForm from '../BasicForm/BasicForm'
-import { SlScreenSmartphone } from "react-icons/sl";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaExchangeAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { BsTelephone } from "react-icons/bs";
 
-const dzialhandlowy = () => {
+function dzialhandlowy({ t }) {
   return (
     <>
     <div className="jm-server-area">
@@ -16,10 +16,10 @@ const dzialhandlowy = () => {
         <div className="jm-datacenter-wrap bg-default">
           <div className='content'>
             <div className='contact-content-title'>
-                <h1>Dział Handlowy</h1>
+                <h1 className='animate__animated animate__backInDown'>{t('1')}</h1>
             </div>
             <div className='handlowy-box-container'>
-            <div className='handlowcy-albo'>ALBO</div>
+            <div className='handlowcy-albo'>{t('3')}</div>
             <div className='handlowcy-transfer'><FaExchangeAlt /></div>
               <div className='handlowy-container'>
 
@@ -29,7 +29,7 @@ const dzialhandlowy = () => {
                         <img src='/assets/img/team/Ewa.png' alt='handlowiec'/>
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Ewa Filipiak</span></div>
-                            <div className='handlowiec-details-desc'>Dyrektor ds. Handlowych</div>
+                            <div className='handlowiec-details-desc'>{t('2')}</div>
                             <div className='handlowiec-details-desc'><Link to="mailto:filipiak@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> filipiak@aodc.pl</div>
                             <div className='handlowiec-details-desc'><Link to="tel:(+48)577414900"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 577 414 900</div>
                         </div>
@@ -79,4 +79,5 @@ const dzialhandlowy = () => {
   )
 }
 
-export default dzialhandlowy
+export default withNamespaces()(dzialhandlowy);
+

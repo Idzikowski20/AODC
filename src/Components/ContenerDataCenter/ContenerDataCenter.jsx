@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'; // Dodanie useState i useRef
 import { withNamespaces } from 'react-i18next';
-import i18n from '../../i18n';
 import { 
   FaTruckMoving, FaMagnet, FaFireExtinguisher, FaPlayCircle, FaShareAlt, 
   FaShippingFast, FaCloudscale, FaCoins, FaShieldAlt, FaInfoCircle, 
@@ -57,7 +56,7 @@ function ContenerDataCenter({ t }) {
       <div className='bluur2'></div>
         <div className="jm-datacenter-wrap bg-default">
           <div className='content'>
-            <h1>{t('Header3.5')}</h1> 
+            <h1 className='animate__animated animate__backInDown'>{t('Header3.5')}</h1> 
             <div className='server-box'>
               <div className='server-box-span-top'>
                 <span>{t('Header3.5.1')}</span>

@@ -13,7 +13,7 @@ function HomePageService({ t }) {
         <div className="container-fluid p-0">
           <div className="jm-service-wrap bg-default">
             <div className='content'>
-              <h1>{t('Header3.4.1')}</h1> 
+              <h1 className='animate__animated animate__backInDown'>{t('Header3.4.1')}</h1> 
             </div>
           </div>
         </div>
