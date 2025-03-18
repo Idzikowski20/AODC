@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Header2 from "../Header/Header2";
 import Footer2 from "../Footer/Footer2";
 import "./Blog.css"; // Import pliku CSS
+import { withNamespaces } from 'react-i18next';
 
-const Blog = () => {
+function blog ({ t }) {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -82,7 +83,7 @@ const Blog = () => {
           </div>
       <div className="blog-header">
         <div className="blog-header-main-title">
-            <span className="blog-main-title animate__animated animate__backInDown">Zobacz nasze najnowsze wpisy o technologii, data centers i innowacjach.</span>
+            <span className="blog-main-title animate__animated animate__backInDown">{t('12')}</span>
             <div className="blog-meta">
               <span></span>
             </div>
@@ -100,7 +101,7 @@ const Blog = () => {
                       <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
                       </svg>
-                      Strona główna
+                      {t('Header1')}
                     </a>
                   </li>
                   <li>
@@ -118,8 +119,7 @@ const Blog = () => {
           <div className="featured-post">
             <h1 className="post-title">{featuredPost.title}</h1>
             <div className="post-info">
-              <span>🖊 Autor: {featuredPost.author || "AODC"}</span>
-              <span>📅Publikacja: {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
+              <span>📅{t('13')} {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
             </div>
             {featuredPost.image && (
               <img
@@ -133,7 +133,7 @@ const Blog = () => {
             <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: featuredPost.content.slice(0, 200) + "..." }}></p>
           <Link to={`/blog/${featuredPost._id}`} className="learn-more inline-block">
             <button className="button-blog">
-        Czytaj więcej
+            {t('14')}
         <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
           <path
             clip-rule="evenodd"
@@ -159,7 +159,7 @@ const Blog = () => {
 
         {/* 📌 Inne wpisy */}
         <aside className="sidebar">
-          <h2 className="sidebar-title">📢 Najnowsze posty</h2>
+          <h2 className="sidebar-title">📢 {t('15')}</h2>
           <div className="post-list">
             {otherPosts.map((post) => (
               <Link key={post._id} to={`/blog/${post._id}`} className="post-item">
@@ -171,7 +171,6 @@ const Blog = () => {
                 />
                 <div className="sidebar-posts-details">
                   <h3 className="post-item-title">{post.title}</h3>
-                  <span className="post-date">🖊 {featuredPost.author || "AODC"}</span>
                   <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
                 </div>
               </Link>
@@ -184,4 +183,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default withNamespaces()(blog);

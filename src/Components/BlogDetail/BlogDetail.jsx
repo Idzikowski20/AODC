@@ -8,8 +8,9 @@ import Footer2 from "../Footer/Footer2";
 import "./BlogDetail.css";
 import { FaHome, FaEdit } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
+import { withNamespaces } from 'react-i18next';
 
-const BlogDetail = () => {
+function BlogDetail ({ t }) {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
@@ -78,7 +79,7 @@ const BlogDetail = () => {
   };
 
   if (loading) return <div className="loading-blogs">
-  ⏳ Ładowanie postów...
+  ⏳{t('16')}
   <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
 <defs>
   <clipPath id="pencil-eraser">
@@ -131,7 +132,7 @@ const BlogDetail = () => {
         <div className="blog-header-title">
             <h1 className="blog-title animate__animated animate__backInDown">{blog.title}</h1>
             <div className="blog-meta">
-              <span>📅Opublikowano:  {new Date(blog.createdAt).toLocaleDateString()}</span>
+              <span>📅 {t('13')}  {new Date(blog.createdAt).toLocaleDateString()}</span>
             </div>
         </div>
       </div>
@@ -146,7 +147,7 @@ const BlogDetail = () => {
                       <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
                       </svg>
-                      Strona główna
+                      {t('Header1')}
                     </a>
                   </li>
                   <li>
@@ -192,7 +193,7 @@ const BlogDetail = () => {
         </div>
 
         <aside className="sidebar">
-  <h2 className="sidebar-title">Inne wpisy</h2>
+  <h2 className="sidebar-title">{t('17')}</h2>
   <div className="post-list">
     {blogs
       .filter((item) => item._id !== id) // Filtrujemy, aby nie pokazać bieżącego wpisu
@@ -206,7 +207,6 @@ const BlogDetail = () => {
           />
           <div className="sidebar-posts-details">
             <h3 className="post-item-title">{item.title}</h3>
-            <span className="post-date">🖊 {item.author || "AODC"}</span>
             <span className="post-date">📅 {new Date(item.createdAt).toLocaleDateString()}</span>
           </div>
         </Link>
@@ -222,4 +222,4 @@ const BlogDetail = () => {
   );
 };
 
-export default BlogDetail;
+export default withNamespaces()(BlogDetail);
