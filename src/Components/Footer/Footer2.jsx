@@ -5,6 +5,8 @@ import { withNamespaces } from 'react-i18next';
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+
 function Footer2({ t }) {
   return (
     <footer id='footer' className="jm-footer-area-3">
@@ -19,16 +21,20 @@ function Footer2({ t }) {
                              <div className="footer-contact jm-sidebar-contact mb-40">
                              <h4 className="jm-sidebar-contact-title">{t('title7.3')}</h4>
                              <Link to="mailto:biuro@aodc.pl" className="theme-3">
-                             <i className="fas fa-envelope"></i>
-                                    <span><span>biuro@aodc.pl</span></span>
-                                        </Link>
-                                        <Link to="mailto:faktury@aodc.pl" className="theme-3">
-                                        <i className="fas fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
+                                <span><span>biuro@aodc.pl</span></span>
+                            </Link>
+                                <Link to="mailto:faktury@aodc.pl" className="theme-3">
+                                    <i className="fas fa-envelope"></i>
                                     <span><span>faktury@aodc.pl</span></span>
-                                        </Link>
-                                             <Link to="tel:(+22)8463515">
-                                                <i className="fal fa-phone"></i>
-                                     <span>(+22) 846 35 15</span>
+                                </Link>
+                                    <Link to="tel:(+22)8463515">
+                                        <i className="fal fa-phone"></i>
+                                        <span>(+22) 846 35 15</span>
+                                    </Link>
+                                <Link to="/Dzial-handlowy">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Dział handlowy </span><IoIosArrowForward />
                                 </Link>
                             </div>
                         </div>

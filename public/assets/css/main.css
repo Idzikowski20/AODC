@@ -4555,7 +4555,9 @@ font-weight: bold;
 }
 
 .jm-sidebar-contact > a {
-  display: block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin-bottom: 12px;
 }
 .jm-sidebar-contact > a:hover {
@@ -14173,7 +14175,7 @@ height: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #2e2e4d;
-    background-color: #2a2a40;
+    background-color: #fff !important;
     color: #000;
     font-size: 14px;
   }
