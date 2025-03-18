@@ -54,7 +54,7 @@
     bottom: 50px;
   }
   50% {
-    bottom: 100px; /* lub inna wartość, do której chcesz przesunąć */
+    bottom: 90px; /* Możesz dostosować wysokość */
   }
   100% {
     bottom: 50px;
@@ -64,6 +64,5 @@
 .login-image {
   position: relative;
   bottom: 50px;
-  animation: moveUpDown 10s ease-in-out infinite; /* 10s to czas trwania, infinite oznacza, że animacja powtarza się w nieskończoność */
-  transition: 500ms all;
+  animation: moveUpDown 7s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
 }

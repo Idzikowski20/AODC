@@ -127,7 +127,7 @@ function Login() {
           </div>
         </MDBCol>
 
-        <MDBCol col="6" className="mb-5">
+        <MDBCol col="6" className="">
           <div className="d-flex flex-column justify-content-center gradient-custom-2 h-100 mb-4">
             <div className="login-image">
             <img src="/assets/datacenter.png" alt="aodc data center company"/>
