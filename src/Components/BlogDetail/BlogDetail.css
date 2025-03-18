@@ -86,8 +86,6 @@
   
   /* ✅ Kontener na artykuł */
   .blog-content {
-    background: #0000001a;
-    backdrop-filter: blur(20px);
     display: flex;
     justify-content: flex-start;
     align-items: center;

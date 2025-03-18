@@ -1,12 +1,10 @@
 .gradient-custom-2 {
-    border-radius: 20px;
-    background: #0000001a;
-    backdrop-filter: blur(20px);
-    padding: 20px;
     height: fit-content;
   }
 
   .login-button {
+    padding: 5px;
+    border-radius: 40px;
     border: 1px solid blue;
   }
 
@@ -39,3 +37,33 @@
   border-color: #dc3545;
   background: #dc3545;
  }
+
+
+ /* === Responsywność === */
+ @media (max-width: 768px) {
+  .login-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 100px; /* lub inna wartość, do której chcesz przesunąć */
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+.login-image {
+  position: relative;
+  bottom: 50px;
+  animation: moveUpDown 10s ease-in-out infinite; /* 10s to czas trwania, infinite oznacza, że animacja powtarza się w nieskończoność */
+  transition: 500ms all;
+}

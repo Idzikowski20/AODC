@@ -58,15 +58,9 @@ function MobileMenu({ t }) {
               <li className="menu-has-children" onClick={handleClose}>
                 <Link to="/Realizacje">{t('title9.4')}</Link>
               </li>
-                  <li className="menu-has-children">
-                    {t('Header6')}
-                      <ul className={`oferta-container-mobile`}>
-                          <Link onClick={handleClose} to="/Dzial-handlowy">
-                          <li className='menu-li'><IoMdBriefcase />
-                           {t('Header6.1')} <IoIosArrowForward /></li>
-                          </Link>
-                      </ul>
-                 </li>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/Dzial-handlowy">{t('Header6')}</Link>
+              </li>
             </ol>
           </nav>
         </div>
