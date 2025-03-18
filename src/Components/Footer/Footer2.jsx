@@ -34,7 +34,7 @@ function Footer2({ t }) {
                                     </Link>
                                 <Link to="/Dzial-handlowy">
                                     <i class="fa-solid fa-briefcase"></i>
-                                    <span>Dział handlowy </span><IoIosArrowForward />
+                                    <span>{t('1')} </span><IoIosArrowForward />
                                 </Link>
                             </div>
                         </div>
