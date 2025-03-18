@@ -32,7 +32,7 @@ function Footer2({ t }) {
                                         <i className="fal fa-phone"></i>
                                         <span>(+22) 846 35 15</span>
                                     </Link>
-                                <Link to="/Dzial-handlowy">
+                                <Link to="/Dzial-handlowy" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                     <i class="fa-solid fa-briefcase"></i>
                                     <span>{t('1')} </span><IoIosArrowForward />
                                 </Link>
