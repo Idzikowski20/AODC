@@ -123,7 +123,7 @@ const AdminPanel = () => {
           ) : (
             <ul>
               {filteredPosts.slice(0, visiblePosts).map((post) => (
-                <li key={post._id} className="post-item">
+                <li key={post._id} className="admin-post-item">
                   <div className="post-info">
                     <img
                       src={post.image || "/assets/noimage.png"}
