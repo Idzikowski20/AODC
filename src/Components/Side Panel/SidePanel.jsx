@@ -30,27 +30,27 @@ function SidePanel({ t }) {
 
         <MobileMenu handleClose={handleClose}/>
 
-        <div className="jm-sidebar-contact-wrapper mt-40">
-          <div className="jm-sidebar-contact mb-40">
-            <h4 className="jm-sidebar-contact-title">{t('title9')}</h4>
-            <span className="sidebar-address">
-              <i className="fal fa-map-marker-alt"></i>
-              <span>Działkowa 37, 02-234 Warszawa</span>
-            </span>
-            <Link to="tel:(+22)8463515">
-              <i className="fal fa-phone"></i>
-              <span>(+22) 846 35 15</span>
-            </Link>
-            <Link to="mailto:biuro@aodc.pl" className="theme-3">
-              <i className="fal fa-envelope"></i>
-              <span><span>biuro@aodc.pl</span></span>
-            </Link>
-            <Link to="https://pl.linkedin.com/company/aodc" target="_blank" className="youtube">
-              <i className="fab fa-instagram"></i>
-              <span><span>Linkedin</span></span>
-              </Link>
-          </div>
-        </div>
+                        <div className="footer-contact-container">
+                             <div className="footer-contact jm-sidebar-contact mb-40">
+                             <h4 className="jm-sidebar-contact-title">{t('title7.3')}</h4>
+                             <Link to="mailto:biuro@aodc.pl" className="theme-3">
+                                <i className="fas fa-envelope"></i>
+                                <span><span>biuro@aodc.pl</span></span>
+                            </Link>
+                                <Link to="mailto:faktury@aodc.pl" className="theme-3">
+                                    <i className="fas fa-envelope"></i>
+                                    <span><span>faktury@aodc.pl</span></span>
+                                </Link>
+                                    <Link to="tel:(+22)8463515">
+                                        <i className="fal fa-phone"></i>
+                                        <span>(+22) 846 35 15</span>
+                                    </Link>
+                                <Link to="/Dzial-handlowy" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>{t('1')} </span>
+                                </Link>
+                            </div>
+                        </div>
       </div>
       <div className={`offcanvas-overlay ${sidePanelOpen ? 'overlay-open' : ''}`} onClick={handleClose}></div>
     </>

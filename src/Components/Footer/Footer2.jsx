@@ -21,7 +21,7 @@ function Footer2({ t }) {
                              <div className="footer-contact jm-sidebar-contact mb-40">
                              <h4 className="jm-sidebar-contact-title">{t('title7.3')}</h4>
                              <Link to="mailto:biuro@aodc.pl" className="theme-3">
-                                <i className="fas fa-envelope"></i>
+                             <i class="fa-solid fa-location-dot"></i>
                                 <span><span>biuro@aodc.pl</span></span>
                             </Link>
                                 <Link to="mailto:faktury@aodc.pl" className="theme-3">
@@ -46,7 +46,7 @@ function Footer2({ t }) {
                                     <div className=''>
                                     <Link to="https://maps.app.goo.gl/HEjxiQmK4aHDSqH86" target="_blank" className="youtube">
                                          <span className="sidebar-address">
-                                                 <i className="fal fa-map-marker-alt"></i>
+                                         <i class="fa-solid fa-location-dot"></i>
                                                 <span>Działkowa 37, 02-234 Warszawa</span>
                                         </span>
                                      </Link>

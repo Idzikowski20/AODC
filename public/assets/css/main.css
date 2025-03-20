@@ -4726,6 +4726,20 @@ font-weight: bold;
   .jm-search-popup.active .search-form {
     width: calc(100% - 50px);
   }
+  .sidebar-address i {
+    width: 35px;
+    height: 35px;
+    box-shadow: -4px 2px 20px #a91616;
+    /* max-width: 40px; */
+    /* height: 40px; */
+    background-color: #d32b50;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 15px;
+    flex: 0 0 40px;
+    transition: 500ms;
+    border-radius: 50%;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .jm-search-popup.active .search-form {
