@@ -4,7 +4,6 @@ import { JobContext } from '../../Context/JobContext';
 import i18n from '../../i18n';
 import { withNamespaces } from 'react-i18next';
 import { Trans } from 'react-i18next';
-import { FaHome } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { PiShippingContainerDuotone } from "react-icons/pi";
 import { BsDatabaseAdd } from "react-icons/bs";
@@ -46,7 +45,7 @@ function Header2 ({ t }) {
                                     <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                         <ol>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#home")}>
-                                                <Link to="/"><FaHome /> {t('Header1')}</Link>
+                                                <Link to="/">{t('Header1')}</Link>
                                             </li>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#aboutus")}>
                                                 <Link to="/">{t('Header2')}</Link>

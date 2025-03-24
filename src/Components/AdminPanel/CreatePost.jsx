@@ -3,42 +3,52 @@ import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react"; // Import TinyMCE
 import Header2 from "../Header/Header2";
 import { Link } from "react-router-dom";
+
 const CreatePost = () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState(""); // Content przechowuje tekst z edytora
+  const [content, setContent] = useState(""); // Treść po polsku
+  const [contentEng, setContentEng] = useState(""); // Treść po angielsku
   const [imageFile, setImageFile] = useState(null);
   const [tags, setTags] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Funkcja do obsługi zmian w edytorze
-  const handleEditorChange = (newContent) => {
-    setContent(newContent);  // Zmieniamy stan content na nowy tekst z edytora
+  // Funkcje do obsługi edytorów
+  const handleEditorChangePL = (newContent) => {
+    setContent(newContent); // Ustawia treść polską
+  };
+
+  const handleEditorChangeEN = (newContent) => {
+    setContentEng(newContent); // Ustawia treść angielską
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
-
+  
     try {
       const tagsArray = tags
         ? tags.split(",").map((tag) => tag.trim()).filter((tag) => tag !== "")
         : [];
-
+  
       const formData = new FormData();
       formData.append("title", title);
-      formData.append("content", content);  // Zmieniamy content na ten z edytora
+      formData.append("content", content);
+      formData.append("contentEng", contentEng); // 📌 WAŻNE!
       formData.append("tags", JSON.stringify(tagsArray));
       if (imageFile) formData.append("image", imageFile);
-
+  
+      console.log("📤 Wysyłane dane:", Object.fromEntries(formData)); // LOGUJEMY PRZED WYSŁANIEM
+  
       await axios.post(`${import.meta.env.VITE_API_URL}/api/blogs`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-
+  
       setMessage("✅ Post utworzony pomyślnie!");
       setTitle("");
       setContent("");
+      setContentEng(""); // RESETUJEMY
       setImageFile(null);
       setTags("");
     } catch (error) {
@@ -67,16 +77,14 @@ const CreatePost = () => {
         <div className="admin-panel">
           <div className="edit-post-title">
             <div className="edit-post-back">
-                <Link to="/AdminPanel">
-                    <img src="/assets/back.png" alt="back"/>
-                </Link>
+              <Link to="/AdminPanel">
+                <img src="/assets/back.png" alt="back" />
+              </Link>
             </div>
-              <div>
-                  <h2>📝 Utwórz nowy post</h2>
-              </div>
-            <div className="edit-post-dot">
-                .
+            <div>
+              <h2>📝 Utwórz nowy post</h2>
             </div>
+            <div className="edit-post-dot">.</div>
           </div>
           <form onSubmit={handleSubmit} className="admin-form">
             <div>
@@ -91,34 +99,40 @@ const CreatePost = () => {
               />
             </div>
 
+            {/* Edytor dla polskiej wersji */}
             <div>
-              <label className="admin-label">Treść:</label>
+              <label className="admin-label">Treść (PL):</label>
               <Editor
                 apiKey="2uiqexfbj40mkzjti964a0h0wv7a0sf4yewaihhzk1el9rk4"
                 value={content}
-                onEditorChange={handleEditorChange}  // Używamy handleEditorChange
+                onEditorChange={handleEditorChangePL}
                 init={{
-                  selector: 'textarea#basic-example',
                   width: "100%",
-                  height: 500,
+                  height: 400,
                   menubar: true,
-                  autosave_ask_before_unload: true,
-                  owerpaste_allow_local_images: true,
-                  autosave_interval: '30s',
-                  autosave_prefix: '{path}{query}-{id}-',
-                  autosave_restore_when_empty: false,
-                  contextmenu: 'link image table',
-                  quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
-                  plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons accordion',
-                  toolbar: "undo redo | accordion accordionremove | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code fullscreen preview | save print | pagebreak anchor codesample | ltr rtl",
-                  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:21px }'
+                  plugins: "advlist autolink lists link image charmap preview",
+                  toolbar: "undo redo | bold italic | alignleft aligncenter alignright | code",
+                  content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
                 }}
               />
-              <div className="zalecenia-con">
-              <img src="/assets/info.png" alt="zalecenia"/>
-              <span><strong>Zalecenia:</strong></span>
-              </div>
-              <p>Pierwszy akapit nie powinien być większy niz 15px.</p>
+            </div>
+
+            {/* Edytor dla angielskiej wersji */}
+            <div>
+              <label className="admin-label">Treść (EN):</label>
+              <Editor
+                apiKey="2uiqexfbj40mkzjti964a0h0wv7a0sf4yewaihhzk1el9rk4"
+                value={contentEng}
+                onEditorChange={handleEditorChangeEN}
+                init={{
+                  width: "100%",
+                  height: 400,
+                  menubar: true,
+                  plugins: "advlist autolink lists link image charmap preview",
+                  toolbar: "undo redo | bold italic | alignleft aligncenter alignright | code",
+                  content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                }}
+              />
             </div>
 
             <div>
@@ -142,11 +156,7 @@ const CreatePost = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="admin-button"
-            >
+            <button type="submit" disabled={loading} className="admin-button">
               {loading ? "Tworzenie..." : "Utwórz post"}
             </button>
           </form>
