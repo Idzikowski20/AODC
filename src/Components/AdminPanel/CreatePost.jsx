@@ -5,7 +5,8 @@ import Header2 from "../Header/Header2";
 import { Link } from "react-router-dom";
 
 const CreatePost = () => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(""); // Tytuł po polsku
+  const [titleEng, setTitleEng] = useState(""); // Tytuł po angielsku
   const [content, setContent] = useState(""); // Treść po polsku
   const [contentEng, setContentEng] = useState(""); // Treść po angielsku
   const [imageFile, setImageFile] = useState(null);
@@ -22,31 +23,38 @@ const CreatePost = () => {
     setContentEng(newContent); // Ustawia treść angielską
   };
 
+  // Funkcja obsługująca zmianę tytułu po angielsku
+  const handleTitleEngChange = (e) => {
+    setTitleEng(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
-  
+
     try {
       const tagsArray = tags
         ? tags.split(",").map((tag) => tag.trim()).filter((tag) => tag !== "")
         : [];
-  
+
       const formData = new FormData();
-      formData.append("title", title);
+      formData.append("title", title); // Tytuł po polsku
+      formData.append("titleEng", titleEng); // Tytuł po angielsku
       formData.append("content", content);
       formData.append("contentEng", contentEng); // 📌 WAŻNE!
       formData.append("tags", JSON.stringify(tagsArray));
       if (imageFile) formData.append("image", imageFile);
-  
+
       console.log("📤 Wysyłane dane:", Object.fromEntries(formData)); // LOGUJEMY PRZED WYSŁANIEM
-  
+
       await axios.post(`${import.meta.env.VITE_API_URL}/api/blogs`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-  
+
       setMessage("✅ Post utworzony pomyślnie!");
       setTitle("");
+      setTitleEng(""); // Resetujemy tytuł angielski
       setContent("");
       setContentEng(""); // RESETUJEMY
       setImageFile(null);
@@ -88,7 +96,7 @@ const CreatePost = () => {
           </div>
           <form onSubmit={handleSubmit} className="admin-form">
             <div>
-              <label className="admin-label">Tytuł:</label>
+              <label className="admin-label">Tytuł (PL):</label>
               <input
                 type="text"
                 value={title}
@@ -118,6 +126,18 @@ const CreatePost = () => {
             </div>
 
             {/* Edytor dla angielskiej wersji */}
+            <div>
+              <label className="admin-label">Tytuł (EN):</label>
+              <input
+                type="text"
+                value={titleEng}
+                onChange={handleTitleEngChange} // Obsługuje zmianę tytułu po angielsku
+                className="admin-input"
+                placeholder="Enter the title in English"
+                required
+              />
+            </div>
+
             <div>
               <label className="admin-label">Treść (EN):</label>
               <Editor

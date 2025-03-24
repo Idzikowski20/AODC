@@ -16,6 +16,11 @@ function Blog({ t, i18n }) {
     return i18n.language === "en" ? post.contentEng || "No content available" : post.content || "Brak treści";
   };
 
+  // Funkcja do wybrania tytułu w zależności od języka
+  const getTitle = (post) => {
+    return i18n.language === "en" ? post.titleEng || "No title" : post.title || "Brak tytułu";
+  };
+
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
@@ -32,9 +37,9 @@ function Blog({ t, i18n }) {
     fetchBlogs();
   }, [i18n.language]); // Zależy od języka
 
-  if (loading) return <div className="loading-blogs">⏳ Ładowanie postów...</div>;
+  if (loading) return <div className="loading-blogs">⏳ {t('18')}</div>;
   if (error) return <div className="error-blogs">{error}</div>;
-  if (blogs.length === 0) return <div className="empty-blogs">🙁 Brak postów do wyświetlenia</div>;
+  if (blogs.length === 0) return <div className="empty-blogs">🙁 {t('19')}</div>;
 
   const featuredPost = blogs[0]; // Główny post
   const otherPosts = blogs.slice(1); // Pozostałe posty
@@ -73,7 +78,7 @@ function Blog({ t, i18n }) {
           </div>
           <div className="main-content">
             <div className="featured-post">
-              <h1 className="post-title">{featuredPost.title}</h1>
+              <h1 className="post-title">{getTitle(featuredPost)}</h1> {/* Zmieniony tytuł */}
               <div className="post-info">
                 <span>📅 {t('13')} {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
               </div>
@@ -86,7 +91,7 @@ function Blog({ t, i18n }) {
                 />
               )}
               <div className="mt-4 text-center">
-                <p className="post-excerpt">{getContent(featuredPost)}</p>
+              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: getContent(featuredPost).substring(0, 350) + "..." }}></p>
                 <Link to={`/blog/${featuredPost._id}`} className="learn-more inline-block">
                   <button className="button-blog">
                     {t('14')}
@@ -109,7 +114,7 @@ function Blog({ t, i18n }) {
                   className="post-thumbnail"
                 />
                 <div className="sidebar-posts-details">
-                  <h3 className="post-item-title">{post.title}</h3>
+                  <h3 className="post-item-title">{getTitle(post)}</h3> {/* Zmieniony tytuł */}
                   <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
                 </div>
               </Link>

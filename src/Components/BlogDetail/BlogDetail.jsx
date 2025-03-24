@@ -10,7 +10,7 @@ import { FaHome, FaEdit } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import { withNamespaces } from 'react-i18next';
 
-function BlogDetail ({ t }) {
+function BlogDetail({ t, i18n }) {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
@@ -38,6 +38,16 @@ function BlogDetail ({ t }) {
       setLoading(false);
     }
   }, [id]);
+
+  // Funkcja do wybrania treści w zależności od języka
+  const getContent = (blog) => {
+    return i18n.language === "en" ? blog.contentEng || "No content available" : blog.content || "Brak treści";
+  };
+
+  // Funkcja do wybrania tytułu w zależności od języka
+  const getTitle = (blog) => {
+    return i18n.language === "en" ? blog.titleEng || "No title" : blog.title || "Brak tytułu";
+  };
 
   // Pobranie listy wszystkich blogów
   useEffect(() => {
@@ -119,8 +129,8 @@ function BlogDetail ({ t }) {
     <>
       {/* Dynamiczne ustawienie meta title */}
       <Helmet>
-        <title>{blog.title ? `${blog.title} | AODC Blog` : "AODC Blog"}</title>
-        <meta name="description" content={blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
+        <title>{getTitle(blog) ? `${getTitle(blog)} | AODC Blog` : "AODC Blog"}</title> {/* Zmieniony tytuł */}
+        <meta name="description" content={getContent(blog) ? getContent(blog).substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
       </Helmet>
 
       <Header2 />
@@ -130,7 +140,7 @@ function BlogDetail ({ t }) {
       {/* Nagłówek z dużym obrazem */}
       <div className="blog-header">
         <div className="blog-header-title">
-            <h1 className="blog-title animate__animated animate__backInDown">{blog.title}</h1>
+            <h1 className="blog-title animate__animated animate__backInDown">{getTitle(blog)}</h1> {/* Zmieniony tytuł */}
             <div className="blog-meta">
               <span>📅 {t('13')}  {new Date(blog.createdAt).toLocaleDateString()}</span>
             </div>
@@ -188,7 +198,7 @@ function BlogDetail ({ t }) {
               </div>
           </div>
           <img className="blog-detail-image" src={blog.image || "/assets/noimage.png"} alt={blog.title} />
-          <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
+          <p dangerouslySetInnerHTML={{ __html: getContent(blog) }}></p>
         </div>
         </div>
 

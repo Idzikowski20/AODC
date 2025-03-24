@@ -10,8 +10,10 @@ const EditPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [title, setTitle] = useState(""); // Tytuł po polsku
+  const [titleEng, setTitleEng] = useState(""); // Tytuł po angielsku
+  const [content, setContent] = useState(""); // Treść po polsku
+  const [contentEng, setContentEng] = useState(""); // Treść po angielsku
   const [imageFile, setImageFile] = useState(null);
   const [tags, setTags] = useState("");
   const [message, setMessage] = useState("");
@@ -22,11 +24,14 @@ const EditPost = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`);
-        const { title, content, tags } = response.data;
+        const { title, titleEng, content, contentEng, tags, image } = response.data;
 
         setTitle(title);
+        setTitleEng(titleEng); // Pobieramy tytuł po angielsku
         setContent(content);
-        setTags(tags.join(", ")); // Łączenie tagów w string
+        setContentEng(contentEng); // Pobieramy treść po angielsku
+        setTags(tags.join(", "));
+        setImageFile(image); // Jeśli jest obrazek, ustawiamy go w stanie
       } catch (error) {
         console.error("❌ Błąd pobierania posta:", error);
         setMessage("❌ Nie udało się pobrać posta.");
@@ -37,8 +42,12 @@ const EditPost = () => {
   }, [id]);
 
   // Obsługa zmian w edytorze TinyMCE
-  const handleEditorChange = (newContent) => {
+  const handleEditorChangePL = (newContent) => {
     setContent(newContent);
+  };
+
+  const handleEditorChangeEN = (newContent) => {
+    setContentEng(newContent);
   };
 
   // Obsługa zmiany pliku
@@ -57,7 +66,7 @@ const EditPost = () => {
     setLoading(true);
     setMessage("");
 
-    if (!title || !content) {
+    if (!title || !titleEng || !content || !contentEng) {
       setMessage("❌ Brak tytułu lub treści. Wypełnij wszystkie pola.");
       setLoading(false);
       return; // Jeśli brak tytułu lub treści, nie wysyłamy zapytania
@@ -69,8 +78,10 @@ const EditPost = () => {
         : [];
 
       const formData = new FormData();
-      formData.append("title", title);
+      formData.append("title", title); // Tytuł po polsku
+      formData.append("titleEng", titleEng); // Tytuł po angielsku
       formData.append("content", content);
+      formData.append("contentEng", contentEng); // Treść po angielsku
       formData.append("tags", JSON.stringify(tagsArray));
 
       if (imageFile) {
@@ -121,7 +132,7 @@ const EditPost = () => {
           </div>
           <form onSubmit={handleUpdate} className="admin-form">
             <div>
-              <label className="admin-label">Tytuł:</label>
+              <label className="admin-label">Tytuł (PL):</label>
               <input
                 type="text"
                 value={title}
@@ -132,27 +143,52 @@ const EditPost = () => {
               />
             </div>
 
+            {/* Edytor dla polskiej wersji */}
             <div>
-              <label className="admin-label">Treść:</label>
+              <label className="admin-label">Treść (PL):</label>
               <Editor
                 apiKey="2uiqexfbj40mkzjti964a0h0wv7a0sf4yewaihhzk1el9rk4"
                 value={content}
-                onEditorChange={handleEditorChange}
+                onEditorChange={handleEditorChangePL}
                 init={{
-                  selector: 'textarea#basic-example',
                   width: "100%",
-                  height: 500,
+                  height: 400,
                   menubar: true,
-                  autosave_ask_before_unload: true,
-                  autosave_interval: '30s',
-                  plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
-                  toolbar: "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | removeformat | code fullscreen preview",
-                  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:21px }'
+                  plugins: "advlist autolink lists link image charmap preview",
+                  toolbar: "undo redo | bold italic | alignleft aligncenter alignright | code",
+                  content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
                 }}
               />
-              <div className="zalecenia-con">
-              </div>
-              <p>Pierwszy akapit nie powinien być większy niż 15px.</p>
+            </div>
+
+            {/* Edytor dla angielskiej wersji */}
+            <div>
+              <label className="admin-label">Tytuł (EN):</label>
+              <input
+                type="text"
+                value={titleEng}
+                onChange={(e) => setTitleEng(e.target.value)} // Obsługuje zmianę tytułu po angielsku
+                className="admin-input"
+                placeholder="Enter the title in English"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="admin-label">Treść (EN):</label>
+              <Editor
+                apiKey="2uiqexfbj40mkzjti964a0h0wv7a0sf4yewaihhzk1el9rk4"
+                value={contentEng}
+                onEditorChange={handleEditorChangeEN}
+                init={{
+                  width: "100%",
+                  height: 400,
+                  menubar: true,
+                  plugins: "advlist autolink lists link image charmap preview",
+                  toolbar: "undo redo | bold italic | alignleft aligncenter alignright | code",
+                  content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                }}
+              />
             </div>
 
             <div>
@@ -163,8 +199,6 @@ const EditPost = () => {
                 onChange={handleFileChange}
                 className="admin-file-input"
               />
-              <p>Maksymalny rozmiar to 50MB</p>
-              <p>Dopuszczalne formy: PNG,JPEG,JPG,WEBP</p>
             </div>
 
             <div>
