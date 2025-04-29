@@ -7,7 +7,7 @@ import Footer2 from "../Footer/Footer2";
 import { Link } from "react-router-dom";
 
 const EditPost = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // id to teraz MongoDB _id
   const navigate = useNavigate();
 
   const [title, setTitle] = useState(""); // Tytuł po polsku
@@ -23,7 +23,9 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`);
+        // Używamy id do pobierania posta po id
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/id/${id}`);
+        
         const { title, titleEng, content, contentEng, tags, image } = response.data;
 
         setTitle(title);
@@ -38,7 +40,9 @@ const EditPost = () => {
       }
     };
 
-    fetchPost();
+    if (id) {
+      fetchPost(); // Uruchamiamy pobieranie posta na podstawie id
+    }
   }, [id]);
 
   // Obsługa zmian w edytorze TinyMCE
@@ -89,7 +93,7 @@ const EditPost = () => {
       }
 
       // Wysyłanie danych
-      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`, formData, {
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/blogs/id/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

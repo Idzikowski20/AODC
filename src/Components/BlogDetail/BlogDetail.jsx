@@ -11,7 +11,7 @@ import { FaShareAlt } from "react-icons/fa";
 import { withNamespaces } from 'react-i18next';
 
 function BlogDetail({ t, i18n }) {
-  const { id } = useParams();
+  const { id } = useParams(); // Tutaj id to tytuł posta
   const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,19 +22,19 @@ function BlogDetail({ t, i18n }) {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/title/${encodeURIComponent(id.replace(/\s+/g, '-'))}`);
         setBlog(response.data);
       } catch (err) {
         console.error("❌ Błąd pobierania posta:", err?.response?.data || err.message);
-        setError("❌ Nie udało się pobrać posta. Sprawdź ID lub spróbuj później.");
+        setError("❌ Nie udało się pobrać posta. Sprawdź tytuł lub spróbuj później.");
       } finally {
         setLoading(false);
       }
     };
 
-    if (id && id.length === 24) fetchBlog();
+    if (id) fetchBlog();
     else {
-      setError("❌ Nieprawidłowy format ID.");
+      setError("❌ Nieprawidłowy format tytułu.");
       setLoading(false);
     }
   }, [id]);
@@ -177,8 +177,7 @@ function BlogDetail({ t, i18n }) {
                     <img src="/assets/back.png" alt="back"/>
                   </Link>
               </div>
-              
-              {/* Wyświetlanie przycisków tylko dla zalogowanych użytkowników */}
+               {/* Wyświetlanie przycisków tylko dla zalogowanych użytkowników */}
               {isAuthenticated && (
                 <div className="blog-content-adminbuttons">
                     <Link to={`/AdminPanel/edit/${blog._id}`} className="edit-btn">
@@ -189,7 +188,6 @@ function BlogDetail({ t, i18n }) {
                    </Link>
                 </div>
               )}
-
               {/* Ikona udostępniania */}
               <div className="share-button">
                 <button onClick={handleShare}>
@@ -206,9 +204,9 @@ function BlogDetail({ t, i18n }) {
   <h2 className="sidebar-title">{t('17')}</h2>
   <div className="post-list">
     {blogs
-      .filter((item) => item._id !== id) // Filtrujemy, aby nie pokazać bieżącego wpisu
+      .filter((item) => item._id !== blog._id) // Filtrujemy, aby nie pokazać bieżącego wpisu
       .map((item) => (
-        <Link key={item._id} to={`/blog/${item._id}`} className="post-item">
+        <Link key={item._id} to={`/blog/${encodeURIComponent(item.title.replace(/\s+/g, '-'))}`} className="post-item">
           <img
             src={item.image || "/assets/noimage.png"}
             alt={item.title}
@@ -216,15 +214,13 @@ function BlogDetail({ t, i18n }) {
             onError={(e) => (e.target.src = "/assets/noimage.png")}
           />
           <div className="sidebar-posts-details">
-            <h3 className="post-item-title">{item.title}</h3>
+          <h3 className="post-item-title">{getTitle(item)}</h3> {/* Zmieniony tytuł */}
             <span className="post-date">📅 {new Date(item.createdAt).toLocaleDateString()}</span>
           </div>
         </Link>
       ))}
   </div>
 </aside>
-
-
       </div>
 
       <Footer2 />

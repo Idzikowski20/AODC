@@ -134,7 +134,7 @@ const AdminPanel = () => {
                     <span>{post.title}</span>
                   </div>
                   <div className="post-actions">
-                    <Link to={`/Blog/${post._id}`} className="edit-btn">
+                    <Link to={`/Blog/${encodeURIComponent(post.title.replace(/\s+/g, '-'))}`} className="edit-btn">
                       <img src="/assets/see.png" alt="see post"/>
                     </Link>
                     <Link to={`/AdminPanel/edit/${post._id}`} className="edit-btn">

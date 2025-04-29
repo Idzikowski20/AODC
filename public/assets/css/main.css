@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
+
 body {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -18,6 +20,7 @@ body {
 }
 
 .herobg {
+  box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -29,57 +32,71 @@ body {
   right: 0;
 }
 
+.black-bg {
+  background: #000;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 120vh;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.building-img {
+  width: 90%;
+  --tw-shadow: 0px 35px 120px -15px #000000;
+  --tw-shadow-colored: 0px 35px 120px -15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 60px;
+}
+
+.content-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.content-image-container .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #FFF;
+}
 
 .jm-building-wrap {
-  height: 400px;
     background: center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.jm-building-wrap::before {
-  /* box-shadow: 3px 15px 100px 50px rgba(3, 15, 35, 1); */
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(0deg, #030f23 0%, #03122970 100%, #030f23 100%), url(../img/offer/budowa.webp) fixed no-repeat 50% 20% / cover; */
 }
 
 .jm-audit-wrap {
-  height: 400px;
-    background: center / cover no-repeat fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.jm-audit-wrap::before {
-  /* box-shadow: 3px 15px 100px 50px rgba(3, 15, 35, 1); */
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(0deg, #030f23 0%, #03122970 100%, #030f23 100%), url(../img/offer/audyt.webp) fixed no-repeat 50% 20% / cover; */
+  background: center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .jm-projecting-wrap {
-  height: 400px;
-    background: center / cover no-repeat fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background: center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .jm-projecting-wrap-blog {
@@ -113,25 +130,14 @@ body {
 }
 
 .jm-service-wrap {
-  height: 400px;
-    background: center / cover no-repeat fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background: center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.jm-service-wrap::before {
-  /* box-shadow: 3px 15px 100px 50px rgba(3, 15, 35, 1); */
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(0deg, #030f23 0%, #03122970 100%, #030f23 100%), url(../img/offer/serwis.webp) fixed no-repeat 50% 20% / cover; */
-}
 
 .content h1 {
   background: linear-gradient(125deg, #E1E0FF 11.36%, #8f8cff 100.09%);
@@ -140,6 +146,125 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: calc(2rem + 1.8vw) !important;
   font-family: "Nunito", sans-serif !important;
+}
+
+.content-building h1 {
+  background: linear-gradient(125deg, #ffffff 11.36%, #0029ff 100.09%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: calc(2rem + 1.8vw) !important;
+    font-family: "Nunito", sans-serif !important;
+}
+
+.content-hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.content-hero-button-container {
+  top: 150px;
+  /* left: 500px; */
+  /* top: 700px; */
+  position: absolute;
+  width: 30%;
+  border-radius: 40px;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #27278d;
+  padding: 20px;
+  position: relative;
+  height: 170px;
+}
+
+.content-building {
+  text-shadow: -8px 0px 20px rgba(129, 129, 129, 0.48);
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+.budowa-klienci-info-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: auto;
+}
+
+.budowa-klienci-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.budowa-klienci-info-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.budowa-klienci-info-experts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.budowa-klienci-info-stars span > i {
+  color: yellow;
+}
+.budowa-klienci-info-stars span  {
+  display: flex;
+  gap: 5px;
+}
+
+.budowa-klienci-info p {
+  opacity: 0;
+}
+
+.budowa-klienci-info-stars p {
+  opacity: 0;
+}
+
+.budowa-section {
+  border-radius: 20px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.356);
+}
+
+.building-description-box {
+  margin: 20px;
+  max-width: 900px;
+  border-radius: 20px;
+  padding: 20px;
+  color: #c3c3c3 !important;
+  margin-bottom: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.budowa-img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
 }
 
 .content h3 {
@@ -160,6 +285,14 @@ body {
   height: auto;
   margin: 5px;
   text-align: center;
+}
+
+.description-title h2 {
+  background: linear-gradient(125deg, #ffffff 11.36%, #0029ff 100.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .polityka-container {
@@ -13391,6 +13524,9 @@ a.meanmenu-reveal {
 }
 
 .description-box-container {
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15629,4 +15765,81 @@ margin-bottom: 10px;
     stroke-dashoffset: 439.82;
     transform: translate(100px,100px) rotate(112deg);
   }
+}
+
+.absolute-column {
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0px;
+  left: 372px;
+  width: 358px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  background: #5154cd;
+  border-radius: 50px;
+  padding: 6px 65px 70px 65px;
+}
+.button-row-view {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	background: #000000;
+	border-radius: 18px;
+	border: none;
+	padding: 13px 29px;
+	margin-left: 36px;
+	margin-right: 36px;
+	text-align: left;
+}
+
+.content-image {
+  margin-top: 100px;
+  border-radius: 40px;
+  object-fit: cover;
+  width: 80%;
+  min-height: 500px;
+  max-height: 700px;
+}
+
+.column {
+	align-self: center;
+	align-items: center;
+	position: relative;
+}
+.column2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+}
+.contain {
+}
+.image {
+	height: 366px;
+	align-self: stretch;
+	object-fit: fill;
+}
+.image2 {
+	height: 475px;
+	align-self: stretch;
+	object-fit: fill;
+}
+.image3 {
+	border-radius: 18px;
+	width: 11px;
+	height: 12px;
+	object-fit: fill;
+}
+.text {
+	color: #F7F6F6;
+	font-size: 20px;
+}
+.text2 {
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin-right: 10px;
+	flex: 1;
 }

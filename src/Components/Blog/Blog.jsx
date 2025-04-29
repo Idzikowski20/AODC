@@ -91,8 +91,8 @@ function Blog({ t, i18n }) {
                 />
               )}
               <div className="mt-4 text-center">
-              <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: getContent(featuredPost).substring(0, 350) + "..." }}></p>
-                <Link to={`/blog/${featuredPost._id}`} className="learn-more inline-block">
+                <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: getContent(featuredPost).substring(0, 350) + "..." }}></p>
+                <Link to={`/blog/${encodeURIComponent(featuredPost.title.replace(/\s+/g, '-'))}`} className="learn-more inline-block">
                   <button className="button-blog">
                     {t('14')}
                   </button>
@@ -107,17 +107,23 @@ function Blog({ t, i18n }) {
           <h2 className="sidebar-title">📢 {t('15')}</h2>
           <div className="post-list">
             {otherPosts.map((post) => (
-              <Link key={post._id} to={`/blog/${post._id}`} className="post-item">
-                <img
-                  src={post.image || "/assets/noimage.png"}
-                  alt={post.title}
-                  className="post-thumbnail"
-                />
-                <div className="sidebar-posts-details">
-                  <h3 className="post-item-title">{getTitle(post)}</h3> {/* Zmieniony tytuł */}
-                  <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
-                </div>
-              </Link>
+              // Linki z tytułami w URL
+            <Link 
+              key={post._id} 
+              to={`/blog/${encodeURIComponent(post.title.replace(/\s+/g, '-'))}`} 
+              className="post-item"
+            >
+              <img
+                src={post.image || "/assets/noimage.png"}
+                alt={post.title}
+                className="post-thumbnail"
+              />
+              <div className="sidebar-posts-details">
+                <h3 className="post-item-title">{getTitle(post)}</h3>
+                <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
+              </div>
+            </Link>
+
             ))}
           </div>
         </aside>

@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react'; // Dodanie useState i useRef
 import { withNamespaces } from 'react-i18next';
-
+import {  FaComments } from 'react-icons/fa';
+import { GrContact } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 function HomePageConstructionDataCenter({ t }) {
 
 
@@ -14,6 +16,7 @@ function HomePageConstructionDataCenter({ t }) {
           <div className="jm-building-wrap bg-default">
             <div className='content'>
               <h1 className='animate__animated animate__backInDown'>{t('Header3.1.1')}</h1> 
+              <img className='content-image' src='/assets/budowa2.png' alt='budowa data center' />
             </div>
           </div>
         </div>
@@ -26,7 +29,7 @@ function HomePageConstructionDataCenter({ t }) {
           <span className='border-radius20'>{t('Header3.1.3')}</span>
         </div>
         <div className='description-title'>
-        <h4>{t('Header3.1.4')}</h4> 
+        <h2>{t('Header3.1.4')}</h2> 
         </div>
         <div className='description-box'>
           <span className='border-radius20'>{t('Header3.1.5')}</span><br></br>
@@ -36,7 +39,7 @@ function HomePageConstructionDataCenter({ t }) {
           <span>{t('Header3.1.9')}</span>
         </div>
         <div className='description-title'>
-        <h4>{t('Header3.1.10')}</h4> 
+        <h2>{t('Header3.1.10')}</h2> 
         </div>
         <div className='description-box'>
           <span className='border-radius20'>{t('Header3.1.11')}</span><br></br>
@@ -47,18 +50,32 @@ function HomePageConstructionDataCenter({ t }) {
           <span>{t('Header3.1.16')}</span>
         </div>
         <div className='description-title'>
-        <h4>{t('Header3.1.17')}</h4> 
+        <h2>{t('Header3.1.17')}</h2> 
         </div>
         <div className='description-box'>
           <span className='border-radius20'>{t('Header3.1.18')}</span><br></br>
         </div>
         <div className='description-title'>
-        <h4>{t('Header3.1.19')}</h4> 
+        <h2>{t('Header3.1.19')}</h2> 
         </div>
         <div className='description-box'>
           <span className='border-radius20'>{t('Header3.1.20')}</span><br></br>
         </div>
         </div>
+                    <div className='description-box-contact-con'>
+                      <div className='description-box-contact'>
+                        <div className='description-box-contact-content'>
+                          <div className='info-svg'><FaComments /></div>
+                          <div className='description-box-contact-desc'>
+                            <span>{t('Header3.5.15')}</span><br /><br />
+                            <span>{t('Header3.5.16')}</span>
+                          </div>
+                          <Link to='/Dzial-handlowy' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                          <button className='server-btn'><GrContact  />{t('Header3.5.24')}</button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
     </div>
     </>
   )

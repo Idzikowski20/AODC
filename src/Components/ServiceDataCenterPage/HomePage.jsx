@@ -1,6 +1,8 @@
 import React from 'react'
 import { withNamespaces } from 'react-i18next';
-
+import {  FaComments } from 'react-icons/fa';
+import { GrContact } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 function HomePageService({ t }) {
 
 
@@ -14,6 +16,7 @@ function HomePageService({ t }) {
           <div className="jm-service-wrap bg-default">
             <div className='content'>
               <h1 className='animate__animated animate__backInDown'>{t('Header3.4.1')}</h1> 
+              <img className='content-image' src='/assets/serwis.png' alt='serwis data center' />
             </div>
           </div>
         </div>
@@ -25,7 +28,7 @@ function HomePageService({ t }) {
           <span>{t('Header3.4.2')}</span>
         </div>
     <div className='description-title'>
-        <h4>{t('Header3.4.3')}</h4> 
+        <h2>{t('Header3.4.3')}</h2> 
     </div>
         <div className='description-box'>
           <span>{t('Header3.4.4')}</span><br></br>
@@ -35,7 +38,7 @@ function HomePageService({ t }) {
           <span>{t('Header3.4.8')}</span>
         </div>
         <div className='description-title'>
-           <h4>{t('Header3.4.9')}</h4> 
+           <h2>{t('Header3.4.9')}</h2> 
        </div>
         <div className='description-box'>
           <span>{t('Header3.4.10')}</span><br></br>
@@ -49,7 +52,7 @@ function HomePageService({ t }) {
           <span>{t('Header3.4.18')}</span>
         </div>
         <div className='description-title'>
-           <h4>{t('Header3.4.19')}</h4> 
+           <h2>{t('Header3.4.19')}</h2> 
        </div>
         <div className='description-box'>
           <span>{t('Header3.4.20')}</span><br></br>
@@ -60,6 +63,20 @@ function HomePageService({ t }) {
           <span>{t('Header3.4.25')}</span>
         </div>
       </div>
+                          <div className='description-box-contact-con'>
+                            <div className='description-box-contact'>
+                              <div className='description-box-contact-content'>
+                                <div className='info-svg'><FaComments /></div>
+                                <div className='description-box-contact-desc'>
+                                  <span>{t('Header3.5.15')}</span><br /><br />
+                                  <span>{t('Header3.5.16')}</span>
+                                </div>
+                                <Link to='/Dzial-handlowy' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <button className='server-btn'><GrContact  />{t('Header3.5.24')}</button>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
     </div>
     </>
   )
