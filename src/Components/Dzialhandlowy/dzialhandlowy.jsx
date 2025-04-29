@@ -36,12 +36,12 @@ function dzialhandlowy({ t }) {
                     </div>
 
                     <div className='handlowiec-box'>
-                        <img src='/assets/img/team/Łukasz.png' alt='handlowiec'/>
+                        <img src='/assets/img/team/konrad.png' alt='handlowiec'/>
                         <div className='handlowiec-details'>
-                            <div className='handlowiec-details-desc'><span>Łukasz Kazimierak</span></div>
+                            <div className='handlowiec-details-desc'><span>Konrad Hołowacz</span></div>
                             <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><Link to="mailto:lukasz.kazimierak@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> lukasz.kazimierak@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><Link to="tel:(+48)533 42473"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 533 342 473</div>
+                            <div className='handlowiec-details-desc'><Link to="mailto:konrad.holowacz@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> 	konrad.holowacz@aodc.pl</div>
+                            <div className='handlowiec-details-desc'><Link to="tel:(+48)533 327 613"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 533 327 613</div>
                         </div>
                     </div>
 
@@ -52,16 +52,6 @@ function dzialhandlowy({ t }) {
                                 <div className='handlowiec-details-desc'>Key Account Manager</div>
                                 <div className='handlowiec-details-desc'><Link to="mailto:arkadiusz.jaworski@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> arkadiusz.jaworski@aodc.pl</div>
                                 <div className='handlowiec-details-desc'><Link to="tel:(+48)577703457"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 577 703 457</div>
-                        </div>
-                    </div>
-
-                    <div className='handlowiec-box'>
-                        <img src='/assets/img/team/Szymon.png' alt='handlowiec'/>
-                        <div className='handlowiec-details'>
-                            <div className='handlowiec-details-desc'><span>Szymon Judek</span></div>
-                            <div className='handlowiec-details-desc'>Key Account Manager</div>
-                            <div className='handlowiec-details-desc'><Link to="mailto:szymon.judek@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> szymon.judek@aodc.pl</div>
-                            <div className='handlowiec-details-desc'><Link to="tel:(+48)533337897"><div className='handlowiec-icon'><BsTelephone /></div></Link> +48 533 337 897</div>
                         </div>
                     </div>
 
