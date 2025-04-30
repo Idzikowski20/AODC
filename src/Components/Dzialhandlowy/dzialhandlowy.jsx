@@ -39,7 +39,7 @@ function dzialhandlowy({ t }) {
                         <img src='/assets/img/team/konrad.png' alt='handlowiec'/>
                         <div className='handlowiec-details'>
                             <div className='handlowiec-details-desc'><span>Konrad Hołowacz</span></div>
-                            <div className='handlowiec-details-desc'>Key Account Manager</div>
+                            <div className='handlowiec-details-desc'>Business Development Manager </div>
                             <div className='handlowiec-details-desc'><Link to="mailto:konrad.holowacz@aodc.pl"><div className='handlowiec-icon'><MdOutlineEmail /></div></Link> 	konrad.holowacz@aodc.pl</div>
                             <div className='handlowiec-details-desc'><Link to="tel:(+48)533 327 613"><div className='handlowiec-icon'><BsTelephone /></div></Link>  +48 533 327 613</div>
                         </div>
