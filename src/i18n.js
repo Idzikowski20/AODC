@@ -1,5 +1,4 @@
 import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import { reactI18nextModule } from "react-i18next";
 import translationEN from './locales/en/translation.json';
 import translationPL from './locales/pl/translation.json';
@@ -15,18 +14,22 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(reactI18nextModule)
   .init({
     debug: true,
     resources,
+    lng: "pl",
     fallbackLng: "pl",
-
-    keySeparator: false, // we do not use keys in form messages.welcome
-
+    supportedLngs: ["pl", "en"],
+    nonExplicitSupportedLngs: false,
+    keySeparator: false,
     interpolation: {
-      escapeValue: false // react already safes from xss
+      escapeValue: false
     }
   });
 
-  export default i18n
+i18n.on('languageChanged', (lng) => {
+  console.log('Język zmieniony na:', lng);
+});
+
+export default i18n;

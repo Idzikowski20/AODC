@@ -3,12 +3,17 @@ import { withNamespaces } from 'react-i18next';
 import {  FaComments } from 'react-icons/fa';
 import { GrContact } from "react-icons/gr";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 function HomePageConstructionDataCenter({ t }) {
 
 
   
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://aodc.pl/Budowa-Data-Center" />
+      </Helmet>
       <div className="jm-video-area">
       <div className='bluur'></div>
       <div className='bluur2'></div>

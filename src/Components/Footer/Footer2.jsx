@@ -82,7 +82,7 @@ function Footer2({ t }) {
                 {/* <ContactForm /> */}
                 <div className="footer-copyright-container">
                             <div className="footer-copyright">
-                                <span>{t('title7.5')}<a href='https://www.linkedin.com/in/patrykidzikowski/' target='_blank'>  {t('title7.6')}</a></span>
+                                <span>{t('title7.5')}<a href='https://idztech.pl' target='_blank'>  {t('title7.6')}</a></span>
                             </div>
                             <div className='polityka-container'>
                                 <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272">{t('polityka3')}</a>

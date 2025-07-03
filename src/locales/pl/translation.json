@@ -1,4 +1,3 @@
-
 {
     "Welcome to React": "Sztuka rozwiązań",
     "for data center": "dla data center",
@@ -171,8 +170,8 @@
     "title7.2": "Certyfikaty",
     "title7.3": "Kontakt",
     "title7.4": "Adres",
-    "title7.5": "© Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez",
-    "title7.6": "Patryk Idzikowski",
+    "title7.5": "© Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Strona wykonana przez",
+    "title7.6": "IDZTECH.PL",
     "title7.7": "Social media",
     "title8": "Witaj!",
     "title8.1": "Ładowanie...",
@@ -224,5 +223,17 @@
     "16": "Ładowanie..",
     "17": "Inne wpisy",
     "18": "Ładowanie postów",
-    "19": "Brak postów do wyświetlenia."
-  }
+    "19": "Brak postów do wyświetlenia.",
+    "Strona główna": "Strona główna",
+    "O nas": "O nas",
+    "Oferta": "Oferta",
+    "Serwerownie Kontenerowe": "Serwerownie Kontenerowe",
+    "Budowa Data Center": "Budowa Data Center",
+    "Audyt Data Center": "Audyt Data Center",
+    "Projektowanie Data Center": "Projektowanie Data Center",
+    "Serwis Data Center": "Serwis Data Center",
+    "Kariera": "Kariera",
+    "Realizacje": "Realizacje",
+    "Blog": "Blog",
+    "Kontakt": "Kontakt"
+}

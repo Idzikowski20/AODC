@@ -20,7 +20,7 @@ body {
 }
 
 .herobg {
-  box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+  filter: saturate(0.8);
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -15830,4 +15830,16 @@ margin-bottom: 10px;
 	text-align: center;
 	margin-right: 10px;
 	flex: 1;
+}
+
+
+.iub__us-widget {
+  display: none !important;
+  margin: 0;
+  padding: .5em;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, sans-serif !important;
+  font-size: 1rem;
+  font-weight: 700;
 }

@@ -1,136 +1,119 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import { withNamespaces } from 'react-i18next';  // Używamy withNamespaces
-import Header2 from "../Header/Header2";
-import Footer2 from "../Footer/Footer2";
-import "./Blog.css"; // Import pliku CSS
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import axios from 'axios';
 
-function Blog({ t, i18n }) {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Blog = () => {
+  const [posts, setPosts] = useState([]);
+  const [isLoadingPosts, setIsLoadingPosts] = useState(true);
   const [error, setError] = useState(null);
-
-  // Funkcja do wybrania treści w zależności od języka
-  const getContent = (post) => {
-    return i18n.language === "en" ? post.contentEng || "No content available" : post.content || "Brak treści";
-  };
-
-  // Funkcja do wybrania tytułu w zależności od języka
-  const getTitle = (post) => {
-    return i18n.language === "en" ? post.titleEng || "No title" : post.title || "Brak tytułu";
-  };
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchBlogs = async () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setIsLoadingPosts(true);
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
-        setBlogs(response.data);
+        setPosts(response.data);
       } catch (err) {
-        console.error("❌ Błąd pobierania blogów:", err.response?.data || err.message);
-        setError("❌ Nie udało się pobrać postów. Spróbuj ponownie później.");
+        setError('Wystąpił błąd podczas ładowania postów.');
       } finally {
-        setLoading(false);
+        setIsLoadingPosts(false);
       }
     };
+    fetchPosts();
+  }, []);
 
-    fetchBlogs();
-  }, [i18n.language]); // Zależy od języka
-
-  if (loading) return <div className="loading-blogs">⏳ {t('18')}</div>;
-  if (error) return <div className="error-blogs">{error}</div>;
-  if (blogs.length === 0) return <div className="empty-blogs">🙁 {t('19')}</div>;
-
-  const featuredPost = blogs[0]; // Główny post
-  const otherPosts = blogs.slice(1); // Pozostałe posty
+  const handlePostClick = (slug) => {
+    navigate(`/blog/${slug}`);
+  };
 
   return (
-    <>
-      <Header2 />
-      <div className="jm-video-area">
-        <div className='bluur'></div>
-        <div className='bluur2'></div>
-        <div className="container-fluid p-0">
-          <div className="jm-projecting-wrap-blog bg-default">
-            <div className='content'>
-              <h1></h1>
+    <div className="">
+      <Helmet>
+        <title>AODC - Blog</title>
+        <meta name="description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        {/* Open Graph */}
+        <meta property="og:title" content="AODC - Blog" />
+        <meta property="og:description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        <meta property="og:image" content="https://aodc.pl/banner.png" />
+        <meta property="og:url" content="https://aodc.pl/blog" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AODC - Blog" />
+        <meta name="twitter:description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        <meta name="twitter:image" content="https://aodc.pl/banner.png" />
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+        {/* Canonical */}
+        <link rel="canonical" href="https://aodc.pl/blog" />
+      </Helmet>
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white mt-8">Blog.</h1>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+          Najnowsze informacje, porady i trendy ze świata IT.
+        </p>
+        <section className="pb-24">
+          {isLoadingPosts ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="flex flex-col">
+                  <div className="h-52 w-full rounded-xl mb-4 bg-gray-800 animate-pulse" />
+                  <div className="h-4 w-24 mb-2 bg-gray-800 animate-pulse" />
+                  <div className="h-6 w-full mb-2 bg-gray-800 animate-pulse" />
+                  <div className="h-4 w-3/4 bg-gray-800 animate-pulse" />
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="blog-header">
-        <div className="blog-header-main-title">
-          <span className="blog-main-title animate__animated animate__backInDown">{t('12')}</span>
-        </div>
-      </div>
-      <div className="blog-container">
-        <div className="main-content-container">
-          <div>
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                <li className="inline-flex items-center">
-                  <a href="#" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                    {t('Header1')}
-                  </a>
-                </li>
-              </ol>
-            </nav>
-          </div>
-          <div className="main-content">
-            <div className="featured-post">
-              <h1 className="post-title">{getTitle(featuredPost)}</h1> {/* Zmieniony tytuł */}
-              <div className="post-info">
-                <span>📅 {t('13')} {new Date(featuredPost.createdAt).toLocaleDateString()}</span>
-              </div>
-              {featuredPost.image && (
-                <img
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  className="post-image"
-                  onError={(e) => (e.target.src = "/assets/noimage.png")}
-                />
-              )}
-              <div className="mt-4 text-center">
-                <p className="post-excerpt" dangerouslySetInnerHTML={{ __html: getContent(featuredPost).substring(0, 350) + "..." }}></p>
-                <Link to={`/blog/${encodeURIComponent(featuredPost.title.replace(/\s+/g, '-'))}`} className="learn-more inline-block">
-                  <button className="button-blog">
-                    {t('14')}
-                  </button>
-                </Link>
-              </div>
+          ) : error ? (
+            <div className="text-center text-gray-400 py-12">
+              <p className="text-xl mb-4">{error}</p>
+              <p className="mb-4">Spróbuj odświeżyć stronę lub sprawdź połączenie internetowe.</p>
+              <button onClick={() => window.location.reload()} className="px-4 py-2 rounded bg-gray-700 text-white">Odśwież stronę</button>
             </div>
-          </div>
-        </div>
-
-        {/* Inne wpisy */}
-        <aside className="sidebar">
-          <h2 className="sidebar-title">📢 {t('15')}</h2>
-          <div className="post-list">
-            {otherPosts.map((post) => (
-              // Linki z tytułami w URL
-            <Link 
-              key={post._id} 
-              to={`/blog/${encodeURIComponent(post.title.replace(/\s+/g, '-'))}`} 
-              className="post-item"
-            >
-              <img
-                src={post.image || "/assets/noimage.png"}
-                alt={post.title}
-                className="post-thumbnail"
-              />
-              <div className="sidebar-posts-details">
-                <h3 className="post-item-title">{getTitle(post)}</h3>
-                <span className="post-date">📅 {new Date(post.createdAt).toLocaleDateString()}</span>
-              </div>
-            </Link>
-
-            ))}
-          </div>
-        </aside>
+          ) : posts && posts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.filter(post => post.published !== false).map((post) => (
+                <article
+                  key={post._id}
+                  className="group bg-[#181836] cursor-pointer flex flex-col rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                  onClick={() => handlePostClick(encodeURIComponent(post.title.replace(/\s+/g, '-')))}
+                >
+                  <div className="block overflow-hidden rounded-t-xl">
+                    <img
+                      src={post.image || '/assets/noimage.png'}
+                      alt={post.title}
+                      className="w-full h-56 object-cover rounded-t-xl"
+                      onError={e => { e.target.src = '/assets/noimage.png'; }}
+                    />
+                  </div>
+                  <div className="flex items-center text-sm text-gray-400 pt-4 mb-2 px-4">
+                    <span className="mr-1">📅</span>
+                    {post.createdAt ? new Date(post.createdAt).toLocaleDateString() : ''}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-left px-4 text-white group-hover:text-blue-400 group-hover:underline transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4 line-clamp-2 text-left px-4">
+                    {post.excerpt || post.summary || 'Brak opisu'}
+                  </p>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center text-gray-400 py-12">
+              <p className="text-xl mb-4">Brak postów do wyświetlenia.</p>
+              <p>Wróć później, gdy pojawią się nowe artykuły.</p>
+            </div>
+          )}
+        </section>
       </div>
-      <Footer2 />
-    </>
+    </div>
   );
-}
+};
 
-export default withNamespaces()(Blog);
+export default Blog;

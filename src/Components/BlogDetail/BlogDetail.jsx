@@ -1,230 +1,198 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import axios from "axios";
-import { Helmet } from "react-helmet-async";
-import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import Firebase Auth
-import Header2 from "../Header/Header2";
-import Footer2 from "../Footer/Footer2";
-import "./BlogDetail.css";
-import { FaHome, FaEdit } from "react-icons/fa";
-import { FaShareAlt } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import Header2 from '../Header/Header2';
+import Footer2 from '../Footer/Footer2';
+import { Helmet } from 'react-helmet-async';
+import axios from 'axios';
 import { withNamespaces } from 'react-i18next';
 
-function BlogDetail({ t, i18n }) {
-  const { id } = useParams(); // Tutaj id to tytuł posta
-  const [blog, setBlog] = useState(null);
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+const BlogDetail = ({ t, i18n }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [post, setPost] = useState(null);
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [tableOfContents, setTableOfContents] = useState([]);
+  const [formattedContent, setFormattedContent] = useState('');
+  const [relatedPage, setRelatedPage] = useState(0);
+  const postsPerPage = 6;
 
-  // Pobieranie szczegółów posta
+  const getContent = (post) => {
+    return i18n.language === "en" ? post.contentEng || "No content available" : post.content || "Brak treści";
+  };
+  const getTitle = (post) => {
+    return i18n.language === "en" ? post.titleEng || "No title" : post.title || "Brak tytułu";
+  };
+
   useEffect(() => {
-    const fetchBlog = async () => {
+    setIsLoading(true);
+    const fetchPost = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/title/${encodeURIComponent(id.replace(/\s+/g, '-'))}`);
-        setBlog(response.data);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/title/${encodeURIComponent(id)}`);
+        setPost(response.data);
+        // Spis treści
+        if (response.data && (response.data.content || response.data.contentEng)) {
+          const html = response.data.content || response.data.contentEng;
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          // Dodaj id do h2/h3 jeśli nie ma
+          tempDiv.querySelectorAll('h2, h3').forEach(h => {
+            if (!h.id && h.textContent) {
+              h.id = h.textContent.toLowerCase().replace(/\s+/g, '-');
+            }
+          });
+          // Spis treści
+          const headings = Array.from(tempDiv.querySelectorAll('h2, h3'));
+          setTableOfContents(headings.map(h => ({
+            id: h.id,
+            text: h.textContent || '',
+            level: h.tagName === 'H2' ? 2 : 3
+          })));
+          setFormattedContent(tempDiv.innerHTML);
+        }
       } catch (err) {
-        console.error("❌ Błąd pobierania posta:", err?.response?.data || err.message);
-        setError("❌ Nie udało się pobrać posta. Sprawdź tytuł lub spróbuj później.");
+        setError('Nie znaleziono posta lub wystąpił błąd.');
       } finally {
-        setLoading(false);
+        setIsLoading(false);
       }
     };
-
-    if (id) fetchBlog();
-    else {
-      setError("❌ Nieprawidłowy format tytułu.");
-      setLoading(false);
-    }
+    fetchPost();
   }, [id]);
 
-  // Funkcja do wybrania treści w zależności od języka
-  const getContent = (blog) => {
-    return i18n.language === "en" ? blog.contentEng || "No content available" : blog.content || "Brak treści";
-  };
-
-  // Funkcja do wybrania tytułu w zależności od języka
-  const getTitle = (blog) => {
-    return i18n.language === "en" ? blog.titleEng || "No title" : blog.title || "Brak tytułu";
-  };
-
-  // Pobranie listy wszystkich blogów
   useEffect(() => {
-    const fetchBlogs = async () => {
+    const fetchPosts = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
-        setBlogs(response.data);
-      } catch (err) {
-        console.error("❌ Błąd pobierania listy blogów:", err);
-      }
+        setPosts(response.data);
+      } catch {}
     };
-
-    fetchBlogs();
+    fetchPosts();
   }, []);
 
-  // Sprawdzanie statusu zalogowania użytkownika przez Firebase Auth
-  useEffect(() => {
-    const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsAuthenticated(!!user); // Jeśli user istnieje, oznacza to, że jest zalogowany
-    });
+  if (isLoading) {
+    return (
+      <div className="min-h-screen ">
+        <div className="container max-w-4xl mx-auto px-4 py-32">
+          <div className="h-12 w-3/4 mb-4 bg-gray-800 animate-pulse" />
+          <div className="h-6 w-1/2 mb-8 bg-gray-800 animate-pulse" />
+          <div className="h-[400px] w-full mb-8 bg-gray-800 animate-pulse" />
+          <div className="space-y-4">
+            <div className="h-6 w-full bg-gray-800 animate-pulse" />
+            <div className="h-6 w-full bg-gray-800 animate-pulse" />
+            <div className="h-6 w-3/4 bg-gray-800 animate-pulse" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-    return () => unsubscribe(); // Cleanup funkcji
-  }, []);
+  if (!post) {
+    return (
+      <div className="min-h-screen ">
+        <Header2 />
+        <div className="container max-w-4xl mx-auto px-4 py-32 text-center text-gray-400">
+          <p className="text-xl mb-4">Nie znaleziono posta o podanym adresie URL lub nie jest on opublikowany.</p>
+        </div>
+        <Footer2 />
+      </div>
+    );
+  }
 
-  // Funkcja udostępniania
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: blog.title,
-        text: blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC",
-        url: window.location.href,
-      })
-      .then(() => console.log('Udostępniono!'))
-      .catch((error) => console.log('Błąd przy udostępnianiu', error));
-    } else {
-      alert('Udostępnianie nie jest obsługiwane przez tę przeglądarkę');
-    }
-  };
-
-  if (loading) return <div className="loading-blogs">
-  ⏳{t('16')}
-  <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
-<defs>
-  <clipPath id="pencil-eraser">
-    <rect height="30" width="30" ry="5" rx="5"></rect>
-  </clipPath>
-</defs>
-<circle transform="rotate(-113,100,100)" stroke-linecap="round" stroke-dashoffset="439.82" stroke-dasharray="439.82 439.82" stroke-width="2" stroke="currentColor" fill="none" r="70" class="pencil__stroke"></circle>
-<g transform="translate(100,100)" class="pencil__rotate">
-  <g fill="none">
-    <circle transform="rotate(-90)" stroke-dashoffset="402" stroke-dasharray="402.12 402.12" stroke-width="30" stroke="hsl(223,90%,50%)" r="64" class="pencil__body1"></circle>
-    <circle transform="rotate(-90)" stroke-dashoffset="465" stroke-dasharray="464.96 464.96" stroke-width="10" stroke="hsl(223,90%,60%)" r="74" class="pencil__body2"></circle>
-    <circle transform="rotate(-90)" stroke-dashoffset="339" stroke-dasharray="339.29 339.29" stroke-width="10" stroke="hsl(223,90%,40%)" r="54" class="pencil__body3"></circle>
-  </g>
-  <g transform="rotate(-90) translate(49,0)" class="pencil__eraser">
-    <g class="pencil__eraser-skew">
-      <rect height="30" width="30" ry="5" rx="5" fill="hsl(223,90%,70%)"></rect>
-      <rect clip-path="url(#pencil-eraser)" height="30" width="5" fill="hsl(223,90%,60%)"></rect>
-      <rect height="20" width="30" fill="hsl(223,10%,90%)"></rect>
-      <rect height="20" width="15" fill="hsl(223,10%,70%)"></rect>
-      <rect height="20" width="5" fill="hsl(223,10%,80%)"></rect>
-      <rect height="2" width="30" y="6" fill="hsla(223,10%,10%,0.2)"></rect>
-      <rect height="2" width="30" y="13" fill="hsla(223,10%,10%,0.2)"></rect>
-    </g>
-  </g>
-  <g transform="rotate(-90) translate(49,-30)" class="pencil__point">
-    <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)"></polygon>
-    <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)"></polygon>
-    <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)"></polygon>
-  </g>
-</g>
-</svg>
-  </div>;
-  if (error) return <div className="text-center text-red-500">{error}</div>;
-  if (!blog) return <div className="text-center text-gray-400">🙁 Post nie istnieje</div>;
+  const filteredPosts = posts.filter(p => p._id !== post._id);
+  const paginatedPosts = filteredPosts.slice(relatedPage * postsPerPage, (relatedPage + 1) * postsPerPage);
+  const hasMoreRelated = (relatedPage + 1) * postsPerPage < filteredPosts.length;
 
   return (
-    <>
-      {/* Dynamiczne ustawienie meta title */}
+    <div className="min-h-screen ">
       <Helmet>
-        <title>{getTitle(blog) ? `${getTitle(blog)} | AODC Blog` : "AODC Blog"}</title> {/* Zmieniony tytuł */}
-        <meta name="description" content={getContent(blog) ? getContent(blog).substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
+        <title>{post?.title ? `${post.title} | AODC Blog` : 'Blog Post | AODC'}</title>
+        <meta name="description" content="Szczegóły wpisu na blogu AODC – web development, SEO, tworzenie stron internetowych, sklepy online." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://aodc.pl/blog/${id}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt || ''} />
+        {post.image && <meta property="og:image" content={post.image} />}
       </Helmet>
-
-      <Header2 />
-      <div className="bluur"></div>
-      <div className="bluur2"></div>
-
-      {/* Nagłówek z dużym obrazem */}
-      <div className="blog-header">
-        <div className="blog-header-title">
-            <h1 className="blog-title animate__animated animate__backInDown">{getTitle(blog)}</h1> {/* Zmieniony tytuł */}
-            <div className="blog-meta">
-              <span>📅 {t('13')}  {new Date(blog.createdAt).toLocaleDateString()}</span>
-            </div>
-        </div>
-      </div>
-
-      {/* Główna treść + Sidebar */}
-      <div className="blog-detail">
-        <div className="blog-content-container">
-        <nav class="flex" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                  <li class="inline-flex items-center">
-                    <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                      <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
-                      </svg>
-                      {t('Header1')}
-                    </a>
-                  </li>
-                  <li>
-                    <div class="flex items-center">
-                      <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                      </svg>
-                      <a href="/Blog" class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Blog</a>
-                    </div>
-                  </li>
-                </ol>
-               </nav>
-               <div className="blog-content">
-           <div className="blog-content-buttons-con">
-              <div className="edit-post-back">
-                  <Link to="/Blog">
-                    <img src="/assets/back.png" alt="back"/>
-                  </Link>
-              </div>
-               {/* Wyświetlanie przycisków tylko dla zalogowanych użytkowników */}
-              {isAuthenticated && (
-                <div className="blog-content-adminbuttons">
-                    <Link to={`/AdminPanel/edit/${blog._id}`} className="edit-btn">
-                      <FaEdit /> Edytuj
-                   </Link>
-                    <Link to={`/AdminPanel`} className="edit-btn">
-                    <FaHome /> Panel
-                   </Link>
+      <div className="pt-32 pb-20">
+        <div className="mx-auto max-w-5xl px-4 flex flex-col gap-10">
+          <div className="w-full">
+            <header className="mb-10">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
+              <div className="flex flex-wrap items-center gap-4 text-gray-400 mb-6">
+                <div className="flex items-center">
+                  <span className="mr-2">📅</span>
+                  <span>{post.createdAt ? new Date(post.createdAt).toLocaleDateString() : ''}</span>
                 </div>
-              )}
-              {/* Ikona udostępniania */}
-              <div className="share-button">
-                <button onClick={handleShare}>
-                  <FaShareAlt /> 
-                </button>
               </div>
+            </header>
+            {post.image && (
+              <div className="mb-10">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-auto rounded-lg object-cover max-h-[500px]"
+                  onError={e => { e.target.src = '/assets/noimage.png'; }}
+                />
+              </div>
+            )}
+            {/* Spis treści */}
+            {tableOfContents.length > 0 && (
+              <section className="mb-10 toc-section">
+                <div className="mt-10 blog-bg border rounded-lg p-6">
+                  <h2 className="text-lg font-bold mb-2">Z tego artykułu dowiesz się:</h2>
+                  <ul className="list-disc pl-6">
+                    {tableOfContents.map(heading => (
+                      <li key={heading.id}>
+                        <a href={`#${heading.id}`} className="text-blue-400 hover:underline">{heading.text}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            )}
+            <article className="prose prose-invert max-w-none mb-10">
+              <div dangerouslySetInnerHTML={{ __html: formattedContent || post.content }} />
+            </article>
           </div>
-          <img className="blog-detail-image" src={blog.image || "/assets/noimage.png"} alt={blog.title} />
-          <p dangerouslySetInnerHTML={{ __html: getContent(blog) }}></p>
         </div>
-        </div>
-
-        <aside className="sidebar">
-  <h2 className="sidebar-title">{t('17')}</h2>
-  <div className="post-list">
-    {blogs
-      .filter((item) => item._id !== blog._id) // Filtrujemy, aby nie pokazać bieżącego wpisu
-      .map((item) => (
-        <Link key={item._id} to={`/blog/${encodeURIComponent(item.title.replace(/\s+/g, '-'))}`} className="post-item">
-          <img
-            src={item.image || "/assets/noimage.png"}
-            alt={item.title}
-            className="post-thumbnail"
-            onError={(e) => (e.target.src = "/assets/noimage.png")}
-          />
-          <div className="sidebar-posts-details">
-          <h3 className="post-item-title">{getTitle(item)}</h3> {/* Zmieniony tytuł */}
-            <span className="post-date">📅 {new Date(item.createdAt).toLocaleDateString()}</span>
-          </div>
-        </Link>
-      ))}
-  </div>
-</aside>
+        {/* Powiązane artykuły - paginacja */}
+        {paginatedPosts && paginatedPosts.length > 0 && (
+          <section className="mt-16 mx-auto max-w-3xl w-full">
+            <h2 className="text-xl font-bold mb-6">Powiązane artykuły</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 justify-center">
+              {paginatedPosts.map((rp) => (
+                <a
+                  key={rp._id}
+                  href={`/blog/${encodeURIComponent(rp.title.replace(/\s+/g, '-'))}`}
+                  className="rounded-2xl flex flex-col items-center p-4 transition hover:scale-105 hover:shadow-xl duration-200 mx-auto md:mx-0"
+                >
+                  {rp.image && (
+                    <img
+                      src={rp.image}
+                      alt={rp.title}
+                      className="rounded-xl w-full h-32 object-cover mb-3"
+                      onError={e => { e.target.src = '/assets/noimage.png'; }}
+                    />
+                  )}
+                  <div className="font-semibold text-lg text-center mb-2 line-clamp-2">{rp.title}</div>
+                  <div className="text-sm text-gray-400 text-center mb-2">
+                    {rp.excerpt && rp.excerpt.length > 100
+                      ? rp.excerpt.slice(0, 100).replace(/\s+\S*$/, '') + '...'
+                      : rp.excerpt}
+                  </div>
+                </a>
+              ))}
+            </div>
+            {hasMoreRelated && (
+              <div className="flex justify-center">
+                <button onClick={() => setRelatedPage(relatedPage + 1)} className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-3">Załaduj więcej</button>
+              </div>
+            )}
+          </section>
+        )}
       </div>
-
-      <Footer2 />
-    </>
+    </div>
   );
 };
 
