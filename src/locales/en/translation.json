@@ -1,4 +1,3 @@
-
 {
   "Welcome to React": "Art of data center",
   "for data center": "",
@@ -98,7 +97,7 @@
     "Header3.5.12.2": "Security and Mobility",
     "Header3.5.12.1": "Advanced security systems protect your data from digital and physical threats, while the solution also enables easy transport in emergency situations.",
     "Header3.5.13": "Our Implementation Process",
-    "Header3.5.14": "We begin with a detailed analysis of your company’s needs, based on which we develop a dedicated project, including requirements for cooling, security, and redundancy. After project approval, we proceed with deployment, focusing on system configuration and integration, and conduct comprehensive tests to ensure optimal performance and security. We support the entire process with professional support and maintenance to ensure your IT infrastructure operates seamlessly.",
+    "Header3.5.14": "We begin with a detailed analysis of your company's needs, based on which we develop a dedicated project, including requirements for cooling, security, and redundancy. After project approval, we proceed with deployment, focusing on system configuration and integration, and conduct comprehensive tests to ensure optimal performance and security. We support the entire process with professional support and maintenance to ensure your IT infrastructure operates seamlessly.",
     "Header3.5.15": "Contact Us",
     "Header3.5.16": "If you're looking for a flexible and reliable data center that perfectly fits the needs of your business, we invite you to get in touch. Fill out the inquiry form, and our experts will present a detailed proposal tailored to your requirements.",
     "Header3.5.17": "Video Presentation",
@@ -198,7 +197,7 @@
   "title12.2": "Home Page",
   "title13": "← Swipe →",
   "politykadesc": "The Privacy Policy describes the principles of processing information about you, including personal data and cookies, also known as cookies.",
-  "politykadesc1": "1. This policy pertains to the website operating under the URL: aodc.pl. The operator of the website and the Data Controller is: AODC SP. Z O.O. Ul. Działkowa 37, 02-234 Warsaw, Poland. Contact email address of the operator: rodo@aodc.pl. The operator is the Data Controller of your personal data with regard to data voluntarily provided on the website. The website uses personal data for the following purposes: Handling inquiries via the contact form, Presenting an offer or information. The website performs functions to gather information about users and their behavior in the following ways: Through voluntarily entered data in forms, which are entered into the operator’s systems. By saving cookies on end devices.",
+  "politykadesc1": "1. This policy pertains to the website operating under the URL: aodc.pl. The operator of the website and the Data Controller is: AODC SP. Z O.O. Ul. Działkowa 37, 02-234 Warsaw, Poland. Contact email address of the operator: rodo@aodc.pl. The operator is the Data Controller of your personal data with regard to data voluntarily provided on the website. The website uses personal data for the following purposes: Handling inquiries via the contact form, Presenting an offer or information. The website performs functions to gather information about users and their behavior in the following ways: Through voluntarily entered data in forms, which are entered into the operator's systems. By saving cookies on end devices.",
   "politykadesc2": "2. Login and personal data entry areas are protected at the transmission layer (SSL certificate). This ensures that personal data and login information entered on the site are encrypted on the user's computer and can only be read on the target server. Personal data stored in the database are encrypted in such a way that only the Operator, who possesses the key, can read them. This ensures data protection in case the database is stolen from the server. The Operator periodically changes its administrative passwords. A crucial element of data protection is the regular updating of all software used by the Operator for processing personal data, which particularly includes regular updates of software components.",
   "politykadesc3": "3. The website is hosted (technically maintained) on the operator's servers: smarthost.pl. The hosting company, to ensure technical reliability, keeps logs at the server level. The logs may include: resources specified by URL identifier (addresses of requested resources – pages, files), time of the request, time of the response, the client's station name – identification carried out by the HTTP protocol, information about errors that occurred during the HTTP transaction, the URL address of the page previously visited by the user (referrer link) – in case the transition to the website was made through a link, information about the user's browser, IP address information, diagnostic information related to the self-ordering process through the recorders on the website, information related to the handling of email directed to and sent by the Operator.",
   "politykadesc4": "4. Your Rights and Additional Information on Data Usage: In certain situations, the Administrator has the right to transfer your personal data to other recipients if it is necessary to perform the contract concluded with you or to fulfill obligations imposed on the Administrator. This applies to the following groups of recipients: authorized employees and associates who use the data to achieve the purpose of the website's operation. Your personal data processed by the Administrator are not stored longer than necessary to perform the related activities specified by separate regulations (e.g., accounting regulations). Regarding marketing data, they will not be processed for more than 3 years. You have the right to request from the Administrator: access to your personal data, rectification, deletion, restriction of processing, and data portability. You have the right to object to the processing specified in point 3.2 regarding the processing of personal data for the purpose of legitimate interests pursued by the Administrator, including profiling, provided that the objection cannot be executed if there are valid, legitimate grounds for processing that override your interests, rights, and freedoms, particularly the establishment, exercise, or defense of legal claims. You have the right to lodge a complaint regarding the Administrator's actions with the President of the Personal Data Protection Office, ul. Stawki 2, 00-193 Warsaw. Providing personal data is voluntary but necessary for the service operation. Automated decision-making, including profiling, may be performed in relation to you for the purpose of providing services under the concluded agreement and for the Administrator's direct marketing. Personal data are not transferred to third countries within the meaning of data protection regulations. This means that we do not send them outside the European Union.",
@@ -223,6 +222,18 @@
   "16": "Loading blog..",
   "17": "Other entries",
   "18": "Loading blogs",
-  "19": "No blogs to show."
-
+  "19": "No blogs to show.",
+  "loading": "Loading...",
+  "noPosts": "No posts to display.",
+  "blogLoadError": "Failed to load blogs. Please try again later.",
+  "otherPosts": "Other posts",
+  "blogReload": "Reload page",
+  "blogWaitForNew": "Check back later for new articles.",
+  "noDescription": "No description",
+  "noContent": "No content available",
+  "noTitle": "No title",
+  "blogNotFound": "Post not found or not published.",
+  "share": "Share",
+  "loadMore": "Load more",
+  "minRead": "{{count}} min read"
 }

@@ -2,8 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
+import { withNamespaces } from 'react-i18next';
 
-const Blog = () => {
+// Importuj Button i Skeleton z odpowiedniej ścieżki (dostosuj jeśli masz inną strukturę)
+import { Button } from '../ui/button';
+import { Skeleton } from '../ui/skeleton';
+// Importuj ikonę Calendar (np. z lucide-react)
+import { Calendar } from 'lucide-react';
+
+// Prosta funkcja do formatowania daty (możesz podmienić na własną)
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('pl-PL', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+
+const Blog = ({ t, i18n }) => {
   const [posts, setPosts] = useState([]);
   const [isLoadingPosts, setIsLoadingPosts] = useState(true);
   const [error, setError] = useState(null);
@@ -18,15 +35,16 @@ const Blog = () => {
       setIsLoadingPosts(true);
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
+        console.log('API /api/blogs response:', response.data);
         setPosts(response.data);
       } catch (err) {
-        setError('Wystąpił błąd podczas ładowania postów.');
+        setError(t('blogLoadError'));
       } finally {
         setIsLoadingPosts(false);
       }
     };
     fetchPosts();
-  }, []);
+  }, [t]);
 
   const handlePostClick = (slug) => {
     navigate(`/blog/${slug}`);
@@ -36,16 +54,16 @@ const Blog = () => {
     <div className="">
       <Helmet>
         <title>AODC - Blog</title>
-        <meta name="description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        <meta name="description" content={t('12')} />
         {/* Open Graph */}
         <meta property="og:title" content="AODC - Blog" />
-        <meta property="og:description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        <meta property="og:description" content={t('12')} />
         <meta property="og:image" content="https://aodc.pl/banner.png" />
         <meta property="og:url" content="https://aodc.pl/blog" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AODC - Blog" />
-        <meta name="twitter:description" content="Najnowsze informacje, porady i trendy ze świata IT." />
+        <meta name="twitter:description" content={t('12')} />
         <meta name="twitter:image" content="https://aodc.pl/banner.png" />
         {/* Robots */}
         <meta name="robots" content="index, follow" />
@@ -53,67 +71,72 @@ const Blog = () => {
         <link rel="canonical" href="https://aodc.pl/blog" />
       </Helmet>
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white mt-8">Blog.</h1>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-          Najnowsze informacje, porady i trendy ze świata IT.
-        </p>
         <section className="pb-24">
-          {isLoadingPosts ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="flex flex-col">
-                  <div className="h-52 w-full rounded-xl mb-4 bg-gray-800 animate-pulse" />
-                  <div className="h-4 w-24 mb-2 bg-gray-800 animate-pulse" />
-                  <div className="h-6 w-full mb-2 bg-gray-800 animate-pulse" />
-                  <div className="h-4 w-3/4 bg-gray-800 animate-pulse" />
-                </div>
-              ))}
-            </div>
-          ) : error ? (
-            <div className="text-center text-gray-400 py-12">
-              <p className="text-xl mb-4">{error}</p>
-              <p className="mb-4">Spróbuj odświeżyć stronę lub sprawdź połączenie internetowe.</p>
-              <button onClick={() => window.location.reload()} className="px-4 py-2 rounded bg-gray-700 text-white">Odśwież stronę</button>
-            </div>
-          ) : posts && posts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.filter(post => post.published !== false).map((post) => (
-                <article
-                  key={post._id}
-                  className="group bg-[#181836] cursor-pointer flex flex-col rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
-                  onClick={() => handlePostClick(encodeURIComponent(post.title.replace(/\s+/g, '-')))}
-                >
-                  <div className="block overflow-hidden rounded-t-xl">
-                    <img
-                      src={post.image || '/assets/noimage.png'}
-                      alt={post.title}
-                      className="w-full h-56 object-cover rounded-t-xl"
-                      onError={e => { e.target.src = '/assets/noimage.png'; }}
-                    />
+          <div className="container mx-auto px-4">
+            {isLoadingPosts ? (
+              <div className="grid lg:grid-cols-3 gap-8">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="flex flex-col">
+                    <Skeleton className="h-52 w-full rounded-xl mb-4" />
+                    <Skeleton className="h-4 w-24 mb-2" />
+                    <Skeleton className="h-6 w-full mb-2" />
+                    <Skeleton className="h-4 w-3/4" />
                   </div>
-                  <div className="flex items-center text-sm text-gray-400 pt-4 mb-2 px-4">
-                    <span className="mr-1">📅</span>
-                    {post.createdAt ? new Date(post.createdAt).toLocaleDateString() : ''}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-left px-4 text-white group-hover:text-blue-400 group-hover:underline transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 line-clamp-2 text-left px-4">
-                    {post.excerpt || post.summary || 'Brak opisu'}
-                  </p>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center text-gray-400 py-12">
-              <p className="text-xl mb-4">Brak postów do wyświetlenia.</p>
-              <p>Wróć później, gdy pojawią się nowe artykuły.</p>
-            </div>
-          )}
+                ))}
+              </div>
+            ) : error ? (
+              <div className="text-center text-gray-400 py-12">
+                <p className="text-xl mb-4">{error}</p>
+                <p className="mb-4">{t('blogLoadError')}</p>
+                <Button onClick={() => window.location.reload()} variant="outline">{t('blogReload')}</Button>
+              </div>
+            ) : posts && posts.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts.map((post) => (
+                  <article 
+                    key={post._id} 
+                    className="group bg-transparent cursor-pointer"
+                    onClick={() => handlePostClick(post.title.replace(/\s+/g, '-'))}
+                  >
+                    <div className="block overflow-hidden rounded-2xl mb-4">
+                      <img 
+                        src={post.image || '/placeholder.svg'} 
+                        alt={i18n.language === 'en' ? (post.titleEng || post.title) : post.title} 
+                        className="w-full blog-image object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          e.target.src = '/placeholder.svg';
+                        }}
+                      />
+                    </div>
+                    
+                    <div className="flex items-center text-sm text-gray-400 mb-2">
+                      <Calendar size={14} className="mr-1" />
+                      {formatDate(post.createdAt)}
+                    </div>
+                    
+                    <h3 className="text-xl blog-title font-semibold mb-2 group-hover:text-premium-purple group-hover:underline transition-colors">
+                      {i18n.language === 'en' ? (post.titleEng || post.title) : post.title}
+                    </h3>
+                    
+                    <p className="text-gray-400 mb-3 line-clamp-2">
+                      {i18n.language === 'en'
+                        ? (post.excerptEng || post.summaryEng || (post.contentEng ? post.contentEng.replace(/<[^>]+>/g, '').slice(0, 150) + '...' : t('noDescription')))
+                        : (post.excerpt || post.summary || (post.content ? post.content.replace(/<[^>]+>/g, '').slice(0, 150) + '...' : t('noDescription')))}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center text-gray-400 py-12">
+                <p className="text-xl mb-4">{t('noPosts')}</p>
+                <p>{t('blogWaitForNew')}</p>
+              </div>
+            )}
+          </div>
         </section>
       </div>
     </div>
   );
 };
 
-export default Blog;
+export default withNamespaces()(Blog);

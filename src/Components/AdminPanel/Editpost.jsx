@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react";
-import Header2 from "../Header/Header2";
-import Footer2 from "../Footer/Footer2";
 import { Link } from "react-router-dom";
 
 const EditPost = () => {
@@ -109,7 +107,6 @@ const EditPost = () => {
 
   return (
     <>
-      <Header2 />
       <div className="jm-video-area">
         <div className="bluur"></div>
         <div className="bluur2"></div>
@@ -121,7 +118,7 @@ const EditPost = () => {
           </div>
         </div>
       </div>
-      <div className="admin-panel-container">
+      <div className="admin-panel-container" style={{ minHeight: '100vh', paddingBottom: '80px' }}>
         <div className="admin-panel">
           <div className="edit-post-title">
             <div className="edit-post-back">
@@ -228,7 +225,6 @@ const EditPost = () => {
           )}
         </div>
       </div>
-      <Footer2 />
     </>
   );
 };

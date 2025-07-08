@@ -1,9 +1,12 @@
 import React from 'react'
 import Contact from '../Components/Contact/Contact'
+import SidePanel from '../Components/Side Panel/SidePanel'
 
 const ContactPage = () => {
   return (
-    <Contact/>
+    <div>
+      <Contact/>
+    </div>
   )
 }
 

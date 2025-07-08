@@ -5,7 +5,7 @@ import SecondTab from "./SecondTab";
 import ThirdTab from "./ThirdTab";
 import FourthTab from "./FourthTab";
 import FifthTab from "./FifthTab"; 
-
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 function Cards({ t }) {
   const [activeTab, setActiveTab] = useState("tab1");
 

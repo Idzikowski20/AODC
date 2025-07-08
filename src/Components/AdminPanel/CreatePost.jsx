@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react"; // Import TinyMCE
-import Header2 from "../Header/Header2";
 import { Link } from "react-router-dom";
 
 const CreatePost = () => {
@@ -69,7 +68,6 @@ const CreatePost = () => {
 
   return (
     <>
-      <Header2 />
       <div className="jm-video-area">
         <div className="bluur"></div>
         <div className="bluur2"></div>

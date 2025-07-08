@@ -235,5 +235,20 @@
     "Kariera": "Kariera",
     "Realizacje": "Realizacje",
     "Blog": "Blog",
-    "Kontakt": "Kontakt"
+    "Kontakt": "Kontakt",
+    "blogMainTitle": "Blog AODC",
+    "readMore": "Czytaj więcej",
+    "otherPosts": "Inne wpisy",
+    "loading": "Ładowanie...",
+    "noPosts": "Brak postów do wyświetlenia",
+    "blogLoadError": "Nie udało się pobrać blogów. Spróbuj ponownie później.",
+    "blogReload": "Odśwież stronę",
+    "blogWaitForNew": "Wróć później, gdy pojawią się nowe artykuły.",
+    "noDescription": "Brak opisu",
+    "noContent": "Brak treści",
+    "noTitle": "Brak tytułu",
+    "blogNotFound": "Nie znaleziono posta o podanym adresie URL lub nie jest on opublikowany.",
+    "share": "Udostępnij",
+    "loadMore": "Załaduj więcej",
+    "minRead": "{{count}} min czytania"
 }
