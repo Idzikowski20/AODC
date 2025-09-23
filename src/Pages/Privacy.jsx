@@ -8,10 +8,7 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const Privacy = () => {
   return (
     <>
-        <Header2 />
-    <SidePanel />
     <PrivacyMain />
-    <Footer2 />
     </>
   )
 }

@@ -7,10 +7,7 @@ import Header2 from "../Components/Header/Header2";
 const ContenerDataCenterPage = () => {
   return (
     <div>
-        <Header2/>
-        <SidePanel />
       <ContenerDataCenter/>
-         <Footer2/>
     </div>
   )
 }

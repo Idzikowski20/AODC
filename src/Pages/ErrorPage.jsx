@@ -6,10 +6,7 @@ import Footer2 from '../Components/Footer/Footer2';
 const ErrorPage = () => {
   return (
     <>
-        <SidePanel/>
-        <Header2/>
         <ErrorMain/>
-        <Footer2/>
     </>
   )
 }

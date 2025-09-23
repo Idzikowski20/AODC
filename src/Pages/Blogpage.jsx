@@ -5,7 +5,6 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const Blogpage = () => {
   return (
     <div>
-          <SidePanel />
       <Blog />
     </div>
   )

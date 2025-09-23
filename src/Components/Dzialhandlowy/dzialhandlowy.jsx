@@ -11,8 +11,6 @@ function dzialhandlowy({ t }) {
     <>
     <div className="jm-server-area">
       <div className="container-fluid p-0">
-      <div className='bluur'></div>
-      <div className='bluur2'></div>
         <div className="jm-datacenter-wrap bg-default">
           <div className='content'>
             <div className='contact-content-title'>

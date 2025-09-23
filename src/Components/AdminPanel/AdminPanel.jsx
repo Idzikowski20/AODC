@@ -74,8 +74,6 @@ const AdminPanel = () => {
 
   return (
     <div className="admin-container">
-      <div className="bluur"></div>
-      <div className="bluur2"></div>
       <div className="admin-content">
         <header>
           <h1 className="admin-panel-title">Panel Administracyjny</h1>

@@ -65,12 +65,9 @@ const MetaTags = () => {
 };
 
 function App() {
-  console.log("Firebase auth:", auth);
-
   return (
     <HelmetProvider>
       <img className="herobg" src="/assets/herobg.png" alt="background" />
-      <PreLoader />
         <Router>
         <MetaTags />
         <Routes>

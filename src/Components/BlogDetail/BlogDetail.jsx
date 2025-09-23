@@ -122,11 +122,6 @@ function BlogDetail ({ t }) {
         <title>{blog.title ? `${blog.title} | AODC Blog` : "AODC Blog"}</title>
         <meta name="description" content={blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
       </Helmet>
-
-      <Header2 />
-      <div className="bluur"></div>
-      <div className="bluur2"></div>
-
       {/* Nagłówek z dużym obrazem */}
       <div className="blog-header">
         <div className="blog-header-title">
@@ -213,11 +208,8 @@ function BlogDetail ({ t }) {
       ))}
   </div>
 </aside>
-
-
       </div>
 
-      <Footer2 />
     </>
   );
 };

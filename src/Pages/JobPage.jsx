@@ -9,10 +9,7 @@ import JobPageMain from '../Components/JobPageMain/JobPageMain'
 const JobMain = () => {
   return (
     <>
-    <Header2 />
-    <SidePanel />
     <JobPageMain />
-  <Footer2 />
     </>
   )
 }

@@ -8,8 +8,6 @@ function HomePageConstructionDataCenter({ t }) {
   return (
     <>
       <div className="jm-video-area">
-      <div className='bluur'></div>
-      <div className='bluur2'></div>
         <div className="container-fluid p-0">
           <div className="jm-building-wrap bg-default">
             <div className='content'>

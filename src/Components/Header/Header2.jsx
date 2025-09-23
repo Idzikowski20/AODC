@@ -46,7 +46,7 @@ function Header2 ({ t }) {
                                     <nav className="jm-mobile-menu" id="jm-mobile-menu">
                                         <ol>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#home")}>
-                                                <Link to="/"><FaHome /> {t('Header1')}</Link>
+                                                <Link to="/">{t('Header1')}</Link>
                                             </li>
                                             <li className="menu-has-children" onClick={() => window.location.replace("/#aboutus")}>
                                                 <Link to="/">{t('Header2')}</Link>

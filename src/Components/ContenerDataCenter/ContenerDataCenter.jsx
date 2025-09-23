@@ -52,8 +52,6 @@ function ContenerDataCenter({ t }) {
   return (
     <div className="jm-server-area">
       <div className="container-fluid p-0">
-      <div className='bluur'></div>
-      <div className='bluur2'></div>
         <div className="jm-datacenter-wrap bg-default">
           <div className='content'>
             <h1 className='animate__animated animate__backInDown'>{t('Header3.5')}</h1> 

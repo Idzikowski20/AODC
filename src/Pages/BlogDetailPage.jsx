@@ -4,7 +4,6 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const BlogDetailPage = () => {
   return (
     <div>
-        <SidePanel/>
       <BlogDetail/>
     </div>
   )

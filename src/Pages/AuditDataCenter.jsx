@@ -7,10 +7,7 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const AuditDataCenter = () => {
   return (
     <>
-    <Header2/>
-    <SidePanel />
     <AuditDataCenterPage/>
-    <Footer2/>
 </>
   )
 }

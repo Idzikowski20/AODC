@@ -7,10 +7,7 @@ import Footer2 from '../Components/Footer/Footer2'
 const LoginPage = () => {
   return (
     <div>
-        <Header2/>
-        <SidePanel/>
       <Login/>
-      <Footer2/>
     </div>
   )
 }

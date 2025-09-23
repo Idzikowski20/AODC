@@ -10,8 +10,6 @@ import Footer2 from "../Components/Footer/Footer2";
 const DashboardPage = () => {
   return (
     <>
-    <Header2/>
-    <SidePanel/>
       <div className="flex h-screen">
         <div className="w-full flex flex-col flex-1">
           <main className="p-6">

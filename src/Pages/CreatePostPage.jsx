@@ -5,9 +5,7 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const CreatePostPage = () => {
   return (
     <div>
-      <SidePanel />
       <CreatePost />
-      <Footer2/>
     </div>
   )
 }

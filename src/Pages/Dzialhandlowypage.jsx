@@ -7,10 +7,7 @@ import Header2 from "../Components/Header/Header2";
 const DzialhandlowyPage = () => {
   return (
     <div>
-        <Header2/>
-        <SidePanel />
       <Dzialhandlowy/>
-         <Footer2/>
     </div>
   )
 }

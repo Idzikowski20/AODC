@@ -5,7 +5,6 @@ function WorkArea({ t }) {
   return (
     <section>
         <h2>{t('title5')}</h2>
-        <div className='bluur'></div>
         <div className="">
             <div className="display-flex row align-items-center">
                 <div className="col-xl-9 width-100">

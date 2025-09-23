@@ -6,9 +6,7 @@ import Footer2 from '../Components/Footer/Footer2';
 const HomePage2 = () => {
   return (
     <>
-    <Header2/>
     <HomePageMain2/>
-    <Footer2/>
 </>
   )
 }

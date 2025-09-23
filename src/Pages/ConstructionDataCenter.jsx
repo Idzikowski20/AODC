@@ -7,10 +7,7 @@ import SidePanel from '../Components/Side Panel/SidePanel'
 const ConstructionDataCenter = () => {
   return (
     <>
-    <Header2/>
-    <SidePanel />
     <ConstructionDataCenterPage/>
-    <Footer2/>
 </>
   )
 }
