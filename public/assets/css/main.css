@@ -5,7 +5,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   --tw-bg-opacity: 1;
-  background: #04122c;
+  background: #050815;
   font-family: "Nunito", sans-serif !important;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -2927,6 +2927,11 @@ ol > li:hover > ul {
   background-color: var(--clr-common-white);
 }
 
+/* Aktywny stan hamburger menu - tylko zmiana koloru */
+.jm-navbar-mobile-sign.active span {
+  background-color: var(--clr-theme-primary) !important;
+}
+
 .img-animation-rotate {
   margin: auto;
   animation: mymove 5s infinite;
@@ -3242,20 +3247,28 @@ font-weight: bold;
   transition: transform 250ms;
 }
 
-.jm-header-logo .jm-logo img:hover {
-  max-width: 180px;
-  display: inline-block;
-  transform: scale(1.2)
-}
+/* Usunięto hover effect dla logo */
 
 @media (max-width: 767px) {
   .jm-header-logo .jm-logo img {
     max-width: 140px;
   }
+  
+  /* Wyłącz hover i focus dla logo w wersji mobilnej */
+  .jm-header-logo .jm-logo img:hover,
+  .jm-header-logo .jm-logo img:focus {
+    transform: none !important;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .jm-header-logo .jm-logo img {
     max-width: 140px;
+  }
+  
+  /* Wyłącz hover i focus dla logo w wersji mobilnej */
+  .jm-header-logo .jm-logo img:hover,
+  .jm-header-logo .jm-logo img:focus {
+    transform: none !important;
   }
 }
 
@@ -4450,11 +4463,11 @@ font-weight: bold;
 *************************************************************** */
 .side-info {
   backdrop-filter: blur(10px);
-  max-width: 400px;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 999;
+  display: none; /* Ukryj domyślnie */
   top: 0;
   right: -400px;
   transition: 0.4s;
@@ -4466,6 +4479,21 @@ font-weight: bold;
   right: 0;
   overflow-y: hidden;
   scrollbar-width: thin;
+}
+
+/* Pokaż SidePanel tylko na mobile i tylko gdy jest otwarty */
+@media (max-width: 991px) {
+  .side-info.info-open {
+    display: block;
+  }
+  
+  .offcanvas-overlay {
+    display: block;
+  }
+  
+  .offcanvas-overlay.overlay-open {
+    display: block;
+  }
 }
 
 .offcanvas-overlay {
@@ -4480,6 +4508,7 @@ font-weight: bold;
   opacity: 0;
   visibility: hidden;
   transition: 0.4s;
+  display: none; /* Ukryj domyślnie */
 }
 
 .offcanvas-overlay:is(.overlay-open) {
@@ -12132,7 +12161,6 @@ width: 85% !important;
   justify-content: center;
   align-items: center;
   padding-bottom: 0;
-  transform: scale(1.2);
 }
 
 .team-servers-container {
@@ -15078,7 +15106,7 @@ input, textarea {
   border-radius: 6px;
   box-sizing: border-box;
   border: 1px solid hsla(var(--fc-primary-hsl));
-  background-color: hsla(var(--fc-primary-hsl));
+  background-color: hsl(353.73deg 60.96% 49.22%);
   color: #fff;
   cursor: pointer;
 }
@@ -15096,7 +15124,6 @@ input, textarea {
   border: 0;
   border-radius: 40px;
   box-sizing: border-box;
-  background-color: hsl(0deg 0% 0%);
   color: #fff;
   cursor: pointer;
   box-shadow: 0 0 0 0 transparent;
@@ -15104,7 +15131,7 @@ input, textarea {
 }
 
 .formcarry-container button:hover {
-  background-color: hsl(216deg 94.96% 12.6%);
+  background-color: #ff5264;
 }
 
 .formcarry-container button:focus {

@@ -18,40 +18,63 @@ function BlogDetail ({ t }) {
   const [error, setError] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Pobieranie szczegółów posta
+  // Pobieranie wszystkich blogów i znajdowanie konkretnego posta
   useEffect(() => {
-    const fetchBlog = async () => {
+    const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`);
-        setBlog(response.data);
+        console.log("🔍 Próba pobrania blogów...");
+        const response = await axios.get(`https://blog-backend-aodc.vercel.app/api/blogs`, {
+          timeout: 10000, // 10 sekund timeout
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
+        console.log("✅ Odpowiedź z API:", response.data);
+        
+        if (response.data && Array.isArray(response.data)) {
+          // Ustaw wszystkie blogi dla sidebara
+          setBlogs(response.data);
+          
+          // Znajdź post o konkretnym ID
+          if (id) {
+            const foundBlog = response.data.find(blog => blog._id === id);
+            if (foundBlog) {
+              setBlog(foundBlog);
+            } else {
+              setError("❌ Post o podanym ID nie istnieje.");
+            }
+          }
+        } else {
+          setError("❌ Nieprawidłowy format danych z API.");
+        }
       } catch (err) {
-        console.error("❌ Błąd pobierania posta:", err?.response?.data || err.message);
-        setError("❌ Nie udało się pobrać posta. Sprawdź ID lub spróbuj później.");
+        console.error("❌ Błąd pobierania blogów:", err);
+        console.error("❌ Status:", err?.response?.status);
+        console.error("❌ Data:", err?.response?.data);
+        console.error("❌ URL:", `https://blog-backend-aodc.vercel.app/api/blogs`);
+        
+        if (err.code === 'ECONNABORTED') {
+          setError("❌ Przekroczono limit czasu połączenia. Sprawdź połączenie internetowe.");
+        } else if (err.response?.status === 404) {
+          setError("❌ Endpoint API nie istnieje.");
+        } else if (err.response?.status === 500) {
+          setError("❌ Błąd serwera. Spróbuj ponownie później.");
+        } else {
+          setError(`❌ Nie udało się pobrać blogów. Status: ${err?.response?.status || 'Brak odpowiedzi'}`);
+        }
       } finally {
         setLoading(false);
       }
     };
 
-    if (id && id.length === 24) fetchBlog();
-    else {
-      setError("❌ Nieprawidłowy format ID.");
+    if (id) {
+      fetchBlogs();
+    } else {
+      setError("❌ Brak ID posta.");
       setLoading(false);
     }
   }, [id]);
-
-  // Pobranie listy wszystkich blogów
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
-        setBlogs(response.data);
-      } catch (err) {
-        console.error("❌ Błąd pobierania listy blogów:", err);
-      }
-    };
-
-    fetchBlogs();
-  }, []);
 
   // Sprawdzanie statusu zalogowania użytkownika przez Firebase Auth
   useEffect(() => {
@@ -122,92 +145,35 @@ function BlogDetail ({ t }) {
         <title>{blog.title ? `${blog.title} | AODC Blog` : "AODC Blog"}</title>
         <meta name="description" content={blog.content ? blog.content.substring(0, 150) + "..." : "Artykuł na blogu AODC"} />
       </Helmet>
-      {/* Nagłówek z dużym obrazem */}
-      <div className="blog-header">
-        <div className="blog-header-title">
-            <h1 className="blog-title animate__animated animate__backInDown">{blog.title}</h1>
-            <div className="blog-meta">
-              <span>📅 {t('13')}  {new Date(blog.createdAt).toLocaleDateString()}</span>
-            </div>
-        </div>
-      </div>
 
-      {/* Główna treść + Sidebar */}
-      <div className="blog-detail">
-        <div className="blog-content-container">
-        <nav class="flex" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                  <li class="inline-flex items-center">
-                    <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                      <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
-                      </svg>
-                      {t('Header1')}
-                    </a>
-                  </li>
-                  <li>
-                    <div class="flex items-center">
-                      <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                      </svg>
-                      <a href="/Blog" class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Blog</a>
-                    </div>
-                  </li>
-                </ol>
-               </nav>
-               <div className="blog-content">
-           <div className="blog-content-buttons-con">
-              <div className="edit-post-back">
-                  <Link to="/Blog">
-                    <img src="/assets/back.png" alt="back"/>
-                  </Link>
-              </div>
-              
-              {/* Wyświetlanie przycisków tylko dla zalogowanych użytkowników */}
-              {isAuthenticated && (
-                <div className="blog-content-adminbuttons">
-                    <Link to={`/AdminPanel/edit/${blog._id}`} className="edit-btn">
-                      <FaEdit /> Edytuj
-                   </Link>
-                    <Link to={`/AdminPanel`} className="edit-btn">
-                    <FaHome /> Panel
-                   </Link>
-                </div>
-              )}
-
-              {/* Ikona udostępniania */}
-              <div className="share-button">
-                <button onClick={handleShare}>
-                  <FaShareAlt /> 
-                </button>
-              </div>
-          </div>
-          <img className="blog-detail-image" src={blog.image || "/assets/noimage.png"} alt={blog.title} />
-          <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
-        </div>
-        </div>
-
-        <aside className="sidebar">
-  <h2 className="sidebar-title">{t('17')}</h2>
-  <div className="post-list">
-    {blogs
-      .filter((item) => item._id !== id) // Filtrujemy, aby nie pokazać bieżącego wpisu
-      .map((item) => (
-        <Link key={item._id} to={`/blog/${item._id}`} className="post-item">
-          <img
-            src={item.image || "/assets/noimage.png"}
-            alt={item.title}
-            className="post-thumbnail"
+      {/* Główny kontener artykułu */}
+      <div className="blog-detail-container">
+        {/* Duży obraz na górze */}
+        <div className="blog-hero-image mt-10">
+          <img 
+            src={blog.image || "/assets/noimage.png"} 
+            alt={blog.title}
             onError={(e) => (e.target.src = "/assets/noimage.png")}
           />
-          <div className="sidebar-posts-details">
-            <h3 className="post-item-title">{item.title}</h3>
-            <span className="post-date">📅 {new Date(item.createdAt).toLocaleDateString()}</span>
+          
+          {/* Metadane na obrazie */}
+          <div className="blog-hero-meta">
+            <div className="blog-meta-details">
+              <span>Opublikowano {new Date(blog.createdAt).toLocaleDateString('pl-PL', { month: 'long', day: 'numeric', year: 'numeric' })} Przez AODC</span>
+            </div>
           </div>
-        </Link>
-      ))}
-  </div>
-</aside>
+        </div>
+
+        {/* Treść artykułu */}
+        <div className="blog-article-content">
+          <div className="blog-article-header">
+            <h1 className="blog-article-title">{blog.title}</h1>
+          </div>
+
+          <div className="blog-article-body">
+            <div className="blog-article-text" dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+          </div>
+        </div>
       </div>
 
     </>

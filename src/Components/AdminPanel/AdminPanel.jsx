@@ -13,7 +13,7 @@ const AdminPanel = () => {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState(""); // Stan dla wyszukiwania
   const [visiblePosts, setVisiblePosts] = useState(2); // Liczba widocznych postów
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const API_URL = "https://blog-backend-aodc.vercel.app";
   const navigate = useNavigate();
 
   // Pobieranie postów

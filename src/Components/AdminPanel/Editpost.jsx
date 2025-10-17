@@ -21,7 +21,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`);
+        const response = await axios.get(`https://blog-backend-aodc.vercel.app/api/blogs/${id}`);
         const { title, content, tags } = response.data;
 
         setTitle(title);
@@ -78,7 +78,7 @@ const EditPost = () => {
       }
 
       // Wysyłanie danych
-      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/blogs/${id}`, formData, {
+      const response = await axios.put(`https://blog-backend-aodc.vercel.app/api/blogs/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

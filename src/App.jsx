@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { JobContextProvider } from "./Context/JobContext";
 import JobPage from "./Pages/JobPage";
 import ErrorPage from "./Pages/ErrorPage";
 import HomePage from "./Pages/HomePage";
@@ -20,6 +21,9 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./config/firebaseConfig";
 import ContenerDataCenterPage from "./Pages/ContenerDataCenterPage";
 import DzialhandlowyPage from "./Pages/Dzialhandlowypage";
+import Header2 from "./Components/Header/Header2";
+import Footer2 from "./Components/Footer/Footer2";
+import SidePanel from "./Components/Side Panel/SidePanel";
 
 const MetaTags = () => {
   const location = useLocation();
@@ -68,31 +72,36 @@ function App() {
   return (
     <HelmetProvider>
       <img className="herobg" src="/assets/herobg.png" alt="background" />
-        <Router>
-        <MetaTags />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Budowa-Data-Center" element={<ConstructionDataCenter />} />
-          <Route path="/Audyt-Data-Center" element={<AuditDataCenter />} />
-          <Route path="/Projektowanie-Data-Center" element={<ProjectingDataCenter />} />
-          <Route path="/Serwis-Data-Center" element={<ServiceDataCenter />} />
-          <Route path="/Serwerownie-Kontenerowe" element={<ContenerDataCenterPage />} />
-          <Route path="/Kariera" element={<JobPage />} />
-          <Route path="/Blog" element={<Blogpage />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/Realizacje" element={<Realizations />} />
-          <Route path="/Kontakt" element={<ContactPage />} />
-          <Route path="/Dzial-handlowy" element={<DzialhandlowyPage />} />
-          
-          {/* 🔐 Zabezpieczone strony */}
-          <Route path="/CreatePost" element={<PrivateRoute><CreatePostPage /></PrivateRoute>} />
-          <Route path="/AdminPanel" element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
-          <Route path="/AdminPanel/edit/:id" element={<PrivateRoute><EditPostPage /></PrivateRoute>} />
-          
-          {/* 🔓 Publiczne strony */}
-          <Route path="/Login" element={<LoginPage />} />
-          <Route path="/*" element={<ErrorPage />} />
-        </Routes>
+      <Router>
+        <JobContextProvider>
+          <Header2 />
+          <SidePanel />
+          <MetaTags />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Budowa-Data-Center" element={<ConstructionDataCenter />} />
+            <Route path="/Audyt-Data-Center" element={<AuditDataCenter />} />
+            <Route path="/Projektowanie-Data-Center" element={<ProjectingDataCenter />} />
+            <Route path="/Serwis-Data-Center" element={<ServiceDataCenter />} />
+            <Route path="/Serwerownie-Kontenerowe" element={<ContenerDataCenterPage />} />
+            <Route path="/Kariera" element={<JobPage />} />
+            <Route path="/Blog" element={<Blogpage />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/Realizacje" element={<Realizations />} />
+            <Route path="/Kontakt" element={<ContactPage />} />
+            <Route path="/Dzial-handlowy" element={<DzialhandlowyPage />} />
+            
+            {/* 🔐 Zabezpieczone strony */}
+            <Route path="/CreatePost" element={<PrivateRoute><CreatePostPage /></PrivateRoute>} />
+            <Route path="/AdminPanel" element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
+            <Route path="/AdminPanel/edit/:id" element={<PrivateRoute><EditPostPage /></PrivateRoute>} />
+            
+            {/* 🔓 Publiczne strony */}
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+          <Footer2 />
+        </JobContextProvider>
       </Router>
     </HelmetProvider>
   );

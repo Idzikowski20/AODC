@@ -18,7 +18,7 @@ function Header2 ({ t }) {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
-    const { handleOpenForm, isSticky, handleOpen } = useContext(JobContext);
+    const { handleOpenForm, isSticky, handleOpen, sidePanelOpen } = useContext(JobContext);
 
     // Stan do przechowywania, czy menu jest rozwinięte
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,7 +140,7 @@ function Header2 ({ t }) {
                                 </button>
                             </div>
                             <div className="px100 menu-mobile jm-header-right jm-header-right-2 text-end  d-flex justify-content-center">
-                                <div className="jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block" role='button' onClick={handleOpen}>
+                                <div className={`jm-navbar-mobile-sign side-toggle d-lg-none d-inline-block ${sidePanelOpen ? 'active' : ''}`} role='button' onClick={handleOpen}>
                                     <span className="dr-line-1"></span>
                                     <span className="dr-line-2"></span>
                                     <span className="dr-line-3"></span>

@@ -1,9 +1,12 @@
 import React, { createContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { jobs } from '../Data/JobsData';
 
 const JobContext = createContext();
 
 const JobContextProvider = ({ children }) => {
+  const location = useLocation();
+  
   // Search Form
   const [isFormOpen, setIsFormOpen] = useState(false);
 
@@ -18,12 +21,20 @@ const JobContextProvider = ({ children }) => {
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
 
   const handleOpen = () => {
+    console.log('🔓 Opening SidePanel');
     setSidePanelOpen(true);
   };
 
   const handleClose = () => {
+    console.log('🔒 Closing SidePanel');
     setSidePanelOpen(false);
   };
+
+  // Reset SidePanel przy zmianie strony
+  useEffect(() => {
+    console.log('🔄 Reset SidePanel - pathname:', location.pathname);
+    setSidePanelOpen(false);
+  }, [location.pathname]);
   
   // Sticky Navbar
   const [isSticky, setIsSticky] = useState(false);

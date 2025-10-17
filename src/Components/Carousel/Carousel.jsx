@@ -11,14 +11,38 @@ function Carousel({ t }) {
     <span>{t('title7.1')}</span>
   </div>
     <div className="slider">
-	<div className="slide-track">
+	<div className="slide-track pointer-none">
 	<div className="slide">
 			<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
+			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+			<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
+			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+		</div>
+		<div className="slide pointer-none">
 			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
@@ -37,75 +61,51 @@ function Carousel({ t }) {
 		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
+		<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+		<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
 		</div>
 		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
+		<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/UDC.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/aodcserwis.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/awave.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/secthor.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-			<img src="https://aodc.pl/assets/img/Carousel/blt.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/rittal.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
-		<img src="https://aodc.pl/assets/img/Carousel/schinder.png" height="100" width="250" alt="" />
-		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/vertiv.png" height="100" width="250" alt="" />
 		</div>
 	</div>
@@ -117,97 +117,89 @@ function Carousel({ t }) {
     <span>{t('title7.2')}</span>
   </div>
     <div className="slider">
-	<div className="slide-track">
+	<div className="slide-track pointer-none">
 	<div className="slide">
 		<img src="https://aodc.pl/assets/img/Carousel/mswia.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<h2>KONCESJA</h2>
 		</div>
-	<div className="slide">
+	<div className="slide pointer-none">
 	<h2>F-GAZY</h2>
 		</div>
-		<div className="slide">
-			<a href='https://www.epi-ap.com/services/1/3/4/Certified_Data_Centre_Professional_(CDCP)'target='_blank'>
-				<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
-			</a>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/cdcs.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/tuvitt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/uptimeinstitute.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/mswia.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<h2>KONCESJA</h2>
 		</div>
-	<div className="slide">
+	<div className="slide pointer-none">
 	<h2>F-GAZY</h2>
 		</div>
-		<div className="slide">
-			<a href='https://www.epi-ap.com/services/1/3/4/Certified_Data_Centre_Professional_(CDCP)'target='_blank'>
-				<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
-			</a>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/cdcs.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/tuvitt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/uptimeinstitute.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/mswia.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<h2>KONCESJA</h2>
 		</div>
-	<div className="slide">
+	<div className="slide pointer-none">
 	<h2>F-GAZY</h2>
 		</div>
-		<div className="slide">
-			<a href='https://www.epi-ap.com/services/1/3/4/Certified_Data_Centre_Professional_(CDCP)'target='_blank'>
-				<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
-			</a>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/cdcs.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/tuvitt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/uptimeinstitute.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/mswia.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<h2>KONCESJA</h2>
 		</div>
-	<div className="slide">
+	<div className="slide pointer-none">
 	<h2>F-GAZY</h2>
 		</div>
-		<div className="slide">
-			<a href='https://www.epi-ap.com/services/1/3/4/Certified_Data_Centre_Professional_(CDCP)'target='_blank'>
-				<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
-			</a>
+		<div className="slide pointer-none">
+		<img src="https://aodc.pl/assets/img/Carousel/cdcp.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/cdcs.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/tuvitt.png" height="100" width="250" alt="" />
 		</div>
-		<div className="slide">
+		<div className="slide pointer-none">
 		<img src="https://aodc.pl/assets/img/Carousel/uptimeinstitute.png" height="100" width="250" alt="" />
 		</div>
 	</div>

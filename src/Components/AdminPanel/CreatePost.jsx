@@ -32,7 +32,7 @@ const CreatePost = () => {
       formData.append("tags", JSON.stringify(tagsArray));
       if (imageFile) formData.append("image", imageFile);
 
-      await axios.post(`${import.meta.env.VITE_API_URL}/api/blogs`, formData, {
+      await axios.post(`https://blog-backend-aodc.vercel.app/api/blogs`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

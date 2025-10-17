@@ -25,41 +25,44 @@ function MobileMenu({ t }) {
           <nav className="mean-nav">
             <ol>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/" onClick={() => window.location.replace("/#home")}><FaHome /> {t('title9.1')}</Link>
+                <Link to="/" onClick={() => { window.location.replace("/#home"); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{t('title9.1')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/" onClick={() => window.location.replace("/#aboutus")}>{t('title9.2')}</Link>
+                <Link to="/" onClick={() => { window.location.replace("/#aboutus"); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{t('title9.2')}</Link>
               </li>
               <li className="menu-has-children">
                 <Link to="#">
                   {t('Header3')}
                 </Link>
                 <ul className={`oferta-container-mobile`}>
-                  <Link onClick={handleClose} to="/Serwerownie-Kontenerowe">
+                  <Link onClick={() => { handleClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} to="/Serwerownie-Kontenerowe">
                     <li> {t('Header3.5')}</li>
                   </Link>
-                  <Link onClick={handleClose} to="/Budowa-Data-Center">
+                  <Link onClick={() => { handleClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} to="/Budowa-Data-Center">
                     <li>{t('Header3.1')}</li>
                   </Link>
-                  <Link onClick={handleClose} to="/Audyt-Data-Center">
+                  <Link onClick={() => { handleClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} to="/Audyt-Data-Center">
                     <li>{t('Header3.2')}</li>
                   </Link>
-                  <Link onClick={handleClose} to="/Projektowanie-Data-Center">
+                  <Link onClick={() => { handleClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} to="/Projektowanie-Data-Center">
                     <li>{t('Header3.3')}</li>
                   </Link>
-                  <Link onClick={handleClose} to="/Serwis-Data-Center">
+                  <Link onClick={() => { handleClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} to="/Serwis-Data-Center">
                     <li>{t('Header3.4')}</li>
                   </Link>
                 </ul>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/Kariera">{t('title9.3')}</Link>
+                <Link to="/Kariera" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.3')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/Realizacje">{t('title9.4')}</Link>
+                <Link to="/Realizacje" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('title9.4')}</Link>
               </li>
               <li className="menu-has-children" onClick={handleClose}>
-                <Link to="/Dzial-handlowy">{t('Header6')}</Link>
+                 <Link to="/Blog" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Blog</Link>
+              </li>
+              <li className="menu-has-children" onClick={handleClose}>
+                <Link to="/Dzial-handlowy" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Header6')}</Link>
               </li>
             </ol>
           </nav>

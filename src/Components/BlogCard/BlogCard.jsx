@@ -9,7 +9,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/blogs`);
+        const response = await axios.get(`https://blog-backend-aodc.vercel.app/api/blogs`);
         console.log("Dane pobrane:", response.data);
         setBlogs(response.data);
       } catch (err) {
