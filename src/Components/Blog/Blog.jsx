@@ -6,6 +6,25 @@ import Footer2 from "../Footer/Footer2";
 import "./Blog.css"; // Import pliku CSS
 import { withNamespaces } from 'react-i18next';
 
+// Funkcja do generowania sluga z tytułu
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .normalize('NFD') // Usuń znaki diakrytyczne
+    .replace(/[\u0300-\u036f]/g, '') // Usuń znaki akcentów
+    .replace(/ł/g, 'l')
+    .replace(/ą/g, 'a')
+    .replace(/ć/g, 'c')
+    .replace(/ę/g, 'e')
+    .replace(/ń/g, 'n')
+    .replace(/ó/g, 'o')
+    .replace(/ś/g, 's')
+    .replace(/ź/g, 'z')
+    .replace(/ż/g, 'z')
+    .replace(/[^a-z0-9]+/g, '-') // Zamień znaki specjalne na myślnik
+    .replace(/^-+|-+$/g, ''); // Usuń myślniki na początku i końcu
+};
+
 function blog ({ t }) {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -113,8 +132,10 @@ function blog ({ t }) {
 
         {/* 📌 Siatka kart blogów */}
         <div className="blog-grid">
-          {blogs.map((post) => (
-            <Link key={post._id} to={`/blog/${post._id}`} className="blog-card">
+          {blogs.map((post) => {
+            const slug = post.slug || generateSlug(post.title);
+            return (
+            <Link key={post._id} to={`/blog/${slug}`} className="blog-card">
               <div className="blog-card-image">
                 <img
                   src={post.image || "/assets/noimage.png"}
@@ -136,7 +157,8 @@ function blog ({ t }) {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </>

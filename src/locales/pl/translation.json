@@ -195,6 +195,7 @@
     "polityka2": "Przed aplikacją na dane stanowisko prosimy o zapoznanie się z Polityką Prywatności",
     "polityka3": "Polityka prywatności",
     "polityka3.1": "Polityka Cookies",
+    "polityka3.2": "Warunki korzystania",
     "polityka4": "AoDC (Art of Data Center) to zespół inżynierów z 20 letnim doświadczeniem w projektowaniu, budowaniu i serwisowaniu obiektów Data Center dla instytucji publicznych i komercyjnych w Polsce. W związku z dynamicznym rozwojem firmy do naszego zespołu poszukujemy osoby na stanowisko:",
     "title12": "Ups! Nie ma takiej strony.",
     "title12.1": "Sprawdź czy poprawnie wpisałeś adres",
@@ -224,5 +225,9 @@
     "14": "Czytaj więcej",
     "15": "Najnowsze posty",
     "16": "Ładowanie..",
-    "17": "Inne wpisy"
+    "17": "Inne wpisy",
+    "clarity.footer": "Ulepszamy nasze produkty i reklamę, używając Microsoft Clarity, aby zobaczyć, jak korzystasz z naszej strony internetowej. Korzystając z naszej witryny, wyrażasz zgodę na gromadzenie i wykorzystywanie tych danych przez nas i Microsoft. Więcej informacji znajdziesz w naszej",
+    "clarity.footer.link": "polityce prywatności",
+    "clarity.privacy": "Współpracujemy z Microsoft Clarity i Microsoft Advertising, aby przechwytywać sposób, w jaki korzystasz z naszej witryny i wchodzisz z nią w interakcje, za pomocą wskaźników behawioralnych, map cieplnych i powtórek sesji w celu ulepszania i promowania naszych produktów/usług. Dane dotyczące korzystania z witryny są przechwytywane przy użyciu plików cookie własnych i stron trzecich oraz innych technologii śledzenia w celu określenia popularności produktów/usług i aktywności online. Ponadto wykorzystujemy te informacje do optymalizacji witryny, celów związanych z zapobieganiem oszustwom/bezpieczeństwem oraz reklamą. Aby uzyskać więcej informacji na temat sposobu, w jaki Microsoft zbiera i wykorzystuje Twoje dane, odwiedź",
+    "clarity.privacy.link": "Deklarację prywatności firmy Microsoft"
   }

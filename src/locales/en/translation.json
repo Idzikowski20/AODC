@@ -193,6 +193,7 @@
   "polityka2": "Before applying for the position, please review our Privacy Policy.",
   "polityka3": "Privacy Policy",
   "polityka3.1": "Privacy Cookies",
+  "polityka3.2": "Terms of Use",
   "polityka4": "AoDC (Art of Data Center) is a team of engineers with 20 years of experience in designing, building, and servicing Data Center facilities for public and commercial institutions in Poland. Due to the dynamic growth of the company, we are looking for a person to join our team in the position of:",
   "title12": "Oops! This page does not exist.",
   "title12.1": "Please check if you entered the address correctly.",
@@ -221,7 +222,12 @@
   "13": "Posted:",
   "14": "Read more",
   "15": "Latest posts",
-  "16": "Loading blog..",
-  "17": "Other entries"
+    "16": "Loading blog..",
+    "17": "Other entries",
+    "clarity.footer": "We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. For more information, please see our",
+    "clarity.footer.link": "privacy policy",
+    "clarity.privacy": "We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services. Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising. For more information about how Microsoft collects and uses your data, visit the",
+    "clarity.privacy.link": "Microsoft Privacy Statement"
 
 }
+

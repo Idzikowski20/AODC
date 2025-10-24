@@ -10,8 +10,27 @@ import { FaHome, FaEdit } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import { withNamespaces } from 'react-i18next';
 
+// Funkcja do generowania sluga z tytułu
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ł/g, 'l')
+    .replace(/ą/g, 'a')
+    .replace(/ć/g, 'c')
+    .replace(/ę/g, 'e')
+    .replace(/ń/g, 'n')
+    .replace(/ó/g, 'o')
+    .replace(/ś/g, 's')
+    .replace(/ź/g, 'z')
+    .replace(/ż/g, 'z')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
 function BlogDetail ({ t }) {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,13 +55,16 @@ function BlogDetail ({ t }) {
           // Ustaw wszystkie blogi dla sidebara
           setBlogs(response.data);
           
-          // Znajdź post o konkretnym ID
-          if (id) {
-            const foundBlog = response.data.find(blog => blog._id === id);
+          // Znajdź post o konkretnym slug
+          if (slug) {
+            const foundBlog = response.data.find(blog => {
+              const postSlug = blog.slug || generateSlug(blog.title);
+              return postSlug === slug;
+            });
             if (foundBlog) {
               setBlog(foundBlog);
             } else {
-              setError("❌ Post o podanym ID nie istnieje.");
+              setError("❌ Post o podanym adresie nie istnieje.");
             }
           }
         } else {
@@ -68,13 +90,13 @@ function BlogDetail ({ t }) {
       }
     };
 
-    if (id) {
+    if (slug) {
       fetchBlogs();
     } else {
-      setError("❌ Brak ID posta.");
+      setError("❌ Brak adresu posta.");
       setLoading(false);
     }
-  }, [id]);
+  }, [slug]);
 
   // Sprawdzanie statusu zalogowania użytkownika przez Firebase Auth
   useEffect(() => {

@@ -86,7 +86,7 @@ function App() {
             <Route path="/Serwerownie-Kontenerowe" element={<ContenerDataCenterPage />} />
             <Route path="/Kariera" element={<JobPage />} />
             <Route path="/Blog" element={<Blogpage />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/Realizacje" element={<Realizations />} />
             <Route path="/Kontakt" element={<ContactPage />} />
             <Route path="/Dzial-handlowy" element={<DzialhandlowyPage />} />

@@ -80,15 +80,40 @@ function Footer2({ t }) {
 
                 </div>
                 {/* <ContactForm /> */}
-                <div className="footer-copyright-container">
-                            <div className="footer-copyright">
-                                <span>{t('title7.5')}<a href='https://idztech.pl' target='_blank'>  {t('title7.6')}</a></span>
-                            </div>
-                            <div className='polityka-container'>
-                                <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272">{t('polityka3')}</a>
-                                <a target="_blank" href="https://www.iubenda.com/privacy-policy/95256272/cookie-policy" >{t('polityka3.1')}</a>
-                             </div>
-                        </div>
+                
+                <hr className='light:border-gray-200 dark:border-gray-800 mb-8' />
+
+                <div className='footer-bottom-container'>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
+                    <p style={{ color: '#6b7280', fontSize: '0.875rem', textAlign: 'center', margin: '0' }}>{t('clarity.footer')}<Link to="/Privacy" style={{ color: '#c23c52', }}> {t('clarity.footer.link')}</Link></p>
+                </div>
+
+                <div className="footer-bottom-links">
+                    <p style={{ color: '#6b7280', fontSize: '0.875rem', margin: '0' }}>
+                        {t('title7.5')}<a href='https://idztech.pl' target='_blank' rel="noopener noreferrer" style={{ color: '#c23c52', textDecoration: 'none' }}>  {t('title7.6')}</a>
+                    </p>
+                    <div style={{ display: 'flex', gap: '1rem', fontSize: '0.875rem' }}>
+                            <Link to="/Privacy" style={{ color: '#6b7280', textDecoration: 'none', }}>{t('polityka3')}</Link>
+                            <Link to="/Privacy" style={{ color: '#6b7280', textDecoration: 'none', }}>{t('polityka3.2')}</Link>
+                    </div>
+                </div>
+                <style>{`
+                    .footer-bottom-links {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                    @media (min-width: 768px) {
+                        .footer-bottom-links {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                `}</style>
+
+                </div>
                   </div>
         </footer>
   )

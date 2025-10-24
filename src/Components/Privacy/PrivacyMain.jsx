@@ -33,6 +33,10 @@ function PrivacyMain({ t }) {
       <div className='polityka-desc'>
       {t('politykadesc7')}
       </div>
+      <div className='polityka-desc' style={{ marginTop: '20px', padding: '15px', backgroundColor: '#f5f5f5', borderLeft: '4px solid #0078d4' }}>
+        <strong>8. Microsoft Clarity</strong><br/>
+        {t('clarity.privacy')} <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" style={{ color: '#0078d4', textDecoration: 'underline' }}>{t('clarity.privacy.link')}</a>.
+      </div>
     </p>
   </div>
     </section>

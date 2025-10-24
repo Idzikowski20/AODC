@@ -12780,7 +12780,6 @@ transform:translateY(-10px);
 
 .footer-container {
   z-index: 1;
-  margin-bottom: 80px;
   width: 100%;
   align-items: flex-start;
     justify-content: space-around;
@@ -15590,6 +15589,14 @@ margin-bottom: 10px;
   }
 }
 
-.h1-hero {
-  
- }
+.footer-bottom-container {
+  width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #80808052;
+    padding-top: 25px;
+}
