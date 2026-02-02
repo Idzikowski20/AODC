@@ -21,6 +21,7 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./config/firebaseConfig";
 import ContenerDataCenterPage from "./Pages/ContenerDataCenterPage";
 import DzialhandlowyPage from "./Pages/Dzialhandlowypage";
+import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage";
 import Header2 from "./Components/Header/Header2";
 import Footer2 from "./Components/Footer/Footer2";
 import SidePanel from "./Components/Side Panel/SidePanel";
@@ -90,6 +91,7 @@ function App() {
             <Route path="/Realizacje" element={<Realizations />} />
             <Route path="/Kontakt" element={<ContactPage />} />
             <Route path="/Dzial-handlowy" element={<DzialhandlowyPage />} />
+            <Route path="/polityka-prywatnosci" element={<PrivacyPolicyPage />} />
             
             {/* 🔐 Zabezpieczone strony */}
             <Route path="/CreatePost" element={<PrivateRoute><CreatePostPage /></PrivateRoute>} />

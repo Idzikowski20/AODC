@@ -172,7 +172,7 @@
     "title7.2": "Certyfikaty",
     "title7.3": "Kontakt",
     "title7.4": "Adres",
-    "title7.5": "© Copyright 2024 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez",
+    "title7.5": "© Copyright 2026 AODC Sp. z o.o. - Wszelkie prawa zastrzeżone. Stworzone przez",
     "title7.6": "Idztech.pl",
     "title7.7": "Social media",
     "title8": "Witaj!",
@@ -229,5 +229,100 @@
     "clarity.footer": "Ulepszamy nasze produkty i reklamę, używając Microsoft Clarity, aby zobaczyć, jak korzystasz z naszej strony internetowej. Korzystając z naszej witryny, wyrażasz zgodę na gromadzenie i wykorzystywanie tych danych przez nas i Microsoft. Więcej informacji znajdziesz w naszej",
     "clarity.footer.link": "polityce prywatności",
     "clarity.privacy": "Współpracujemy z Microsoft Clarity i Microsoft Advertising, aby przechwytywać sposób, w jaki korzystasz z naszej witryny i wchodzisz z nią w interakcje, za pomocą wskaźników behawioralnych, map cieplnych i powtórek sesji w celu ulepszania i promowania naszych produktów/usług. Dane dotyczące korzystania z witryny są przechwytywane przy użyciu plików cookie własnych i stron trzecich oraz innych technologii śledzenia w celu określenia popularności produktów/usług i aktywności online. Ponadto wykorzystujemy te informacje do optymalizacji witryny, celów związanych z zapobieganiem oszustwom/bezpieczeństwem oraz reklamą. Aby uzyskać więcej informacji na temat sposobu, w jaki Microsoft zbiera i wykorzystuje Twoje dane, odwiedź",
-    "clarity.privacy.link": "Deklarację prywatności firmy Microsoft"
-  }
+    "clarity.privacy.link": "Deklarację prywatności firmy Microsoft",
+    "privacyPolicy.title": "Polityka prywatności – AODC sp. z o.o.",
+    "privacyPolicy.effectiveDate": "Data wejścia w życie: 01.01.2026 r.",
+    "privacyPolicy.administrator": "Administrator danych osobowych: AODC sp. z o.o., ul. Działkowa 37, 02-234 Warszawa (Polska)",
+    "privacyPolicy.iodContact": "Kontakt z Inspektorem Ochrony Danych (IOD): iod@aodc.pl",
+    "privacyPolicy.section1.title": "Zakres i cele przetwarzania danych",
+    "privacyPolicy.section1.intro": "AODC sp. z o.o. przetwarza dane osobowe osób odwiedzających stronę https://aodc.pl/ w następujących celach:",
+    "privacyPolicy.section1.tableHeaders": {
+        "purpose": "Cel przetwarzania",
+        "categories": "Kategorie danych",
+        "legalBasis": "Podstawa prawna RODO"
+    },
+    "privacyPolicy.section1.tableRows": {
+        "contactForm": {
+            "purpose": "Obsługa zapytań z formularza kontaktowego",
+            "categories": "Imię, nazwisko, e-mail, telefon, treść wiadomości",
+            "legalBasis": "art. 6 ust. 1 lit. b – realizacja zapytania"
+        },
+        "marketingB2B": {
+            "purpose": "Marketing B2B (kontakt na LinkedIn / strona WWW)",
+            "categories": "Imię, nazwisko, e-mail, stanowisko, firma",
+            "legalBasis": "art. 6 ust. 1 lit. f – uzasadniony interes Administratora"
+        },
+        "analytics": {
+            "purpose": "Statystyki dotyczące korzystania ze strony (analityka)",
+            "categories": "Anonimizowane dane dotyczące ruchu (adres IP w formie skróconej), czas wizyty, podstrony",
+            "legalBasis": "art. 6 ust. 1 lit. f – uzasadniony interes Administratora (analityka)"
+        },
+        "security": {
+            "purpose": "Zabezpieczenie strony www",
+            "categories": "Logi serwera, IP urządzeń",
+            "legalBasis": "art. 6 ust. 1 lit. f – ochrona bezpieczeństwa systemów"
+        }
+    },
+    "privacyPolicy.section2.title": "Pliki cookies i podobne technologie",
+    "privacyPolicy.section2.intro": "Strona https://aodc.pl/ korzysta z plików cookies i podobnych technologii śledzenia w celu poprawnego działania serwisu oraz analizy statystycznej korzystania z witryny.",
+    "privacyPolicy.section2.cookieTypes": {
+        "necessary": {
+            "title": "Niezbędne pliki cookies",
+            "description": "Zapewniają prawidłowe działanie strony, np. utrzymanie sesji użytkownika i funkcji podstawowych."
+        },
+        "analytical": {
+            "title": "Analityczne pliki cookies",
+            "description": "Umożliwiają zbieranie anonimowych informacji statystycznych o korzystaniu ze strony (np. liczba odwiedzin, podstrony odwiedzane przez użytkownika), co pozwala na analizę i optymalizację funkcjonalności witryny. Dane są anonimowe i nie służą do identyfikacji konkretnej osoby."
+        },
+        "functional": {
+            "title": "Funkcjonalne pliki cookies",
+            "description": "Umożliwiają zapamiętywanie preferencji użytkownika, np. wyboru języka lub ustawień interfejsu."
+        },
+        "thirdParty": {
+            "title": "Cookies stron trzecich",
+            "description": "Jeżeli strona wykorzystuje elementy zewnętrzne (np. przyciski LinkedIn, osadzone treści), mogą być stosowane pliki cookies dostawców zewnętrznych zgodnie z ich politykami prywatności (np. LinkedIn Insight Tag)."
+        }
+    },
+    "privacyPolicy.section2.management": "Jak zarządzać plikami cookies",
+    "privacyPolicy.section2.managementDesc": "Użytkownik może w każdym czasie zmienić ustawienia plików cookies poprzez ustawienia swojej przeglądarki internetowej, w tym blokować wszystkie lub wybrane pliki cookies lub usunąć je. Wyłączenie plików cookies może wpłynąć na ograniczenie funkcjonalności strony.",
+    "privacyPolicy.section3.title": "Formularz kontaktowy i dane kontaktowe",
+    "privacyPolicy.section3.desc": "Dane podane w formularzu kontaktowym (np. imię, nazwisko, adres e-mail, telefon) są przetwarzane w celu udzielenia odpowiedzi na zapytanie oraz dalszej komunikacji dotyczącej usług AODC. Podanie tych danych jest dobrowolne, ale niezbędne do obsługi zgłoszenia.",
+    "privacyPolicy.section4.title": "Udostępnianie danych osobowych",
+    "privacyPolicy.section4.desc": "Dane osobowe mogą być udostępniane wyłącznie:",
+    "privacyPolicy.section4.points": [
+        "podmiotom technicznym, którym AODC powierzyło przetwarzanie danych (np. dostawcy hostingu, narzędzi IT) na podstawie umowy powierzenia;",
+        "organom i instytucjom uprawnionym do uzyskania danych na mocy przepisów prawa (np. organy ścigania)."
+    ],
+    "privacyPolicy.section4.note": "Administrator danych nie przekazuje danych osobowych poza Europejski Obszar Gospodarczy.",
+    "privacyPolicy.section5.title": "Okres przechowywania danych",
+    "privacyPolicy.section5.points": [
+        "Dane z formularza kontaktowego – nie dłużej niż 3 lata od daty kontaktu lub do wycofania zgody, jeśli zgoda była podstawą przetwarzania.",
+        "Dane analityczne cookies – zgodnie z ustawieniami narzędzi analitycznych (anonimizowane).",
+        "Dane techniczne (logi) – zgodnie z polityką retencji serwera, maksymalnie do czasu koniecznego do rozliczenia ewentualnych incydentów."
+    ],
+    "privacyPolicy.section6.title": "Prawa osób, których dane dotyczą",
+    "privacyPolicy.section6.intro": "Osobom, których dane są przetwarzane, przysługują prawa:",
+    "privacyPolicy.section6.rights": [
+        "dostępu do danych,",
+        "sprostowania,",
+        "usunięcia („prawo do bycia zapomnianym\"),",
+        "ograniczenia przetwarzania,",
+        "sprzeciwu wobec przetwarzania,",
+        "przenoszenia danych (dotyczy danych elektronicznych),",
+        "wycofania zgody, jeśli to właśnie zgoda była podstawą przetwarzania."
+    ],
+    "privacyPolicy.section6.contact": "Wnioski można kierować na adres iod@aodc.pl.",
+    "privacyPolicy.section7.title": "Bezpieczeństwo danych",
+    "privacyPolicy.section7.intro": "AODC stosuje odpowiednie środki techniczne i organizacyjne w celu zabezpieczenia danych osobowych, takie jak:",
+    "privacyPolicy.section7.measures": [
+        "zabezpieczenia serwerów (firewalle, logowanie dostępu),",
+        "kontrola dostępu do systemów i usług,",
+        "szyfrowanie danych wrażliwych w systemach,",
+        "kopie zapasowe (backup),",
+        "procedury reagowania na naruszenia danych."
+    ],
+    "privacyPolicy.section8.title": "Zmiany polityki prywatności",
+    "privacyPolicy.section8.desc": "Polityka prywatności może być aktualizowana. O każdej zmianie użytkownicy zostaną poinformowani poprzez komunikat na stronie lub aktualizację treści dokumentu.",
+    "privacyPolicy.contactFormInfo": "Informacja o przetwarzaniu danych osobowych dla osób korzystających z formularza kontaktowego:",
+    "privacyPolicy.contactFormDetails": "Administratorem Państwa danych osobowych jest AODC sp. z o.o., ul. Działkowa 37, 02-234 Warszawa, e-mail: iod@aodc.pl. Państwa dane osobowe (imię, nazwisko, adres e-mail, numer telefonu oraz treść wiadomości) przetwarzane są wyłącznie w celu udzielenia odpowiedzi na przesłane zapytanie oraz dalszej komunikacji w sprawie usług AODC. Podstawą prawną przetwarzania jest art. 6 ust. 1 lit. b RODO (niezbędność do realizacji zapytania). Dane będą przechowywane przez okres niezbędny do obsługi zapytania, maksymalnie 3 lata. Dane nie będą przekazywane podmiotom zewnętrznym poza przypadkami wymaganymi przepisami prawa ani wykorzystywane do innych celów, w tym do oceny pracy lub profilowania. Osobie, której dane dotyczą, przysługują prawa: dostęp do danych, ich sprostowanie, usunięcie, ograniczenie przetwarzania, sprzeciw wobec przetwarzania, przenoszenie danych oraz wycofanie zgody (jeżeli przetwarzanie opierałoby się na zgodzie). Wnioski można kierować na adres iod@aodc.pl. Korzystając z formularza, wyrażają Państwo zgodę na przetwarzanie danych osobowych w powyższym zakresie."
+}

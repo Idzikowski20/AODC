@@ -170,7 +170,7 @@
   "title7.2": "Certificates",
   "title7.3": "Contact",
   "title7.4": "Address",
-  "title7.5": "© Copyright 2024 AODC Sp. z o.o. - All rights reserved. Created by",
+  "title7.5": "© Copyright 2026 AODC Sp. z o.o. - All rights reserved. Created by",
   "title7.6": "Idztech.pl",
   "title7.7": "Social media",
   "title8": "Welcome!",
@@ -227,7 +227,102 @@
     "clarity.footer": "We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. For more information, please see our",
     "clarity.footer.link": "privacy policy",
     "clarity.privacy": "We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services. Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising. For more information about how Microsoft collects and uses your data, visit the",
-    "clarity.privacy.link": "Microsoft Privacy Statement"
+    "clarity.privacy.link": "Microsoft Privacy Statement",
+  "privacyPolicy.title": "Privacy Policy – AODC sp. z o.o.",
+  "privacyPolicy.effectiveDate": "Effective date: 01.01.2026",
+  "privacyPolicy.administrator": "Data Controller: AODC sp. z o.o., ul. Działkowa 37, 02-234 Warsaw (Poland)",
+  "privacyPolicy.iodContact": "Contact with Data Protection Officer (DPO): iod@aodc.pl",
+  "privacyPolicy.section1.title": "Scope and purposes of data processing",
+  "privacyPolicy.section1.intro": "AODC sp. z o.o. processes personal data of persons visiting the website https://aodc.pl/ for the following purposes:",
+  "privacyPolicy.section1.tableHeaders": {
+    "purpose": "Processing purpose",
+    "categories": "Data categories",
+    "legalBasis": "Legal basis GDPR"
+  },
+  "privacyPolicy.section1.tableRows": {
+    "contactForm": {
+      "purpose": "Handling contact form inquiries",
+      "categories": "First name, last name, e-mail, phone, message content",
+      "legalBasis": "art. 6(1)(b) – inquiry implementation"
+    },
+    "marketingB2B": {
+      "purpose": "B2B Marketing (contact on LinkedIn / website)",
+      "categories": "First name, last name, e-mail, position, company",
+      "legalBasis": "art. 6(1)(f) – legitimate interest of the Controller"
+    },
+    "analytics": {
+      "purpose": "Website usage statistics (analytics)",
+      "categories": "Anonymized traffic data (IP address in shortened form), visit time, subpages",
+      "legalBasis": "art. 6(1)(f) – legitimate interest of the Controller (analytics)"
+    },
+    "security": {
+      "purpose": "Website security",
+      "categories": "Server logs, device IPs",
+      "legalBasis": "art. 6(1)(f) – system security protection"
+    }
+  },
+  "privacyPolicy.section2.title": "Cookies and similar technologies",
+  "privacyPolicy.section2.intro": "The website https://aodc.pl/ uses cookies and similar tracking technologies for proper website operation and statistical analysis of website usage.",
+  "privacyPolicy.section2.cookieTypes": {
+    "necessary": {
+      "title": "Essential cookies",
+      "description": "Ensure proper website functioning, e.g., maintaining user session and basic functions."
+    },
+    "analytical": {
+      "title": "Analytical cookies",
+      "description": "Enable collection of anonymous statistical information about website usage (e.g., number of visits, subpages visited by users), allowing for analysis and optimization of website functionality. Data is anonymous and not used to identify specific persons."
+    },
+    "functional": {
+      "title": "Functional cookies",
+      "description": "Enable remembering user preferences, such as language choice or interface settings."
+    },
+    "thirdParty": {
+      "title": "Third-party cookies",
+      "description": "If the website uses external elements (e.g., LinkedIn buttons, embedded content), cookies from external providers may be used in accordance with their privacy policies (e.g., LinkedIn Insight Tag)."
+    }
+  },
+  "privacyPolicy.section2.management": "How to manage cookies",
+  "privacyPolicy.section2.managementDesc": "Users can change cookie settings at any time through their web browser settings, including blocking all or selected cookies or deleting them. Disabling cookies may affect website functionality.",
+  "privacyPolicy.section3.title": "Contact form and contact details",
+  "privacyPolicy.section3.desc": "Data provided in the contact form (e.g., first name, last name, e-mail address, phone) is processed to provide a response to the inquiry and further communication regarding AODC services. Providing this data is voluntary but necessary to handle the request.",
+  "privacyPolicy.section4.title": "Sharing personal data",
+  "privacyPolicy.section4.desc": "Personal data may be shared exclusively with:",
+  "privacyPolicy.section4.points": [
+    "technical entities to whom AODC has entrusted data processing (e.g., hosting providers, IT tools) based on a data processing agreement;",
+    "authorities and institutions entitled to obtain data under legal provisions (e.g., law enforcement agencies)."
+  ],
+  "privacyPolicy.section4.note": "The Data Controller does not transfer personal data outside the European Economic Area.",
+  "privacyPolicy.section5.title": "Data retention period",
+  "privacyPolicy.section5.points": [
+    "Contact form data – no longer than 3 years from the contact date or until consent withdrawal, if consent was the processing basis.",
+    "Analytical cookie data – according to analytical tools settings (anonymized).",
+    "Technical data (logs) – according to server retention policy, maximum for the time necessary to settle potential incidents."
+  ],
+  "privacyPolicy.section6.title": "Rights of data subjects",
+  "privacyPolicy.section6.intro": "Persons whose data is processed have the following rights:",
+  "privacyPolicy.section6.rights": [
+    "access to data content,",
+    "rectification,",
+    "erasure (\"right to be forgotten\"),",
+    "restriction of processing,",
+    "objection to processing,",
+    "data portability (applies to electronic data),",
+    "withdrawal of consent, if consent was the processing basis."
+  ],
+  "privacyPolicy.section6.contact": "Requests can be sent to iod@aodc.pl.",
+  "privacyPolicy.section7.title": "Data security",
+  "privacyPolicy.section7.intro": "AODC applies appropriate technical and organizational measures to secure personal data, such as:",
+  "privacyPolicy.section7.measures": [
+    "server security (firewalls, access logging),",
+    "access control to systems and services,",
+    "encryption of sensitive data in systems,",
+    "backups,",
+    "data breach response procedures."
+  ],
+  "privacyPolicy.section8.title": "Changes to privacy policy",
+  "privacyPolicy.section8.desc": "The privacy policy may be updated. Users will be informed of any changes through a website notice or document content update.",
+  "privacyPolicy.contactFormInfo": "Information on personal data processing for persons using the contact form:",
+  "privacyPolicy.contactFormDetails": "The controller of your personal data is AODC sp. z o.o., ul. Działkowa 37, 02-234 Warsaw, e-mail: iod@aodc.pl. Your personal data (first name, last name, e-mail address, phone number and message content) are processed exclusively to provide a response to the submitted inquiry and further communication regarding AODC services. The legal basis for processing is art. 6(1)(b) GDPR (necessity for inquiry implementation). Data will be stored for the period necessary to handle the inquiry, maximum 3 years. Data will not be transferred to external entities except as required by law nor used for other purposes, including performance evaluation or profiling. The data subject has the following rights: access to data, rectification, erasure, restriction of processing, objection to processing, data portability and consent withdrawal (if processing were based on consent). Requests can be sent to iod@aodc.pl. By using the form, you consent to the processing of personal data in the above scope."
 
 }
 

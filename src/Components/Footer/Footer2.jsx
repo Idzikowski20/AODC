@@ -85,7 +85,7 @@ function Footer2({ t }) {
 
                 <div className='footer-bottom-container'>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
-                    <p style={{ color: '#6b7280', fontSize: '0.875rem', textAlign: 'center', margin: '0' }}>{t('clarity.footer')}<Link to="/Privacy" style={{ color: '#c23c52', }}> {t('clarity.footer.link')}</Link></p>
+                    <p style={{ color: '#6b7280', fontSize: '0.875rem', textAlign: 'center', margin: '0' }}>{t('clarity.footer')}<Link to="/polityka-prywatnosci" style={{ color: '#c23c52', }}> {t('clarity.footer.link')}</Link></p>
                 </div>
 
                 <div className="footer-bottom-links">
@@ -93,8 +93,7 @@ function Footer2({ t }) {
                         {t('title7.5')}<a href='https://idztech.pl' target='_blank' rel="noopener noreferrer" style={{ color: '#c23c52', textDecoration: 'none' }}>  {t('title7.6')}</a>
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', fontSize: '0.875rem' }}>
-                            <Link to="/Privacy" style={{ color: '#6b7280', textDecoration: 'none', }}>{t('polityka3')}</Link>
-                            <Link to="/Privacy" style={{ color: '#6b7280', textDecoration: 'none', }}>{t('polityka3.2')}</Link>
+                            <Link to="/polityka-prywatnosci" style={{ color: '#6b7280', textDecoration: 'none', }}>{t('polityka3')}</Link>
                     </div>
                 </div>
                 <style>{`
