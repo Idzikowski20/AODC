@@ -18,9 +18,31 @@ i18n
   .use(LanguageDetector)
   .use(reactI18nextModule) // passes i18n down to react-i18next
   .init({
-    debug: true,
+    debug: false,
     resources,
-    fallbackLng: "pl",
+    lng: "pl", // domyślny język: polski
+    fallbackLng: "pl", // język zapasowy: polski
+    
+    // Konfiguracja wykrywania języka przeglądarki
+    detection: {
+      // Kolejność sprawdzania źródeł języka
+      order: ['localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      
+      // Klucz w localStorage do przechowywania wybranego języka
+      lookupLocalStorage: 'i18nextLng',
+      
+      // Cache ustawień języka
+      caches: ['localStorage'],
+      
+      // Wykrywanie języka z nagłówków przeglądarki
+      checkWhitelist: true
+    },
+    
+    // Obsługiwane języki
+    supportedLngs: ['pl', 'en'],
+    
+    // Jeśli wykryty język nie jest obsługiwany, użyj polskiego
+    nonExplicitSupportedLngs: false,
 
     keySeparator: false, // we do not use keys in form messages.welcome
 

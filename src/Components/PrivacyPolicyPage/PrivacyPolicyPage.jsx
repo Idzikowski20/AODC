@@ -14,10 +14,12 @@ function PrivacyPolicyPage({ t }) {
   return (
     <div className="privacy-policy-container">
       <div className="privacy-policy-content">
+        <section className="privacy-policy-section">
         <h1 className="privacy-policy-title">{t('privacyPolicy.title')}</h1>
         <p className="privacy-policy-date">{t('privacyPolicy.effectiveDate')}</p>
         <p className="privacy-policy-administrator">{t('privacyPolicy.administrator')}</p>
         <p className="privacy-policy-iod">{t('privacyPolicy.iodContact')}</p>
+        </section>
         
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section1.title')}</h2>
