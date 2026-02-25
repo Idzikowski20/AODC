@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withNamespaces } from 'react-i18next';
 import './PrivacyPolicyPage.css';
 
 function PrivacyPolicyPage({ t }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const tableHeaders = t('privacyPolicy.section1.tableHeaders', { returnObjects: true });
   const tableRows = t('privacyPolicy.section1.tableRows', { returnObjects: true });
   const cookieTypes = t('privacyPolicy.section2.cookieTypes', { returnObjects: true });

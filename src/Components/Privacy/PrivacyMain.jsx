@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PrivacyPageImage from '../Video Area/PrivacyPageImage'
 import { withNamespaces } from 'react-i18next';
 
 function PrivacyMain({ t }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
     <PrivacyPageImage />
