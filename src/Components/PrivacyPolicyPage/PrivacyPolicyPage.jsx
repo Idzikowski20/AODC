@@ -9,6 +9,8 @@ function PrivacyPolicyPage({ t }) {
   const tableHeaders = t('privacyPolicy.section1.tableHeaders', { returnObjects: true });
   const tableRows = t('privacyPolicy.section1.tableRows', { returnObjects: true });
   const cookieTypes = t('privacyPolicy.section2.cookieTypes', { returnObjects: true });
+  const cookieTypesLabels = t('privacyPolicy.section2.cookieTypesLabels', { returnObjects: true });
+  const cookieDescriptions = t('privacyPolicy.section2.cookieDescriptions', { returnObjects: true });
   const section4Points = t('privacyPolicy.section4.points', { returnObjects: true });
   const section5Points = t('privacyPolicy.section5.points', { returnObjects: true });
   const section6Rights = t('privacyPolicy.section6.rights', { returnObjects: true });
@@ -67,27 +69,28 @@ function PrivacyPolicyPage({ t }) {
           <h2>{t('privacyPolicy.section2.title')}</h2>
           <p>{t('privacyPolicy.section2.intro')}</p>
           
-          <div className="privacy-policy-cookies">
-            <div className="cookie-type">
-              <h3>{cookieTypes.necessary.title}</h3>
-              <p>{cookieTypes.necessary.description}</p>
-            </div>
-            
-            <div className="cookie-type">
-              <h3>{cookieTypes.analytical.title}</h3>
-              <p>{cookieTypes.analytical.description}</p>
-            </div>
-            
-            <div className="cookie-type">
-              <h3>{cookieTypes.functional.title}</h3>
-              <p>{cookieTypes.functional.description}</p>
-            </div>
-            
-            <div className="cookie-type">
-              <h3>{cookieTypes.thirdParty.title}</h3>
-              <p>{cookieTypes.thirdParty.description}</p>
-            </div>
-          </div>
+          <h3>{t('privacyPolicy.section2.cookieTypesTitle')}</h3>
+          
+          <h4>{cookieTypesLabels.necessary}</h4>
+          <ul className="privacy-list">
+            <li>{cookieDescriptions.necessary}</li>
+          </ul>
+          
+          <h4>{cookieTypesLabels.analytical}</h4>
+          <ul className="privacy-list">
+            <li>{cookieDescriptions.analytical}</li>
+            <li>{cookieDescriptions.analyticalExtra}</li>
+          </ul>
+          
+          <h4>{cookieTypesLabels.functional}</h4>
+          <ul className="privacy-list">
+            <li>{cookieDescriptions.functional}</li>
+          </ul>
+          
+          <h4>{cookieTypesLabels.thirdParty}</h4>
+          <ul className="privacy-list">
+            <li>{cookieDescriptions.thirdParty}</li>
+          </ul>
           
           <h3>{t('privacyPolicy.section2.management')}</h3>
           <p>{t('privacyPolicy.section2.managementDesc')}</p>
@@ -95,23 +98,24 @@ function PrivacyPolicyPage({ t }) {
 
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section3.title')}</h2>
-          <p>{t('privacyPolicy.section3.desc')}</p>
+          <p>{t('privacyPolicy.section3.desc2')}</p>
+          <p>{t('privacyPolicy.section3.desc3')}</p>
         </section>
 
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section4.title')}</h2>
           <p>{t('privacyPolicy.section4.desc')}</p>
-          <ul>
+          <ul className="privacy-list">
             {Array.isArray(section4Points) && section4Points.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
           </ul>
-          <p>{t('privacyPolicy.section4.note')}</p>
+          <p><strong>{t('privacyPolicy.section4.note')}</strong></p>
         </section>
 
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section5.title')}</h2>
-          <ul>
+          <ul className="privacy-list">
             {Array.isArray(section5Points) && section5Points.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
@@ -121,7 +125,7 @@ function PrivacyPolicyPage({ t }) {
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section6.title')}</h2>
           <p>{t('privacyPolicy.section6.intro')}</p>
-          <ul>
+          <ul className="privacy-list">
             {Array.isArray(section6Rights) && section6Rights.map((right, index) => (
               <li key={index}>{right}</li>
             ))}
@@ -132,7 +136,7 @@ function PrivacyPolicyPage({ t }) {
         <section className="privacy-policy-section">
           <h2>{t('privacyPolicy.section7.title')}</h2>
           <p>{t('privacyPolicy.section7.intro')}</p>
-          <ul>
+          <ul className="privacy-list">
             {Array.isArray(section7Measures) && section7Measures.map((measure, index) => (
               <li key={index}>{measure}</li>
             ))}
@@ -144,7 +148,7 @@ function PrivacyPolicyPage({ t }) {
           <p>{t('privacyPolicy.section8.desc')}</p>
         </section>
 
-        <section className="privacy-policy-section contact-form-info">
+        <section className="privacy-policy-section contact-info">
           <h3>{t('privacyPolicy.contactFormInfo')}</h3>
           <p>{t('privacyPolicy.contactFormDetails')}</p>
         </section>
